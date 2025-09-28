@@ -1,0 +1,68 @@
+`1 742 900 4500 *Moto Moto Rod of Beguiling
+`1 742 1700 8500 *Moto Moto Rod of Concealment
+`1 742 2000 10000 *Moto Moto Rod of Strength
+`1 742 3000 15000 *Moto Moto Rod of Thundering Compliance
+`1 1021 7500 40000 *Rod of Absorption, Charges: {41 50}
+`1 1022 5000 25000 *Rod of the Aerdi Sea, Charges: {41 50}
+`1 1022 7000 50000 *Rod of Alertness, Charges: {41 50}
+`1 1023 6000 30000 *Bample's Rod of Distortion, Charges: {41 50}
+`1 1023 5000 30000 *Rod of Beguiling, Charges: {41 50}
+`1 1023 2000 20000 *Rod, Blackstick, Charges: {41 50}
+`1 1023 1200 7000 *Rod of Blind Walking
+`1 1024 12000 60000 *Rod of Building, Charges: {41 50}
+`1 1024 0 0 *Rod of Cancellation, Charges: {41 50}
+`1 1024 10000 50000 *Rod of Cancellation II, Charges: {41 50}
+`1 1024 900 4500 *Rod of Climbing, Charges: {41 50}
+`1 1024 7500 37500 *Rod of Death, Charges: {41 50}
+`1 1025 4000 15000 *Diplomacy Rod of Furyondy, Charges: {20 25}
+`1 1025 5000 25000 *Rod of Distortion, Charges: {41 50}
+`1 1026 1000 5000 *Rod, Diviner of Life, Charges: {41 50}
+`1 1026 3500 17500 *Rod of Divining, Charges: {41 50}
+`1 1026 7000 45000 *Rod of Dominion, Charges: {41 50}
+`1 1026 2400 12000 *Rod of Electrification, Charges: {41 50}
+`1 1026 4000 20000 *Rod of Elemental Fire, Charges: {41 50}
+`1 1027 1000 8000 *Rod of Entrapment, Charges: {41 50}
+`1 1027 5000 23000 *Rod of Equestrians, Charges: {41 50}
+`1 1027 4000 20000 *Excellent Rod of Engineering, Charges: {41 50}
+`1 1027 3500 35000 *Rod of Expeditious Transport, Charges: {41 50}
+~1 10 1027 3500 35000 *Rod of Expeditious Transport w/Shadow Walking, Charges: {41 50}
+~11 100 1027 3500 35000 *Rod of Expeditious Transport, Charges: {41 50}
+`1 1028 300 1500 *Rod, Extendable Hand of Enjoyment, Charges: {41 50}
+`1 1028 2000 20000 *Rod of Flailing, Charges: {41 50}
+`1 1028 5000 25000 *Rod of Generalship, Charges: {41 50}
+`1 1028 3000 15000 *Rod of Glyph Creation, Charges: {41 50}
+`1 1028 6000 25000 *Rod of Health, Charges: {41 50}
+`1 1029 2500 17500 *Rod of Indestructibility, Charges: {41 50}
+`1 1029 3000 15000 *Rod of Inertia, Charges: {41 50}
+`1 1029 14000 70000 *Iron Rod of Parn, Charges: {41 50}
+`1 1030 2000 10000 *Rod of Justice, Charges: {41 50}
+`1 1030 5000 30000 *Rod of Leadership, Charges: {41 50}
+`1 1030 4000 30000 *Lightning Rod, Charges: {41 50}
+`1 1030 6000 20000 *Rod of Lordly Might, Charges: {41 50}
+`1 1031 12000 60000 *Malice's Rod of Reincarnation, Charges: {41 50}
+`1 1031 7500 25000 *Rod of Many Things, Charges: {41 50}
+`1 1033 3000 12000 *Rod of Melting, Charges: {41 50}
+`1 1034 3000 15000 *Rod of the Monolith, Charges: {41 50}
+`1 1034 4000 15000 *Rod of Onnwal, Charges: {41 50}
+`1 1034 1000 10000 *Rod of Parrying, Charges: {41 50}
+`1 1035 5000 50000 *Rod of Passage, Charges: {41 50}
+`1 1036 1000 5000 *Rod, Ranike, Charges: {41 50}
+`1 1036 5000 40000 *Rod of Rastinon, Charges: {41 50}
+`1 1037 10000 35000 *Rod of Resurrection, Charges: {41 50}
+`1 1037 8000 35000 *Rod of Rulership, Charges: {41 50}
+`1 1037 3000 30000 *Rod of Security, Charges: {41 50}
+`1 1038 0 0 *Segojan Earthcaller's Rod, Charges: {41 50}
+`1 1040 0 750 *Rod of Singing, Charges: {41 50}
+`1 1040 4000 15000 *Rod of Smiting, Charges: {41 50}
+`1 1040 4000 15000 *Rod of Smiting II, Charges: {41 50}
+`1 1041 2500 25000 *Rod of Splendor, Charges: {41 50}
+`1 1042 3000 15000 *Rod of Terror, Charges: {41 50}
+`1 1042 6000 20000 *Rod of Victory, Charges: {41 50}
+`1 1042 3500 25000 *Rod of Weaponry, Charges: {41 50}
+`1 1042 5000 25000 *Rod of Welkwood, Charges: {41 50}
+`1 1042 5000 15000 *Whisper's Lesser Rod of Transportation, Charges: {41 50}
+`1 1042 7000 20000 *Whisper's Greater Rod of Transportation, Charges: {41 50}
+`1 1043 5000 25000 *Rod of the Wyrm, Charges: {41 50}
+~1 50 1043 5000 25000 *Rod of the Wyrm (Lawful), Charges: {41 50}
+~51 80 1043 5000 25000 *Rod of the Wyrm (Neutral), Charges: {41 50}
+~81 100 1043 5000 25000 *Rod of the Wyrm (Chaotic), Charges: {41 50}

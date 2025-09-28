@@ -1,0 +1,160 @@
+6~65~Gauntlet of Valor (Arm of Valor)
+6~65~Vambrace of Valor (Arm of Valor)
+6~65~Couter of Valor (Arm of Valor)
+6~65~Pauldron of Valor (Arm of Valor)
+6~65~Rerebrace of Valor (Arm of Valor)
+6~69~Abbathor's Armor
+6~69~Armor of Absorption :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~69~Armor of Acidic Secretion :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~70~Anything Armor
+6~70~Aquatic Armor {armor/aquatic_armor} :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~70~Arcane Armor
+6~71~Arvoreen's Chain Armor
+6~71~Aslyferund's Armor
+6~72~Armor of Blackflame
+6~72~Armor of Blending :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~72~Blue Armor of the Crystalmist
+6~72~Mountains Armor
+6~72~Bradlie's Leather Armor
+6~72~Callarduran Smoothhands's Armor
+6~72~Chain Armor
+6~72~Armor of Charm :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~72~Armor of Comfort :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~73~Armor of Command :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~73~Armor of Concealed Wizardry :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~73~Armor of Continual Cleanliness
+6~73~Armor of Coolness :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~73~Armor of Cure Wounds :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~73~Armor of the Desert Evening
+6~73~Dragonarmor
+6~73~Eastern Wooden Armor
+6~74~Armor of Eelix
+6~74~Armor of Electricity :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~74~Elven Chain {armor/bonus_no_negative} {armor/sized_for_elven_chain}
+6~74~Armor of Energy Drain :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~74~Armor of Ethereality :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~74~Armor of Etherealness :: {armor/material} Plate Mail +3 {armor/sized_for}
+6~74~Armor of Etherealness II :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~75~White Dragon Armor
+6~75~Black Dragon Armor
+6~75~Green Dragon Armor
+6~75~Blue Dragon Armor
+6~75~Red Dragon Armor
+6~76~Armor of Fear :: {armor/armor} {armor/bonus} {armor/sized_for} (Fear Charges: {dice/2d10})
+6~76~Armor of Fear II :: {armor/material} Plate Mail + 1 {armor/sized_for} (Fear Charges: {dice/2d2})
+6~76~Armor of Flight :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~77~Armor of Gaseous Form :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~77~Gnarldan's Armor
+6~77~Armor of Haste :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~77~Armor of Healing :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~77~Heimdall's Armor
+6~77~Heimdall's White Armor
+6~77~Armor of Horus
+6~77~Ilneval's Red Chain Armor
+6~77~India's Golden Armor
+6~77~Armor of Invisibility :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~77~Keolish Plate of the Seas
+6~77~Kumakawa Armor
+6~78~Laeral's Storm Armor
+6~78~Lemmikainen's Armor
+6~78~Armor of Missile Attraction :: {armor/armor} {armor/bonus_cursed} {armor/sized_for}
+6~78~Mourner's Armor
+6~78~Oyori of the Unknown Warrior (Armor)
+6~79~Plate of Solamnus (Armor)
+6~79~Armor of Possession :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~79~Armor of Presence
+6~81~Armor of Rage
+6~81~Rainbow Armor
+6~81~Raji's Armor of the Desert Evening
+6~81~Red Armor of the Hellfumaces
+6~81~Red Dragon Scale (Armor)
+6~81~Armor of Reflection :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~82~Remove Curse Armor :: {armor/armor} {armor/bonus_no_negative} {armor/sized_for} (Charges: 3)
+6~82~Scale of Horus (Armor)
+6~82~Skoriaan's Drow Chain
+6~82~Armor of Solamnia
+6~82~Suite's Iron Armor
+6~82~Armor of Swimming :: Leather Lammellar {armor/bonus} {armor/sized_for}
+6~82~Armor of Temperature Control :: {armor/armor} {armor/bonus} {armor/sized_for}
+6~82~Tulen's Plate of Etherealness (Armor)
+6~83~Armor of the Undead
+6~83~Armor of Underwater Action :: {armor/armor_underwater_action} {armor/bonus} {armor/sized_for}
+6~83~Voice of Heroes (Armor) :: {armor/armor} +5 {armor/sized_for}
+6~83~Armor of Vulnerability :: {armor/armor} {armor/bonus_cursed} {armor/sized_for}
+6~83~Armor of Vulnerability II :: {armor/armor} {armor/bonus_cursed_II} {armor/sized_for}
+6~83~Armor of Wannth*
+6~83~White Armor of the Griff Mountains
+6~158~Barding of Deceptive Travel :: {armor/material_barding} {armor/barding} {armor/bonus} {armor/barding_category} (Creature: {armor/barding_deceptive_travel})
+6~158~Barding of Easy Travel :: {armor/material_barding} {armor/barding} {armor/bonus} {armor/barding_category}
+6~158~Barding of Flight :: Leather {armor/barding} {armor/bonus} {armor/barding_category}
+6~159~Barding of Missile Protection :: {armor/material_barding} Chain {armor/bonus} {armor/barding_category}
+6~159~Morgan's Horse Barding :: Steel Plate Mail +1 (Half Barding)
+6~184~Horn Bonnet
+6~184~War Bonnet
+6~252~Armored Caparison
+6~252~Caparison of Comparison
+6~252~Caparison of Enslavement
+6~253~Caparison of Protection {armor/caparison_of_protection}
+6~253~Caparison of Silence
+6~253~Caparison of Sustenance
+6~1093~Abbathor's Shield
+6~1093~Shield of Absorption :: {armor/material} {armor/shield} {armor/bonus}
+6~1093~Aegis Shield
+6~1093~Aegis Shield II
+6~1093~Athena's Shield
+6~1093~Shield of Blow Turning :: {armor/material} {armor/shield} {armor/bonus}
+6~1093~Shield of Charm :: {armor/material} {armor/shield} {armor/bonus}
+6~1094~Shield of Concealed Wizardry :: {armor/material} {armor/shield} {armor/bonus}
+6~1094~Copper Shield
+6~1094~Shield of Cure Wounds :: {armor/material} {armor/shield} {armor/bonus}
+6~1094~Death Watch Beetle (Shield)
+6~1094~Discus Shield
+6~1094~Shield of Dragon Protection
+6~1095~Dragonscale Shield
+6~1095~Dragonshield
+6~1095~Dzance's Guardian Shield
+6~1095~Shield of Electricity :: {armor/material} {armor/shield} {armor/bonus}
+6~1095~Shield of Energy Drain :: {armor/material} {armor/shield} +2
+6~1095~Shield of Energy Drain II :: {armor/material} {armor/shield} {armor/bonus}
+6~1096~Shield of Ethereality :: {armor/material} {armor/shield} {armor/bonus}
+6~1096~Fire's Shield
+6~1096~Shield of Fly :: {armor/material} {armor/shield} {armor/bonus}
+6~1096~Shield of Gaseous Form :: {armor/material} {armor/shield} {armor/bonus}
+6~1096~Goblin Shield of the Pomarj
+6~1096~Shield of Greyhawk
+6~1096~Grimjaw Shield
+6~1097~Shield of Haste :: {armor/material} {armor/shield} {armor/bonus}
+6~1097~Hastsezini's Shield
+6~1097~Hawkstone's Bulwark (Shield)
+6~1098~Holy Shield (Alignment: {armor/holy_shield} Good)
+6~1098~Shield of the Holy
+6~1098~Shield of Huma
+6~1098~Shield of Invisibility :: {armor/material} {armor/shield} {armor/bonus}
+6~1098~Kirith-Kanoi Shield
+6~1099~Laduguer's Shield
+6~1099~Laeral's Spell Shield
+6~1099~Shield of Lorin
+6~1099~Magical Defense Shield :: {armor/material} {armor/shield} {armor/bonus}
+6~1099~Medicine Shield
+6~1099~Shield of Medusae :: {armor/material} {armor/shield} {armor/bonus}
+6~1100~Missile Attractor Shield (Chances to be chosen are {armor/missile_attractor_shield}) :: {armor/material} {armor/shield}
+6~1100~Missile Deflector Shield :: {armor/material} {armor/shield}
+6~1100~Noj's Missile Attractor Shield
+6~1100~Shield of Olynthos
+6~1101~Petrified Shield :: Petrified Wood {armor/shield} {armor/bonus}
+6~1101~Shield of Proof Against {armor/shield_proof_against} :: {armor/material} {armor/shield} {armor/bonus}
+6~1101~Shield of Proof Against Cold :: {armor/material} {armor/shield} {armor/bonus}
+6~1101~Shield of Proof Against Electricity :: {armor/material} {armor/shield} {armor/bonus}
+6~1101~Shield of Proof Against Fire :: {armor/material} {armor/shield} {armor/bonus}
+6~1102~Raji's Shield of the Holy
+6~1102~Shield of Reflection :: {armor/material} {armor/shield} {armor/bonus}
+6~1103~Shield of Remove Curse :: {armor/material} {armor/shield} {armor/bonus_no_negative}
+6~1103~Reptar's Wall (Shield)
+6~1103~Shoon's Buckler
+6~1104~Sticky Shield
+6~1105~Thurbrand's Protector (Shield)
+6~1105~Tortoise Shield
+6~1105~Thillonrian Shield of Berserking
+6~1105~White Shield
+6~1105~Wood-Iron* Shield :: Wooden {armor/shield} +1
+6~1106~Yondalla's Shield

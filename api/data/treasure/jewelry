@@ -1,0 +1,39 @@
+1 10 10 100 brass
+11 20 20 200 copper
+21 45 50 500 silver
+46 48 100 1000 ivory
+49 50 100 1000 coral
+51 75 500 2000 gold
+76 78 500 3000 jade
+79 80 500 3000 onyx
+81 88 500 3000 platinum
+89 93 1000 6000 silver and gems
+94 96 2000 8000 gold and gems
+97 98 3000 9000 jade and gems
+99 100 2000 10000 platinum and gems
+:ITEM
+1 4 anklet
+5 8 ring
+9 12 braclet
+13 16 brooch
+17 20 buckle
+21 24 chain
+25 28 clasp
+29 32 locket
+33 36 pin
+37 40 armband
+41 44 belt
+45 48 earring
+49 52 heart
+53 56 leaf
+57 60 necklace
+61 64 pendant
+65 68 amulet
+69 72 crown
+73 76 diadem
+77 80 medallion
+81 84 orb
+85 88 scarab
+89 92 scepter
+93 96 talisman
+97 100 tiara

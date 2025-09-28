@@ -1,0 +1,54 @@
+1 10 1 10 10 ONE
+11 25 3 6 10 TWO
+26 40 1 6 100 THREE
+41 50 1 10 100 FOUR
+51 60 2 6 100 FIVE
+61 70 3 6 100 SIX
+71 80 4 6 100 SEVEN
+81 85 5 6 100 EIGHT
+86 90 1 4 1000 NINE
+91 95 1 6 1000 TEN
+96 99 2 4 1000 ELEVEN
+100 100 2 6 1000 TWELVE
+:ONE
+1 25 a silver ewer
+26 50 a carved bone statuette
+51 75 an ivory statuette
+76 100 a finely wrought small gold bracelet
+:TWO
+1 33 a cloth of gold vestments
+34 66 a black velvet mask with numerous citrines
+67 100 a silver chalice with lapis lazuli gems
+:THREE
+1 50 a large well-done wool tapestry
+51 100 a brass mug with jade inlays
+:FOUR
+1 50 a silver comb with moonstones
+51 100 a silver-plated steel longsword with jet jewel in hilt
+:FIVE
+1 50 a harp carved of exotic wood with ivory inlay and zircon gems
+51 100 a solid gold idol (10 lbs.)
+:SIX
+1 33 a gold dragon comb with red garnet eye
+34 66 a gold and topaz bottle stopper cork
+67 100 a ceremonial electrum dagger with a star ruby in the pommel
+:SEVEN
+1 33 an eyepatch with mock eye of sapphire and moonstone
+34 66 a fire opal pendant on a fine gold chain
+67 100 an old masterpiece painting
+:EIGHT
+1 50 an embroidered silk and velvet mantle with numerous moonstones
+51 100 a sapphire pendant on gold chain
+:NINE
+1 33 an embroidered and bejeweled glove
+34 66 a jeweled anklet
+67 100 a golden music box
+:TEN
+1 50 a golden circlet with four aquamarines
+51 100 a string of small pink pearls
+:ELEVEN
+1 50 a jeweled gold crown
+51 100 a jeweled electrum ring
+:TWELVE
+1 50 a gold and ruby ring
+51 100 a gold cup set with emeralds

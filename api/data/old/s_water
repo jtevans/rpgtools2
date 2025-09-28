@@ -1,0 +1,95 @@
+:COMMON
+4 24 Bird, Kingfisher
+1 20 Bird, Skyfisher
+3 24 Crocodile, Common
+10 60 Fish, Eel, Weed
+3 12 Fish, Shark
+1 8 Whale, Common
+5 40 Whale, Killer
+:UNCOMMON
+1 3 Fish, Sting Ray
+2 20 Dolphin
+1 3 Fish, Eel, Electric
+5 50 Fish, Piranha
+1 3 Fish, Sting Ray
+2 16 Gargoyle, Common
+20 200 Merman
+2 24 Ogre, Merrow
+20 80 Sahuagin
+3 12 Sea Lion
+1 8 Snake, Sea, Giant, Common
+1 8 Snake, Sea, Giant, Elder
+1 8 Troll, Saltwater
+1 6 Urchin, Black
+:RARE
+3 12 Broken One, Common
+2 12 Crabman
+1 20 Crawling Claw
+2 12 Crustacean, Giant, Crab
+1 8 Dog, Moon
+1 1 Fish, Dragonfish
+1 1 Fish, Eel, Marine
+5 12 Fish, Ixitxachitl
+1 1 Fish, Manta Ray
+1 1 Fish, Pungi Ray
+1 20 Fish, Sea Horse, Giant
+1 3 Fish, Shark, Giant
+2 16 Gargoyle, Margoyle
+11 20 Giff
+1 3 Hag, Sea
+2 8 Hippocampus
+4 40 Locathah
+1 3 Octopus, Giant
+3 12 Plant, Intelligent, Strangleweed
+2 8 Sirine
+5 40 Sprite, Sea
+1 1 Squid, Giant, Common
+3 12 Tako, Male
+6 60 Triton
+1 4 Urchin, Green
+1 4 Urchin, Red
+1 6 Whale, Narwhal
+2 24 Zombie, Sea
+:VERY_RARE
+1 1 Banshee
+1 1 Beholder, Eye of the Deep
+1 4 Broken One, Greater
+1 12 Crocodile, Giant
+1 1 Death Knight
+3 12 Doppleganger
+1 1 Dragon Turtle
+1 1 Elemental, Water
+1 1 Elemental, Air Kin, Aerial Servant
+1 4 Elemental, Water Kin, Nereid
+1 3 Elemental, Water Kin, Water Weird
+1 4 Fish, Eel, Giant
+2 20 Fish, Piranha, Giant
+1 1 Ghost
+2 24 Ghoul, Lacedon
+1 4 Giant, Fog
+1 6 Giant, Fog
+1 1 Giant, Reef 
+1 4 Giant, Reef
+1 1 Giant, Storm
+2 4 Giant, Storm
+2 8 Githyanki
+1 1 Haunt
+2 8 Imp, Mephit, Mist
+2 8 Imp, Mephit, Smoke
+2 8 Imp, Mephit, Steam
+5 12 Ixitxachitl
+3 18 Lycanthrope, Seawolf, Lesser
+4 16 Lycanthrope, Seawolf, Greater
+1 1 Morkoth
+1 3 Phoenix
+1 4 Plant, Intelligent, Kelpie
+1 1 Selkie
+12 30 Selkie
+1 1 Squid, Giant, Kraken
+1 2 Tako, Female
+1 2 Urchin, Silver
+1 3 Urchin, Yellow
+1 2 Whale, Giant
+1 1 Whale, Leviathan
+1 1 Zaratan
+:

@@ -1,0 +1,97 @@
+:COMMON
+1 100 Bat, Common
+3 18 Beetle, Boring
+3 12 Beetle, Fire
+1 12 Cat, Small, Domestic
+2 24 Centipede, Giant
+5 30 Centipede, Huge
+1 12 Crocodile, Giant
+1 6 Dinosaur, Diplodocus
+2 16 Dinosaur, Lambeosaurus
+3 18 Dinosaur, Pteranodon
+2 8 Dinosaur, Stegosaurus
+2 8 Dinosaur, Tricerotops
+1 12 Elephant, Mammoth
+1 12 Elephant, Mastadon
+:UNCOMMON
+1 4 Basilisk
+3 18 Bat, Large
+1 1 Bat, Azmyth
+1 12 Bat, Night Hunter
+1 2 Bear, Cave
+4 15 Bird, Blood Hawk
+1 2 Bird, Condor
+2 20 Bird, Emre
+2 5 Bird, Owl, Giant
+4 16 Bird, Raven, Giant
+2 5 Cat, Small, Wild
+1 6 Cockatrice, Common
+2 5 Dinosaur, Ankylosaurus
+1 2 Dinosaur, Tyrannosaurus
+1 2 Dinosaur, Elasmosaurus
+2 24 Ghoul, Common
+:RARE
+1 6 Bat, Sinister
+1 2 Behir
+1 20 Bird, Eagle, Giant
+1 4 Great, Cat, Giant Lynx
+1 2 Great, Cat, Smilodon
+1 4 Chimera, Common
+1 4 Cockatrice, Pyrolisk
+1 20 Crawling Claw
+1 6 Dinosaur, Deinonychus
+1 8 Dog, Moon
+2 16 Gargoyle, Margoyle
+1 4 Ghoul, Ghast
+1 1 Gloomwing, Moth
+10 100 Human, Caveman
+1 100 Insect, Ant, Giant
+1 1 Insect, Ant Lion, Giant
+1 1 Insect, Aratha
+1 1 Insect, Aspis, Cow
+2 20 Insect, Aspis, Drone
+6 60 Insect, Aspis, Larva
+2 2 Insect, Assassin Bug
+1 10 Insect, Bee, Worker
+1 1 Insect, Bee, Soldier
+1 1 Insect, Bumblebee
+1 8 Insect, Cave Cricket
+1 6 Insect, Dragonfly, Giant
+1 1 Insect, Dragonfly, Larva
+1 4 Insect, Ear Seeker
+1 4 Insect, Firefriend
+1 10 Insect, Fly, Blubottle
+1 4 Insect, Fly, Horsefly
+1 1 Insect, Fyrefly
+3 30 Insect, Horax
+1 1 Insect, Hornet, Giant
+4 200 Insect, Pernicon
+1 2 Insect, Praying Mantis (2 HD)
+1 2 Insect, Praying Mantis (4 HD)
+1 2 Insect, Praying Mantis (6 HD)
+1 2 Insect, Praying Mantis (8 HD)
+1 2 Insect, Praying Mantis (10 HD)
+1 2 Insect, Praying Mantis (12 HD)
+1 1 Insect, Termite, King
+1 1  Insect, Termite, Queen
+3 18 Insect, Termite, Soldier
+6 60 Insect, Termite, Worker
+3 12 Insect, Tick, Giant
+1 20 Insect, Wasp, Giant
+:VERY_RARE
+1 1 Banshee
+1 7 Greater Basilisk
+1 2 Dracolisk
+1 4 Broken One, Greater
+1 2 Bulette (Land Shark)
+1 4 Centipede, Megalo-
+1 1 Chimera, Gorgimera
+1 4 Couatl
+1 1 Death Knight
+3 12 Doppleganger
+1 1 Elemental, Air
+1 1 Elemental, Earth
+1 1 Elemental, Fire
+1 1 Elemental, Air Kin, Aerial Servant
+1 1 Ghost
+:

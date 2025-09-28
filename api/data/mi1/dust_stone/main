@@ -1,0 +1,365 @@
+3~26~Air Spores
+3~26~Chandrasakar's Air Spores
+3~58~Apple of Bragi
+3~58~Apple of Chaos
+3~163~Bead of Accuracy
+3~163~Beady Eye
+3~164~Bead of Dew
+3~164~Bead of Force
+3~164~Glass Bead ({dust_stone/glass_bead})
+3~164~Bead of Oblivion
+3~164~Pearl (Bead)
+3~165~Bead of Prayer (Contains 10d4 random beads)
+3~165~Bead of Prayer II
+3~171~Fireberries
+3~171~Magical Berry
+3~182~Bone of Animation
+3~182~Bone of Bruising
+3~183~Clapper Bone
+3~183~Dragon Bone ({dust_stone/dragon_bone})
+3~183~Bone of Slaying
+3~184~Bone of Turning
+3~240~Black Candle
+3~240~Blinking Candle ({dust_stone/candle_blinking})
+3~240~Blue Candle
+3~240~Candle of Brilliance ({dust_stone/candle_brilliance})
+3~240~Candle of Charming ({dust_stone/candle_size})
+3~241~Convocation Candle
+3~241~Darkness Candle ({dust_stone/candle_size})
+3~241~Defense Candle ({dust_stone/candle_size})
+3~241~Disruption Candle ({dust_stone/candle_size})
+3~241~Divination Candle ({dust_stone/candle_size})
+3~241~Candle of Everburning
+3~242~Candle of Evocation
+3~242~Exploding Candle ({dust_stone/candle_size})
+3~242~Fireball Candle ({dust_stone/candle_size})
+3~242~Flame Candle ({dust_stone/candle_size})
+3~242~Flame Arrow Candle ({dust_stone/candle_size})
+3~242~Flame Blade Candle ({dust_stone/candle_size})
+3~242~Gold Candle
+3~243~Candle of Invocation
+3~243~Methven Candle
+3~243~Noora's Candle of Propra'ousness
+3~243~Candle of Powerlessness
+3~243~Candle of Propitiousness
+3~243~Candle of Protection
+3~244~Candle of Protection II ({dust_stone/candle_size})
+3~244~Purple Candle
+3~244~Pyrotechnics Candle ({dust_stone/candle_size})
+3~244~Red Candle
+3~244~Reflection Candle ({dust_stone/candle_size})
+3~244~Sanctuary Candle ({dust_stone/candle_size})
+3~245~Shielding Candle ({dust_stone/candle_shielding})
+3~245~Smoke Detection Candle
+3~245~Candle of Spells ({dust_stone/candle_size})
+3~245~Survival Candle ({dust_stone/candle_survival})
+3~245~Candle of Transference
+3~245~Unfailing Light Candle
+3~245~Candle of Vapors ({dust_stone/candle_size})
+3~246~Visibility Candle ({dust_stone/candle_size})
+3~246~Yellow Candle
+3~284~Cheese of Odors
+3~284~Cheese of Vile Odors
+3~414~Dust of Absorption
+3~414~Dust of Adhering
+3~414~Allergy Dust
+3~415~Dust of Appearance
+3~415~Dust of Blandness
+3~415~Dust of Piquantness
+3~415~Dust of Blending
+3~419~Decoy Dust
+3~419~Dust of Disappearance
+3~419~Dust of Dryness
+3~419~Dust of Dullness
+3~420~Feather Dust
+3~420~Fertilization Dust
+3~420~Fodder Dust
+3~420~Dust of Forgetfulness
+3~420~Green Sleeping Dust
+3~420~Dust of Illusion
+3~421~Leech Dust
+3~421~Malta's Dust of Mind Dulling
+3~421~Dust of Mind Dulling
+3~421~Dust of Opposition
+3~421~Paralyzation Dust
+3~422~Revealing Dust
+3~422~Rust Dust
+3~422~Dust of Sleeping
+3~422~Sleep Dust
+3~422~Small Bird Repulsion Dust
+3~423~Sneezing Dust
+3~423~Sneezing Dust II
+3~423~Dust of Sneezing and Choking
+3~423~Sparkling Dust
+3~423~Dust of Tracelessness
+3~423~Dust of Trail Dispersion
+3~423~Violet Dindower's Dust of Disappearance
+3~429~Antimagic Egg
+3~430~Apprentice's Egg
+3~430~Black Egg
+3~430~Cloudkill Egg
+3~430~Egg of Desire ({dust_stone/egg_desire})
+3~431~Disintegration Egg
+3~431~Egg of Distraction
+3~431~Egg of Dragon Breath ({dust_stone/egg_dragon_breath})
+3~432~Dreamhold Egg
+3~432~Egg of Fascination
+3~433~Flame Egg
+3~433~Fog Cloud Egg
+3~433~Golden Egg
+3~433~Golden Egg of Ghastar (Type: {dust_stone/egg_ghastar})
+3~434~Gray Egg
+3~434~Guardian Egg
+3~434~Hard-Boiled Egg
+3~435~Imprisonment Egg
+3~435~Incubalum Egg
+3~436~Khenel's Philosopher's Egg
+3~436~Mishakal's Token Egg
+3~436~Multicolor Egg
+3~436~Philosopher's Egg
+3~436~Egg of the Phoenix I
+3~438~Pink Egg
+3~438~Egg of Reason
+3~438~Rotten Egg
+3~439~Egg of Shattering
+3~439~Shell of Protection ({dust_stone/shell_protection})
+3~439~Soft Boiled Egg
+3~439~Stinging Cloud Egg
+3~439~Turquoise Egg
+3~440~Egg of Wonder ({dust_stone/egg_wonder})
+3~466~Feathertoken
+3~466~Lapland Feather
+3~466~Plumalitter Feather
+3~466~Quaal's Feather Token ({dust_stone/quaal_feather_token})
+3~469~Quaal's Mystical Feather Token
+3~480~Finger of Commanding
+3~480~Finger of the Master Thief
+3~480~Thumb of the Master Thief (Finger)
+3~611~Incense of Meditation
+3~611~Incense of Obsession
+3~612~Shahpesh's Incense of Obsession
+3~613~Ioun Stone: Balian's Yellow
+3~614~Ioun Stone: Blue-Green Spindle ({dust_stone/ioun_stone_type_cursed})
+3~614~Ioun Stone: Brass Lozenge ({dust_stone/ioun_stone_type_cursed})
+3~614~Ioun Stone: Bright Silver Cylinder ({dust_stone/ioun_stone_type})
+3~614~Ioun Stone: Bright White Rectangle ({dust_stone/ioun_stone_type_cursed})
+3~614~Ioun Stone: Brown Rhomboid ({dust_stone/ioun_stone_type_cursed})
+3~614~Ioun Stone: Cerulean Blue Rhomboid
+3~614~Ioun Stone: Clear Pink Sphere ({dust_stone/ioun_stone_type_cursed_or_normal})
+3~614~Ioun Stone: Clear Prism
+3~615~Ioun Stone: Clear Sphere ({dust_stone/ioun_stone_type_cursed_or_normal})
+3~615~Ioun Stone: Copper Rectangle ({dust_stone/ioun_stone_type_cursed_or_normal})
+3~615~Ioun Stone: Deep Black Sphere ({dust_stone/ioun_stone_type_cursed_or_normal})
+3~615~Ioun Stone: Deep Purple Prism
+3~615~Ioun Stone: Deep Red Sphere
+3~615~Ioun Stone: Flickering White Snowflake ({dust_stone/ioun_stone_type_cursed})
+3~615~Ioun Stone: Gold Ellipsoid ({dust_stone/ioun_stone_type_cursed})
+3~615~Ioun Stone: Green Sphere ({dust_stone/ioun_stone_type_cursed})
+3~615~Ioun Stone: Incandescent Blue Sphere
+3~615~Ioun Stone: Light Blue Prism ({dust_stone/ioun_stone_type_cursed_or_normal})
+3~616~Ioun Stone: Maroon Star  ({dust_stone/ioun_stone_type_cursed_or_normal})
+3~616~Ioun Stone: Orange Cube  ({dust_stone/ioun_stone_type_cursed})
+3~616~Ioun Stone: Pale Green Ellipsoid
+3~616~Ioun Stone: Pale Lavender Spindle
+3~616~Ioun Stone: Pale Yellow Lozenge ({dust_stone/ioun_stone_type_cursed})
+3~616~Ioun Stone: Pearly White Prism
+3~616~Ioun Stone: Pink Ellipsoid
+3~616~Ioun Stone: Pink & Green Ellipsoid
+3~616~Ioun Stone: Puce Cube ({dust_stone/ioun_stone_type_cursed})
+3~616~Ioun Stone: Pulsing Red Star ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Pure White Octahedron ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Rainbow Ellipsoid ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Rainbow Spindle ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Scarlet & Blue Sphere
+3~618~Ioun Stone: Silver Rod ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Silver Sphere ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Silvery Mirror Cube ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Soft Black Rectangle ({dust_stone/ioun_stone_type_cursed})
+3~618~Ioun Stone: Yellow Sphere ({dust_stone/ioun_stone_type_cursed})
+3~696~Cat's Eye Marble
+3~696~Marble of Cleanliness
+3~696~Granite Marble
+3~696~Marble of Quarry
+3~696~Warp Marble
+3~835~Pie of Four-and-Twenty Blackbirds
+3~835~Pie of Raspberries
+3~835~Rhubarb Pie
+3~899~Absinthe Powder
+3~899~African Ju Ju Powder
+3~899~Allspice Powder
+3~899~Allspice Powder II
+3~899~Anger Powder
+3~899~Anise Powder
+3~899~Aphrodisia Powder
+3~899~Arabian Nights Powder
+3~899~Attraction Powder
+3~899~Bats' Blood Powder
+3~899~Bendover's Powder
+3~899~Bergamot's Powder
+3~899~Black Arts Powder
+3~900~Powder of the Black Veil
+3~900~Bottom #20 Powder
+3~900~Bruno's Curse Powder
+3~900~Buddha Powder Type {dust_stone/buddha_powder}
+3~900~Bull's Powder
+3~900~Carnation Powder
+3~900~Chocolate Powder
+3~900~Citronella Powder
+3~900~Civet Powder
+3~900~Cleo May Powder
+3~900~Powder of Coagulation
+3~901~Powder of Comeliness
+3~901~Commanding Powder
+3~901~Concentration Powder
+3~901~Confusion Powder
+3~901~Conquering Glory Powder
+3~901~Controlling Powder
+3~901~Crab Apple Powder
+3~901~Crossing Powder
+3~902~Cumin Seed Powder
+3~902~Cypress Seed Powder
+3~902~Damnation Powder
+3~902~Desire Erne's Powder
+3~902~Doas Isay's Powder
+3~902~Double Cross Powder
+3~902~Dragon's Blood Powder
+3~902~Dream Powder
+3~902~Dypshez's Powder of the Black Veil
+3~902~Elixir Powder
+3~902~Enchantment Powder
+3~903~Eucalyptus Powder
+3~903~Eve Powder
+3~903~Evil Eye Powder
+3~903~Excisement Powder
+3~903~Exodus Powder
+3~903~Five Finger Grass Powder
+3~903~Frangi Pani Powder
+3~903~Galangale's Powder
+3~903~Gardenia Powder
+3~903~Getaway's Powder
+3~903~Good Taste Powder
+3~903~Grape Powder
+3~903~Powder of the Hero's Heart
+3~904~High Conquering Powder
+3~904~High John the Conqueror's Powder
+3~904~Hindu Grass Powder
+3~904~Honeysuckle Powder
+3~904~Hypnotic Powder
+3~904~Hysspo Powder
+3~904~Powder of Images
+3~905~Jamaica Powder
+3~905~Jezebel Powder
+3~905~Jinx Removing Powder
+3~905~Kludde Powder
+3~905~Lavender Powder
+3~905~Life Powder
+3~905~Lily of the Valley Powder
+3~905~Powder of Magic Detection
+3~905~Magnolia Powder
+3~905~Manpower Powder
+3~905~Mercury Powder
+3~906~Mojo Powder
+3~906~Moon Powder
+3~906~Musk Powder
+3~906~Narcissus Powder
+3~906~New life Powder
+3~906~Nine Mystery Powder
+3~906~Obeah Powder
+3~906~Oak-in-Acorn Powder
+3~906~Powder of Obsession
+3~907~Olibanum Powder
+3~907~Power Powder
+3~907~Primrose Powder
+3~907~Purification Powder
+3~907~Puchezma's Powder of Edible Objects
+3~907~Purwuvok's Powder of the Hero's Heart
+3~909~Reversibility Powder
+3~909~Rosemary Powder
+3~909~Rue Powder
+3~909~Sandalwood Powder
+3~909~Smoke Powder
+3~910~Snake Powder
+3~910~Solomon's Powder
+3~910~Spikenard Powder
+3~910~Spirit Powder
+3~910~Time Powder
+3~910~Trinity Powder
+3~910~Verbena Powder
+3~910~Vibration Powder
+3~910~Virgin Olive Powder
+3~911~Vision Powder
+3~911~Voodoo Powder
+3~911~Will Power Powder
+3~911~Wintergreen Powder
+3~911~Wishing Powder
+3~911~Witch's Powder
+3~911~Xyz Powder
+3~911~Ylang Ylang Powder
+3~911~Zodiac Powder
+3~911~Zula Zula Powder
+3~1020~Death Rock of the Darad S'tin
+3~1020~Kereenyaga Rock
+3~1021~Pet Rock ({dust_stone/pet_rock})
+3~1045~Rose of Eternal Slumber ({dust_stone/rose_eternal_slumber})
+3~1045~Rose of Ravenloft
+3~1046~Rose of Forgetfulness
+3~1089~Dragon Lily Seed
+3~1089~Enchanted Cherry Pits ({dice/1d3} {dust_stone/enchanted_cherry_pits}) (Seed)
+3~1089~Fire Seed
+3~1090~Seed of Growth
+3~1090~Damage Curing Seed
+3~1090~Disease Curing Seed
+3~1090~Normal Seed
+3~1090~Sun Seed
+3~1091~Trollflower Seed
+3~1091~Seed of Wealth
+3~1122~Smoke of Fire Quenching
+3~1122~Sleep Smoke
+3~1126~Soap of Abrasion
+3~1126~Soap of Washing
+3~1307~Beauregard's Beautiful Bauble (Stone)
+3~1308~Bimbomushi Stone
+3~1308~Bloodstone of Fistandantilus (Stone)
+3~1308~Chardalyn Stone
+3~1309~Stone of Cold Immunity
+3~1309~Stone of Continual Light
+3~1309~Stone of Controlling Earth Elementals
+3~1309~Coruskian Stone
+3~1309~Cursed Well Stone
+3~1309~Dream Stone
+3~1310~Stone of Everburning
+3~1310~Finder's Stone
+3~1310~Glowstone (Stone)
+3~1311~Stone of Good Luck
+3~1311~Stone of Gul and Thiondar
+3~1313~Honing Stone
+3~1313~Myste's Stone of Mixed Luck
+3~1313~Stone of Mysterious Sounds
+3~1314~Nanorion Stone
+3~1314~Oval Stone of Tzolo's Guardian
+3~1314~Philosopher's Stone
+3~1314~Philosopher's Stone II
+3~1314~Stone of Sampling
+3~1315~Stone of Shielding
+3~1315~Stone of Silence ({dust_stone/stone_silence})
+3~1315~Spongestone ({dust_stone/spongestone})
+3~1315~Travel Stone
+3~1318~Wardstone
+3~1318~Warm Stone
+3~1318~Stone of Warmth
+3~1318~Stone of Weight
+3~1318~Stone of the Well
+3~1428~Tart of Accusation
+3~1428~Tart of Enticement
+3~1428~Tart of a Summer's Day
+3~1446~Tooth of Dahlver-nar
+3~1448~Dragon Tooth ({dust_stone/dragon_tooth})
+3~1451~Sweet Tooth ({dust_stone/sweet_tooth})
+3~1505~Wax of Careful Hearing
+3~1505~Ceiling Wax
+3~1505~Wax of Fabrication
+3~1506~Wax of Hearing
+3~1506~Sealing Wax
+3~1506~Wax of Waning
+3~1527~Rapture Weed
+3~1527~Weed of the Witch

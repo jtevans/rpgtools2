@@ -1,0 +1,235 @@
+`1 253 500 3000 Cape of Disguise
+`1 253 1000 15000 Cape of Good Hope
+`1 253 800 2400 Cape of the Hornet
+`1 253 1000 5000 Cape of Horns
+`1 255 6000 60000 Iuz's Cape
+`1 255 000 0000 Cape of Protection
+~1 30 255 1000 10000 Cape of Protection +1
+~31 50 255 2000 20000 Cape of Protection +2
+~51 85 255 3000 30000 Cape of Protection +3
+~86 95 255 4000 40000 Cape of Protection +4
+~96 100 255 5000 50000 Cape of Protection +5
+`1 255 0 1000 Cape of Reeking
+`1 255 2500 15000 Shadow Cape
+`1 277 600 3000 Chaplet of Creature Recognition
+`1 295 800 4000 Cloak of Appearance
+`1 295 3000 25000 Cloak of Arachnida
+`1 296 2500 12500 Artemus' Cloak of Displacement
+`1 296 1000 9000 Atmospheric Cloak
+`1 296 7000 35000 Baravar Cloakshadow's Cloak
+`1 296 1500 15000 Cloak of the Bat
+`1 297 2000 12000 Battle Cloak
+`1 297 1500 17500 Bear Cloak of the Sulhaut Mountains
+`1 297 3000 17500 Cloak of the Beguiler
+`1 297 20000 100000 Cloak of Blackflame
+`1 298 6000 20000 Bolder's Cloak of the Rogue
+`1 298 0 0 Chameleon Cloak
+~1 30 298 750 3750 Chameleon Cloak (Wisdom 15)
+~31 75 298 800 4000 Chameleon Cloak (Wisdom 16)
+~76 95 298 850 4250 Chameleon Cloak (Wisdom 17)
+~96 100 298 900 4500 Chameleon Cloak (Wisdom 18)
+`1 298 1000 10000 Changeling Cloak
+`1 298 1500 15000 Cheetah Cloak of Amedio
+`1 299 4000 25000 Cloak of the Clouds
+`1 299 1500 7500 Cloak of Comfort
+`1 299 3000 3500 Cloak of Delight
+`1 299 3000 17500 Displacer Cloak
+`1 299 3000 17500 Cloak of Displacement
+`1 300 1000 10000 Dragon Cloak
+~1 10 300 1000 10000 Black Dragon Cloak
+~11 20 300 1000 10000 Blue Dragon Cloak
+~21 30 300 1000 10000 Brass Dragon Cloak
+~31 40 300 1000 10000 Bronze Dragon Cloak
+~41 50 300 1000 10000 Copper Dragon Cloak
+~51 60 300 1000 10000 Gold Dragon Cloak
+~61 70 300 1000 10000 Green Dragon Cloak
+~71 80 300 1000 10000 Red Dragon Cloak
+~81 90 300 1000 10000 Silver Dragon Cloak
+~91 100 300 1000 10000 White Dragon Cloak
+`1 300 0 3000 Cloak of Echoes
+`1 300 1000 6000 Elven Cloak
+`1 300 1000 6000 Elven Cloak II
+`1 300 1000 6000 Cloak of Elvenkind
+`1 301 2600 15500 Cloak of Etherealness
+`1 301 1500 10000 Fangs Cloak
+`1 301 2000 10000 Firebane Cloak
+`1 302 300 1500 Cloak of Flame
+`1 302 1000 6000 Gargoyle Cloak
+~1 5 302 1000 6000 Banderlog Cloak (Listed Under: Gargoyle Cloak)
+~6 10 302 1000 6000 Crabman Cloak (Listed Under: Gargoyle Cloak)
+~11 15 302 1000 6000 Dakon Cloak (Listed Under: Gargoyle Cloak)
+~16 20 302 1000 6000 Faun Cloak (Listed Under: Gargoyle Cloak)
+~21 25 302 1000 6000 Galeb Duhr Cloak (Listed Under: Gargoyle Cloak)
+~26 30 302 1000 6000 Gargoyle Cloak
+~31 35 302 1000 6000 Gnoll Cloak (Listed Under: Gargoyle Cloak)
+~36 40 302 1000 6000 Illithid Cloak (Listed Under: Gargoyle Cloak)
+~41 45 302 1000 6000 Kelpie Cloak (Listed Under: Gargoyle Cloak)
+~46 50 302 1000 6000 Lizard Man Cloak (Listed Under: Gargoyle Cloak)
+~51 55 302 1000 6000 Manscorpion Cloak (Listed Under: Gargoyle Cloak)
+~56 60 302 1000 6000 Owlbear Cloak (Listed Under: Gargoyle Cloak)
+~61 65 302 1000 6000 Pixie Cloak (Listed Under: Gargoyle Cloak)
+~66 70 302 1000 6000 Rakshasa Cloak (Listed Under: Gargoyle Cloak)
+~71 75 302 1000 6000 Sahuagin Cloak (Listed Under: Gargoyle Cloak)
+~76 80 302 1000 6000 Umber Hulk Cloak (Listed Under: Gargoyle Cloak)
+~81 85 302 1000 6000 Urd Cloak (Listed Under: Gargoyle Cloak)
+~86 90 302 1000 6000 Vegapygmie Cloak (Listed Under: Gargoyle Cloak)
+~91 95 302 1000 6000 Xaren Cloak (Listed Under: Gargoyle Cloak)
+~96 100 302 1000 6000 Yeti Cloak (Listed Under: Gargoyle Cloak)
+`1 303 1500 10000 Guarding Cloak
+`1 303 400 6000 Cloak of Healing
+`1 303 2000 8000 Cloak of the Hellfurnaces
+`1 303 1000 5000 Kaldair Swiftfoot's Cloak
+`1 304 2000 10000 KalnaKaa's Black Cloak
+`1 304 3500 17500 Cloak of Lathander
+`1 304 650 22000 Cloak of Lordliness
+`1 304 1800 9000 Cloak of the Manta Ray
+`1 304 2000 12500 Cloak of the Manta Ray II
+`1 304 1500 15000 Cloak, Mantle of the Celestian
+`1 305 800 5000 Cloak, Mantle of Mist
+`1 305 1500 15000 Cloak, Mantle of the Mundane
+`1 305 1200 8000 Cloak of Many Colors
+`1 306 3000 30000 Midnight Slasher's Cloak
+`1 306 3000 12000 Mummy's Cloak
+`1 306 4200 21000 Cloak of the One Plume
+`1 306 2000 10000 Cloak of Passage
+`1 307 1000 6000 Cloak of Plenty
+`1 307 0 2500 Cloak of Poisonousness
+`1 307 1000 10000 Cloak of Protection +1
+~1 35 307 1000 10000 Cloak of Protection +1
+~36 65 307 2000 20000 Cloak of Protection +2
+~66 85 307 3000 30000 Cloak of Protection +3
+~86 95 307 4000 40000 Cloak of Protection +4
+~96 100 307 5000 50000 Cloak of Protection +5
+`1 307 1500 10000 Cloak of Reflection
+`1 308 2000 7000 Rhun's Horned Cloak
+~1 20 308 2500 10000 Rhun's Horned Cloak with Tail
+~21 50 308 2200 7500 Rhun's Horned Cloak with Visor
+~51 100 308 2000 7000 Rhun's Horned Cloak
+`1 308 3000 30000 Shadowcloak
+`1 309 9000 69500 Cloak, Shaman's Mantle
+`1 309 1500 10000 Cloak of the Shield
+`1 309 1200 7500 Cloak of Stars, Type I
+~1 33 309 1200 7500 Cloak of Stars, Type I
+~34 66 309 1200 7500 Cloak of Stars, Type II
+~67 100 309 1200 7500 Cloak of Stars, Type III
+`1 310 3000 30000 Cloak of Strength
+`1 310 1500 15000 Cloak, Sumpko's Mantle
+`1 310 1000 6000 Cloak of Survival
+`1 311 3000 20000 Cloak of Symbiotic Protection
+`1 311 1500 12500 Tiger Cloak of Chalyik
+`1 311 3500 30000 Theodolus' Cloak of Arachnida
+`1 311 1000 7500 Cloak of Warmth
+`1 311 1500 7500 Cloak of Weather
+`1 311 1000 9500 Cloak, Wings of the Rakers
+`1 312 1500 7500 White Cloak of Charming
+`1 312 2000 15000 Wolf Cloak of Wegwiur
+`1 312 3000 30000 Zinzerena's Cloak
+`1 312 1000 4500 Cloth of Cleanliness
+`1 312 700 7000 Merchant's Cloth
+`1 313 500 1500 Cloth of Perfect Fit
+`1 313 500 2000 Cloth of Polishing
+`1 313 500 1500 Cloth of Polishing II
+`1 313 1000 5000 Shekinester's Cloth
+`1 313 750 5500 Steel Cloth
+`1 314 1500 15000 Fare's Coat of Protection
+`1 314 13500 87500 Invulnerable Coat of Arn
+`1 314 10000 65000 Invulnerable Coat of Arnd
+`1 314 2000 10000 Coat of the Seas
+`1 413 1000 9000 Dress of Amazement
+`1 414 1000 10000 Dress of Protection +1
+~1 10 414 0 1800 Cursed Dress of Protection -1
+~11 20 414 1000 7500 Dress of Protection +1 to Saves
+~21 50 414 1000 10000 Dress of Protection +1
+~51 70 414 2000 20000 Dress of Protection +2
+~71 86 414 3000 30000 Dress of Protection +3
+~87 94 414 4000 40000 Dress of Protection +4
+~95 100 414 5000 50000 Dress of Protection +5
+`1 499 2000 10000 Anagakok Fur
+`1 499 7000 35000 Fur of Elsewhere
+`1 499 5000 25000 Fur of Warmth
+`1 499 8000 40000 Zambi's Fur of Warmth
+`1 548 3000 30000 Loriell's Gown
+`1 549 3000 17500 Sehanine's Gown
+`1 755 4000 20000 Nemean Lion Skin
+`1 1009 1000 5000 Aba Robe of the Desert
+`1 1009 3000 15000 Aba Robe of Displacement
+`1 1009 1000 5000 Aba Robe of Protection +1
+~1 35 1009 1000 5000 Aba Robe of Protection +1
+~36 65 1009 2000 10000 Aba Robe of Protection +2
+~66 85 1009 3000 15000 Aba Robe of Protection +3
+~86 95 1009 4000 20000 Aba Robe of Protection +4
+~96 100 1009 5000 25000 Aba Robe of Protection +5
+`1 1009 6000 65000 Robe of the Archmagi
+~1 45 1009 6000 65000 White Robe of the Archmagi (Good)
+~46 75 1009 6000 65000 Grey Robe of the Archmagi (Neutral)
+~76 100 1009 6000 65000 Black Robe of the Archmagi (Evil)
+`1 1010 0 4000 Robe of Blending
+`1 1010 0 4000 Robe of Blending II
+`1 1010 3500 35000 Robe of Blending III
+`1 1010 0 0 Robe, Caftan of Protection
+~1 35 1010 1000 5000 Robe, Caftan of Protection +1
+~36 65 1010 2000 10000 Robe, Caftan of Protection +2
+~66 85 1010 3000 15000 Robe, Caftan of Protection +3
+~86 95 1010 4000 20000 Robe, Caftan of Protection +4
+~96 100 1010 5000 25000 Robe, Caftan of Protection +5
+`1 1010 9000 45000 Diirinka's Robe
+`1 1010 1000 5000 Robe of Drying
+`1 1010 4500 50000 Robe of Eyes
+`1 1011 4000 24000 Ghastrobe
+`1 1011 1000 5000 Robe of Holding with {11 30} Pockets
+`1 1011 3000 15000 H'Veyk's Robe of Immediate Access
+`1 1011 1000 5000 Jalleba Robe of Concealment
+`1 1011 4500 4000 Jalleba Robe of Eyes
+`1 1012 2750 25000 Jalleba Robe of Scintillating Colors
+`1 1013 0 3000 Kaftan Robe of Ogrishness
+`1 1013 0 30000 Marion's Robe of Blending
+`1 1013 6250 60000 Mellifleur's Robe of Stars
+`1 1014 0 1000 Robe of Powerlessness
+`1 1014 0 0 Robe of Protection
+~1 5 1014 6000 60000 Robe of Protection (AC: 6)
+~6 15 1014 5000 50000 Robe of Protection (AC: 5)
+~16 35 1014 4000 40000 Robe of Protection (AC: 4)
+~36 50 1014 3500 35000 Robe of Protection (AC: 3)
+~51 70 1014 3000 30000 Robe of Protection (AC: 2)
+~71 85 1014 2500 25000 Robe of Protection (AC: 1)
+~86 100 1014 2000 20000 Robe of Protection (AC: 0)
+`1 1014 6000 30000 Robe of Repetition
+`1 1015 3500 17500 Rock Robe
+`1 1015 2750 25000 Robe of Scintillating Color
+`1 1015 2750 25000 Robe of Scintillating Colors
+`1 1016 0 1000 Robe of Serration
+`1 1016 4000 12000 Robe of Stars
+`1 1016 1250 14000 Stone Robe
+`1 1016 4000 20000 Sulmish Robe of Magical Enhancement +1
+~1 50 1016 4000 20000 Sulmish Robe of Magical Enhancement +1
+~51 85 1016 6000 30000 Sulmish Robe of Magical Enhancement +2
+~86 100 1016 8000 40000 Sulmish Robe of Magical Enhancement +3
+`1 1017 9000 90000 Tvashtri's Golden Robe
+`1 1017 1500 8000 Robe of Useful Items
+`1 1017 1000 5000 Robe of Useful Items II
+`1 1017 100 500 Robe of Useless Items
+`1 1018 2000 20000 Robe of Vanishing
+`1 1018 2000 10000 Robe of Veluna
+`1 1018 0 1000 Robe of Vermin
+`1 1018 1000 5000 Robe of Warmth
+`1 1018 4000 45000 Wizard's Robe
+~1 60 1018 4000 45000 White Wizard's Robe (Lawful)
+~61 90 1018 4000 45000 Gray Wizard's Robe (Neutral)
+~91 100 1018 4000 45000 Black Wizard's Robe (Chaotic)
+`1 1018 10000 75000 Yama's Robe
+`1 1110 5000 50000 War Shirt (AC: 1)
+`1 1110 4000 40000 War Shirt (AC: 2)
+`1 1110 3500 35000 War Shirt (AC: 3)
+`1 1110 3000 30000 War Shirt (AC: 4)
+`1 1110 2500 25000 War Shirt (AC: 5)
+`1 1110 2000 20000 War Shirt (AC: 6)
+`1 1306 1000 5000 Stockings of Elf Summoning
+`1 1306 400 2000 Stockings of Mystery
+`1 1417 2000 15000 Tabard of the Mystics
+`1 1463 4000 40000 Tunic of Glory
+`1 1463 500 3500 Wizard's Tunic
+`1 1469 1000 5000 Veil of X-Ray Vision
+`1 1470 0 1200 Vest of Attraction
+`1 1470 1000 5000 Vest of Missile Protection
+`1 1470 1800 18000 Lesser Vestments of Power
+`1 1470 3000 30000 Greater Vestments of Power

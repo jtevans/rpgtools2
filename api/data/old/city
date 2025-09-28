@@ -1,0 +1,91 @@
+:COMMON
+1 100 Bat, Common
+4 32 Bird, Crow
+2 20 Bird, Flightless
+1 2 Bird, Owl
+3 32 Bird, Raven
+4 24 Bird, Vulture
+1 12 Cat, Small, Domestic
+4 16 Dog, Wild Dog
+3 18 Lycanthrope, Werewolf
+2 40 Rat, Common
+2 20 Rat, Giant
+:UNCOMMON
+3 18 Bat, Large
+1 12 Bat, Night Hunter
+4 15 Bird, Blood Hawk
+1 3 Brownie, Killmoulis
+2 5 Cat, Small, Wild
+1 6 Dog, War Dog
+2 16 Gargoyle, Common
+2 24 Ghoul, Common
+2 12 Gnoll, Common
+4 24 Lycanthrope, Wererat
+2 8 Lycanthrope, Wereraven
+5 20 Worm, Rotgrub
+2 12 Wraith
+:RARE
+1 1 Bat, Azmyth
+1 6 Bat, Sinister
+3 12 Broken One, Common
+4 16 Brownie
+1 20 Crawling Claw
+1 8 Dog, Moon
+2 16 Gargoyle, Margoyle
+1 4 Ghoul, Ghast
+1 8 Giant, Fire
+11 20 Giff
+1 1 Gloomwing, Moth
+1 4 Gnoll, Flind
+1 4 Lycanthrope, Werebat
+1 4 Lycanthrope, Werebear
+2 8 Lycanthrope, Wereboar
+1 8 Poltergeist
+1 4 Vampire
+1 2 Worm, Bookworm
+:VERY_RARE
+1 6 Arcane
+1 1 Arcane
+1 1 Banshee
+1 1 Bird, Owl, Talking
+1 3 Brain Mole
+1 4 Broken One, Greater
+1 2 Bulette (Land Shark)
+1 4 Centipede, Megalo-
+1 1 Crypt Thing
+1 1 Death Knight
+3 12 Doppleganger
+1 1 Elemental, Air
+1 1 Elemental, Earth
+1 1 Elemental, Fire
+1 1 Elemental, Air Kin, Aerial Servant
+1 3 Elemental, Water Kin, Water Weird
+1 1 Elemental, Composite, Tempest
+1 4 Feyr, Common
+1 1 Feyr, Great
+2 12 Fish, Lamprey, Land
+1 1 Ghost
+2 8 Githyanki
+1 6 Gremlin, Common
+1 4 Gremlin, Fremlin
+1 4 Gremlin, Galltrit
+1 1 Haunt
+1 1 Homonculous
+1 1 Imp, Common
+1 1 Imp, Quasit
+2 8 Imp, Mephit, Fire
+2 8 Imp, Mephit, Ice
+2 8 Imp, Mephit, Lava
+2 8 Imp, Mephit, Mist
+2 8 Imp, Mephit, Smoke
+2 8 Imp, Mephit, Steam
+1 1 Invisible Stalker
+1 1 Lich, Common
+1 1 Lich, Archlich
+1 1 Living Wall
+1 1 Lycanthrope, Werefox (Foxwoman)
+1 4 Ogre, Half-, Common
+1 1 Phantom
+1 3 Phoenix
+1 1 Revenant
+:

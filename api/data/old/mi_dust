@@ -1,0 +1,540 @@
+`1 26 500 2500 Air Spores
+`1 26 1000 5000 Chandrasakar's Air Spores
+`1 58 500 2500 Apple of Braggi
+`1 58 300 3000 Apple of Chaos
+`1 163 150 1500 Bead of Accuracy
+`1 163 150 1500 Beady Eye
+`1 164 200 300 Bead of Dew
+`1 164 200 1000 Bead of Force
+`1 164 250 400 Glass Bead
+~1 16 164 250 400 Glass Bead of Fire Resistance
+~17 32 164 250 400 Glass Bead of Flying
+~33 48 164 250 400 Glass Bead of Healing
+~49 64 164 250 400 Glass Bead of Invisibility
+~65 80 164 250 400 Glass Bead of Poison
+~81 100 164 250 400 Glass Bead of Speed
+`1 164 0 0 Bead of Oblivion
+`1 164 0 500 Pearl Bead
+`1 165 500 1000 Bead of Prayer (Atonement)
+~1 16 165 500 1000 Bead of Prayer (Atonement)
+~17 32 165 500 1000 Bead of Prayer (Damnation)
+~33 48 165 500 1000 Bead of Prayer (Hindrance)
+~49 64 165 500 1000 Bead of Prayer (Karma)
+~65 80 165 500 1000 Bead of Prayer (Response)
+~81 100 165 500 1000 Bead of Prayer (Succor)
+`1 165 200 300 Bead of Prayer II
+`1 165 500 2500 Bean of Ooze, Slime and Jelly
+~1 20 165 500 2500 Bean of Ooze, Slime and Jelly (Gray)
+~21 40 165 500 2500 Bean of Ooze, Slime and Jelly (Green)
+~41 60 165 500 2500 Bean of Ooze, Slime and Jelly (Orange)
+~61 80 165 500 2500 Bean of Ooze, Slime and Jelly (White)
+~81 100 165 500 2500 Bean of Ooze, Slime and Jelly (Yellow)
+`1 171 600 1200 Berry, Fireberries
+`1 171 300 900 Magical Berry
+`1 182 1000 5000 Bone of Animation
+`1 182 250 3000 Bone of Bruising
+`1 183 150 1500 Clapper Bone
+`1 183 0 0 Dragon Bone
+~1 8 183 0 2000 Cursed Dragon Bone
+~9 16 183 450 4500 Hatchling Dragon Bone
+~17 24 183 475 4750 Very Young Dragon Bone
+~25 32 183 500 5000 Young Dragon Bone
+~33 40 183 525 5250 Juvenile Dragon Bone
+~41 48 183 550 5500 Young Adult Dragon Bone
+~49 56 183 575 5750 Adult Dragon Bone
+~57 64 183 600 6000 Mature Adult Dragon Bone
+~65 70 183 625 6250 Old Dragon Bone
+~71 79 183 650 6500 Very Old Dragon Bone
+~80 86 183 675 6750 Venerable Dragon Bone
+~87 93 183 700 7000 Wyrm Dragon Bone
+~94 100 183 725 7250 Great Wyrm Dragon Bone
+`1 183 2000 10000 Bone of Slaying
+`1 184 1000 5000 Bone of Turning
+`1 231 600 2400 Buttercup's Bouquet
+`1 240 200 1000 Black Candle
+`1 240 0 0 Blinking Candle
+~1 5 240 2000 10000 Rare, Large Blinking Candle
+~6 50 240 400 2000 Normal, Large Blinking Candle
+~51 55 240 500 2500 Rare, Small Blinking Candle
+~56 100 240 100 500 Normal, Small Blinking Candle
+`1 240 200 1000 Blue Candle
+`1 240 0 0 Candle of Brilliance
+~1 5 240 0 250 Cursed, Large Candle of Brilliance
+~6 50 240 100 500 Normal, Large Candle of Brilliance
+~51 55 240 0 100 Cursed, Small Candle of Brilliance
+~56 100 240 50 250 Normal, Small Candle of Brilliance
+`1 240 0 0 Candle of Charming
+~1 50 240 400 2000 Large Candle of Charming
+~51 100 240 100 500 Small Candle of Charming
+`1 241 800 4000 Convocation Candle
+`1 241 0 0 Darkness Candle
+~1 50 241 200 4000 Large Darkness Candle
+~51 100 241 50 250 Small Darkness Candle
+`1 241 0 0 Defense Candle
+~1 50 241 600 3000 Large Defense Candle
+~51 100 241 150 750 Small Defense Candle
+`1 241 0 0 Disruption Candle
+~1 50 241 500 2500 Large Disruption Candle
+~51 100 241 125 625 Small Disruption Candle
+`1 241 0 0 Divination Candle
+~1 50 800 4000 Large Divination Candle
+~51 100 200 1000 Small Divination Candle
+`1 241 300 1500 Candle of Everburning
+`1 242 1000 5000 Candle of Evocation
+`1 242 0 0 Exploding Candle
+~1 50 242 0 200 Large Exploding Candle
+~51 100 242 0 50 Small Exploding Candle
+`1 242 0 0 Fireball Candle
+~1 50 242 500 2500 Large Fireball Candle
+~51 100 242 125 625 Small Fireball Candle
+`1 242 0 0 Flame Candle
+~1 50 242 200 1000 Large Flame Candle
+~51 100 242 50 250 Small Flame Candle
+`1 242 0 0 Flame Arrow Candle
+~1 50 242 400 2000 Large Flame Arrow Candle
+~51 100 242 100 500 Small Flame Arrow Candle
+`1 242 0 0 Flame Blade Candle
+~1 50 242 400 2000 Large Flame Blade Candle
+~51 100 242 100 500 Small Flame Blade Candle
+`1 242 200 1000 Gold Candle
+`1 243 1000 5000 Candle of Invocation
+`1 243 800 4000 Methven Candle
+`1 243 1000 9000 Noora's Candle of Propitiousness
+`1 243 0 250 Candle of Powerlessness
+`1 243 750 3750 Candle of Propitiousness
+`1 243 200 1000 Candle of Protection
+`1 244 0 0 Candle of Protection II
+~1 50 244 700 3500 Large Candle of Protection II
+~51 100 244 175 875 Small Candle of Protection II
+`1 244 200 1000 Purple Candle
+`1 244 0 0 Pyrotechnic Candle
+~1 50 244 200 1000 Large Pyrotechnic Candle
+~51 100 244 50 250 Small Pyrotechnic Candle
+`1 244 200 1000 Red Candle
+`1 244 0 0 Reflection Candle
+~1 50 244 300 1500 Large Reflection Candle
+~51 100 244 75 375 Small Reflection Candle
+`1 244 0 0 Sanctuary Candle
+~1 50 244 700 3500 Large Sanctuary Candle
+~51 100 244 175 875 Small Sanctuary Candle
+`1 245 0 0 Shielding Candle
+~1 5 245 1500 7500 Improved Large Shielding Candle
+~6 50 245 1000 5000 Normal Large Shielding Candle
+~51 55 245 300 1500 Improved Small Shielding Candle
+~56 100 245 200 1000 Normal Small Shielding Candle
+`1 245 100 500 Smoke Detection Candle
+`1 245 0 0 Candle of Spells
+~1 50 245 800 4000 Large Candle of Spells
+~51 100 245 200 1000 Small Candle of Spells
+`1 245 0 0 Survival Candle
+~1 5 245 300 1500 Improved, Large Survival Candle
+~6 50 245 200 1000 Normal, Large Survival Candle
+~51 55 245 75 375 Improved, Small Survival Candle
+~56 100 245 50 250 Normal, Small Survival Candle
+`1 245 2000 10000 Candle of Transference
+`1 245 0 0 Unfailing Light Candle
+~1 50 245 100 500 Large Unfailing Light Candle
+~51 100 245 25 125 Small Unfailing Light Candle
+`1 245 0 0 Candle of Vapors
+~1 10 245 300 1500 Large Candle of Vapors (Insanity Gas)
+~11 20 245 300 1500 Large Candle of Vapors (Poison)
+~21 30 245 300 1500 Large Candle of Vapors (Sleep)
+~31 40 245 300 1500 Large Candle of Vapors (Smoke)
+~41 50 245 300 1500 Large Candle of Vapors (Sweet Smell)
+~51 60 245 75 375 Small Candle of Vapors (Insanity Gas)
+~61 70 245 75 375 Small Candle of Vapors (Poison)
+~71 80 245 75 375 Small Candle of Vapors (Sleep)
+~81 90 245 75 375 Small Candle of Vapors (Smoke)
+~91 100 245 75 375 Small Candle of Vapors (Sweet Smell)
+`1 246 0 0 Visibility Candle
+~1 50 246 400 2000 Large Visibility Candle
+~51 100 246 100 500 Small Visibility Candle
+`1 246 200 1000 Yellow Candle
+`1 284 200 1000 Cheese of Odors
+`1 284 0 500 Cheese of Vile Odors
+`1 414 250 750 Dust of Absorption
+`1 414 200 1000 Dust of Adhering
+`1 414 100 500 Allergy Dust
+`1 414 1000 5000 Dust of Appearance
+`1 415 20 100 Dust of Blandness
+`1 415 20 100 Dust of Piquantness
+`1 415 1250 5000 Dust of Blending, Uses: {2 12}
+`1 419 400 1200 Decoy Dust
+`1 419 1000 5000 Dust of Disappearance
+`1 419 250 750 Dust of Dryness
+`1 419 250 500 Dust of Dullness
+`1 420 250 500 Feather Dust
+`1 420 300 900 Fertilization Dust
+`1 420 200 600 Fodder Dust, Uses: {4 13}  (XP & GP values are per use.)
+`1 420 1500 4000 Dust of Forgetfulness
+`1 420 800 1600 Green Sleeping Dust
+`1 420 500 1500 Dust of Illusion, Uses: {11 20}
+`1 421 1000 2000 Leech Dust
+`1 421 1500 3000 Malto's Dust of Mind Dulling
+`1 421 1000 3000 Dust of Mind Dulling
+`1 421 100 500 Dust of Opposition
+`1 421 500 2500 Paralyzation Dust
+`1 422 1000 4000 Revealing Dust
+`1 422 1000 5000 Rust Dust, Uses: {1 10}
+`1 422 400 800 Sleep Dust
+`1 422 400 800 Dust of Sleeping
+`1 422 50 250 Small Bird Repulsion Dust
+`1 423 0 600 Sneezing Dust
+`1 423 0 1000 Sneezing Dust II
+`1 423 0 1000 Dust of Sneezing and Choking
+`1 423 95 150 Sparkling Dust, Uses: {5 20}
+`1 423 500 2000 Dust of Tracelessness, Uses: {13 24}
+`1 423 200 600 Dust of Trail Dispersion, Uses: {5 8}
+`1 423 2500 5000 Violet Dindower's Dust of Disappearance
+`1 429 4000 20000 Antimagic Egg
+`1 430 2000 10000 Apprentice's Egg
+`1 430 150 900 Black Egg
+`1 430 1200 6000 Cloudkill Egg
+`1 430 500 5000 Black Egg of Desire
+~1 20 430 500 5000 Black Egg of Desire
+~21 40 430 900 10000 Bone Egg of Desire
+~41 60 430 800 9000 Crystal Egg of Desire
+~61 80 430 600 4000 Golden Egg of Desire
+~81 100 430 700 3500 Scarlet Egg of Desire
+`1 431 2000 10000 Disentigration Egg
+`1 431 300 3000 Egg of Distraction
+`1 431 00 000 Egg of Dragon Breath
+~1 8 431 100 1000 Egg of Hatchling Dragon Breath
+~9 16 431 200 2000 Egg of Very Young Dragon Breath
+~17 24 431 400 4000 Egg of Young Dragon Breath
+~25 32 431 800 8000 Egg of Juvenile Dragon Breath
+~33 40 431 1600 16000 Egg of Young Adult Dragon Breath
+~41 48 431 3200 32000 Egg of Adult Dragon Breath
+~49 56 431 6400 64000 Egg of Mature Adult Dragon Breath
+~57 64 431 12800 128000 Egg of Old Dragon Breath
+~65 72 431 25600 256000 Egg of Very Old Dragon Breath
+~73 80 431 51200 512000 Egg of Venerable Dragon Breath
+~81 88 431 102400 1024000 Egg of Wyrm Dragon Breath
+~89 100 431 204800 2048000 Egg of Great Wyrm Dragon Breath
+`1 432 1000 8000 Egg, Dreamhold
+`1 432 350 3500 Egg of Facination
+`1 433 1000 5000 Flame Egg
+`1 433 800 4000 Fog Cloud Egg
+`1 433 600 4000 Golden Egg
+`1 434 200 2000 Gray Egg
+`1 434 500 2500 Guardian Egg
+`1 434 300 1500 Hard-Boiled Egg
+`1 435 500 5000 Imprisonment Egg
+`1 435 0 3000 Incubalum Egg
+`1 436 1000 5000 Khenel's Philosopher's Egg
+`1 436 0 0 Mishakal's Token Egg
+`1 436 200 400 Multicolor Egg
+`1 436 1000 5000 Philosopher's Egg
+`1 436 3000 15000 Egg of the Pheonix
+`1 438 400 900 Pink Egg
+`1 438 250 1250 Egg of Reason
+`1 438 0 400 Rotten Egg
+`1 439 0 500 Egg of Shattering
+`1 439 1000 10000 Egg Shell of Protection
+`1 439 500 5000 Egg Shell of Protection vs. Birds
+`1 439 500 5000 Egg Shell of Protection vs. Dragons
+`1 439 500 5000 Egg Shell of Protection vs. Evil
+`1 439 500 5000 Egg Shell of Protection vs. Fiends
+`1 439 500 5000 Egg Shell of Protection vs. Good
+`1 439 500 5000 Egg Shell of Protection vs. Humanoids
+`1 439 500 5000 Egg Shell of Protection vs. Humans
+`1 439 500 5000 Egg Shell of Protection vs. Lycanthropes
+`1 439 500 5000 Egg Shell of Protection vs. Planars
+`1 439 500 5000 Egg Shell of Protection vs. Scalekind
+`1 439 500 5000 Egg Shell of Protection vs. Undead
+`1 439 200 500 Soft Boiled Egg
+`1 439 200 500 Stinging Cloud Egg
+`1 439 700 1200 Turquoise Egg
+`1 440 300 3000 Egg of Wonder (Black Bear)
+~1 8 440 300 3000 Egg of Wonder (Black Bear)
+~9 16 440 300 3000 Egg of Wonder (Boar)
+~17 24 440 800 8000 Egg of Wonder (Draco Lizard)
+~25 32 440 600 6000 Egg of Wonder (Gecko Lizard)
+~33 40 440 100 1000 Egg of Wonder (Giant Bat)
+~41 48 440 300 3000 Egg of Wonder (Giant Ferret)
+~49 56 440 600 6000 Egg of Wonder (Grizzly Bear)
+~57 64 440 500 5000 Egg of Wonder (Mountain Lion)
+~65 72 440 500 5000 Egg of Wonder (Panther)
+~73 80 440 600 6000 Egg of Wonder (Racer Snake)
+~81 88 440 100 1000 Egg of Wonder (Rock Baboon)
+~89 100 440 200 2000 Egg of Wonder (Wolf)
+`1 447 300 1500 Eternal Peanut
+`1 466 300 1500 Feathertoken
+`1 466 800 4000 Lapland Feather
+`1 466 3250 17500 Plumalitter Feather
+`1 466 500 2000 Quaal's Feather Token (Anchor)
+~1 5 466 500 2000 Quaal's Feather Token (Anchor)
+~6 10 466 1000 5000 Quaal's Feather Token (Arbor)
+~11 15 466 1000 6000 Quaal's Feather Token (Bind)
+~16 20 466 600 3000 Quaal's Feather Token (Bird)
+~21 25 466 500 5000 Quaal's Feather Token (Bridge)
+~26 30 466 1000 5000 Quaal's Feather Token (Chest)
+~31 35 466 1000 2000 Quaal's Feather Token (Crown)
+~36 40 466 1000 7000 Quaal's Feather Token (Eye)
+~41 45 466 700 4000 Quaal's Feather Token (Fan)
+~46 50 466 500 1000 Quaal's Feather Token (Finger)
+~51 55 466 500 2000 Quaal's Feather Token (Flame)
+~56 60 466 1000 4000 Quaal's Feather Token (Jug)
+~61 65 466 500 7000 Quaal's Feather Token (Key)
+~66 70 466 500 2000 Quaal's Feather Token (Spoon)
+~71 75 466 1600 5500 Quaal's Feather Token (Stone)
+~76 80 466 800 5000 Quaal's Feather Token (Swan Boat)
+~81 85 466 1000 6000 Quaal's Feather Token (Sword)
+~86 90 466 900 6000 Quaal's Feather Token (Tree)
+~91 95 466 1000 7000 Quaal's Feather Token (Whip)
+~96 100 466 1000 6000 Quaal's Feather Token (Wing)
+`1 469 1000 7000 Quaal's Mystical Feather Token
+`1 480 3000 15000 Finger of Commanding
+`1 480 4000 20000 Finger of the Master Thief
+`1 480 8000 40000 Thumb of the Master Thief
+`1 481 1000 8000 Fingernail of Reading
+`1 499 100 1000 Four-Leaf Clover
+`1 501 200 800 Gas of Dreadful Sleep
+`1 549 600 1800 Grains of Discomfort
+`1 611 500 2500 Incense of Meditation
+`1 611 0 1000 Incense of Obsession
+`1 612 0 1200 Shahpesh's Incense of Obsession
+`1 613 300 5000 \Ioun Stone, Balian's Yellow
+`1 614 300 5000 \Ioun Stone, Blue-Green Spindle
+`1 614 300 5000 \Ioun Stone, Brass Lozenge
+`1 614 300 5000 \Ioun Stone, Bright Silver Cylinder
+`1 614 300 5000 \Ioun Stone, Bright White Rectangle
+`1 614 300 5000 \Ioun Stone, Brown Rhomboid
+`1 614 300 5000 \Ioun Stone, Cerulean Blue Rhomboid
+`1 614 300 5000 \Ioun Stone, Clear Pink Sphere
+`1 614 300 5000 \Ioun Stone, Clear Prism
+`1 615 300 5000 \Ioun Stone, Clear Sphere
+`1 615 300 5000 \Ioun Stone, Copper Rectangle
+`1 615 300 5000 \Ioun Stone, Deep Black Sphere
+`1 615 300 5000 \Ioun Stone, Deep Purple Prism
+`1 615 300 5000 \Ioun Stone, Deep Red Sphere
+`1 615 300 5000 \Ioun Stone, Flickering White Snowflake
+`1 615 300 5000 \Ioun Stone, Gold Ellipsoid
+`1 615 300 5000 \Ioun Stone, Green Sphere
+`1 615 300 5000 \Ioun Stone, Incadescent Blue Sphere
+`1 615 300 5000 \Ioun Stone, Light Blue Prism
+`1 616 300 5000 \Ioun Stone, Maroon Star
+`1 616 300 5000 \Ioun Stone, Orange Cube
+`1 616 300 5000 \Ioun Stone, Pale Green Ellipsoid
+`1 616 300 5000 \Ioun Stone, Pale Lavender Spindle
+`1 616 300 5000 \Ioun Stone, Pale Yellow Lozenge
+`1 616 300 5000 \Ioun Stone, Pearly White Prism
+`1 616 300 5000 \Ioun Stone, Pink Ellipsoid
+`1 616 300 5000 \Ioun Stone, Pink and Green Ellipsoid
+`1 616 300 5000 \Ioun Stone, Puce Cube
+`1 616 300 5000 \Ioun Stone, Pulsing Red Star
+`1 617 300 5000 \Ioun Stone, Pure White Octahedron
+`1 617 300 5000 \Ioun Stone, Rainbow Ellipsoid
+`1 617 300 5000 \Ioun Stone, Scarlet and Blue Sphere
+`1 617 300 5000 \Ioun Stone, Silver Rod
+`1 617 300 5000 \Ioun Stone, Silver Sphere
+`1 617 300 5000 \Ioun Stone, Silvery Mirror Cube
+`1 617 300 5000 \Ioun Stone, Soft Black Rectangle
+`1 617 300 5000 \Ioun Stone, Yellow Sphere
+`1 634 400 2000 Kulver-Tam's Fruit of Healing
+`1 696 400 2000 Cat's Eye Marble
+`1 696 500 2500 Marble of Cleanliness
+`1 696 600 3000 Granite Marble
+`1 696 1000 5000 Marble of Quarry
+`1 696 5000 25000 Warp Marble
+`1 782 5 25 Sweet Onion
+`1 835 250 800 Pie of Four-and-Twenty Blackbirds
+`1 835 0 700 Pie of Raspberries
+`1 835 700 2100 Rhubarb Pie
+`1 839 1600 8000 Plumastone
+`1 899 100 500 +Absinthe Powder
+`1 899 1000 5000 +African Ju Ju Powder
+`1 899 150 750 +Allspice Powder
+`1 899 250 1000 +Allspice Powder II
+`1 899 300 1500 +Anger Powder
+`1 899 100 500 +Anise Powder
+`1 899 200 400 +Aphrodesia Powder
+`1 899 300 550 +Arabian Nights Powder
+`1 899 200 400 +Attraction Powder
+`1 899 250 750 +Bats' Blood Powder
+`1 899 1000 3000 +Bendover's Powder
+`1 899 600 1800 +Bergamot's Powder
+`1 899 700 2100 +Black Arts Powder
+`1 900 1000 5000 +Powder of the Black Veil
+`1 900 100 300 +Bottom Powder #20
+`1 900 200 400 +Bruno's Curse Powder
+`1 900 300 900 +Buddha Powder Type I
+`1 900 600 1800 +Buddha Powder Type II
+`1 900 900 2700 +Buddha Powder Type III
+`1 900 100 300 +Bull's Powder
+`1 900 150 450 +Carnation Powder
+`1 900 100 250 +Chocolate Powder
+`1 900 125 650 +Citronella Powder
+`1 900 100 300 +Civet Powder
+`1 900 100 300 +Cleo May Powder
+`1 900 500 2500 +Powder of Coagulation
+`1 901 500 900 +Powder of Comliness
+`1 901 300 900 +Commanding Powder
+`1 901 400 1200 +Concentration Powder
+`1 901 900 2700 +Confusion Powder
+`1 901 500 1500 +Conquering Glory Powder
+`1 901 600 1800 +Controlling Powder
+`1 901 100 300 +Crab Apple Powder
+`1 901 600 1800 +Crossing Powder
+`1 902 100 300 +Cumin Seed Powder
+`1 902 100 300 +Cypress Seed Powder
+`1 902 300 900 +Damnation Powder
+`1 902 500 1500 +Desire Eme's Powder
+`1 902 300 900 +Doas Isay's Powder
+`1 902 600 1800 +Double Cross Powder
+`1 902 500 1500 +Dragon's Blood Powder
+`1 902 600 1800 +Dream Powder
+`1 902 1500 4500 +Dypshez's Powder of the Black Veil
+`1 902 500 900 +Elixer Powder
+`1 902 900 2700 +Enchantment Powder
+`1 903 200 600 +Eucalyptus Powder
+`1 903 300 900 +Eve Powder
+`1 903 200 600 +Evil Eye Powder
+`1 903 300 750 +Excisement Powder
+`1 903 200 600 +Exodus Powder
+`1 903 250 750 +Five Finger Grass Powder
+`1 903 200 600 +Frangi Pani Powder
+`1 903 100 400 +Galangale's Powder
+`1 903 200 600 +Gardenia Powder
+`1 903 300 900 +Getaway's Powder
+`1 903 100 200 +Good Taste Powder
+`1 903 100 500 +Grape Powder
+`1 903 750 1800 +Powder of the Hero's Heart
+`1 904 600 1800 +High Conquering Powder
+`1 904 500 2500 +High John the Conqueror's Powder
+`1 904 250 750 +Hindu Grass Powder
+`1 904 100 300 +Honeysuckle Powder
+`1 904 300 900 +Hypnotic Powder
+`1 904 200 600 +Hysspo Powder
+`1 904 400 900 +Powder of Images
+`1 905 200 600 +Jamaica Powder
+`1 905 300 900 +Jezebel Powder
+`1 905 900 1900 +Jinx Removing Powder
+`1 905 300 900 +Kludde Powder
+`1 905 100 300 +Lavender Powder
+`1 905 300 900 +Life Powder
+`1 905 200 600 +Lily Powder of the Valley
+`1 905 1000 2500 +Powder of Magic Detection
+`1 905 150 450 +Magnolia Powder
+`1 905 400 1200 +Manpower Powder
+`1 905 100 300 +Mercury Powder
+`1 906 100 500 +Mojo Powder
+`1 906 200 600 +Moon Powder
+`1 906 100 400 +Musk Powder
+`1 906 200 600 +Narcissus Powder
+`1 906 200 600 +New Life Powder
+`1 906 300 900 +Nine Mystery Powder
+`1 906 400 1200 +Obeah Powder
+`1 906 1000 4000 +Oak-in-Acorn Powder
+`1 906 500 1500 +Powder of Obsession
+`1 907 200 600 +Olibanum Powder
+`1 907 750 2250 +Power Powder
+`1 907 200 600 +Primrose Powder
+`1 907 300 900 +Purification Powder
+`1 907 1000 2500 +Puchezema's Powder of Edible Objects
+`1 907 1000 2500 +Purwuvok's Powder of the Hero's Heart
+`1 909 500 1500 +Reversibility Powder
+`1 909 200 600 +Rosemary Powder
+`1 909 100 300 +Rue Powder
+`1 909 300 900 +Sandalwood Powder
+`1 909 0 750 +Smoke Powder
+`1 910 250 750 +Snake Powder
+`1 910 300 900 +Solomon's Powder
+`1 910 300 900 +Spikenard Powder
+`1 910 300 900 +Spirit Powder
+`1 910 600 1800 +Time Powder
+`1 910 900 2700 +Trinity Powder
+`1 910 400 1200 +Verbena Powder
+`1 910 300 900 +Vibration Powder
+`1 910 100 300 +Virgin Olive Powder
+`1 911 900 1800 +Vision Powder
+`1 911 200 600 +Voodoo Powder
+`1 911 500 1500 +Will Power Powder
+`1 911 100 300 +Wintergreen Powder
+`1 911 900 2700 +Wishing Powder
+`1 911 600 1800 +Witch's Powder
+`1 911 300 900 +Xyz Powder
+`1 911 300 900 +Ylang Ylang Powder
+`1 911 100 300 +Zodiac Powder
+`1 911 250 750 +Zula Zula Powder
+`1 919 250 400 Puppy Putty
+`1 931 100 500 Rakasta Tea
+`1 1020 12000 60000 Death Rock of the Darad S'tin
+`1 1020 4000 20000 Kereenyaga Rock
+`1 1021 0 0 Pet Rock
+~1 40 1021 0 1000 Cursed Pet Rock
+~41 100 1021 2000 15000 Pet Rock
+`1 1045 0 0 Rose of Eternal Slumber
+`1 1045 1500 5250 Wreath of Roses of Eternal Slumber
+`1 1045 3000 10500 Bush of Roses of Eternal Slumber
+`1 1045 0 0 Rose of Ravenloft
+`1 1046 500 5000 Rose of Forgetfulness
+`1 1052 900 2700 Sand of Truth
+`1 1089 200 1000 Dragon Lily Seed
+`1 1089 1500 7500 Seed, Enchanted Cherry Pit (Brown)
+`1 1089 2000 10000 Seed, Enchanted Cherry Pit (Gold)
+`1 1089 1600 8000 Seed, Enchanted Cherry Pit (Red)
+`1 1089 2500 10000 Fireseed
+`1 1090 400 2000 Seed of Growth
+`1 1090 200 2000 Square-meal Seed of Damage Curing
+`1 1090 200 2000 Square-meal Seed of Disease Curing
+`1 1090 10 100 Square-meal Seed (Normal)
+`1 1090 4000 20000 Hill Seed
+`1 1090 8000 40000 Mountain Seed
+`1 1090 1500 7500 Sun Seed
+`1 1091 200 1000 Trollflower, Seed
+`1 1091 1000 5000 Seed of Wealth
+`1 1122 250 750 Smoke of Fire Quenching
+`1 1122 200 800 Sleep Smoke
+`1  0 0 Soap of Abrasion
+`1  0 0 Soap of Washing
+`1  0 0 Stone, Beauregard's Beautiful Bauble
+`1  0 0 Bimbomushi Stone
+`1  0 0 Bloodstone of Fistandantilus
+`1  0 0 Chardalyn Stone
+`1  0 0 Stone of Cold Immunity
+`1  0 0 Stone of Continual Light
+`1  0 0 Stone of Controlling Earth Elementals
+`1  0 0 Coruskian Stone
+`1  0 0 Cursed Well Stone
+`1  0 0 Dream Stone
+`1  0 0 Stone of Everburning
+`1  0 0 Finder's Stone
+`1  0 0 Glowstone
+`1  0 0 Stone of Good Luck
+`1  0 0 Stone of Gul and Thiondar
+`1  0 0 Honing Stone
+`1  0 0 Myste's Stone of Mixed Luck
+`1  0 0 Stone of Mysterious Sounds
+`1  0 0 Nanorion Stone
+`1  0 0 Oval Stone of Tzolo's Guardian
+`1  0 0 Philosopher's Stone
+`1  0 0 Philosopher's Stone II
+`1  0 0 Stone of Sampling
+`1  0 0 Stone of Shielding
+`1  0 0 Stone of Silence
+`1  0 0 Spongestone
+`1  0 0 Travel Stone
+`1  0 0 Wardstone
+`1  0 0 Warfu Stone
+`1  0 0 Stone of Warmth
+`1  0 0 Stone of Weight
+`1  0 0 Stone of the Well
+`1  0 0 Tanglefoot
+`1  0 0 Tanglevine Root
+`1  0 0 Tart of Accusation
+`1  0 0 Tart of Enticement
+`1  0 0 Tart of a Summer's Day
+`1  0 0 Thorn of Sleep
+`1  0 0 Tooth of Dahlver-nar
+`1  0 0 Dragon Tooth
+`1  0 0 Sweet Tooth
+`1  0 0 Wax of Careful Hearing
+`1  0 0 Ceiling Wax
+`1  0 0 Wax of Fabrication
+`1  0 0 Wax of Hearing
+`1  0 0 Sealing Wax
+`1  0 0 Wax of Waning
+`1  0 0 Rapture Weed
+`1  0 0 Weed of the Witch
+`1  0 0 Zweiback of Zymurgy

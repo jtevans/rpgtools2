@@ -1,0 +1,129 @@
+`1 803 200 1000 Paper of Forms
+`1 803 300 1500 Paper of Writing
+`1 803 600 3000 Parchment of Looping
+`1 803 150 1500 Parchment of Monster Holding
+`1 804 1200 6000 Parchment of Selective Reading
+`1 804 1000 5000 Parchment of Self Protecting
+`1 804 500 5000 Parchment of Spell Stealing
+~1 12 804 500 5000 One Parchment of Spell Stealing
+~13 20 804 500 5000 Two Parchment of Spell Stealing
+~21 28 804 500 5000 Three Parchment of Spell Stealing
+~29 36 804 500 5000 Four Parchment of Spell Stealing
+~37 44 804 500 5000 Five Parchments of Spell Stealing
+~45 52 804 500 5000 Six Parchments of Spell Stealing
+~53 60 804 500 5000 Seven Parchments of Spell Stealing
+~61 68 804 500 5000 Eight Parchments of Spell Stealing
+~69 76 804 500 5000 Nine Parchments of Spell Stealing
+~77 84 804 500 5000 Ten Parchments of Spell Stealing
+~85 92 804 500 5000 Eleven Parchments of Spell Stealing
+~93 100 804 500 5000 Twelve Parchments of Spell Stealing
+`1 1070 1200 6000 $Scroll of Animal Growth
+`1 1070 2500 25000 $Ballant's Scroll
+`1 1071 3000 15000 $Scroll of Communication
+`1 1071 4000 20000 $Scroll of Creation
+`1 1071 300 1500 $Scroll of Curate's
+`1 1071 0 500 %Cursed Scroll
+`1 1072 0 750 $Cursed Scroll of Amber
+`1 1072 3000 15000 $Scroll of the Death Servant
+`1 1073 1000 5000 $Scroll of Delay
+`1 1073 1500 4500 $Scroll of Domination
+`1 1073 1000 4500 $Scroll of the Efreeti
+`1 1073 1000 5000 $Scroll of Equipment
+`1 1073 1600 9000 $Scroll of Erasing
+`1 1074 0 0 $Glyph Scroll:
+~1 25 1074 100 300 $Glyph Scroll: 1 Glyph
+~26 50 1074 200 600 $Glyph Scroll: 2 Glyphs
+~51 75 1074 300 900 $Glyph Scroll: 3 Glyphs
+~76 100 1074 400 1200 $Glyph Scroll: 4 Glyphs
+`1 1074 2000 7000 $Scroll of Ha Rahni
+`1 1075 500 2500 $Scroll of Illumination
+`1 1075 700 3500 $Scroll of Mapping
+`1 1075 1200 6000 $Scroll of Mapping II
+`1 1075 3000 15000 $Mondasso's Automated Spell Scroll
+`1 1076 2500 7500 $Nether Scroll
+`1 1076 2000 10000 $Scroll of Portals
+`1 1076 2500 7500 $Scroll of Protection from Acid
+`1 1077 2000 6000 $Scroll of Protection from Air
+`1 1077 1000 6000 $Scroll of Protection from Baatezu
+`1 1077 2000 6000 $Scroll of Protection from Cold
+`1 1077 2000 6000 $Scroll of Protection from Divination
+`1 1077 2000 6000 $Scroll of Protection from Dragon Breath
+`1 1077 1500 6000 $Scroll of Protection from Earth
+`1 1077 1500 4500 $Scroll of Protection from Electricity
+`1 1077 1500 4500 $Scroll of Protection from Elementals
+~1 15 1077 1500 4500 $Scroll of Protection from Air Elementals
+~16 30 1077 1500 4500 $Scroll of Protection from Earth Elementals
+~31 45 1077 1500 4500 $Scroll of Protection from Fire Elementals
+~46 60 1077 1500 4500 $Scroll of Protection from Water Elementals
+~61 100 1077 2000 6000 $Scroll of Protection from All Elementals
+`1 1078 500 2500 $Scroll of Protection from Felines
+`1 1078 2000 6000 $Scroll of Protection from Fire
+`1 1078 2000 6000 $Scroll of Protection from Gas
+`1 1078 2000 10000 $Scroll of Protection from Genies
+~1 20 1078 2000 10000 $Scroll of Protection from Dao Genies
+~21 37 1078 2000 10000 $Scroll of Protection from Djinni Genies
+~38 54 1078 2000 10000 $Scroll of Protection from Efreeti Genies
+~55 71 1078 2000 10000 $Scroll of Protection from Marid Genies
+~72 88 1078 2000 10000 $Scroll of Protection from Any Tasked Genies
+~89 100 1078 2000 10000 $Scroll of Protection from All Genies
+`1 1078 1000 5000 $Scroll of Protection from Heat
+`1 1078 1500 4500 $Scroll of Protection from Illusions
+`1 1079 1000 3000 $Scroll of Protection from Lycanthropes
+~1 5 1079 1000 3000 $Scroll of Protection from Werebears
+~6 10 1079 1000 3000 $Scroll of Protection from Wereboars
+~11 20 1079 1000 3000 $Scroll of Protection from Wererats
+~21 25 1079 1000 3000 $Scroll of Protection from Weretigers
+~26 40 1079 1000 3000 $Scroll of Protection from Werewolves
+~41 98 1079 1000 3000 $Scroll of Protection from All Lycanthropes
+~99 100 1079 1000 3000 $Scroll of Protection from Shapechangers
+`1 1079 2500 6500 $Scroll of Protection from Magic
+`1 1079 1000 3000 $Scroll of Protection from Magical Weapons
+`1 1079 1000 3000 $Scroll of Protection from Nonmagical Weapons
+`1 1079 1500 4500 $Scroll of Protection from Paralyzation
+`1 1079 2000 6000 $Scroll of Protection from Petrification
+`1 1079 1000 3000 $Scroll of Protection from Plants
+`1 1080 1000 3000 $Scroll of Protection from Poison
+`1 1080 1500 4500 $Scroll of Protection from Possession
+`1 1080 1500 7500 $Scroll of Protection from Shapechangers
+`1 1080 2000 6000 $Scroll of Protection from Spirits
+`1 1080 1000 6000 $Scroll of Protection from Tanar'ri
+`1 1080 2000 6000 $Scroll of Protection from Traps
+~1 50 1080 2000 6000 $Scroll of Protection from Mechanical Traps
+~51 80 1080 2000 6000 $Scroll of Protection from Magical Traps
+~81 100 1080 3000 9000 $Scroll of Protection from All Traps
+`1 1081 1500 4500 $Scroll of Protection from Undead
+~1 10 1081 1500 4500 $Scroll of Protection from Undead (Ghasts)
+~11 20 1081 1500 4500 $Scroll of Protection from Undead (Ghosts)
+~21 30 1081 1500 4500 $Scroll of Protection from Undead (Ghouls)
+~31 40 1081 1500 4500 $Scroll of Protection from Undead (Shadows)
+~41 50 1081 1500 4500 $Scroll of Protection from Undead (Skeletons)
+~51 60 1081 1500 4500 $Scroll of Protection from Undead (Spectres)
+~61 70 1081 1500 4500 $Scroll of Protection from Undead (Wights)
+~71 80 1081 1500 4500 $Scroll of Protection from Undead (Wraiths)
+~81 90 1081 1500 4500 $Scroll of Protection from Undead (Vampires)
+~91 100 1081 1500 4500 $Scroll of Protection from Undead (Zombies)
+`1 1081 1500 4500 $Scroll of Protection from Water
+`1 1081 2000 6000 $Scroll of Questioning
+`1 1082 400 2000 $Scroll of Recovery
+`1 1082 1000 3000 $Scroll of Repetition
+`1 1083 2000 6000 $Scroll of Return
+`1 1083 1500 6000 $Rhialle's Scroll
+`1 1083 2000 6000 $Sand Scroll
+`1 1083 2000 6000 $Sea Scroll
+`1 1083 1000 5000 $Scroll of Seeing
+`1 1083 1500 4500 $Scroll of Shelter
+`1 1084 2000 10000 $Scroll of Spell Catching
+~1 40 1084 2000 10000 $Scroll of Spell Catching: 1st-2nd level spells
+~41 70 1084 4000 20000 $Scroll of Spell Catching: 1st-4th level spells
+~71 90 1084 6000 30000 $Scroll of Spell Catching: 1st-6th level spells
+~91 100 1084 8000 40000 $Scroll of Spell Catching: 1st-8th level spells
+`1 1084 2500 7500 $Scroll of the Stellar Path
+`1 1084 1000 6000 $Scroll of the Stellar Path II
+`1 1085 0 1000 $Suggestion Scroll
+`1 1085 3000 7000 $Tatoo Scroll
+`1 1085 100 1000 $Scroll of Transmution
+`1 1085 300 3000 $Scroll of Trapping
+`1 1086 600 6000 $Scroll of Truth
+`1 1086 2000 6000 $Scroll of Wind Magic
+`1 1086 400 2000 $Scroll of Wizards
+`11 1068 0 0 ^Spell Scroll

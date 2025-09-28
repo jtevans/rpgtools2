@@ -1,0 +1,370 @@
+`1 123 2500 25000 Bag, Backpack of Holding
+`1 123 1000 5000 Bag of Beans with {3 12} beans
+`1 124 1000 5000 Bag of Beans II with {3 12} beans
+`1 132 0 1250 Bag, Beltpouch of Disappearance
+`1 132 3000 15000 Bag of Bones
+~1 66 132 3000 15000 Normal Bag of Bones
+~67 100 132 3000 15000 Replinishing Bag of Bones
+`1 133 1500 15000 Bag, Bucknard's Everfull Purse Type I
+~1 50 133 1500 15000 Bag, Bucknard's Everfull Purse Type I
+~51 90 133 2500 25000 Bag, Bucknard's Everfull Purse Type II
+~91 100 133 4000 40000 Bag, Bucknard's Everfull Purse Type III
+`1 133 0 1500 Bag of Devouring
+`1 133 0 1500 Bag, Devouring Pouch
+`1 134 4000 40000 Bag of Duplication, Charges: {4 32}
+`1 134 1500 2500 Ever-Full Bag of Seeds
+`1 134 2250 20000 Bag of Eyes
+`1 134 500 2500 Bag, Feedback of Plenty
+`1 134 700 3500 Bag, Food Pouch
+`1 134 5000 25000 Bag, Henry's Carpetbag of Holding
+`1 135 3000 30000 Bag, Heward's Handy Haversack
+`1 135 1000 5000 Bag of Holding (Weight: 5 - Weight Limit: 50)
+~1 28 135 1000 5000 Bag, Bag of Holding (Weight: 5 - Weight Limit: 50)
+~29 43 135 2000 10000 Bag, Bag of Holding (Weight: 10 - Weight Limit: 100)
+~44 57 135 3000 15000 Bag, Bag of Holding (Weight: 10 - Weight Limit: 150)
+~58 69 135 4000 20000 Bag, Bag of Holding (Weight: 15 - Weight Limit: 200)
+~70 79 135 5000 25000 Bag, Bag of Holding (Weight: 15 - Weight Limit: 250)
+~80 87 135 7500 37500 Bag, Bag of Holding (Weight: 15 - Weight Limit: 500)
+~88 93 135 10000 50000 Bag, Bag of Holding (Weight: 35 - Weight Limit: 1000)
+~94 97 135 12500 65200 Bag, Bag of Holding (Weight: 60 - Weight Limit: 1500)
+~98 100 135 15000 70000 Bag, Bag of Holding (Weight: 80 - Weight Limit: 2000)
+`1 135 5000 25000 Bag of Infinite Wealth
+`1 135 3000 15000 Bag, Jasper Thunderhand's Haversack
+`1 136 600 3000 Bag, Kangaroo Pouch
+`1 136 1000 9000 Bag, Khalid's Pouch of Accessability
+`1 136 1000 2500 Bag of Many Bags
+`1 136 800 2400 Bag, Nithian Saddlebags
+`1 136 0 500 Noj's Bag of Misplacing
+`1 136 5000 25000 Pictish Bag of Fiends
+`1 136 5000 25000 Bag of Plenty
+`1 136 2500 25000 Bag, Protection Pouch
+`1 137 1500 12500 Bag, Pouch of Accessability
+`1 137 800 4000 Bag, Pouch of Holding
+`1 137 500 2500 Bag of Returning
+`1 137 2000 10000 Bag, Pouch of Security
+`1 137 250 1250 Bag, Seed Satchel With {7 12} Seeds
+`1 137 500 2500 Bag, Silent Purse
+`1 138 1000 5000 Bag, Skain's Satchel
+`1 138 1000 5000 Sleeping Bag of Armor Nullification
+`1 138 2500 10000 Bag of Teleportation
+`1 138 0 500 Bag of Transmutation
+`1 138 2000 10000 Bag of Traveling
+`1 138 2500 15000 Bag of Tricks, Type A
+~1 50 138 2500 15000 Bag of Tricks, Type A
+~51 80 138 2500 15000 Bag of Tricks, Type B
+~81 100 138 2500 15000 Bag of Tricks, Type C
+`1 139 1500 7500 Bag of Useful Items
+`1 139 5000 25000 Bag of Vanishing
+`1 139 4000 20000 Bag of Aeolus Wind
+~1 20 139 1400 7000 Bag of Boreas Wind
+~21 40 139 1600 8000 Bag of Euros Wind
+~41 60 139 1300 6500 Bag of Notus Wind
+~61 80 139 1200 6000 Bag of Zephynrus Wind
+~81 100 139 4000 20000 Bag of Aeolus Wind
+`1 140 1600 8000 Bag, Wind Pouch
+`1 141 1500 5000 Bag of the Woodlands
+`1 141 5000 25000 Bag, Zadron's Pouch of Wonders, "Charges": {11 30}
+`1 147 200 2000 Bag, Zagyg's Spell Component Pouch (2 uses per day)
+~1 15 147 200 2000 Bag, Zagyg's Spell Component Pouch (2 uses per day)
+~16 30 147 300 3000 Bag, Zagyg's Spell Component Pouch (3 uses per day)
+~31 50 147 400 4000 Bag, Zagyg's Spell Component Pouch (4 uses per day)
+~51 70 147 500 5000 Bag, Zagyg's Spell Component Pouch (5 uses per day)
+~71 95 147 600 6000 Bag, Zagyg's Spell Component Pouch (6 uses per day)
+~96 100 147 700 7000 Bag, Zagyg's Spell Component Pouch (7 uses per day)
+`1 159 250 1000 Barrel of Hiding
+`1 159 500 3000 Itzpixe's Collapsable Barrel
+`1 160 0 500 Barrel of Monkeys
+`1 160 900 4500 Neverending Barrel of Grog
+`1 160 1800 9000 Neverending Barrel of Salt Pork
+`1 160 0 550 Barrel of Poverty
+`1 160 500 1500 Barrel of Rolling
+`1 161 7500 33500 Basin of the Angel
+~1 33 161 7500 33500 Basin of the CG Angel
+~34 66 161 7500 33500 Basin of the LG Angel
+~67 100 161 7500 33500 Basin of the NG Angel
+`1 161 0 3000 Basin of Hidden Dangers
+`1 161 250 2500 Basket of Devouring
+`1 165 400 2000 Beaker of Cures
+`1 165 1500 12500 Beaker of Plentiful Potions
+`1 166 500 1500 Bedroll of Dryness
+`1 199 9000 45000 Brazen Bottle
+`1 199 4000 20000 Bottle of Containment
+`1 199 9000 45000 Efreeti Bottle
+`1 199 500 1500 Bottle of Evaporation
+`1 199 500 2500 Eversmoking Bottle
+`1 199 600 3000 Bottle of Fireflies
+`1 200 500 2500 Graffiti Bottle
+`1 200 1000 5000 Bottle of Pleasnt Odors
+`1 200 200 2000 Bottle of Preservation
+`1 200 500 2500 Bottle of Refreshment
+`1 200 1600 8000 Safety Bottle
+`1 200 1000 3000 Temperature Bottle
+`1 200 1000 5000 Thought Bottle
+`1 201 12000 60000 Thuba's Efreeti Bottle
+`1 201 3500 17500 Bottle of Trapping
+`1 202 1200 6000 Undead Bottle
+~1 20 202 1200 6000 Undead Bottle (1 Wight)
+~21 35 202 1200 6000 Undead Bottle (1 Groaning Spirit)
+~36 55 202 1200 6000 Undead Bottle ({1 3} Spectre(s))
+~56 70 202 1200 6000 Undead Bottle ({1 2} Vampire(s))
+~71 100 202 1200 6000 Undead Bottle ({1 6} Wraith(s))
+`1 210 500 1000 Bowl of Blood
+`1 211 300 900 Calabash Bowl of Plenty
+`1 211 4000 25000 Bowl of Commanding Water Elementals
+`1 211 600 3000 Bowl of Delicacies
+`1 211 4000 25000 Bowl of Ship Sinking
+`1 211 0 1000 Bowl of Watery Death
+`1 212 800 4000 Box of Burglar Detection
+`1 212 300 3000 Dead Box
+`1 212 2500 25000 Box of Delightful Transports
+`1 213 5500 22500 Dido's Flatbox
+`1 213 0 0 Box, Face of Xenous
+`1 213 5000 25000 Flatbox
+`1 214 2500 25000 Goerl's Tackle Box and Portable Canoe
+`1 214 1200 6000 Box of Heating
+`1 214 800 4000 Ice Box
+`1 214 2000 8000 Box of Many Holdings: 1' x 1' x 1'
+~1 20 214 2000 8000 Box of Many Holdings: 1' x 1' x 1'
+~21 40 214 4000 16000 Box of Many Holdings: 2' x 2' x 2'
+~41 60 214 13500 54000 Box of Many Holdings: 3' x 3' x 3'
+~61 80 214 32000 128000 Box of Many Holdings: 4' x 4' x 4'
+~81 100 214 62500 250000 Box of Many Holdings: 5' x 5' x 5'
+`1 215 500 5000 Box of Message Sending
+`1 215 1000 3000 Money Changer Box
+`1 215 100 500 Mystical Brown Coating Box
+`1 215 1250 12500 Ohm's Black Box
+`1 216 1000 5000 Box of Preservation
+`1 216 2200 11000 Box of Preservation II
+`1 216 2100 10500 Rudra's Box of Cloning
+`1 216 300 3000 Strongbox of Immobility
+`1 216 10000 50000 Box, Tamate-Bako
+`1 223 4000 25000 Brazier of Commanding Fire Elementals
+`1 223 600 1200 Brazier, Hu'i Wing
+`1 223 0 1000 Brazier of Sleep Smoke
+`1 230 500 2500 Bucket of Fire Snuffing
+`1 233 600 6000 Cabinet of Air Restoration
+`1 233 3000 30000 H'Veyk's Cavernous Cabinet
+`1 233 1000 5000 Cabinet of Ministering
+`1 233 2000 10000 Cabinet of Security
+`1 234 3000 15000 Cage of Carrying
+`1 234 0 1500 Cage of Entrapment
+`1 234 1500 7500 Cage of Shelter
+`1 235 500 2500 String Cage
+`1 237 500 2500 Can of Cant
+`1 237 400 2000 Can of Moonlight
+`1 237 100 500 Can of Preserving (1 Cubic Foot)
+~1 16 237 100 500 Can of Preserving (1 Cubic Foot)
+~17 32 237 200 1000 Can of Preserving (2 Cubic Feet)
+~33 48 237 300 1500 Can of Preserving (3 Cubic Feet)
+~49 64 237 400 2000 Can of Preserving (4 Cubic Feet)
+~65 80 237 500 2500 Can of Preserving (5 Cubic Feet)
+~81 100 237 600 3000 Can of Preserving (6 Cubic Feet)
+`1 237 300 1500 Can of Spinach
+`1 237 500 1500 Can of Worms
+`1 237 2000 5000 Zwann's Irrigation Can
+`1 237 1000 5000 Zwaan's Watering Can
+`1 248 200 1000 Canister of Condiments (Ketchup)
+~1 16 248 200 1000 Canister of Condiments (Ketchup)
+~17 32 248 400 2000 Canister of Condiments (Mustard)
+~33 48 248 300 1500 Canister of Condiments (Pepper)
+~49 64 248 500 2500 Canister of Condiments (Salt)
+~65 80 248 400 2000 Canister of Condiments (Jelly)
+~81 100 248 200 1000 Canister of Condiments (Jam)
+`1 249 0 1000 Canister of Curses
+`1 249 600 3000 Canteen of Coolness
+`1 249 1500 7500 Erdlu Canteen
+`1 249 800 4000 Canteen of Purification
+`1 261 1000 5000 Case of Compression
+~1 10 261 0 1000 Cursed Case of Compression
+~11 100 261 1000 5000 Case of Compression
+`1 261 1000 5000 Exalted Component Case
+`1 261 3000 15000 Case of Document Transmission
+`1 261 800 4000 Case of Scroll Holding
+`1 261 6000 30000 Case, Tenser's Portmanteau of Frugality
+`1 262 360 3600 Everfull Cask
+`1 262 4000 20000 Cask of the Wind Spy
+`1 267 100 500 Cauldron of Ambrosia
+`1 267 3000 16000 Archdruid Cauldron
+`1 267 0 500 Cauldron of Blindness
+`1 267 300 1500 Cauldron of Creatures
+`1 267 6000 30000 Cauldron of Doom
+`1 267 0 500 Cauldron of Entrancement
+`1 268 1000 9000 Cauldron of Foretelling
+`1 268 300 1500 Cauldron of Fresh Water
+`1 268 1000 5000 Cauldron of Healing
+`1 268 300 1500 Cauldron of Heating
+`1 268 200 1000 Cauldron of Iubadan's
+`1 268 3000 15000 Mordom's Cauldron of Air
+`1 269 1000 5000 Cauldron of Plenty
+`1 269 1000 50000 Potion Cauldron
+`1 269 1000 5000 Cauldron of Restoring Freshness
+`1 269 200 1000 Warming Cauldron
+`1 269 1700 8500 Cegilune's Iron Pot
+`1 270 1200 12000 Censer of Conduct
+`1 270 4000 28000 Censer of Controlling Air Elementals
+`1 270 4000 25000 Censer of Controlling Air Elementals II
+`1 270 0 2500 Censer of Summoning Hostile Elementals
+`1 270 2500 12000 Censer of Thaumaturgy
+`1 275 500 1500 Chalice of Colors
+`1 275 240 2400 Chalice of Continual Water
+`1 275 1000 5000 Chalice of Detection
+`1 275 1500 25000 Chalice of Eucharistic
+`1 275 0 0 Chalice, Holy Grail
+`1 276 1000 5000 Chalice of Identification
+`1 276 2000 12000 Chalice of Irreversability
+`1 276 1000 5000 Chalice of Liquid Food
+`1 276 2000 10000 Chalice of Planar Travel
+`1 276 0 1500 Chalice of Poison
+`1 277 3000 25000 Chalice of the Shield Lands
+`1 277 500 1500 Silver Chalice
+`1 287 500 2500 Chest of Drawers
+`1 287 600 3000 Foot Stool Chest
+~1 1 287 2000 10000 Extradimensional Foot Stool Chest
+~2 100 287 600 3000 Normal Foot Stool Chest
+`1 287 1500 15000 Oyster Chest
+`1 288 2500 12500 Quartermaster's Chest
+`1 288 1000 9000 Chest of Sieges
+`1 288 3000 15000 Chest of Zorathus
+`1 317 2500 27500 Coffin, Casket of Furyondy
+`1 317 10000 50000 Coffin of Creation
+~1 4 317 10000 50000 Coffin of Creation: Banshee
+~5 7 317 10000 50000 Coffin of Creation: Beholder, Death Tyrant
+~8 11 317 10000 50000 Coffin of Creation: Crypt Thing
+~12 15 317 10000 50000 Coffin of Creation: Death Knight
+~16 19 317 10000 50000 Coffin of Creation: Ghost
+~20 22 317 10000 50000 Coffin of Creation: Ghoul
+~23 26 317 10000 50000 Coffin of Creation: Haunt
+~27 30 317 10000 50000 Coffin of Creation: Heucuva
+~31 33 317 10000 50000 Coffin of Creation: Mummy
+~34 37 317 10000 50000 Coffin of Creation: Mummy, Greater
+~38 41 317 10000 50000 Coffin of Creation: Phantom
+~42 44 317 10000 50000 Coffin of Creation: Poltergeist
+~45 48 317 10000 50000 Coffin of Creation: Revenant
+~49 52 317 10000 50000 Coffin of Creation: Shadow
+~53 56 317 10000 50000 Coffin of Creation: Skeleton
+~57 59 317 10000 50000 Coffin of Creation: Skeleton, Giant
+~60 63 317 10000 50000 Coffin of Creation: Skeleton, Warrior
+~64 67 317 10000 50000 Coffin of Creation: Spectre
+~68 70 317 10000 50000 Coffin of Creation: Vampire
+~71 74 317 10000 50000 Coffin of Creation: Vampire, Eastern
+~75 78 317 10000 50000 Coffin of Creation: Wight
+~79 81 317 10000 50000 Coffin of Creation: Wraith
+~82 85 317 10000 50000 Coffin of Creation: Zombie, Common
+~86 89 317 10000 50000 Coffin of Creation: Zombie, Ju-ju
+~90 93 317 10000 50000 Coffin of Creation: Zombie, Monster
+~94 96 317 10000 50000 Coffin of Creation: Zombie, Lord
+~97 100 317 10000 50000 Coffin of Creation: Zombie, Sea
+`1 317 1000 10000 Crystal Coffin
+`1 328 200 1000 =Container, Fireproof
+`1 328 20 100 =Container, Watertight
+`1 341 1000 5000 Crucible of Melting
+`1 353 80 600 Cup of Wine
+`1 375 1250 4000 Carrague's Decanter of Endless Steam
+`1 376 1200 3600 Decanter of Endless Water
+`1 376 1000 3000 Decanter of Endless Water II
+`1 407 500 2500 Disentigration Chamber 1' x 1' x 1', Charges: {81 100}
+~1 16 407 500 2500 Disentigration Chamber 1' x 1' x 1', Charges: {81 100}
+~17 32 407 1000 5000 Disentigration Chamber 2' x 2' x 3', Charges: {81 100}
+~33 48 407 1500 7500 Disentigration Chamber 3' x 3' x 6', Charges: {81 100}
+~49 64 407 2000 10000 Disentigration Chamber 3' x 5' x 6', Charges: {81 100}
+~65 80 407 3000 15000 Disentigration Chamber 5' x 5' x 10', Charges: {81 100}
+~81 100 407 5000 25000 Disentigration Chamber 10' x 10' x 10', Charges: {81 100}
+`1 449 4450 44500 Extradimensional Safe
+`1 483 6000 40000 Flagon of Dragons
+`1 484 500 2500 Flagon of Dimunition
+`1 484 750 3500 Zagyg's Flowing Flagon
+`1 488 100 1000 Copper Flask
+`1 488 0 1000 Flask of Curses
+`1 489 0 2000 Iron Flask
+~1 50 489 0 2000 Empty Iron Flask
+~51 54 489 0 2000 Iron Flask: Air Elemental
+~55 65 489 0 2000 Iron Flask: Djinni
+~66 69 489 0 2000 Iron Flask: Earth Elemental
+~70 72 489 0 2000 Iron Flask: Efreeti
+~73 76 489 0 2000 Iron Flask: Fire Elemental
+~77 86 489 0 2000 Iron Flask: Invisible Stalker
+~87 89 489 0 2000 Iron Flask: Rakshasa
+~90 93 489 0 2000 Iron Flask: Salamander
+~94 97 489 0 2000 Iron Flask: Water Elemental
+~98 99 489 0 2000 Iron Flask: Wind Walker
+~100 100 489 0 2000 Iron Flask: Xorn
+`1 489 10000 50000 Iron Flask of Tuenry the Merciless
+`1 490 1000 5000 Vapor Flask
+`1 546 1250 12000 Goblet of Glory
+`1 547 1200 8000 Goblet of the Great Kingdom
+`1 547 120 1200 Leomund's Goblet
+`1 547 0 2000 Manas Goblet
+~1 33 547 0 2000 Manas Goblet of Sleep
+~34 66 547 0 1200 Manas Goblet of Death
+~67 100 547 0 1000 Manas Goblet of Fixation
+`1 596 4500 50000 Hold of Holding (Size: 10' x 10' x 10' - Volume: 1 ton)
+~1 20 596 4500 50000 Hold of Holding (Size: 10' x 10' x 10' - Volume: 1 ton)
+~21 40 596 5000 100000 Hold of Holding (Size: 20' x 10' x 10' - Volume: 2 tons)
+~41 60 596 5500 150000 Hold of Holding (Size: 20' x 25' x 10' - Volume: 5 tons)
+~61 70 596 6500 250000 Hold of Holding (Size: 40' x 25' x 10' - Volume: 10 tons)
+~71 80 596 7500 350000 Hold of Holding (Size: 50' x 30' x 10' - Volume: 15 tons)
+~81 90 596 10000 500000 Hold of Holding (Size: 50' x 40' x 10' - Volume: 20 tons)
+~91 100 596 15000 750000 Hold of Holding (Size: 50' x 50' x 10' - Volume: 25 tons)
+`1 599 350 5000 Horn, Cornucopia
+`1 599 1000 5000 Ngona Horn
+~1 33 599 1000 5000 Ngona Horn of Fire Resistance
+~34 66 599 1000 5000 Ngona Horn of Silent Moving
+~67 100 599 1000 5000 Ngona Horn of Underwater Breathing
+`1 622 50 200 Borieflin's Jar of Steam
+`1 622 300 3000 Jar of Comprehension of a Human Language
+~1 75 622 300 3000 Jar of Comprehension of a Human Language
+~76 100 622 200 2000 Jar of Comprehension of a Animal Language
+`1 622 500 2500 Jar of Preserving
+`1 624 3000 12000 Alchemy Jug
+`1 626 2000 10000 Amorpha Jug
+`1 626 600 2400 Red Jug of Dyeing
+`1 626 600 2400 Blue Jug of Dyeing
+`1 626 2000 5000 Jug of Jade
+`1 626 1000 3000 Jug of Jesting
+`1 626 2000 10000 Louie Dulama's Alchemy Jug
+`1 627 1000 5000 Kettle of Breathing
+`1 627 500 2500 Kettle of Drumming
+`1 627 1000 5000 Everbountiful Soup Kettle
+`1 627 1000 3000 Kettle of Fish
+`1 627 2000 10000 Mithryl's Everbountiful Soup Kettle
+`1 657 5000 25000 Leomund's Labile Locker
+`1 742 1000 5000 Leomund's Mug
+`1 742 1000 5000 Mug of Plenty
+`1 743 400 2000 Mug of Warming
+`1 838 300 1500 Pitcher of Blending
+`1 838 600 1800 Pitcher of Continuous Water
+`1 851 5000 50000 Portable Hole
+`1 915 4000 20000 Castellan's Magical Prison
+`1 917 2000 10000 Genie Prison
+~1 24 917 2000 10000 Genie Prison (Djinni)
+~25 48 917 2000 10000 Genie Prison (Dao)
+~49 73 917 2000 10000 Genie Prison (Efreeti)
+~74 96 917 2000 10000 Genie Prison (Marid)
+~97 97 917 6000 30000 Genie Prison (Noble Djinni)
+~98 98 917 6000 30000 Genie Prison (Noble Dao)
+~99 99 917 6000 30000 Genie Prison (Noble Efreeti)
+~100 100 917 6000 30000 Genie Prison (Noble Marid)
+`1 917 2750 25000 Prison of Zagig
+`1 918 2750 25000 Prison of Zagyg
+`1 1054 500 2500 Small Scabbard of Holding
+~1 40 1054 500 2500 Small Scabbard of Holding
+~41 100 1054 1000 5000 Large Scabbard of Holding
+`1 1055 500 5000 Scabbard of Poison
+`1 1092 0 1000 Sheath of Frogs
+`1 1092 1500 15000 Sheath of Smallness
+`1 1092 500 2500 Zadore's Poison Sheath
+`1 1119 1000 5000 Sleeping Bag of Armor Nullification
+`1 1462 1000 5000 Bathtub
+`1 1462 300 1500 Tub of Fat
+`1 1462 400 2000 Tub of Lard
+`1 1462 1000 5000 Tub of Sailing
+`1 1462 1000 5000 Taryn's Tub
+`1 1462 800 4000 Tub of Washing
+`1 1465 800 4000 Urn of Ashes
+`1 1465 1000 5000 Urn of Awakening
+`1 1465 0 800 Urn of Curses
+`1 1465 4000 20000 Urn of Hindsight
+`1 1466 2000 10000 Urn of Water Purification
+`1 1469 25000 125000 Vampire Sheath
+`1 1471 3000 15000 Vial of Durance
+`1 1505 500 2500 Waterskin of Pouring

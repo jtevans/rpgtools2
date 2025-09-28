@@ -1,0 +1,681 @@
+`1 59 0 0 Arcane Formulae for a Dracolich
+`1 60 0 0 Arcane Formulae for a Lich
+`1 330 100 1000 Cordial of the Dryad
+`1 441 500 5000 !Elixer of Additional Weaponry
+`1 441 250 2000 !Elixer of All-Purpose Healing
+`1 442 700 1600 !Elixer, Distillate of Wolfsbane
+`1 442 250 2000 !Elixer of Health
+`1 442 350 800 !Elixer of Heroic Action
+`1 442 250 400 !Elixer of Kindness
+`1 442 250 2500 !Elixer of Life
+`1 443 500 2500 !Elixer of Luck
+`1 443 0 500 !Elixer of Madness
+`1 443 150 750 !Nerve Tonic Elixer
+`1 443 200 400 !Nodozze Elixer
+`1 443 300 700 !Elixer of Obscurement
+`1 443 400 2500 !Elixer of Photosynthesis
+`1 443 300 800 !Physical Enhancement Elixer
+`1 445 1500 4000 !Rainbow Bridge Elixer
+`1 445 0 250 !Elixer of Reduction
+`1 445 500 2500 !Elixer of Revivication
+`1 445 500 1000 !Elixer of Sanity
+`1 445 100 400 !Skunk Water Elixer
+`1 445 400 1500 !Elixer of Sunlight Resistance
+`1 446 50 250 !Elixer of Weakness
+`1 446 500 1000 !Elixer of Youth
+`1 446 500 800 !Elixer of Zorbo Fingers
+`1 446 250 750 Essence of Darkness
+`1 607 500 900 Ichor of Intoxication
+`1 670 2000 10000 Liquid Iron
+`1 670 500 900 Liquid Road
+`1 736 200 9000 Mist of Rapture
+`1 763 100 500 Absinthe Oil
+`1 763 500 1000 Oil of Acid Resistance
+`1 763 100 500 African Ju Ju Oil
+`1 763 800 4000 Oil of Agelessness
+`1 763 150 750 Allspice Oil
+`1 763 250 650 Allspice Oil II
+`1 763 300 900 Anger Oil
+`1 764 200 800 Animation Oil
+`1 764 100 400 Anise Oil
+`1 764 200 550 Aphrodesia Oil
+`1 764 300 1500 Arabian Knights Oil
+`1 764 150 750 Oil of Aries
+`1 764 400 2000 Oil of Armor
+`1 764 500 1800 Oil of Armor II
+`1 764 200 700 Attraction Oil
+`1 764 500 1500 Attractiveness Oil
+`1 764 200 600 Bard's Aphrodisiac Inspiration Oil
+`1 765 250 750 Bat's Blood Oil
+`1 765 400 1200 Oil of Beauty
+`1 765 1000 3000 Bendover's Oil
+`1 765 600 1800 Bergamot's Oil
+`1 765 700 2100 Oil of the Black Arts
+`1 765 100 300 Bottom Oil #20
+`1 765 0 400 Bruno's Curse Oil
+`1 765 300 900 Buddha Oil Type I
+`1 765 600 1800 Buddha Oil Type II
+`1 765 900 2700 Buddha Oil Type III
+`1 765 300 550 Oil of Bug Repellence
+`1 765 100 300 Bull's Oil
+`1 765 250 700 Oil of Buoyancy
+`1 766 500 5000 Caloric Shield Oil
+`1 766 150 450 Carnation Oil
+`1 766 100 300 Chocolate Oil
+`1 766 125 625 Citronella Oil
+`1 766 100 300 Civit Oil
+`1 766 100 300 Cleo May Oil
+`1 766 750 2250 Oil of Cloaking
+`1 766 300 900 Oil of Commanding
+`1 766 400 1200 Oil of Concentration
+`1 766 900 2700 Oil of Confusion
+`1 766 500 1500 Oil of Conquering Glory
+`1 766 600 1800 Controlling Oil
+`1 767 100 300 Crab Apple Oil
+`1 767 600 1800 Oil of Crossing
+`1 767 100 300 Cumin Seed Oil
+`1 767 100 300 Cypres Seed Oil
+`1 767 300 900 Oil of Damnation
+`1 767 400 900 Dendan Oil
+`1 767 500 1500 Desir‚ Eme's Oil
+`1 767 500 1500 Oil of Dexterity
+`1 767 750 1500 Oil of Disenchantment
+`1 767 300 900 Doas Isay's Oil
+`1 768 600 1800 Double Cross Oil
+`1 768 500 1500 Oil of Dragon's Blood
+`1 768 600 1800 Oil of Dream
+`1 768 250 750 Oil of the Dryad
+`1 768 250 750 Oil of Elasticity
+`1 768 500 1000 Oil of Elemental Invulnerability
+~1 25 768 500 1000 Oil of Air Elemental Invulnerability
+~26 50 768 500 1000 Oil of Earth Elemental Invulnerability
+~51 75 768 500 1000 Oil of Fire Elemental Invulnerability
+~76 100 768 500 1000 Oil of Water Elemental Invulnerability
+`1 768 900 2700 Oil of Enchantment
+`1 768 300 900 Oil of Enchantment II
+`1 768 300 500 Oil of Eternal Fire
+`1 768 600 1200 Oil of Etherealness
+`1 769 200 600 Eucalyptus Oil
+`1 769 300 900 Oil of Eve
+`1 769 200 600 Oil of the Evil Eye
+`1 769 300 750 Excisement Oil
+`1 769 200 600 Oil of Exodus
+`1 769 250 500 Oil of the Feasts
+`1 769 700 2100 Oil of Feather Falling
+`1 769 500 1000 Oil of Fiery Burning
+`1 769 180 540 Oil of Fire Stilling
+`1 770 250 750 Five Finger Grass Oil
+`1 770 200 600 Frangi Pani Oil
+`1 770 0 650 Oil of Fumbling
+`1 770 100 400 Galangale's Oil
+`1 770 200 600 Gerdenia Oil
+`1 770 300 900 Getaway's Oil
+`1 770 100 500 Grape Oil
+`1 770 750 2250 Oil of Great Devotion
+`1 770 150 450 Oil of Hair Replacement
+`1 770 600 1800 Oil of High Conquering
+`1 771 500 1500 Oil of High John the Conqueror
+`1 771 250 750 Hindu Grass Oil
+`1 771 100 300 Honeysuckle Oil
+`1 771 200 600 Oil of Horridness
+`1 771 300 900 Hypnotic Oil
+`1 771 200 600 Hysspo Oil
+`1 771 350 1050 Oil of Immovability
+`1 771 750 1500 Oil of Impact
+`1 771 400 1200 Invisibility Oil
+`1 771 400 1200 Oil of Invulnerability
+`1 771 200 600 Jamaica Oil
+`1 772 300 900 Oil, Jannis's Aroma of Nightmare's
+`1 772 0 600 Jazper's Oil of Permanent Etherealness
+`1 772 300 900 Jezebel Oil
+`1 772 200 600 Oil of Jinx Removing
+`1 772 1000 3000 Jo's Liquid Road Oil
+`1 772 300 900 Kludde Oil
+`1 772 100 300 Lavender Oil
+`1 772 250 750 Oil of Life
+`1 772 250 750 Oil of Lighting
+`1 772 0 500 Oil of Lightning Bolts
+`1 773 200 600 Oil, Lily of the Valley
+`1 773 250 600 Oil of Lorn
+`1 773 300 600 Oil of Luminescence
+`1 773 150 450 Magnolia Oil
+`1 773 400 1200 Oil of Manpower
+`1 773 400 1200 Maybel's Insect Charm Oil
+`1 773 100 300 Oil of Mercury
+`1 773 400 1200 Oil of Metal Fatigue
+`1 774 100 500 Mojo Oil
+`1 774 250 750 Oil of Monster Repulsion
+`1 774 200 600 Moon Oil
+`1 774 100 400 Musk Oil
+`1 774 200 600 Narcissus Oil
+`1 774 300 900 Oil of Neutral Scent
+`1 774 200 600 Oil of New Life
+`1 774 300 900 Nine Mystery Oil
+`1 774 400 1200 Obeah Oil
+`1 775 750 2250 Oil of Obedience
+`1 775 200 600 Olibanum Oil
+`1 775 1000 3000 Oil of Permanent Disenchantment
+`1 775 500 1500 Oil of Petrification
+`1 775 0 100 Oil of Phosphorescence
+`1 775 350 800 Oil of Phosphorus
+`1 775 500 1500 Oil of the Pickpocket
+`1 776 750 2250 Oil of Power
+`1 776 500 1500 Oil of Preservation
+`1 776 200 600 Primrose Oil
+`1 776 750 2250 Reptilla's Curdled Death Oil
+`1 776 500 1500 Oil of Reversibility
+`1 776 750 2250 Oil of Romance
+`1 776 200 600 Rosemary Oil
+`1 776 100 300 Rue Oil
+`1 776 400 1200 Oil of Rust Proofing
+`1 776 300 900 Sandalwood Oil
+`1 777 0 250 Oil of Scents
+`1 777 500 1500 Oil of Scribes
+`1 777 250 750 Oil of Scrying
+`1 777 400 4000 Oil of Sharpness
+~1 10 777 400 4000 Oil of Sharpness +1
+~11 25 777 800 8000 Oil of Sharpness +2
+~26 55 777 1200 12000 Oil of Sharpness +3
+~56 80 777 1600 16000 Oil of Sharpness +4
+~81 95 777 2000 20000 Oil of Sharpness +5
+~96 100 777 2400 24000 Oil of Sharpness +6
+`1 777 400 800 Oil of Slipperiness
+`1 777 250 750 Snake Oil
+`1 777 300 900 Soloman's Oil
+`1 777 300 900 Spikenard Oil
+`1 778 300 900 Spirit Oil
+`1 778 600 1800 Oil of Stillness
+`1 778 1000 4000 Oil of Stone Passage
+`1 778 150 350 Oil of Sulfur
+`1 778 600 1800 Oil of Time
+`1 778 500 1000 Oil of Timelessness
+`1 778 900 2700 Trinity Oil
+`1 779 300 800 Oil of Unlocking
+`1 779 400 1200 Verbena Oil
+`1 779 300 900 Oil of Vibration
+`1 779 100 300 Virgin Olive Oil
+`1 779 900 1800 Oil of Vision
+`1 779 200 600 Oil of Voodoo
+`1 779 500 1500 Oil of Will Power
+`1 779 100 300 Wintergreen Oil
+`1 779 900 2700 Oil of Wishing
+`1 779 600 1800 Witch's Oil
+`1 779 300 900 Xyz Oil
+`1 779 300 900 Ylang Ylang Oil
+`1 779 100 300 Zodiac Oil
+`1 779 250 750 Zula Zula Oil
+`1 780 100 300 Ointment of Blessing
+`1 780 500 750 Courtesan's Cream Ointment
+`1 780 1000 5000 Ointment of Far Seeing (Ashen)
+`1 780 1000 5000 Ointment of Far Seeing (Black)
+`1 780 1000 5000 Ointment of Far Seeing (Blue)
+`1 780 1000 5000 Ointment of Far Seeing (Bluish)
+`1 780 1000 5000 Ointment of Far Seeing (Clear)
+`1 780 1000 5000 Ointment of Far Seeing (Copper)
+`1 780 1000 5000 Ointment of Far Seeing (Golden)
+`1 780 1000 5000 Ointment of Far Seeing (Gray)
+`1 780 1000 5000 Ointment of Far Seeing (Silver)
+`1 780 1000 5000 Ointment of Far Seeing (White)
+`1 780 300 750 Ointment of Flying
+`1 780 200 400 Ointment of Healing
+`1 780 600 1800 Ointment of Healing II
+`1 780 500 10000 Keoghtom's Ointment
+`1 781 250 750 Ointment of Mage Smelling
+`1 781 0 600 Poison Ointment
+`1 781 300 650 Ointment of Recovery
+`1 781 400 1200 Ointment of Scar Removal
+`1 781 0 400 Ointment of Scarring
+`1 781 900 2700 Ointment of Second Sight
+`1 782 200 600 Ointment of Soothing
+`1 782 100 300 Ointment of Tanning
+~1 16 782 100 300 Ointment of Tanning (Blue)
+~17 32 782 100 300 Ointment of Tanning (Brown)
+~33 48 782 100 300 Ointment of Tanning (Green)
+~49 64 782 100 300 Ointment of Tanning (Orange)
+~65 80 782 100 300 Ointment of Tanning (Red)
+~81 100 782 100 300 Ointment of Tanning (Yellow)
+`1 802 10000 50000 Padriac's Portable Purveyor of Parfait Potions
+`1 823 300 1500 Aroma of Dreams
+`1 823 1500 7500 Curdled Death
+`1 824 800 4000 Elyas Perfume
+`1 824 250 750 Essence of Darkness
+`1 825 200 1000 Murdock's Insect Ward
+`1 825 250 1250 Starella's Aphrodesiac
+`1 827 400 2000 @Aleese's Philter of Overwhelming Love
+`1 828 250 1500 @Philter of Beauty
+`1 828 0 150 @Philter of Drunkeness
+`1 828 0 250 @Philter of Drunkeness II
+`1 828 700 3500 @Durimal's Merry Blend
+`1 828 850 4250 @Durimal's Potent Draft
+`1 828 850 4250 @Durimal's Sovereign Tonic
+`1 828 500 2500 @Philter of Glibness
+`1 828 200 800 @Philter of Love
+`1 829 400 850 @Philter of Persuasiveness
+`1 830 0 1500 @Philter of Stammering and Stuttering
+`1 836 1000 5000 Bell's Palette of Identity
+`1 836 300 2500 Pigment of Blackmoor (Red)
+`1 836 300 2500 Pigment of Blackmoor (Blue)
+`1 836 300 2500 Pigment of Blackmoor (Green)
+`1 836 300 2500 Pigment of Blackmoor (Black)
+`1 836 300 2500 Pigment of Blackmoor (White)
+`1 836 300 2500 Pigment of Blackmoor (Brown)
+`1 837 5000 25000 Pigment of Longevity
+`1 837 500 3000 Nolvur's Marvelous Pigment
+`1 837 5000 25000 Yellow Kohl
+`1 853 700 1200 #Potion of Absorption
+`1 854 300 700 #Potion of Advanced Meditation
+~1 95 854 300 700 #Potion of Advanced Meditation (Normal Version)
+~96 100 854 400 850 #Potion of Advanced Meditation (Special Version)
+`1 854 500 900 #Potion of Agility
+`1 854 0 500 #Potion of Ageing
+`1 854 250 700 #Potion of Alternate Profession
+`1 854 200 300 #Potion of Ambrosia
+`1 854 1200 9350 #Amalgamous Potion Type I
+`1 854 550 900 #Amalgamous Potion Type II
+`1 854 700 1450 #Amalgamous Potion Type III
+`1 855 250 400 #Potion of Animal Control
+~1 20 855 250 400 #Potion of Animal Control (Mammals Only)
+~21 40 855 250 400 #Potion of Animal Control (Avians Only)
+~41 60 855 250 400 #Potion of Animal Control (Reptiles and Amphibians)
+~61 75 855 250 400 #Potion of Animal Control (Fish Only)
+~76 85 855 250 400 #Potion of Animal Control (Mammals/Avians)
+~86 95 855 250 400 #Potion of Animal Control (Reptiles/Amphibians/Fish)
+~96 100 855 250 400 #Potion of Animal Control (All Animals)
+`1 855 200 400 #Potion, Antidote
+~1 40 855 200 400 #Potion, Antidote to poisons from 3-HD (or lesser) creatures
+~41 70 855 200 400 #Potion, Antidote to poisons from 7-HD (or lesser) creatures
+~71 90 855 200 400 #Potion, Antidote to poisons from 15-HD (or lesser) creatures
+~91 100 855 200 400 #Potion, Antidote to all poisons
+`1 855 800 2400 #Potion of Anti-Magic
+`1 855 350 500 #Anti-Sleep Potion
+`1 856 400 1200 #Potion of Arcane Comprehension
+`1 856 450 1200 #Potion of Archmagedom
+`1 856 500 900 #Potion of Black Sight
+`1 856 300 500 #Potion of Blending
+`1 856 0 250 #Potion of Blindness
+`1 856 250 400 #Potion of Bouncing
+`1 856 50 250 #Potion of Bubbles
+`1 857 350 700 #Potion of Chameleon Power
+`1 857 0 400 #Potion of Childishness
+`1 857 250 400 #Potion of Clairaudience
+`1 857 300 500 #Potion of Clairvoyance
+`1 857 550 1100 #Potion of Clarity
+`1 857 900 2700 #Clay Potion
+`1 857 100 250 #Clean and Dry Potion
+`1 857 200 300 #Clearwater Potion
+`1 857 300 500 #Potion of Climbing
+`1 858 400 2000 #Potion of Controlling Damage
+`1 858 250 500 #Potion of Cold Resistance
+`1 858 0 250 #Potion of Confusion
+`1 858 400 800 #Potion of Contact Disruption
+`1 858 700 1200 #Potion of the Corrosive Touch
+`1 859 400 800 #Potion of Craftmanship
+`1 859 250 400 #Potion of Creation
+`1 859 400 750 #Potion of Cure Disease
+`1 859 250 2000 #Potion of Curing Lycanthropy
+`1 859 250 600 #Potion of Danger Detection
+`1 859 600 2400 #Dark Draft of the Voodoo Masters
+`1 859 0 800 #Potion of Deafness
+`1 860 200 1000 #Potion of Defense
+~1 30 860 200 1000 #Potion of Defense +1
+~31 50 860 400 2000 #Potion of Defense +2
+~51 70 860 600 3000 #Potion of Defense +3
+~71 90 860 800 4000 #Potion of Defense +4
+~91 100 860 1000 5000 #Potion of Defense +5
+`1 860 500 800 #Potion of Deftness (DEX 17)
+`1 860 700 1000 #Potion of Deftness (DEX 18)
+`1 860 900 1200 #Potion of Deftness (DEX 19)
+`1 860 1000 1300 #Potion of Deftness (DEX 20)
+`1 860 1200 1500 #Potion of Deftness (DEX 21)
+`1 860 200 500 #Potion of Digestion
+`1 860 400 1200 #Potion of Digging
+`1 860 300 500 #Potion of Dimunition
+`1 860 350 800 #Potion of Direction
+`1 861 1000 2500 #Potion of the Dracolich
+`1 862 500 1400 #Potion of Amethyst Dragon Breath
+`1 862 500 1400 #Potion of Black Dragon Breath
+`1 862 500 1400 #Potion of Blue Dragon Breath
+`1 862 500 1400 #Potion of Brass Dragon Breath
+`1 862 500 1400 #Potion of Bronze Dragon Breath
+`1 862 500 1400 #Potion of Brown Dragon Breath
+`1 862 500 1400 #Potion of Cloud Dragon Breath
+`1 862 500 1400 #Potion of Copper Dragon Breath
+`1 862 500 1400 #Potion of Crystal Dragon Breath
+`1 862 500 1400 #Potion of Deep Dragon Breath
+`1 862 500 1400 #Potion of Emerald Dragon Breath
+`1 862 500 1400 #Potion of Gold Dragon Breath
+`1 862 500 1400 #Potion of Green Dragon Breath
+`1 862 500 1400 #Potion of Mercury Dragon Breath
+`1 862 500 1400 #Potion of Mist Dragon Breath
+`1 862 500 1400 #Potion of Red Dragon Breath
+`1 862 500 1400 #Potion of Sapphire Dragon Breath
+`1 862 500 1400 #Potion of Shadow Dragon Breath
+`1 862 500 1400 #Potion of Silver Dragon Breath
+`1 862 500 1400 #Potion of Steel Dragon Breath
+`1 862 500 1400 #Potion of Topaz Dragon Breath
+`1 862 500 1400 #Potion of White Dragon Breath
+`1 862 500 1400 #Potion of Yellow Dragon Breath
+`1 864 700 7000 #Potion of Dragon Control
+~1 10 864 700 7000 #Potion of White Dragon Control
+~11 20 864 700 7000 #Potion of Black Dragon Control
+~21 35 864 700 7000 #Potion of Green Dragon Control
+~36 45 864 700 7000 #Potion of Blue Dragon Control
+~46 50 864 700 7000 #Potion of Red Dragon Control
+~51 60 864 700 7000 #Potion of Brass Dragon Control
+~61 70 864 700 7000 #Potion of Copper Dragon Control
+~71 75 864 700 7000 #Potion of Bronze Dragon Control
+~76 80 864 700 7000 #Potion of Silver Dragon Control
+~81 85 864 700 7000 #Potion of Gold Dragon Control
+~86 95 864 700 7000 #Potion of Evil Dragon Control
+~96 100 864 700 7000 #Potion of Good Dragon Control
+`1 864 700 7000 #Potion of Dragon Control II
+~1 10 864 700 7000 #Potion of Chiang Lung Dragon Control II
+~11 20 864 700 7000 #Potion of Pan Lung Dragon Control II
+~21 35 864 700 7000 #Potion of Yu Lung Dragon Control II
+~36 45 864 700 7000 #Potion of Shen Lung Dragon Control II
+~46 50 864 700 7000 #Potion of Li Lung Dragon Control II
+~51 60 864 700 7000 #Potion of Mist Dragon Control II
+~61 70 864 700 7000 #Potion of Cloud Dragon Control II
+~71 75 864 700 7000 #Potion of Lung Wang Dragon Control II
+~76 85 864 700 7000 #Potion of T'ien Gold Dragon Control II
+~86 95 864 700 7000 #Potion of Evil Dragon Control II
+~96 100 864 700 7000 #Potion of Good Dragon Control II
+`1 864 700 7000 #Potion of Dragon Control III
+~1 25 864 700 7000 #Potion of White (or Crystal) Dragon Control III
+~26 50 864 700 7000 #Potion of Black (or Onyx) Dragon Control III
+~51 70 864 700 7000 #Potion of Green (or Jade) Dragon Control III
+~71 85 864 700 7000 #Potion of Blue (or Sapphire) Dragon Control III
+~86 95 864 700 7000 #Potion of Red (or Ruby) Dragon Control III
+~96 100 864 700 7000 #Potion of Gold (or Amber) Dragon Control III
+`1 865 200 1000 #Potion of Dragon Sight
+`1 865 400 700 #Dragon's Blood Potion
+`1 865 300 500 #Potion of Dreaming
+`1 865 800 1200 #Potion of Dreamspeech
+`1 865 0 250 #Potion of Drunkeness
+`1 865 300 800 #Potion of Elasticity
+`1 866 300 800 #Potion of Elasticity II
+`1 866 600 1800 #Potion of Elemental Control
+~1 25 600 1800 #Potion of Earth Elemental Control
+~26 50 600 1800 #Potion of Air Elemental Control
+~51 75 600 1800 #Potion of Fire Elemental Control
+~76 100 600 1800 #Potion of Water Elemental Control
+`1 866 400 700 #Potion of Elemental Form
+~1 25 400 700 #Potion of Earth Elemental Form
+~26 50 400 700 #Potion of Air Elemental Form
+~51 75 400 700 #Potion of Fire Elemental Form
+~76 100 400 700 #Potion of Water Elemental Form
+`1 866 500 900 #Potion of Enlightenment
+`1 867 500 850 #Potion of ESP
+`1 867 300 500 #Potion of Ethereality
+`1 867 450 900 #Bottle of Explosions
+`1 867 75 150 #Vial of Explosions
+`1 868 500 1000 #Potion of Extra-Healing
+`1 868 400 1000 #Potion of Fire Breath
+`1 868 250 400 #Potion of Fire Resistance
+`1 868 0 250 #Potion of Fire Vulnerability
+`1 868 750 1500 #Potion of Fluidness
+`1 868 500 750 #Potion of Flying
+`1 869 600 1200 #Potion of Forewarning
+`1 869 400 800 #Potion of Forgetfulness
+`1 869 0 250 #Potion of Forgetfulness II
+`1 869 900 1500 #Potion of Fortitude
+`1 869 0 200 #Foul Water Potion
+`1 869 500 900 #Potion of Freedom
+`1 869 350 700 #Potion of Fresh Air
+`1 869 100 250 #Potion of Fright
+`1 869 250 400 #Potion of Frost Resistance
+`1 870 125 250 #Potion of Fur Growth
+`1 870 300 400 #Potion of Gaseous Form
+`1 870 300 800 #Potion of Genius
+`1 870 600 1800 #Potion of Ghostliness
+`1 870 600 1000 #Potion of Giant Control
+~1 25 870 600 1000 #Potion of Hill Giant Control
+~26 45 870 600 1000 #Potion of Stone Giant Control
+~46 65 870 600 1000 #Potion of Frost Giant Control
+~66 85 870 600 1000 #Potion of Fire Giant Control
+~86 95 870 600 1000 #Potion of Cloud Giant Control
+~96 100 870 600 1000 #Potion of Storm Giant Control
+`1 870 600 1000 #Potion of Giant Control II
+~1 40 870 600 1000 #Potion of Hill Giant Control II
+~41 55 870 600 1000 #Potion of Desert Giant Control II
+~56 65 870 600 1000 #Potion of Reef Giant Control II
+~66 75 870 600 1000 #Potion of Jungle Giant Control II
+~76 85 870 600 1000 #Potion of Stone Giant Control II
+~86 90 870 600 1000 #Potion of Fire Giant Control II
+~91 95 870 600 1000 #Potion of Cloud Giant Control II
+~96 100 870 600 1000 #Potion of Storm Giant Control II
+`1 871 500 900 #Potion of Giant Strength
+~1 30 871 500 900 #Potion of Hill Giant Strength  (STR = 19)
+~31 50 871 500 900 #Potion of Stone Giant Strength  (STR = 20)
+~51 70 871 500 900 #Potion of Frost Giant Strength  (STR = 21)
+~71 85 871 500 900 #Potion of Fire Giant Strength  (STR = 22)
+~86 95 871 500 900 #Potion of Cloud Giant Strength  (STR = 23)
+~96 100 871 500 900 #Potion of Storm Giant Strength  (STR = 24)
+`1 871 0 100 #Potion of Gluttony
+`1 871 250 400 #Potion of Golden Silence
+`1 871 500 1100 #Potion of Good Humor
+`1 871 250 600 #Gray Slumber Potion
+`1 871 300 600 #Potion of Greensprouting
+~1 90 871 300 600 #Potion of Greensprouting (Normal Version)
+~91 100 871 250 600 #Potion of Greensprouting (Rooting Version)
+`1 871 250 300 #Potion of Growth
+`1 872 200 400 #Potion of Healing
+`1 872 300 500 #Potion of Heroism
+`1 872 250 500 #Potion, Horn of Plenty
+`1 872 250 550 #Potion of Housecat Control
+`1 872 500 900 #Potion of Human Control
+~1 10 872 500 900 #Potion of Human Control (Dwarves Only)
+~11 20 872 500 900 #Potion of Human Control (Elves/Half-Elves Only)
+~21 30 872 500 900 #Potion of Human Control (Gnomes Only)
+~31 40 872 500 900 #Potion of Human Control (Halflings Only)
+~41 50 872 500 900 #Potion of Human Control (Half-Orcs Only)
+~51 80 872 500 900 #Potion of Human Control (Humans Only)
+~81 95 872 500 900 #Potion of Human Control (Gnolls, Orcs and Goblins)
+~96 100 872 500 900 #Potion of Human Control (Elves, Half-Elves and Humans)
+`1 873 200 450 #Potion of Hummingbird Nectar
+`1 873 200 600 #Potion of Immunity
+~1 5 200 600 #Potion of Immunity to Normal Weapons
+~6 20 200 600 #Potion of Immunity to Death Magic
+~21 35 0 0 #Potion of Immunity. Poison! Instant Death, No Saving Throw
+~36 50 200 600 #Potion of Immunity to Poison
+~51 70 600 1200 #Potion of Immunity to Magical Aging
+~71 100 200 600 #Potion of Immunity to Disease
+`1 873 300 500 #Potion of Immunization from Lycanthropes
+`1 873 200 500 #Potion of Infravision
+`1 873 250 700 #Potion of Inner Strength
+`1 873 250 600 #Potion of Insulation
+`1 873 400 750 #Potion of Intensity
+`1 873 250 500 #Potion of Invisibility
+`1 873 350 500 #Potion of Invulnerability
+`1 874 300 600 #Potion of Iron Handedness
+`1 874 750 1400 #Istar's Truth Potion
+`1 874 400 900 #Kanzaz Potion
+`1 874 400 800 #Potion, Kur's Drink
+`1 874 600 1300 #Potion of Language Learning
+`1 874 0 250 #Potion of Lethargy
+`1 874 250 400 #Potion of Levitation
+`1 874 1000 2500 #Potion of Lichdom
+`1 876 800 1800 #Potion of Life Stealing
+`1 876 500 1200 #Potion of Life Suspension
+`1 876 500 1500 #Potion of Lightning Form
+`1 877 500 900 #Potion of Longevity
+`1 877 200 300 #Love Potion
+`1 877 600 1500 #Potion of Luck
+`1 877 50 500 #Potion of Lycanthropy
+~1 17 877 50 500 #Potion of Lycanthropy, Werewolf
+~18 29 877 50 500 #Potion of Lycanthropy, Wereboar
+~30 41 877 50 500 #Potion of Lycanthropy, Werebear
+~42 53 877 50 500 #Potion of Lycanthropy, Wererat
+~54 65 877 50 500 #Potion of Lycanthropy, Werewolf
+~66 77 877 50 500 #Potion of Lycanthropy, Werefox
+~78 89 877 50 500 #Potion of Lycanthropy, Weretoger
+~90 100 877 50 500 #Potion of Lycanthropy, Werebadger
+`1 877 400 900 #Potion, Mage Wine
+`1 877 400 900 #Potion of Magic Blocking
+`1 877 500 1200 #Potion of Magic Enhancement
+`1 878 0 250 #Potion of Magic Peas
+`1 878 500 900 #Potion of Magic Resistance
+`1 878 900 2000 #Potion of Magic Resistance II
+`1 878 450 900 #Potion of Magic Shielding
+`1 878 250 800 #Potion of Magnetism
+`1 878 250 700 #Potion of Magnification
+`1 878 500 1200 #Potion of Master Thievery
+`1 879 500 900 #Potion of Merging
+`1 879 1000 2500 #Potion of Metal Immunity
+`1 879 500 1500 #Potion of the Midas Touch
+`1 879 400 900 #Potion of Mind Dampening
+`1 879 800 1700 #Potion of Mind Focusing
+`1 879 650 1300 #Potion of Mind Restoration
+`1 879 1000 2500 #Mirage Potion
+`1 879 600 1400 #Potion of Mirrored Eyes
+`1 880 400 800 #Potion of Missile Protection
+`1 880 200 400 #Potion of Monster Creation
+`1 880 200 600 #Potion of Neutralization
+`1 880 400 900 #Potion of Noxious Resistance
+`1 880 150 500 #Potion of Nutrition
+`1 880 600 1800 #Odrovir Potion
+`1 880 0 250 #Potion of Open Mind
+`1 880 0 600 #Potion of Opposite Aligment
+`1 881 50 100 #Potion of Pain Suppresion
+`1 881 300 750 #Potion of Perception
+`1 881 0 600 #Potion of Pestilence
+`1 881 0 300 #Potion of Petrification
+`1 881 800 2000 #Phase Potion
+`1 882 250 300 #Potion of Plant Control
+`1 882 200 250 #Potion of Plant Growth
+`1 882 0 100 #Potion of Poison
+`1 882 250 400 #Potion of Poison Negation
+`1 882 200 350 #Potion of Polymorph Self
+`1 882 500 1300 #Potion of Wizard Power
+`1 882 500 1300 #Potion of Priest Power
+`1 882 500 1300 #Potion of Rogue Power
+`1 882 500 1300 #Potion of Warrior Power
+`1 882 50 450 #Pox Potion
+`1 883 500 900 #Potion of Protection from Immiscibility
+`1 883 300 800 #Potion of the Pseudo Treant
+`1 883 900 2000 #Potion of Psionic Ability
+`1 883 200 350 #Potion of Psionics Boosting (Gray)
+`1 883 300 600 #Potion of Psionics Boosting (Green)
+`1 883 350 650 #Potion of Psionics Boosting (Red)
+`1 883 300 650 #Potion of Psionics Boosting (Silver)
+`1 883 300 650 #Potion of Psionics Boosting (Violet)
+`1 883 200 300 #Potion of Psionics Boosting (White)
+`1 883 300 600 #Potion of Psionics Boosting (Yellow)
+`1 884 0 600 #Potion of the Psychotic Killer
+`1 884 800 4000 #Potion of Pursuit
+`1 886 0 400 #Potion of Rage
+`1 886 200 400 #Potion of Rainbow Hues
+`1 886 600 1300 #Potion of Recall
+`1 886 300 700 #Potion of Reflection
+`1 887 500 4000 #Potion of Regeneration
+`1 887 500 4000 #Potion of Regeneration II
+`1 887 250 500 #Potion of Rejuvination
+`1 887 250 500 #Potion of Rest
+`1 887 300 2000 #Potion of Restoration
+`1 887 300 600 #Potion of Resuscitation
+`1 887 0 500 #Potion of Reverse Ventriloquism
+`1 887 500 900 #Potion of Rogue Wisdom
+`1 887 300 500 #Potion of Safe Consumption
+`1 888 300 500 #Potion of Scent Neutralization
+~1 5 888 400 900 #Potion of Scent Neutralization. Scent is Controllable.
+~6 100 888 300 500 #Potion of Scent Neutralization
+`1 888 700 1000 #Potion of Scrying
+`1 888 300 500 #Potion of Seeing
+`1 888 250 500 #Potion of Sensory Enhancement
+`1 888 400 1000 #Potion of Shadow
+`1 888 300 500 #Potion of Sharp Eyes
+`1 888 500 900 #Potion of Sight
+`1 888 200 500 #Singing Potion
+`1 888 200 650 #Skeletal Potion
+`1 889 200 500 #Potion of Sleep Bestowing
+`1 889 250 550 #Potion of Sleep Breathing
+`1 889 300 500 #Sleeping Potion
+`1 889 250 500 #Potion of Sleepy Breath
+`1 889 250 600 #Potion of Snake Crawling
+`1 889 200 400 #Potion of Sobriety
+`1 890 300 500 #Potion of Soul-Chilling
+`1 890 200 400 #Potion of Speech
+`1 890 200 450 #Potion of Speed
+`1 890 600 1300 #Potion of Spelljamming
+`1 890 250 800 #Potion of Spirit Binding
+`1 890 300 500 #Potion of Spirit Flight
+`1 891 500 1100 #Potion of Stone Form
+`1 891 400 800 #Potion of Strength
+`1 891 500 900 #Potion of Superhealing
+`1 891 450 750 #Potion of Superheroism
+`1 891 450 750 #Potion of Superheroism II
+`1 891 300 600 #Potion of Superior Animal Control
+`1 891 500 1000 #Potion of Superior Healing
+`1 892 250 350 #Potion of Sustenance
+`1 892 200 250 #Potion, Sweet Water
+`1 892 500 900 #Potion of Swimming
+`1 892 500 1900 #Teleportation Potion
+`1 892 350 950 #Potion of Thievery
+`1 892 250 600 #Potion of Thinness
+`1 892 500 1000 #Potion of Toad Skin
+`1 893 250 600 #Potion of Tongues
+~1 30 893 250 600 #Potion of Tongues (Tongues)
+~31 60 893 200 500 #Potion of Tongues (Speak with animals)
+~61 80 893 250 600 #Potion of Tongues (Speak with dead)
+~81 90 893 250 600 #Potion of Tongues (Speak with monsters)
+~91 100 893 200 500 #Potion of Tongues (Speak with plants)
+`1 893 300 600 #Potion of Toughening
+`1 893 250 400 #Potion of Tragic Heroism
+`1 893 600 2000 #Potion of Treasure Finding
+`1 893 400 900 #Potion of Truth
+`1 895 200 500 #Potion, Truth Drug
+`1 895 0 250 #Potion of Ugliness
+`1 895 700 1200 #Potion of the Undead
+`1 895 700 2500 #Potion of Undead Control
+~1 10 895 700 2500 #Potion of Undead Control (Ghasts)
+~11 20 895 700 2500 #Potion of Undead Control (Ghosts)
+~21 30 895 700 2500 #Potion of Undead Control (Ghouls)
+~31 40 895 700 2500 #Potion of Undead Control (Shadows)
+~41 50 895 700 2500 #Potion of Undead Control (Skeletons)
+~51 60 895 700 2500 #Potion of Undead Control (Spectres)
+~61 70 895 700 2500 #Potion of Undead Control (Wights)
+~71 80 895 700 2500 #Potion of Undead Control (Wraiths)
+~81 90 895 700 2500 #Potion of Undead Control (Vampires)
+~91 100 895 700 2500 #Potion of Undead Control (Zombies)
+`1 895 500 1100 #Potion of Underground Awareness
+`1 895 250 800 #Potion of Useful Appendages
+`1 895 500 1600 #Potion of Vampirism
+`1 896 450 990 #Potion of Venom
+`1 896 200 800 #Potion of Ventriloquism
+`1 896 50 250 #Potion of Visions
+`1 896 3000 2500 #Potion of Vitality
+`1 896 400 900 #Wallac's Potion of Speedcasting
+`1 897 800 1800 #Potion of Water Adventuring
+`1 897 400 900 #Potion of Water Breathing
+`1 897 400 900 #Potion of Water Breathing II
+`1 897 400 900 #Potion of Water Breathing III
+`1 897 350 650 #Potion of Water Movement
+`1 897 350 900 #Potion of Wizardry
+`1 897 0 250 #Potion of Worm Calling
+`1 898 650 1600 #Zak's Potion of Invulnerability
+`1 898 700 1200 #Zombie Blood Potion
+`1 898 700 1200 #Zombie Broth Potion
+`1 1052 1000 5000 Salve of Far Seeing
+~1 7 1052 1000 5000 Salve of Far Seeing (Blue)
+~8 14 1052 1000 5000 Salve of Far Seeing (Black)
+~15 21 1052 1000 5000 Salve of Far Seeing (White)
+~22 29 1052 1000 5000 Salve of Far Seeing (Clear)
+~30 36 1052 1000 5000 Salve of Far Seeing (Ashen)
+~37 43 1052 1000 5000 Salve of Far Seeing (Light Blue)
+~44 50 1052 1000 5000 Salve of Far Seeing (Gray)
+~51 57 1052 1000 5000 Salve of Far Seeing (Copper)
+~58 64 1052 1000 5000 Salve of Far Seeing (Gray)
+~65 71 1052 1000 5000 Salve of Far Seeing (White)
+~72 79 1052 1000 5000 Salve of Far Seeing (Golden)
+~80 86 1052 1000 5000 Salve of Far Seeing (Gray)
+~87 93 1052 1000 5000 Salve of Far Seeing (Silver)
+~94 100 1052 1000 5000 Salve of Far Seeing (Black)
+`1 1052 200 400 Salve of Healing
+`1 1052 300 500 Salve of Scar Removal
+`1 1086 0 0 Sea Dew
+`1 1128 1000 7500 Sovereign Glue
+`1 1465 1000 7000 Universal Solvent
+`1 1505 5 25 Blessed Water
+`1 1505 1000 5000 Golden Water
+`1 1505 5 25 Holy Water
+`1 1559 1500 10000 Wine of Eternity

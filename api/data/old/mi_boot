@@ -1,0 +1,193 @@
+`1 48 2000 8000 Anklet, Equus
+`1 49 0 1200 Anklet of Growth
+`1 49 600 6000 Anklet of Hobbling
+`1 51 2500 17000 Anklet of Levitation
+`1 51 0 600 Anklet of Sinking
+`1 51 2000 16000 Anklet of Sure Footing
+`1 51 1200 6000 Anklet of Walking
+`1 65 300 1500 Armband of Comfort of Sleep
+`1 65 250 1200 Armband of Death
+`1 65 1500 9000 Armband of Healing
+`1 66 700 7000 Armband of Music
+`1 66 0 1500 Armband of Salutation
+`1 66 500 2500 Armband of Snake Changing
+`1 66 750 8000 Armband of Strength
+`1 66 6900 42000 Armband, Trueheart's Warding
+`1 67 0 750 Armband of Variable Strength
+`1 152 3000 30000 Band of the Arachnid
+`1 152 100 500 Band of Bird Restraint
+`1 152 4000 20000 Band of Denial
+`1 153 2000 12000 Band of Familiar Protection Enhancement
+`1 153 2000 20000 Bands of Might, STR: 18/00
+~1 30 153 2000 20000 Bands of Might, STR: 18/00
+~31 55 153 2500 25000 Bands of Might, STR: 19
+~56 75 153 3000 30000 Bands of Might, STR: 20
+~76 90 153 3500 35000 Bands of Might, STR: 21
+~91 100 153 4000 40000 Bands of Might, STR: 22
+`1 153 2500 25000 Band of the Serpent
+`1 193 1000 3500 Boots of Attraction
+`1 193 1000 10000 Boots of Balance
+`1 193 1000 5000 Boots of Carrying
+`1 193 50 500 Boots of Cleanliness
+`1 193 1000 7000 Boots of Cloudwalking
+`1 193 500 2500 Boots of Comfort
+`1 193 2000 15000 Boots of Concealing
+`1 194 1500 7500 Cyria's Winged Boots
+`1 194 0 5000 Boots of Dancing
+`1 194 1000 5000 Deceptor's Boots
+`1 194 1000 5000 Elven Boots
+`1 194 1000 5000 Elven Boots II
+`1 194 1000 5000 Boots of Elvenkind
+`1 195 1000 7000 Boots of Feather Falling
+`1 195 1000 7000 Featherweight Boots
+`1 195 1000 6000 Boots of Gentle Thievery
+`1 195 1200 6000 Boots of Gentle Thievery II
+`1 195 1200 6000 Boots of Jogging
+`1 195 2000 15000 Boots of Levitation
+`1 195 6000 47500 Loki's Boots
+`1 195 2000 14000 Midnight Slasher's Boots
+`1 195 1000 10000 Boots, Moccasins of Free Movement
+`1 196 1500 7500 Boots of the North
+`1 196 0 1800 Boots of Pinching
+`1 196 2500 12500 Runjoye's Winged Boots
+`1 196 3000 15000 Shaladain's Boots of Starstriding
+`1 196 2500 20000 Boots of Speed
+`1 196 3500 25000 Spider's Boots of Stealth
+`1 197 3000 20000 Boots of Star Striding
+`1 197 900 1800 Boots of Stomping
+`1 197 2500 20000 Boots of Striding and Springing
+`1 198 1500 7500 Boots of Tracks
+`1 198 2500 20000 Boots of Traveling and Leaping
+`1 198 1500 7500 Boots of Varied Tracks (Consult Book to Determine Track Types)
+`1 198 2000 20000 Winged Boots
+~1 25 198 2000 20000 Winged Boots (Speed: 15, Maneuverability Class: A)
+~26 50 198 2000 20000 Winged Boots (Speed: 18, Maneuverability Class: B)
+~51 75 198 2000 20000 Winged Boots (Speed: 21, Maneuverability Class: C)
+~76 100 198 2000 20000 Winged Boots (Speed: 24, Maneuverability Class: D)
+`1 220 1000 10000 Bracers of Archery
+`1 220 0 1000 Bracers of Attraction
+`1 220 3500 35000 Bracers of Blasting
+`1 220 4000 20000 Bracers of Blinding Strike
+`1 220 100 1000 Bracers of Brachiation
+`1 221 3000 15000 Bracers of Brandishing
+`1 221 1500 8000 Bracers of Cleanliness
+`1 221 4000 24000 Bracers of Defense, AC:2
+~1 5 221 4000 24000 Bracers of Defense, AC:2
+~6 15 221 3500 21000 Bracers of Defense, AC:3
+~16 35 221 3000 18000 Bracers of Defense, AC:4
+~36 50 221 2500 15000 Bracers of Defense, AC:5
+~51 70 221 2000 12000 Bracers of Defense, AC:6
+~71 85 221 1500 9000 Bracers of Defense, AC:7
+~86 100 221 1000 6000 Bracers of Defense, AC:8
+`1 221 0 2000 Bracers of Defenselessness
+`1 221 4500 27000 Bracers of Deflection
+`1 221 0 0 Bracers of Invulnerability
+`1 222 2000 4500 Bracers of the Mermen
+`1 222 3000 15000 Noj's Bracers of Brandishing
+`1 222 4000 20000 Phandoorl's Bracers
+`1 293 3500 17500 Claw of Magic Stealing
+`1 294 3750 35000 Claw of Nezram
+`1 294 0 2000 Noj's Claw of Magic Exchange
+`1 294 3000 15000 Claws, Talon of the Danse Macabre
+`1 294 700 6000 Claws, Talon of Zaltec
+`1 294 100 500 Twisted Claw
+`1 295 1000 6000 Cleats of Gripping
+`1 325 4000 20000 Collar of Change
+`1 325 250 1500 Collar of Charisma
+`1 325 250 1500 Collar of Disguise
+`1 326 000 0000 Collar of Protection
+~1 20 326 1000 10000 Collar of Protection +1
+~21 40 326 2000 20000 Collar of Protection +2
+~41 60 326 3000 30000 Collar of Protection +3
+~61 80 326 4000 40000 Collar of Protection +4
+~81 100 326 5000 50000 Collar of Protection +5
+`1 326 0 1000 Collar of Stiffness
+`1 326 0 1200 Collar of Strangling
+`1 326 1000 5000 Collar of Tusmit
+`1 326 800 4000 Wolf Collar
+`1 503 500 5000 Gauntlets, Claw of the Bear
+`1 503 2000 12000 Clawed Gauntlets
+`1 503 1000 8000 Climbing Gauntlets
+`1 503 1000 10000 Gauntlets of Dexterity
+`1 503 1000 10000 Gauntlets of Dexterity II
+`1 504 0 1200 Gauntlets of Entrapment
+`1 504 9000 50000 Gauntlets, Fire Claws
+`1 504 2000 10000 Fjalar's Gauntlets
+`1 504 0 1000 Gauntlets of Fumbling
+`1 505 1000 4000 Glim-Gauntlet
+`1 505 1400 16500 Gauntlets, Hand of Remote Action
+`1 506 1000 10000 Gauntlets of Heat
+`1 506 1000 10000 Gauntlets of Holding
+`1 506 2000 12000 Iron Gauntlets of Urnst
+`1 506 8000 70000 Gauntlets of Might
+`1 506 2500 15000 Gauntlets of Moander
+`1 507 1000 15000 Gauntlets of Ogre Power
+`1 507 1000 10000 Gauntlets of Ogre Power II
+`1 507 370 3750 Gauntlets of Polishing
+`1 507 500 5000 Gauntlets of Proficiency
+`1 507 1500 12000 Gauntlets, Razor Claws of Chakyik
+`1 507 1000 10000 Gauntlets of Specialization
+`1 507 100 1000 Gauntlets of Sticking
+`1 507 3000 30000 Gauntlets of Super Strength
+`1 508 1000 10000 Gauntlets of Swimming and Climbing
+`1 508 1000 10000 Gauntlets of Tamus
+`1 510 10000 45000 Gauntlets of the Valorous
+`1 541 4500 50000 Gloves, Black Hand
+`1 542 500 2500 Gloves, Claws of Raking
+`1 542 100 500 Cosmetology Gloves
+`1 542 1000 10000 Gloves of Evasion
+`1 542 2000 10000 Gloves of the Feline
+~1 15 542 2000 10000 Gloves of the Feline (Chaotic Good)
+~16 30 542 2000 10000 Gloves of the Feline (Neutral Good)
+~31 40 542 2000 10000 Gloves of the Feline (Lawful Good)
+~41 50 542 2000 10000 Gloves of the Feline (Chaotic Evil)
+~51 60 542 2000 10000 Gloves of the Feline (Neutral Evil)
+~61 70 542 2000 10000 Gloves of the Feline (Lawful Evil)
+~71 80 542 2000 10000 Gloves of the Feline (Neutral Good)
+~81 90 542 2000 10000 Gloves of the Feline (Neutral)
+~91 100 542 2000 10000 Gloves of the Feline (Neutral Evil)
+`1 542 900 9000 Fist Gloves
+`1 543 0 1000 Golden Gloves
+`1 543 1000 5000 Gloves, Helping Hand
+`1 543 1500 10000 Gloves of Interception
+`1 543 2000 20000 Gloves of Lightning
+`1 544 1800 10000 Gloves of Missile Snaring
+`1 544 4000 20000 Gloves of the Octopus
+`1 544 3000 15000 Reglar's Gloves of Freedom
+`1 544 5000 25000 Reglar's Gloves of Freedom from Magic
+`1 545 1000 5000 Gloves of Thievery
+`1 545 2500 25000 Thor's Magical Gloves of Power
+`1 560 2500 12000 Balacer's Hand
+`1 561 2000 25000 Hands of Harrowing
+~1 10 561 2000 25000 Evil-Aligned Hands of Harrowing
+~11 100 561 2000 25000 Good-Aligned Hands of Harrowing
+`1 562 1000 2500 Helping Hand
+`1 562 8000 80000 Holy Hand of Bane
+`1 563 2000 20000 Tomorast's Left Hand
+`1 563 3000 30000 Tomorast's Right Hand
+`1 563 18000 180000 Hand of Vecna
+`1 565 1400 16500 Wonderful Hand
+`1 574 1000 5000 Heel of Reunion
+`1 808 2000 10000 Pegleg of Immurk the Invincible
+`1 809 900 4500 Pegleg of Walking
+`1 1111 2000 20000 Shoes of Fharlanghn
+`1 1111 0 1000 Hefiz's Superb Shiny Shoes
+`1 1111 4000 20000 Iron Shoes of Vidar
+`1 1111 2500 20000 Shoes, Sandals of Speed
+`1 1112 1000 5000 Shoes of White Bronze
+`1 1112 750 2500 Woodland Shoes
+`1 1121 1250 6250 Bahija's Slippers of Spider Climbing
+`1 1121 0 5000 Slippers of Dancing
+`1 1121 3000 15000 Dragon Slippers
+`1 1121 300 1500 Slippers of Drinking
+`1 1121 2000 10000 Ebomara's Slippers of Spider Climbing
+`1 1121 400 2000 Glass Slippers
+`1 1121 750 3750 Slippers of Kicking
+`1 1121 1000 5000 Ruby Slippers
+`1 1122 1000 5000 Ruby Slippers II
+`1 1122 0 1000 Slippers of Slowness
+`1 1122 1000 5000 Slippers of Soft Movement
+`1 1122 1000 5000 Slippers of Spider Climbing
+`1 1126 4000 20000 Snowshoes of Speed and Traveling
+`1 1126 300 1500 Socks of Dryness
+`1 1126 1000 5000 Socks of Sweating

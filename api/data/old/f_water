@@ -1,0 +1,77 @@
+:COMMON
+1 12 Beetle, Water
+4 32 Bird, Crow
+5 12 Bird, Eagle, Wild
+1 2 Bird, Falcon
+2 20 Bird, Flightless
+1 2 Bird, Hawk, Large
+4 24 Bird, Kingfisher
+3 32 Bird, Raven
+1 20 Bird, Skyfisher
+2 16 Bird, Swan
+2 24 Centipede, Giant
+5 30 Centipede, Huge
+1 2 Fish, Barracuda
+:UNCOMMON
+5 40 Frog, Giant
+1 4 Crustacean, Giant, Crayfish
+5 50 Fish, Quipper
+1 2  Fish, Lamprey
+1 6 Fish, Gar, Giant
+2 16 Gargoyle, Common
+1 4 Naga, Water
+2 24 Ogre, Merrow
+:RARE
+1 2 Bird, Boobrie
+1 20 Bird, Eagle, Giant
+3 12 Broken One, Common
+2 12 Crabman
+1 20 Crawling Claw
+1 8 Dog, Moon
+1 8 Fish, Pike, Giant
+5 12 Fish, Ixitxachitl
+1 4 Fish, Carp, Giant
+1 1 Fish, Catfish, Giant
+1 1 Fish, Dragonfish
+2 12 Frog, Poisonous
+2 16 Gargoyle, Margoyle
+11 20 Giff
+1 3 Hag, Sea
+2 8 Hippocampus
+20 80 Sprite, Nixie
+1 6 Troll, Freshwater
+1 3 Umber Hulk, Vodyanoi
+:VERY_RARE
+1 4 Aboleth
+1 1 Banshee
+4 16 Bird, Eblis
+1 4 Broken One, Greater
+1 4 Centipede, Megalo-
+1 1 Death Knight
+3 12 Doppleganger
+1 1 Dragon Turtle
+1 1 Elemental, Water
+1 1 Elemental, Air Kin, Aerial Servant
+1 4 Elemental, Water Kin, Nereid
+1 3 Elemental, Water Kin, Water Weird
+1 1 Elemental, Composite, Tempest
+1 4 Fish, Lamprey, Giant
+3 18 Frog, Killer
+1 1 Ghost
+2 24 Ghoul, Lacedon
+1 4 Giant, Fog
+1 6 Giant, Fog
+1 1 Giant, Storm
+2 4 Giant, Storm
+2 8 Githyanki
+1 3 Hag, Green
+1 1 Haunt
+2 8 Imp, Mephit, Mist
+2 8 Imp, Mephit, Smoke
+2 8 Imp, Mephit, Steam
+1 1 Morkoth
+1 3 Phoenix
+2 8 Sirine
+2 5 Swanmay
+1 1 Zaratan
+:

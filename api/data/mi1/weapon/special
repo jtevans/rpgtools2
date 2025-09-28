@@ -1,0 +1,885 @@
+1~84~Abaris's Arrow~0
+1~84~Acid Arrow (Quantity: {dice/1d6})~0
+1~85~Arrow of Aggravation~0
+1~85~Antimagic Arrow~0
+1~85~Apollo's Arrow~0
+1~85~Arrow of Attraction~0
+1~85~Arrow of Biting~0
+1~85~Black Arrow of Iuz~0
+1~86~Arrow of Blinding~0
+1~86~Arrow of Blinking~0
+1~86~Bolt of Lightning (Quantity: {dice/2d4})~0
+1~86~Arrow of Bow-Breaking~0
+1~86~Arrow of Burning~0
+1~86~Arrow of Charming~0
+1~86~Arrow of Charming II~0
+1~87~Arrow of Clairaudience~0
+1~87~Arrow of Clairvoyance~0
+1~87~Arrow of Climbing~0
+1~87~Arrow of Connection~0
+1~87~Arrow of Curing~0
+1~87~Arrow of Darkness~0
+1~88~Arrow of Detonation~0
+1~88~Arrow of Direction~0
+1~88~Arrow of Disarming~0
+1~88~Arrow of Disintegration~0
+1~88~Arrow of Dispelling~0
+1~88~Arrow of Distance~0
+1~88~Arrow of Draconian Slaying~0
+1~88~Elven Arrow~0
+1~89~Arrow of Enchantment~0
+1~89~Arrow of Explosions~0
+1~89~Arrow of Extended Range (Quantity: {dice/2d10})~0
+1~89~Faerie Fire Arrow~0
+1~89~Arrow of Fire~0
+1~89~Fire Seed Arrow~0
+1~90~Fire Trap Arrow~0
+1~90~Flaming Arrow (Quantity: {dice/2d6})~0
+1~90~Arrow of Flying~0
+1~90~Arrow of Force~0
+1~90~Arrow of Harm ({weapon/arrow_harm})~0
+1~90~Arrow of Holding~0
+1~90~Arrow of Holding II~0
+1~91~Arrow of Ice (Quantity: {dice/1d8})~0
+1~91~Arrow of Illumination (Quantity: {dice/2d4})~0
+1~91~Illusory Missile~0
+1~91~Arrow of Justice~0
+1~91~Arrow of Law~0
+1~91~Arrow of Light~0
+1~92~Arrow of Lighting~0
+1~92~Arrow of Lightning~0
+1~92~Lycanthrope Slayer (Arrow)~0
+1~92~Maglubiyet's Wounding Arrow~0
+1~92~Arrow of Misdirection~0
+1~92~Arrow of Multiplicity~0
+1~92~Nilbog Arrow (Quantity: {dice/1d8})~0
+1~92~Oberon's Arrow of Subduing~0
+1~93~Oberon's Arrow of Slaying~0
+1~93~Arrow of Paralyzation~0
+1~93~Arrow of Penetrating~0
+1~93~Arrow of Penetration~0
+1~93~Arrow of Perseverance~0
+1~93~Arrow of Piercing~0
+1~93~Arrow of Polymorphing (Form: {weapon/arrow_polymorphing})~0
+1~94~Arrow of Pursuit~0
+1~95~Quarrel of Biting ({weapon/quarrel_biting}) (Quantity: {dice/1d12})~0
+1~95~Red Arrow {weapon/red_arrow} (Quantity: {dice/5d4})~0
+1~95~Arrow of Refilling~0
+1~95~Arrow of Returning~0
+1~95~Arrow of Rock Piercing~0
+1~96~Arrow of Roping~0
+1~96~Arrow of Scent Detection~0
+1~96~Arrow of Screaming~0
+1~96~Arrow of Screaming II~0
+1~96~Arrow of Seeking~0
+1~97~Arrow of Seeking II (Quantity: {dice/2d8})~0
+1~97~Arrow of Set~0
+1~97~Arrow of Signaling~0
+1~97~Arrow of Silence~0
+1~97~Arrow of Sinking~0
+1~97~Arrow of Slaying ({weapon/arrow_slaying})~0
+1~99~Arrow of Slaying II~0
+1~99~Arrow of Slaying III ({weapon/arrow_slaying_3})~0
+1~99~Arrow of Slaying IV ({weapon/arrow_slaying_4})~0
+1~100~Snake Arrow~0
+1~100~Arrow of Speaking~0
+1~100~Stun Bolt~0
+1~100~Arrow of Stunning~0
+1~100~Stirge's Bite (Arrow)~0
+1~100~Arrow of Teleporting~0
+1~101~Arrow of Transporting~0
+1~101~Wooden Arrow~0
+1~101~Arrow of Wounding~0
+1~111~Agni's Red Axe~0
+1~112~Ama-Tsu-Mara's Vorpal Axe~0
+1~112~Arumdina Axe~0
+1~112~Azuredge, Slayer of the Netherborn (Axe)~0
+1~114~Brihaspati's Axe~0
+1~114~{weapon/axe} of Brotherhood~1
+1~114~Callarduran Smoothhands's Axe~0
+1~114~Cursed Battle Axe~1
+1~115~{weapon/axe} of Cutting~1
+1~115~Deathstriker (Axe)~0
+1~115~Axe of the Dwarvish Lords~1
+1~117~{weapon/axe} of Enchantment (Equivalent Bonus: {weapon/bonus_no_curse})~1
+1~117~Frostreaver (Axe)~1
+1~118~Garl Glittergold's Battle Axe~0
+1~118~Gnarldan's Battle Axe~0
+1~118~Hastseltsi's Hand Axe~0
+1~118~Hastsezini's Hand Axe~0
+1~118~Axe of Hurling {weapon/axe_hurling}~1
+1~118~Lortz's Battle Axe~0
+1~118~Maglubiyet's Axe~0
+1~118~Might of Heroes (Axe)~0
+1~118~Molydeus's Axe~0
+1~119~Motopua (Axe)~0
+1~119~Nanna Sin's Black Axe~0
+1~119~Nomog-Geaya's Hand Axe~0
+1~119~Pickaxe of Piercing {weapon/bonus_no_curse}~1
+1~119~Rocksplitter Axe~1
+1~119~Sampsa's Golden Axe~0
+1~119~Shag's Battle Axe~0
+1~119~Sulward's Axe~0
+1~120~Thor's Kiss (Axe)~0
+1~120~Throwing Axe {weapon/bonus_no_curse}~1
+1~120~Thumb Height Man's~0
+1~120~Torshorak (Axe)~0
+1~120~Tunnelrunner's Axe~0
+1~122~Withering Pickaxe~1
+1~122~Axe of the Woodsman~1
+1~122~Zebulon's Axe of Leaving~0
+1~122~Zzzzzz's Axe of Snoring {weapon/bonus_no_curse}~0
+1~~Ballistae Heavy {weapon/bonus_123}~0
+1~~Ballistae Light {weapon/bonus_123}~0
+1~~Ballistae Medium {weapon/bonus_123}~0
+1~~Bigby's Demanding Battering Ram~0
+1~~Magical Battering Ram {weapon/bonus_123} (Type: {weapon/battering_ram})~0
+1~~{weapon/blowgun} of Accuracy +3~1
+1~~{weapon/blowgun} of Distance {weapon/bonus_12}~1
+1~~Hawk Blowgun~0
+1~~{weapon/blowgun} of Wild Emotions~1
+1~202~Aasimon (Bow)~0
+1~202~{weapon/bow} of Accuracy~1
+1~202~Ajagava ({weapon/bow})~0
+1~202~{weapon/bow} of Anshan~0
+1~202~Black {weapon/bow}~1
+1~213~Brihaspati's Bow~0
+1~213~{weapon/bow} of the Centaurs~1
+1~213~Corellon's Long Bow~0
+1~213~Crossbow of Accuracy ({weapon/crossbow_accuracy})~1
+1~213~Crossbow of Angling~1
+1~213~Crossbow of Distance {weapon/bonus_12}~1
+1~213~Crossbow of Enchantment {weapon/bonus_no_curse}~1
+1~213~Crossbow of Klee~0
+1~213~Crossbow of Multiplication ({weapon/crossbow_multiplication})~1
+1~204~Crossbow of Speed~1
+1~204~Crossbow of Speed II ({weapon/crossbow_speed_2})~1
+1~204~Cursed {weapon/bow}~1
+1~204~{weapon/bow} of Distance~1
+1~204~{weapon/bow} of Doubling~1
+1~204~Eagle {weapon/bow}~1
+1~204~{weapon/bow} of Enchantment {weapon/bonus_no_curse}~1
+1~204~Firebow ({weapon/bow})~1
+1~205~Fire Teeth ({weapon/bow})~1
+1~205~Bow of the Forest~1
+1~205~Gem {weapon/bow}~1
+1~205~Goblins' Bane ({weapon/bow})~1
+1~205~Hastsezini's Long Bow~0
+1~205~Hawk {weapon/bow}~1
+1~205~Heartseeker (Bow)~1
+1~206~{weapon/bow} of Heartseeking (Type: {weapon/bow_heartseeking})~1
+1~206~Heracles's Bow~0
+1~206~Hiatea's Long Bow~0
+1~206~Ice Fang ({weapon/bow})~0
+1~206~Illusory ({weapon/bow})~1
+1~206~Indra's Bow~0
+1~207~Iron Bow of Gesen~0
+1~208~Joukahainen's Crossbow~0
+1~208~Last Shot ({weapon/bow})~1
+1~208~{weapon/bow} of Levitation~1
+1~208~{weapon/bow} of Lir~0
+1~209~{weapon/bow} of Marksmanship~1
+1~209~{weapon/bow} of Neverending Arrows~1
+1~209~Oberon's bow~0
+1~209~Odin's Bow~0
+1~209~Phantom {weapon/bow}~1
+1~209~Rudra's Bow~0
+1~209~Sarnge ({weapon/bow})~0
+1~209~Shichi's Daikyu~0
+1~210~Solonor Thelandira's~0
+1~210~{weapon/bow} of Speed~1
+1~210~Underwater Crossbow~1
+1~210~Long Bow of the Unicorn~1
+1~210~Valis's Bow~0
+1~210~{weapon/bow} of Warning {weapon/bow_warning} Curse~1
+1~266~Catapult Heavy {weapon/bonus_123}~0
+1~266~Catapult Light {weapon/bonus_123}~0
+1~266~Catapult Medium {weapon/bonus_123}~0
+1~314~Aegir's Club~0
+1~314~Bronzewood Cudgel~1
+1~314~Daghdha's Club~0
+1~314~Druid's Cudgel~1
+1~314~Fire's Club~1
+1~314~Great Stone Club~1
+1~314~Grolantor's Club~0
+1~356~Abbathor's Dagger~0
+1~356~Alignment Detection {weapon/dagger}~1
+1~356~Aphrodite's Dagger~0
+1~356~Armor Piercing {weapon/dagger}~1
+1~357~Baravar Cloakshadow's~0
+1~357~{weapon/dagger} of Blackflame~1
+1~357~Blade of Banishing ({weapon/dagger})~1
+1~357~Bladestar (Dagger)~0
+1~358~Brandobaris's Dagger~0
+1~358~Buckle Knife {weapon/bonus_no_curse}~1
+1~358~Buckler Knife {weapon/bonus_1234}~1
+1~359~Ceremonial {weapon/dagger}~1
+1~359~Chih-Nii's Dagger~0
+1~359~Chill Blade ({weapon/dagger})~0
+1~359~{weapon/dagger} of Concealment {weapon/bonus_123}~1
+1~359~{weapon/dagger} of Defiance~1
+1~359~Dolphins' Bane (Dagger)~1
+1~359~{weapon/dagger} of Doomwarding~1
+1~360~Dragon Fang ({weapon/dagger})~1
+1~360~Dragonfang ({weapon/dagger})~1
+1~360~Elven ({weapon/dagger})~1
+1~360~{weapon/dagger} of the Evil Eye~1
+1~360~Eviscerator~0
+1~360~Fang ({weapon/dagger}) (Poison Type: {weapon/fang})~1
+1~361~Fang of the Nosferatu (Dagger)~0
+1~362~Flying Dagger~1
+1~363~Flying Dagger II (Quantity: {dice/1d12})~1
+1~363~Freya's Fiery Dagger~0
+1~363~Frigga's Dagger~0
+1~363~Golemblight ({weapon/dagger})~0
+1~363~Grimwald's Dagger~0
+1~363~Guardian Blade ({weapon/dagger})~1
+1~364~Hastseltsi's Throwing Knife~0
+1~364~Hecate's Dagger~0
+1~364~Hornblade ({weapon/hornblade})~1
+1~364~Dagger of Illusory Metal~1
+1~364~{weapon/dagger} of Impaling~1
+1~364~Iyarim's Flying Dagger~0
+1~365~Jump Dagger~1
+1~365~Kiaransalee's Dagger~0
+1~365~Knife of Continual Sharpness {weapon/bonus_no_curse}~1
+1~366~Knife of Sharpness~1
+1~366~Koalinth Slayer (Dagger)~0
+1~366~Lola's Envenomed Dagger~0
+1~366~Longtooth~0
+1~366~Mageslayer ({weapon/dagger})~0
+1~366~Dagger of the Magius~1
+1~366~Mervic's Daggers~0
+1~366~Nut's Black Dagger~0
+1~366~{weapon/dagger} of Quickness~1
+1~367~Rabbitslayer (Dagger)~1
+1~367~Random Target Dagger~1
+1~367~Resource Dagger {weapon/bonus_234}~1
+1~367~Rust Blade ({weapon/dagger} {weapon/bonus_no_curse})~1
+1~368~Rutterkin Sling Blade~0
+1~368~Sahuagin Dolphin Dagger~0
+1~368~Dagger of Set~1
+1~368~Soma's Dagger~0
+1~368~{weapon/dagger} of Sounding~1
+1~368~Speaking Dagger~1
+1~369~Spider Fang Dagger~0
+1~369~Sung Chiang's Dagger~0
+1~369~Dagger of Throwing {weapon/bonus_1234}~1
+1~369~Dagger of Throwing II {weapon/bonus_no_curse}~1
+1~369~Throwing Dagger of Returning {weapon_bonus_no_curse}~1
+1~369~Tooth of Torm (Dagger)~0
+1~370~{weapon/dagger} of Truth~1
+1~370~Tufala's Jambiya (Dagger)~0
+1~370~Tvashtri's Dagger~0
+1~370~Dagger of Vengeance~1
+1~371~{weapon/dagger} of Venom~1
+1~371~Werebane ({weapon/dagger})~1
+1~371~Xochiquetzal's Dagger~0
+1~371~Yama's Dagger~0
+1~371~{weapon/dart} of Biting {weapon/bonus_no_curse}~0
+1~372~{weapon/dart} of Blinking {weapon/bonus_no_curse}~0
+1~372~{weapon/dart} of Branding {weapon/bonus_no_curse}~0
+1~372~{weapon/dart} of Charming {weapon/bonus_no_curse}~0
+1~372~{weapon/dart} of Climbing {weapon/bonus_no_curse}~0
+1~372~{weapon/dart} of Curing {weapon/bonus_no_curse}~0
+1~372~Death Dart (Size: {weapon/death_dart})~0
+1~373~Death Dart II~0
+1~373~{weapon/dart} of Disarming {weapon/bonus_no_curse}~0
+1~373~{weapon/dart} of Dispelling {weapon/bonus_no_curse}~0
+1~373~{weapon/dart} of Flying {weapon/bonus_no_curse}~0
+1~373~{weapon/dart} of Homing +3~0
+1~373~Dart of the Hornets' Nest {weapon/dart_hornet_nest}~0
+1~374~Illusory Missiles ({weapon/dart})~0
+1~374~{weapon/dart} of Light (Quantity: {dice/2d10})~0
+1~374~{weapon/dart} of Lighting~0
+1~374~{weapon/dart} of Penetrating~0
+1~374~{weapon/dart} of Refilling~0
+1~374~{weapon/dart} of Screaming~0
+1~374~{weapon/dart} of Seeking~0
+1~374~{weapon/dart} of Sinking~0
+1~375~{weapon/dart} of Slaying ({weapon/dart_slaying})~0
+1~375~{weapon/dart} of Speaking~0
+1~375~{weapon/dart} of Stunning~0
+1~375~Svirfhebli Dart~0
+1~375~{weapon/dart} of Teleporting~0
+1~375~{weapon/dart} of Transporting~0
+1~375~{weapon/dart} of Wounding~0
+1~447~Dimensional Mine (Explosive Device)~0
+1~447~Dimensional Mine II (Explosive Device)~0
+1~447~Ellister's Dimensional Mine (Explosive Device)~0
+1~448~Helm Bomb (Explosive Device)~0
+1~448~Spelljamming Mine (Explosive Device)~0
+1~449~Wethilion's Time Bomb (Explosive Device)~0
+1~485~Bael's Morning Star~0
+1~485~Bargrivyek's Flail~0
+1~485~Battle Star~0
+1~485~Flail of the Desert Kings~0
+1~487~Dragonflail~1
+1~487~Fleeting Flail~1
+1~488~Morning Star of Detection~1
+1~488~Multiple Rod of Dancing~1
+1~488~Osiris's Royal Flail~0
+1~488~Pharaoh's Flail~0
+1~551~Aegis-Fang (Hammer)~0
+1~551~Air Hammer~1
+1~551~Colgomere's Hammer of Thunderbolts~0
+1~552~Delzoun's Fist (Warhammer)~0
+1~552~Dwarf Thrower (Warhammer)~1
+1~552~Dwarf Thrower II (Hammer)~1
+1~553~Flandal Steelskin's Hammer~0
+1~553~Gaerdal Ironhand's Hammer~0
+1~554~Goibhniu's Warhammer~0
+1~554~Hephaestus's Hammer~0
+1~556~Kostchtchie's Hammer~0
+1~556~Kostchtchie's Hammer II~0
+1~556~{weapon/hammer} of Life~1
+1~556~Mallet of Luck~1
+1~556~Maul of the Titans~1
+1~557~Mjolnir II~0
+1~557~{weapon/hammer} of Nailing~1
+1~557~Nai No Kami's Hammer~0
+1~557~Hammer of Penetration~1
+1~558~Runehammer~0
+1~558~{weapon/hammer} of Silence~1
+1~558~Storm {weapon/hammer}~1
+1~558~Stronmaus's Hammer of Thunderbolts~0
+1~558~Hammer of Thunderbolts~1
+1~558~Warhammer of Vengence~1
+1~558~Warhammer of Vitroin~1
+1~559~Whelm Hammer ({weapon/hammer})~1
+1~559~Winged Hammer ({weapon/hammer})~1
+1~568~Magical Harpoon {weapon/bonus_harpoon}~1
+1~596~Helmseeker ({weapon/helmseeker})~0
+1~623~Javelin of Distance~0
+1~623~Hruggek's Javelin of Lightning~0
+1~623~Huitzilopochtli's Javelin~0
+1~623~Javelin of Lightning (Quantity: {dice/1d4_plus_1})~0
+1~624~Javelin of Piercing (Quantity: {dice/2d4})~0
+1~624~Sunbolt (Javelin)~0
+1~624~Jettison Heavy {weapon/bonus_123}~0
+1~624~Jettison Light {weapon/bonus_123}~0
+1~624~Jettison Medium {weapon/bonus_123}~0
+1~647~Anhur's Lance~0
+1~647~Copper {weapon/lance}~1
+1~647~Death {weapon/lance}~1
+1~647~Dragonlance (Type: {weapon/dragonlance})~0
+1~647~{weapon/lance} of Fire~1
+1~648~Hastsezini's Lance of Fire ({{weapon/lance}})~0
+1~648~Izanagi's {weapon/lance}~0
+1~648~Lesser Dragonlance (Type: {weapon/dragonlance}))~0
+1~649~{weapon/lance} of Piercing~1
+1~649~Puchan's Golden Lance~0
+1~649~Tribal Lance~1
+1~649~True Dragonlance~0
+1~650~Venom Lance~1
+1~650~Wind's Lance~0
+1~675~Astral Deva {weapon/mace}~1
+1~675~Bael's Morning Star~0
+1~675~Berronar Truesilver's Mace~0
+1~675~Black Mace~1
+1~675~Mace of Crushing~1
+1~675~{weapon/mace} of Darkness~1
+1~676~Diamond Mace~1
+1~676~{weapon/mace} of Disruption~1
+1~676~Driver ({weapon/mace})~1
+1~676~Expeller ({weapon/mace})~1
+1~677~Great Golden Mace of the North~0
+1~677~Great Holy Mace Icon~0
+1~677~Hruggek's Morning Star~0
+1~677~Ironstar Mace~1
+1~677~Mace-Wand~1
+1~677~Memnor's Morning Star~0
+1~677~Muamman Duathal's Mace~0
+1~677~Nebelun's Mace~0
+1~678~Nightbringer~1
+1~678~{weapon/mace} of Pain~1
+1~678~Raiden's Mace~0
+1~678~Shadowcaster (Mace)~0
+1~678~Skull (Mace)~1
+1~678~{weapon/mace} of Spellwarding~1
+1~679~Mace of St. Cuthbert~0
+1~679~Mace of St. Cuthbert II~0
+1~679~Mace of St. Cuthbert III~0
+1~681~Staff-Mace (Form: {weapon/staff_mace})~1
+1~681~Storm Star (Mace)~0
+1~681~Tadrond's Mace~0
+1~681~Undeadbane ({weapon/mace})~1
+1~681~Undeadbane II ({weapon/mace})~1
+1~682~Varuna's Mace~0
+1~682~Warstar of the Manticore (Morning Star)~0
+1~709~Dumathoin's Mattock~0
+1~710~Mattock of the Titans~1
+1~755~Ashley's Net of Entrapment~0
+1~756~Drag Net ({weapon/net})~1
+1~756~{weapon/net} of Entrapment~1
+1~756~{weapon/net} of Fishing~1
+1~756~Hare Net~1
+1~756~Hiatea's Net of Weakness~0
+1~756~Hiatea's Net of Feeblemind~0
+1~756~Hiatea's Net of Petrification~0
+1~757~{weapon/net} of Landing~1
+1~757~Loyal Net of Restraint~0
+1~757~Net of Plenty~1
+1~757~Net of Profit~1
+1~757~Safety Net~1
+1~758~{weapon/net} of Snaring~1
+1~758~{weapon/net} of Snaring II~1
+1~758~{weapon/net} of Sneering~1
+1~758~{weapon/net} of Spirit Snaring~1
+1~758~Webnet~1
+1~758~Webnet II~1
+1~758~Net of Worth~1
+1~801~Magical Paddleboard {weapon/paddleboard}~0
+1~801~Paddleboard of Wondrous Transformation~0
+1~809~Flash Pellet~0
+1~809~Flash Pellet II~0
+1~841~Baphomet's Bardiche~0
+1~841~Belial's Military Fork~0
+1~841~Blessed Trident~1
+1~841~Trident of Commanding Water Creatures~1
+1~841~Fisher's Trident of Fish Command {weapon/bonus_no_curse}~0
+1~841~Fork of Jabbing~1
+1~841~Fork of Travel {weapon/bonus_no_curse}~1
+1~842~Lacedonbane~0
+1~842~Mephistopheles's Fork~0
+1~842~Niord's Great Trident~0
+1~842~O-Wata-Tsu-Mi's Jade Trident~0
+1~842~Persana's Trident~0
+1~843~Pitchfork of Penetration {weapon/bonus_no_curse}~1
+1~843~Poseidon's Trident~0
+1~843~Reptilebane~1
+1~843~Rutterkin {weapon/polearm} {weapon/bonus_123}~1
+1~844~Saw-Toothed Glaive~1
+1~844~Trident of Elemental Death~1
+1~844~Trident of Fish Command {weapon/bonus_no_curse}~1
+1~844~Trident of Fish Control {weapon/bonus_no_curse}~1
+1~844~Trident/Military Fork {weapon/bonus_no_curse}~1
+1~844~Trident of the Oljatt Sea~0
+1~846~Trident of the Phlogiston~0
+1~846~Trident of Submission {weapon/bonus_no_curse}~1
+1~846~Trident of Warning {weapon/bonus_no_curse}~1
+1~846~Trident of Yearning~1
+1~846~Uluth'gak's Gythka~0
+1~847~Water Elemental Slayer (Trident)~1
+1~847~Wave (Trident)~0
+1~847~Zezen Washio's Trident~0
+1~929~Quiver of Arrow Storing~0
+1~929~Black Quiver~0
+1~929~Quiver of Ehlonna~0
+1~929~Frief's Magical Quiver~0
+1~929~Never Empty Quiver~0
+1~929~Quiver of Returning~0
+1~929~Quiver of Wrong Returning~0
+1~1112~Elmarin Cannon Call ({weapon/elmarin_cannon_call})~0
+1~1112~Elmarin Cannon Call II ({weapon/elmarin_cannon_call_2})~0
+1~1113~Elmarin Cannon Call III ({weapon/elmarin_cannon_call_3})~0
+1~1114~Ahto's Sickle~0
+1~1114~Black Sickle~0
+1~1115~Cronus's Sickle~0
+1~1115~Gaea's Black Sickle~0
+1~1115~Golden Sickle~0
+1~1115~{weapon/sickle} of the Harvest~1
+1~1115~{weapon/sickle} of Lycanthropy {weapon/bonus_no_curse}~1
+1~1116~Scythe of Pain~0
+1~1119~Blacksling~0
+1~1119~Bolas of Sunlight~0
+1~1120~Finniginn's Sling~0
+1~1120~{weapon/sling} of Seeking~1
+1~1129~{weapon/spear} of Accuracy~1
+1~1129~Ares's Spear~0
+1~1129~Athena's Spear~0
+1~1129~Backbiter {weapon_bonus123} ({weapon/spear})~1
+1~1129~Black Kumade~0
+1~1129~Demeter's Spear~0
+1~1129~Gae Bolg Spear~0
+1~1129~Goibhniu's Spear~0
+1~1129~Gruumsh's Spear~0
+1~1129~Gungnir (Spear)~0
+1~1130~Gungnir (Spear) II~0
+1~1130~Hadrion's Spear~0
+1~1130~Heartseeker (Spear)~1
+1~1130~Heartseeker (Spear) II~1
+1~1131~Heartwood {weapon/spear}~1
+1~1131~Hiatea's Spear~0
+1~1131~{weapon/spear} of Obliteration {weapon/bonus_no_curse}~1
+1~1131~Spear of Panic~1
+1~1131~{weapon/spear} of Paralysis {weapon/bonus_no_curse}~1
+1~1131~Returning {weapon/spear} {weapon/bonus_no_curse}~1
+1~1131~Sharksbane (Spear)~1
+1~1131~Smokespear ({weapon/spear}) {weapon/bonus_no_curse}~1
+1~1132~Sparkling Spear~1
+1~1132~Spear of Vix~0
+1~1132~Spear of Yang~0
+1~1132~Zeus's Spear~0
+1~1268~Spelljamming Ram {weapon/bonus_123} ({weapon/spelljamming_ram})~0
+1~1336~Aasimon Sword~0
+1~1336~{weapon/sword} of Abhorrence of Shape Changers~1
+1~1336~Adjatha the Drinker (Sword)~0
+1~1337~Albruin (Sword)~0
+1~1339~Amatsu-Mikaboshi's Sword~0
+1~1339~Anduvar (Sword)~0
+1~1339~Angurvadal (Sword)~0
+1~1339~Annacon (Sword)~0
+1~1340~Ansanther (Sword)~0
+1~1340~The Answerer (Fragarach)~0
+1~1341~The Answerer ({weapon/sword_answerer})~0
+1~1341~Anton's Vorpal Blade~0
+1~1341~{weapon/sword} of Arak~1
+1~1342~Arbane's {weapon/sword} of Agility~0
+1~1342~Ar'ondight (Long Sword)~0
+1~1342~Arvoreen's (Short Sword)~0
+1~1342~{weapon/sword} of Arvoreen~0
+1~1342~{weapon/sword} of Assassination (Assassination Bonus: +{weapon/sword_assassination}%)~1
+1~1342~Aziza's Scimitar of Dancing~0
+1~1343~Sword of Azor'alq~0
+1~1343~{weapon/sword} of Backstabbing~1
+1~1343~Balisarda ({weapon/sword})~0
+1~1343~Balmung (Sword)~0
+1~1343~Balor (Sword)~0
+1~1343~Bamboo Scimitar~1
+1~1343~Bane of Enchanted Beings ({weapon/sword})~1
+1~1344~Bane of the North (Short Sword)~1
+1~1344~Barnus's Gnomebane ({weapon/sword})~0
+1~1344~{weapon/sword} of Bast~1
+1~1344~Belenus's Sword~0
+1~1344~{weapon/sword} of the Believer~1
+1~1344~Benn Griff's Sword~0
+1~1344~Berserk Dancing {weapon/sword}~1
+1~1345~Black {weapon/sword}~1
+1~1345~Black Flame (Two-Handed Sword)~1
+1~1345~Blackflame ({weapon/sword})~1
+1~1345~Sword of Blackflame (Rapier)~1
+1~1345~Blackjammer's Cutlass~1
+1~1346~Blackrazor ({weapon/sword})~1
+1~1347~Blade of Black Ice ({weapon/sword})~1
+1~1347~Blade of Corusk ({weapon/blade_corusk})~0
+1~1347~Blade of Lathander (Broad Sword)~0
+1~1347~Bladeless (Khopesh)~1
+1~1347~Blood Drinker ({weapon/sword})~1
+1~1347~Bloodletter (Long Sword)~1
+1~1347~Bloodsword (Long Sword)~1
+1~1438~Blue Dragon Bane (Long Sword)~1
+1~1438~Brightblade (Two-Handed Sword)~1
+1~1438~Caeren-Uroth (Broad Sword)~0
+1~1349~Calathangas (Short Sword)~0
+1~1349~Canopa's Sword ({weapon/sword})~0
+1~1349~Captain's Sword ({weapon/sword})~0
+1~1349~Casterbane ({weapon/sword})~0
+1~1349~Celestial Fury (Katana)~0
+1~1350~Chainsword~1
+1~1351~{weapon/sword} of Charm Person~1
+1~1351~Chopping ({weapon/sword})~1
+1~1351~Clamorour ({weapon/sword})~1
+1~1351~{weapon/sword} of Cleaving~1
+1~1352~Colada ({weapon/sword})~0
+1~1352~{weapon/sword} of Cold~1
+1~1352~Companion (Long Sword)~0
+1~1352~Corellon's (Long Sword)~0
+1~1352~Corthalis ({weapon/sword})~0
+1~1352~Courtain (Short Sword)~0
+1~1352~{weapon/sword} of Cowardice~1
+1~1353~Crusader (Long Sword)~0
+1~1353~Crysomer (Long Sword)~0
+1~1354~Cuprumbane ({weapon/sword})~0
+1~1354~Cursed {weapon/sword}~1
+1~1354~Cursed II {weapon/sword}~1
+1~1354~Cursed Berserker {weapon/sword}~1
+1~1354~Cutter (Sabre)~1
+1~1355~Sword of Cymrych Hugh~0
+1~1355~Cyric's Sword~0
+1~1355~Dale ({weapon/sword})~0
+1~1355~{weapon/sword} of Dancing~1
+1~1356~Dancing {weapon/sword} of Bronze~1
+1~1356~Dancing {weapon/sword} of Lightning~1
+1~1356~Darius's {weapon/sword}~0
+1~1356~Death-to-Monsters (Bastard Sword)~0
+1~1356~Deep Sashelas's Long Sword~0
+1~1356~Defender, {weapon/sword} {weapon/bonus_no_curse}~1
+1~1356~Desert Blade (Scimitar) (Affects: {weapon/desert_blade})~1
+1~1356~Dragonbait's Holy Avenger~0
+1~1356~Dragon Claws~1
+1~1357~Dragon Crippler ({weapon/sword})~0
+1~1357~Dragon Slayer ({weapon/sword}) (Extra Damage Against: {weapon/sword_dragon_slayer} Dragons)~1
+1~1357~Dragonslayer II ({weapon/sword}) (Extra Damage Against: {weapon/sword_dragon_slayer} Dragons)~1
+1~1357~{weapon/sword} of Dragon Slaying (Extra Damage Against: {weapon/sword_dragon_slaying} Dragons)~1
+1~1357~Drain Life Energy ({weapon/sword})~1
+1~1357~Draxalon Defender of Feminine Virtue ({weapon/sword})~0
+1~1357~Dreamsinger ({weapon/sword})~0
+1~1358~Dugmaren Brightmantle's Broadsword~0
+1~1358~Durandan ({weapon/sword})~0
+1~1358~Dyerwaen (Broad Sword)~0
+1~1359~Sword of the Ebon Flame (Long Sword)~0
+1~1359~Ebonbane ({weapon/sword})~0
+1~1363~The Edge (Bastard Sword)~0
+1~1364~{weapon/sword} of Efreeti Slaying~1
+1~1364~Elkhora's {weapon/sword}~0
+1~1364~Elqillar ({weapon/sword})~0
+1~1365~Elven {weapon/sword}~1
+1~1365~Elven II {weapon/sword}~1
+1~1365~Emperor's {weapon/sword}~1
+1~1365~Enchanted Sword of Sylaire ({weapon/sword})~0
+1~1365~Equalizer Sword of Gran March ({weapon/sword})~0
+1~1365~Everstriking {weapon/sword}~1
+1~1366~Evil Wyrmslayer ({weapon/sword})~0
+1~1366~Evithyan's Blade ({weapon/sword})~0
+1~1366~Excalibur (Long Sword)~0
+1~1366~Excalibur II (Long Sword)~0
+1~1367~Excalibur III (Long Sword)~0
+1~1367~Farrinae ({weapon/sword})~0
+1~1367~Fate's Promise ({weapon/sword})~0
+1~1367~Fiendbane ({weapon/sword})~0
+1~1367~Final Word ({weapon/sword}) ({weapon/sword_final_word})~0
+1~1368~Finder (Long Sword)~0
+1~1368~Fionnghuala's (Long Sword)~0
+1~1368~Fist of Odin (Long Sword)~0
+1~1368~Flamberge (Flame Cutter)~1
+1~1368~Flame Blade ({weapon/sword})~1
+1~1368~Flame of the North (Two-Handed Sword)~0
+1~1369~Flame Tongue ({weapon/sword})~1
+1~1369~Flames on Command ({weapon/sword})~0
+1~1369~Flaming ({weapon/sword})~1
+1~1369~Flaming II ({weapon/sword})~1
+1~1369~Floating Blade of Shin Lu ({weapon/sword})~0
+1~1369~Frying Scimitar of Tusmit~0
+1~1369~Foebane (Bastard Sword)~0
+1~1370~Foefinder ({weapon/sword})~0
+1~1370~Forseti's ({weapon/sword})~0
+1~1370~Frey's Long Sword~0
+1~1370~Frey's Long Sword II~0
+1~1370~Frey's Two-Handed Sword~0
+1~1370~Frey's Two-Handed Sword II~0
+1~1370~Freya's Frost Brand (Long Sword)~0
+1~1370~{weapon/sword} of Friendship~1
+1~1370~Frost Brand ({weapon/sword})~1
+1~1371~Galanti ({weapon/sword})~0
+1~1371~Gemsword ({weapon/sword})~1
+1~1371~Genie Slayer ({weapon/sword}) (Double Damage Against: {weapon/desert_blade})~1
+1~1371~Genies' Bane ({weapon/sword})~1
+1~1371~Genies' Bane II ({weapon/sword}) (More Effective Against: {weapon/desert_blade})~1
+1~1372~Genieblight ({weapon/sword})~1
+1~1372~Geniescourge ({weapon/sword})~1
+1~1372~Giant Slayer ({weapon/sword})~1
+1~1372~{weapon/sword} of Giant Slaying~1
+1~1372~{weapon/sword} of the Giants~1
+1~1372~Githyanki Silver Sword ({weapon/sword_githyanki_silver})~1
+1~1372~Glorius ({weapon/sword})~0
+1~1372~Goblinvolent ({weapon/sword})~0
+1~1372~{weapon/sword} of the Golden Gulf~1
+1~1372~Golembane (Long Sword)~1
+1~1373~Gram ({weapon/sword})~0
+1~1373~Grankhul's Long Sword~0
+1~1373~Graz'zt's Bastard Sword~0
+1~1373~Greenswathe ({weapon/sword})~0
+1~1373~Gregory's Holy Avenger (Long Sword)~0
+1~1373~Grinthane ({weapon/sword})~0
+1~1373~Guardian Blade ({weapon/sword})~0
+1~1374~Hachiman's Sword~0
+1~1374~Hades's Sword~0
+1~1374~Harmonizer (Two-Handed Sword)~0
+1~1374~Harpo's Orcslayer ({weapon/sword})~0
+1~1374~Hawksblade (Long Sword)~0
+1~1374~Heart of Stone ({weapon/sword})~1
+1~1374~Heartseeker ({weapon/sword})~0
+1~1374~Heimdall's ({weapon/sword})~0
+1~1375~Hel's Sword~0
+1~1375~Ho Masubi's Sword~0
+1~1375~Hofud ({weapon/sword})~0
+1~1375~Holy {weapon/sword}~1
+1~1375~Holy Avenger ({weapon/sword})~1
+1~1375~Holy Revenger ({weapon/sword})~1
+1~1375~{weapon/sword} of Honor~1
+1~1375~Hornblade ({weapon/sword})~1
+1~1376~Sword of Horus~0
+1~1376~Ice Claw ({weapon/sword})~1
+1~1376~Ilbratha (Mistress of Battle)~0
+1~1377~Ilneval's Broad sword~0
+1~1377~Ilyana (Bastard Sword)~0
+1~1377~Indra's Flaming Sword~0
+1~1377~{weapon/sword} of Insanity~1
+1~1377~{weapon/sword} of Intercession~1
+1~1377~Ironfang ({weapon/sword})~0
+1~1377~Jaysen's Magebane ({weapon/sword})~0
+1~1377~Joyeuse (Bastard Sword)~0
+1~1378~Justicer ({weapon/sword})~0
+1~1378~Kabal ({weapon/sword})~0
+1~1378~Kaldair Swiftfoot's Short Sword~0
+1~1378~Kali's Sword~0
+1~1378~Karali's Silver {weapon/sword}~0
+1~1379~Kirren's Frostbrand ({weapon/sword})~0
+1~1379~Kullervo's {weapon/sword}~0
+1~1379~Kura (The Darkness)~0
+1~1380~Kusunogi no Tsunigi (Grass Quelling)~0
+1~1380~Lafarallinn's Sword~0
+1~1380~Lancelin's Sword~0
+1~1380~Laprov (Short Sword)~0
+1~1380~Lassrviren's {weapon/sword}~0
+1~1380~Lemmikainen's {weapon/sword}~0
+1~1380~Life Saver ({weapon/sword})~1
+1~1380~Life Stealing ({weapon/sword})~1
+1~1381~Life Taker ({weapon/sword})~1
+1~1381~Scimitar of Light~1
+1~1381~Lightning Blade ({weapon/sword})~1
+1~1381~Locate Object ({weapon/sword})~1
+1~1381~Elven {weapon/sword} of Luck~1
+1~1381~Luck Blade ({weapon/sword})~1
+1~1381~Lydia's Broad sword~0
+1~1381~{weapon/sword} of Lyons~0
+1~1381~Madoc's {weapon/sword}~0
+1~1381~Malign (Bastard Sword)~0
+1~1381~Mamluk Sword of Obedience~0
+1~1382~{weapon/sword} of Mammal Slaying~1
+1~1382~Mantooth (Long Sword)~0
+1~1382~Mantooth II (Long Sword)~0
+1~1382~Maroon ({weapon/sword})~0
+1~1382~Mayonaka's Silver Katana~0
+1~1383~Melior (Two-Handed Sword)~0
+1~1383~Meredin's Luck Blade ({weapon/sword})~0
+1~1383~Mimung ({weapon/sword})~0
+1~1383~Mitra's {weapon/sword} of Light~0
+1~1383~Monster Slayer (Bastard Sword)~0
+1~1383~Moon Blade ({weapon/sword})~1
+1~1383~Morglay ({weapon/sword})~0
+1~1383~Movanic Deva ({weapon/sword})~0
+1~1384~Naesowen, Ghost Blade ({weapon/sword})~0
+1~1384~Nagelring ({weapon/sword})~0
+1~1384~Namara Neversleep ({weapon/sword})~0
+1~1384~Neekar (Broad Sword)~0
+1~1385~Nepanth ({weapon/sword})~0
+1~1385~{weapon/sword} of Night~1
+1~1385~Nightwatcher (Long Sword)~0
+1~1386~Nightwind ({weapon/sword})~0
+1~1386~Nine Lives Stealer ({weapon/sword})~1
+1~1386~Nine Steps Draining ({weapon/sword})~1
+1~1386~Nomog-Geaya's Broad sword~0
+1~1386~Oberon's Long Sword~0
+1~1386~Sword of Odin~0
+1~1386~Odin's Sword~0
+1~1386~Sword of Olynthos~0
+1~1387~Owen's Sword (Broad Sword)~0
+1~1387~Paramel ({weapon/sword})~0
+1~1387~Partisan (Scimitar)~0
+1~1387~Peacemaker ({weapon/sword})~0
+1~1387~Peregrine's ({weapon/sword})~0
+1~1387~Phantom (Rapier)~0
+1~1387~Philippan ({weapon/sword})~0
+1~1387~Piercer ({weapon/sword})~0
+1~1387~Plak's {weapon/sword}~0
+1~1387~{weapon/sword} of the Planes~1
+1~1388~Poisonsword (Sword)~1
+1~1388~Porpherio's Long Sword~0
+1~1388~Purta Blue's {weapon/sword}~0
+1~1388~{weapon/sword} of Quickness~1
+1~1388~Ratri's {weapon/sword}~0
+1~1388~Red Death (Bastard Sword)~0
+1~1388~Red Robin ({weapon/sword})~0
+1~1388~Red Sabre~0
+1~1388~Redeemer ({weapon/sword})~0
+1~1388~Rel Astran {weapon/sword} of Enmity~0
+1~1388~Ren's {weapon/sword} of Dancing~0
+1~1389~Reptilian Legionnaire ({weapon/sword})~0
+1~1389~Retaliator ({weapon/sword})~0
+1~1389~Retaliator II ({weapon/sword})~0
+1~1389~Rutterkin Flatchet~0
+1~1389~{weapon/sword} of the Sands~1
+1~1389~Sauvagine ({weapon/sword})~0
+1~1389~Savitri's {weapon/sword}~0
+1~1389~Scale Cleaver (Long Sword)~0
+1~1389~Scales of Justice (Long Sword)~0
+1~1390~Scalebane ({weapon/sword})~0
+1~1390~Schakha (Scimitar)~0
+1~1390~Scimitar of Speed {weapon/bonus_no_curse}~1
+1~1390~Scorbane ({weapon/sword})~0
+1~1391~Scourge of Regenerators ({weapon/sword})~1
+1~1391~Serpent Slicer ({weapon/sword})~0
+1~1391~Sess'innek's Two-Handed Sword~0
+1~1391~Sess'innek's Long Sword~0
+1~1391~Seventh Blade ({weapon/sword})~0
+1~1391~Shadowsword ({weapon/sword})~1
+1~1391~Shalandain's Holy Avenger ({weapon/sword})~0
+1~1391~Scimitar of Shame~1
+1~1391~Sh'arien, Sun Blade~0
+1~1391~{weapon/sword} of Sharpness~1
+1~1391~Shazzellim~0
+1~1393~Shichi's Katana~0
+1~1394~Shimmering Blade of Shin Ginsen~0
+1~1394~Shina-Tsu-Hiko's Sword~0
+1~1394~Shock Blade ({weapon/sword})~0
+1~1394~Shu's Sword~0
+1~1394~Sif's Sword~0
+1~1396~Singing {weapon/sword}~1
+1~1396~Siva's Scimitar~0
+1~1396~{weapon/sword} of Skewering~1
+1~1396~Slayer ({weapon/sword})~1
+1~1396~Snakebane ({weapon/sword})~1
+1~1396~Snoop (Long Sword)~0
+1~1396~Snow on the Mountain ({weapon/sword})~0
+1~1397~Soulblade ({weapon/sword})~0
+1~1397~Sword of Souls (Scimitar)~0
+1~1397~Soulseeker ({weapon/sword})~0
+1~1403~Spectral {weapon/sword}~0
+1~1403~Spellbinder ({weapon/sword})~0
+1~1404~Spellblade ({weapon/sword})~1
+1~1405~Stalker (Long Sword)~0
+1~1405~Starfall ({weapon/sword})~0
+1~1405~Stonefist ({weapon/sword})~0
+1~1405~Stormbringer (Long Sword)~0
+1~1406~Sun Blade ({weapon/sword})~0
+1~1406~Sunsword (Long Sword)~0
+1~1406~Surtr's Flaming {weapon/sword}~0
+1~1407~Surya's {weapon/sword} of Light~0
+1~1407~Susanoo's Blue {weapon/sword}~0
+1~1407~Susk, The Silent (Sword)~0
+1~1407~Sylabra (Long Sword)~0
+1~1407~Syrar's Silver {weapon/sword}~0
+1~1408~Taragarth, the Bloodbrand~0
+1~1409~Tarl Vanovitch's Sun Blade ({weapon/sword})~0
+1~1409~Tefhut's {weapon/sword}~0
+1~1409~Tideripper (Long Sword)~0
+1~1409~Timesweep (Two-Handed Sword)~0
+1~1409~Token {weapon/sword}~0
+1~1409~Tri-Entity (Sword)~0
+1~1411~Troll's Bane ({weapon/sword})~1
+1~1411~Twinkle (Scimitar)~0
+1~1411~Tyr's of Sharpness ({weapon/sword})~0
+1~1411~Undead Slayer (Long Sword)~1
+1~1411~Uranus's Sword~0
+1~1411~Vainamoinen's {weapon/sword}~0
+1~1411~Vainamoinen's {weapon/sword} II~0
+1~1412~Vampiric Regeneration {weapon/sword}~1
+1~1412~Vanya's Wrath (Bastard Sword)~0
+1~1412~Vasgo ({weapon/sword})~0
+1~1412~Vergadain's Broad sword~0
+1~1412~Vhaeraun's Long Sword~0
+1~1412~Vorpal {weapon/sword}~1
+1~1412~Vorpal {weapon/sword} II~1
+1~1412~Warbringer (Two-Handed Sword)~0
+1~1412~Warlord Blade of the Shield Lands (Broad Sword)~0
+1~1413~Weasel (Short Sword)~0
+1~1413~Whirlwind Blade ({weapon/sword})~1
+1~1413~White {weapon/sword}~1
+1~1413~{weapon/sword} of the Wild Coast~1
+1~1413~{weapon/sword} of Wishes~1
+1~1413~Woodhold ({weapon/sword})~0
+1~1414~{weapon/sword} of Wounding~1
+1~1414~Wyrmcleaver ({weapon/sword})~0
+1~1414~Wyrmsbane (Two-Handed Sword)~0
+1~1414~Wyrmsbane II (Long Sword)~0
+1~1414~Wyrmslayer (Two-Handed Sword)~0
+1~1415~Wyrmsvenin (Two-Handed Sword)~0
+1~1415~Xiphoid Xebec ({weapon/sword})~0
+1~1415~Yondalla's Short Sword~0
+1~1415~Zenchoo Katana~0
+1~1415~Zinzerena's Short Sword~0
+1~1435~Throwing Star of Ojy-do (Type: {weapon/throwing_star})~0
+1~1435~Throwing Star of Returning (Type: {weapon/throwing_star})~0
+1~Whip of Amatar~0
+1~Balor Whip~0
+1~{weapon/whip} of Feathers~1
+1~{weapon/whip} of Frost Fire and Fear~1
+1~Furies's Whip ({weapon/whip_furies})~0
+1~Khurgorbaeyag's Whip~0
+1~Moloch's Whip~0
+1~Purpose Whip (Slay {weapon/whip_purpose})~0
+1~{weapon/whip} of Summoning {weapon/bonus_no_curse}~1
+1~Tar's Chaotic Creature (Whip)~0
+1~Whip of Zeif~0

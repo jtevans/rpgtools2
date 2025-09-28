@@ -1,0 +1,166 @@
+1 28 10 Ornamental
+29 57 50 Semi-precious
+58 70 100 Fancy
+71 89 500 Precious
+90 98 1000 Gems
+99 100 5000 Jewels
+:Ornamental
+1 2 an Agni Mani
+3 4 an Algea
+5 6 an Augelite
+7 8 an Azurite
+9 10 a Banded Agate
+11 12 a Bluestone
+13 14 a Blue Quartz
+15 16 a Chrysocolla
+17 18 a Corstal
+19 20 a Crown of Silver
+21 22 a Disthene
+23 24 an Epidote
+25 26 an Eye Agate
+27 28 a Fire Agate
+29 30 a Fluorspar
+31 32 a Frost Agate
+33 34 a Goldline
+35 36 a Greenstone
+37 38 a Hematite
+39 40 a Lapis Lazuli
+41 42 a Hyaline
+43 44 a Lynx Eye
+45 46 a Malachite
+47 48 a Moss Agate
+49 50 a Microcline
+51 52 a Nelvine
+53 54 a Nune
+55 56 an Obsidian
+57 58 an Oolite
+59 60 an Ophealine
+61 62 a Rhodochrosite
+63 64 a Rosaline
+65 66 a Sagenite
+67 68 a Sanidine
+69 70 a Sarbossa
+71 72 a Satin Spar
+73 74 a Sharpstone
+75 76 a Sheen
+77 78 a Silkstone
+79 80 a Snowflake Obsidian
+81 82 a Sunstone
+83 84 a Thuparlial
+85 86 a Tiger Eye Agate
+87 88 a Turquoise
+89 90 a Variscite
+91 92 a Violane
+93 94 a Webstone
+95 96 a Wonderstone
+97 98 a Woodtine
+99 100 a Zarbrina
+:Semi-precious
+1 2 an Alestone
+3 4 an Andar
+5 6 an Aventurine
+7 10 a Bloodstone
+11 12 a Boakhar
+13 15 a Carnelian
+16 18 a Chalcedony
+19 21 a Chrysoprase
+22 24 a Citrine
+25 26 a Celophane
+27 28 a Datchase
+29 30 a Dioptase
+31 32 a Gold Sheen
+33 34 a Hambergyle
+35 36 a Hydrophane
+37 38 a Hypersthene
+39 40 an Iol
+41 43 a Jasper
+44 45 an Irtios
+46 47 a Luriyl
+48 49 a Malacon
+50 51 a Mellochrysos
+52 54 a Moonstone
+55 56 a Mykaro
+57 58 a Mynteer
+59 62 an Onyx
+63 64 an Orprase
+65 66 a Phenalope
+67 68 a Rainbow Obsidian
+69 72 a Rock Crystal
+73 74 a Samarskite
+75 77 a Sardonyx
+78 80 a Serpentine
+81 82 a Skydrop
+83 86 a Smoky Quartz
+87 88 a Spodumene
+89 91 a Star Rose Quartz
+92 93 a Tabasheer
+94 95 a Tchazar
+96 97 a Witherite
+98 100 a Zircon
+:Fancy
+1 6 an Alexandrite
+7 14 an Amber
+15 22 an Amethyst
+23 26 an Angel's Skin
+27 30 a Brandeen
+31 36 a Chrysoberyl
+37 44 a Coral
+45 48 a Jargoon
+49 54 a Jade
+55 60 a Jet
+61 64 a Kornerupine
+65 68 a Laeral's Tears
+69 72 an Octel
+73 76 a Scrapa
+77 80 a Shandon
+81 85 a Sinhalite
+86 88 a Star Diopside
+89 92 a Tourmaline
+93 94 a Tremair
+95 96 an Ulvaen
+97 98 a Waterstar
+99 100 a Ziose
+:Precious
+1 7 an Aquamarine
+8 14 an Euclase
+15 21 a Flamedance
+22 29 a Garnet
+30 37 a Heliodor
+38 44 a Horn Coral
+45 51 an Orbaline
+52 59 a Pearl
+60 67 a Peridot
+68 75 a Raindrop
+76 81 a Rusteen
+82 88 a Sphene
+89 95 a Spinel
+96 100 a Topaz
+:Gems
+1 8 a Black Opal
+9 16 a Fire Opal
+17 24 a Jasmal
+25 32 a Moonbar
+33 40 an Opal
+41 48 an Orblen
+49 56 an Orl
+57 64 a Ravenar
+65 72 a Red Tears
+73 76 a Sapphire
+77 79 a Shou Lung Amethyst
+80 82 a Shou Lung Topaz
+83 89 a Tomb Jade
+90 94 a Water Opal
+95 100 a Zendalure
+:Jewels
+1 6 an Amaratha
+7 17 a Beljuril
+18 25 a Black Sapphire
+26 36 a Diamond
+37 47 an Emerald
+48 58 a Jacinth
+59 69 a King's Tears
+70 71 a Rogue Stone
+72 82 a Ruby
+83 85 a Shou Lung Emerald
+86 93 a Star Ruby
+94 100 a Star Sapphire

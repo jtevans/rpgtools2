@@ -1,0 +1,159 @@
+`1 247 0 1200 Cane of Age, Charges: {1 20}
+`1 247 2000 10000 Cane of Armament
+`1 247 0 1200 Cane of Blindness, Charges: {1 20}
+`1 247 1500 7500 Cane of Detection, Charges: {1 20}
+`1 248 0 1200 Cane of Stiffness
+`1 248 6000 30000 Wemick's Cane of Striking, Charges: {1 20}
+`1 501 1000 5000 Gaff of Docking
+`1 501 0 2000 Gaff of Gaffes
+`1 546 20000 200000 Gnomewrecker
+`1 827 9000 45000 Pharoah's Crook
+`1 1272 200 4000 *Staff of Air and Water, Charges: {20 25}
+`1 1272 6000 30000 *Alar Ch'Aranol's Staff, Charges: {20 25}
+`1 1272 1000 50000 *Staff of Aquatic Wizardry, Charges: {20 25}
+`1 1272 150 1500 *Arctor's Staff of Swarming Insects, Charges: {20 25}
+`1 1273 12000 75000 *Aric's Staff of Power, Charges: {20 25}
+`1 1273 1000 5000 *Staff of Battle, Charges: {20 25}
+`1 1273 1000 5000 *Staff of Battle II, Charges: {20 25}
+`1 1273 1000 10000 *Blackstaff, Charges: {20 25}
+`1 1274 900 9000 *Caduceus Staff, Charges: {20 25}
+`1 1274 2500 15000 *Staff of Caracanomnos, Charges: {20 25}
+`1 1274 6000 13000 *Catstaff, Charges: {20 25}
+`1 1274 6000 13000 *Catstaff II, Charges: {20 25}
+`1 1274 8000 35000 *Centeotl's Staff, Charges: {20 25}
+`1 1275 1000 7500 *Staff of Cirulon, Charges: {20 25}
+`1 1275 5000 25000 *Staff of Command, Charges: {20 25}
+`1 1275 5000 25000 *Staff of Commanding, Charges: {20 25}
+`1 1275 12000 60000 *Staff of Conjuration, Charges: {20 25}
+`1 1275 7500 20000 *Staff of the Couatl, Charges: {20 25}
+`1 1276 6000 25000 *Staff of Curing, Charges: {20 25}
+`1 1276 6000 25000 *Staff of Curing II, Charges: {20 25}
+`1 1276 4000 15000 *Damh's Staff, Charges: {20 25}
+`1 1276 8000 35000 *Staff of Devotion, Charges: {20 25}
+`1 1276 1000 75000 *Dionysus's Staff, Charges: {20 25}
+`1 1276 4500 22500 *Staff of Disjoining, Charges: {20 25}
+`1 1277 4000 20000 *Staff of Dispelling, Charges: {20 25}
+`1 1277 6000 30000 *Staff of Displacement, Charges: {20 25}
+`1 1277 1000 9500 *Staff of Divergence, Charges: {20 25}
+`1 1278 1000 7500 *Staff, Diviner of Life, Charges: {20 25}
+`1 1278 9000 40000 *Dolmar's Staff of Withering, Charges: {20 25}
+`1 1278 10000 50000 *Druid Staff, Charges: {20 25}
+`1 1278 10000 50000 *Staff of the Druids, Charges: {20 25}
+`1 1278 10000 20000 *Staff of an Element, Charges: {20 25}
+~1 21 1278 10000 20000 *Staff of an Element (Earth), Charges: {20 25}
+~22 42 1278 10000 20000 *Staff of an Element (Air), Charges: {20 25}
+~43 63 1278 10000 20000 *Staff of an Element (Fire), Charges: {20 25}
+~64 84 1278 10000 20000 *Staff of an Element (Water), Charges: {20 25}
+~85 91 1278 20000 45000 *Staff of an Element (Earth and Fire), Charges: {20 25}
+~92 98 1278 20000 45000 *Staff of an Element (Air and Water), Charges: {20 25}
+~99 100 1278 30000 65000 *Staff of an Element (Elemental Power), Charges: {20 25}
+`1 1279 10000 25000 *Staff of the Elements: Earth, Charges: {20 25}
+`1 1279 10000 25000 *Staff of the Elements: Air, Charges: {20 25}
+`1 1279 10000 25000 *Staff of the Elements: Fire, Charges: {20 25}
+`1 1279 10000 25000 *Staff of the Elements: Water, Charges: {20 25}
+`1 1280 7000 15000 *Staff of Ethereal Action, Charges: {20 25}
+`1 1280 25000 90000 *Staff of the Fates, Charges: {20 25}
+`1 1280 8000 40000 *Fiend Staff, Charges: {20 25}
+`1 1280 10000 40000 *Staff of Flames, Charges: {20 25}
+`1 1281 18000 90000 *Fraz-Urb-Iuu's Staff, Charges: {20 25}
+`1 1281 8000 40000 *Staff of Fury, Charges: {20 25}
+`1 1281 8000 45000 *Geb's Quarterstaff, Charges: {20 25}
+`1 1281 1000 8000 *Staff of Glyphs, Charges: {20 25}
+`1 1281 4000 20000 *Staff of Gnatmarsh, Charges: {20 25}
+`1 1282 4500 35000 *Staff of Harming, Charges: {20 25}
+`1 1282 5000 40000 *Staff of Healing, Charges: {20 25}
+`1 1282 4000 15000 *Staff of Hornwood, Charges: {20 25}
+`1 1282 2000 45000 *Idun's Staff, Charges: {20 25}
+`1 1282 600 3000 *Ixtlilton's Staff, Charges: {20 25}
+`1 1282 7000 35000 *Staff, Jizo, Charges: {20 25}
+`1 1282 3500 42500 *Staff of Kisyrral, Charges: {20 25}
+`1 1283 1500 15000 *Kuan Yin's Quarterstaff, Charges: {20 25}
+`1 1283 1500 25000 *K'uei Hsing's Staff, Charges: {20 25}
+`1 1283 3000 18000 *K'ung Fu-tzu's Staff, Charges: {20 25}
+`1 1283 10000 72000 *Kura Okami's Staffk, Charges: {20 25}
+`1 1283 3000 30000 *Ky Trencha Ukang's Staff, Charges: {20 25}
+`1 1283 9000 82000 *Lao Tzu's Staff, Charges: {20 25}
+`1 1283 15000 75000 *Staff of the Magi, Charges: {20 25}
+`1 1284 13000 72000 *Staff of Magius, Charges: {20 25}
+`1 1285 10000 50000 *Staff of Magius II, Charges: {20 25}
+`1 1285 15000 75000 *Staff of the Magius, Charges: {20 25}
+`1 1285 3200 25000 *Meriadar's Quarterstaff, Charges: {20 25}
+`1 1285 4000 20000 *Staff of Miracles, Charges: {20 25}
+`1 1285 5000 25000 *Mirandos's Staff of Insect Command, Charges: {20 25}
+`1 1286 5000 25000 *Staff of Mishakal, Charges: {20 25}
+`1 1286 5000 25000 *Staff of Mishakal II, Charges: {20 25}
+`1 1286 2500 15000 *Monkey's Staff, Charges: {20 25}
+`1 1286 3000 15000 *Staff of the Moonglow, Charges: {20 25}
+`1 1287 13000 65000 *Staff of the Necromancer, Charges: {20 25}
+`1 1287 3000 15000 *Staff of Night, Charges: {20 25}
+`1 1287 5000 25000 *Staff of the Ninja, Charges: {20 25}
+`1 1288 7000 20000 *Oberon's Staff, Charges: {20 25}
+`1 1288 8000 20000 *Staff of Oceans, Charges: {20 25}
+`1 1288 1000 7500 *O-Kuni-Nushi's Staff, Charges: {20 25}
+`1 1288 1500 7500 *Staff of Osiris, Charges: {20 25}
+`1 1288 9000 45000 *Osmal's Staff of the Woodlands, Charges: {20 25}
+`1 1288 1500 8500 *Panzuriel's Quarterstaff, Charges: {20 25}
+`1 1288 5000 25000 *Pharoh's Ruling Staff, Charges: {20 25}
+`1 1289 12000 60000 *Staff of Power, Charges: {20 25}
+`1 1289 5000 25000 *Staff of the Priest Kings, Type I, Charges: {20 25}
+~1 65 1289 5000 25000 *Staff of the Priest Kings, Type I, Charges: {20 25}
+~66 75 1289 5500 27500 *Staff of the Priest Kings, Type II, Charges: {20 25}
+~76 85 1289 6000 30000 *Staff of the Priest Kings, Type III, Charges: {20 25}
+~86 95 1289 6500 32500 *Staff of the Priest Kings, Type IV, Charges: {20 25}
+~96 99 1289 7000 35000 *Staff of the Priest Kings, Type V, Charges: {20 25}
+~100 100 1289 7500 37500 *Staff of the Priest Kings, Type VI, Charges: {20 25}
+`1 1291 10000 50000 *Staff of Raket, Charges: {20 25}
+`1 1291 2500 12500 *Staff, Ranike, Charges: {20 25}
+`1 1291 2000 10000 *Staff of Recording, Charges: {20 25}
+`1 1291 7000 35000 *Reptilla's Staff of the Serpent, Charges: {20 25}
+`1 1291 0 0 *Rheddrian's Staff, Charges: {20 25}
+`1 1291 3000 15000 *Rilantaver's Staff, Charges: {20 25}
+`1 1292 2500 12500 *Staff, Rohalan, Charges: {20 25}
+`1 1292 10000 50000 *Staff of the Sands, Charges: {20 25}
+`1 1292 2500 12500 *Staff of Savona, Charges: {20 25}
+`1 1292 3000 15000 *Staff of Scrivening, Charges: {20 25}
+`1 1292 10000 50000 *Staff of the Sea, Charges: {20 25}
+`1 1293 7000 35000 *Staff of the Serpent, Charges: {20 25}
+~1 60 1293 7000 35000 *Staff of the Serpent (Python), Charges: {20 25}
+~61 100 1293 7000 35000 *Staff of the Serpent (Adder), Charges: {20 25}
+`1 1293 8000 20000 *Shang-ti's Staff, Charges: {20 25}
+`1 1293 1000 2500 *Lesser Staff of Shock, Charges: {20 25}
+`1 1293 2000 5000 *Greater Staff of Shock, Charges: {20 25}
+`1 1294 16000 70000 *Staff, Shou Hsing's Walking Stick, Charges: {20 25}
+`1 1294 1500 7500 *Staff of Silence, Charges: {20 25}
+`1 1294 900 15000 *Lesser Staff of Skulls, Charges: {20 25}
+~1 75 1294 900 15000 *Lesser Staff of Skulls, Charges: {20 25}
+~76 100 1294 1500 25000 *Greater Staff of Skulls, Charges: {20 25}
+`1 1295 5000 20000 *Skull-Staff of Hepmonaland, Charges: {20 25}
+`1 1295 1000 5000 *Staff of Slinging, Charges: {20 25}
+`1 1295 7000 35000 *Snake Staff, Charges: {20 25}
+`1 1295 7000 35000 *Snake Staff II, Charges: {20 25}
+`1 1296 6000 25000 *Staff of Spell Focusing, Charges: {20 25}
+`1 1296 4000 20000 *Staff of Spheres, Charges: {20 25}
+`1 1297 1500 7500 *Staff-Mace
+`1 1297 1000 5000 *Staff-Spear +1
+~1 30 1297 1000 5000 *Staff-Spear +1
+~31 50 1297 1000 5000 *Staff-Spear +2
+~51 65 1297 1000 5000 *Staff-Spear +3
+~66 80 1297 1000 5000 *Staff-Spear +4
+~81 95 1297 1000 5000 *Staff-Spear +5
+~96 100 1297 1000 5000 *Staff-Spear +3 (Grants +3 AC bonus when held)
+`1 1297 6000 15000 *Staff of Striking, Charges: {20 25}
+`1 1297 8000 20000 *Staff of Striking and Curing, Charges: {20 25}
+`1 1298 1000 5000 *Staff of Stunning, Charges: {20 25}
+`1 1298 4000 20000 *Staff of Surprises, Charges: {20 25}
+`1 1298 100 500 *Staff of Swarming Insects, Charges: {45 50} (GP & XP values are per charge)
+`1 1298 48000 200000 *Thoth's Staff, Charges: {20 25}
+`1 1299 8000 40000 *Staff of Thunder and Lightning, Charges: {20 25}
+`1 1299 3000 25000 *Ushas's Staff, Charges: {20 25}
+`1 1299 5000 25000 *Staff of Vision, Charges: {20 25}
+`1 1299 5000 30000 *War Staff of Nyrond, Charges: {20 25}
+`1 1300 15000 75000 *Staff of the White Well, Charges: {20 25}
+`1 1300 10000 50000 *Staff of the Winds, Charges: {20 25}
+`1 1300 8000 35000 *Staff of Withering, Charges: {20 25}
+`1 1300 15000 75000 *Staff of Wizardry, Charges: {20 25}
+`1 1301 8000 40000 *Staff of the Woodlands, Charges: {20 25}
+~1 25 1301 8000 40000 *Staff of the Woodlands +4, Charges: {20 25}
+~26 50 1301 8000 40000 *Staff of the Woodlands +3, Charges: {20 25}
+~51 75 1301 8000 40000 *Staff of the Woodlands +2, Charges: {20 25}
+~76 100 1301 8000 40000 *Staff of the Woodlands +1 , Charges: {20 25}

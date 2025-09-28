@@ -1,0 +1,6 @@
+491~{armor/armor} {armor/bonus} {armor/sized_for}
+36~{armor/barding_material} {armor/barding} Barding {armor/bonus} {armor/barding_category}
+12~{armor/material} Bonnet {armor/bonus}
+37~{armor/material} Caparison {armor/bonus}
+376~{armor/material} {armor/shield} {armor/bonus}
+48~special

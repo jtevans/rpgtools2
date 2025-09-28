@@ -1,0 +1,692 @@
+`1 27 2000 6000 Amulet of the Abyss
+`1 27 4000 15000 Amulet Against ESP and Crystal Balls
+`1 27 350 1000 Amulet Against Disease
+`1 27 0 3500 Amulet of Amiability
+`1 28 2000 8000 Amulet of Arachnid Control
+`1 28 0 3500 Ivory Amulet of the Beast
+~1 50 28 0 5000 Silver Amulet of the Beast
+~51 100 28 0 3500 Ivory Amulet of the Beast
+`1 28 2000 18000 Amulet of the Cairn Hills
+`1 28 3000 21000 Cartographer's Amulet
+`1 29 5 25 Amulet of Caterpillar Control
+`1 29 1500 8000 Amulet of Charm Resistance +3
+~1 50 29 1500 8000 Amulet of Charm Resistance +3
+~51 100 29 2000 10000 Amulet of Charm Resistance +4
+`1 29 2500 12500 Amulet of Charming
+`1 29 1000 4000 Amulet of Cheetah Speed
+`1 29 1000 5000 Amulet of Communication
+`1 29 8000 47500 Amulet of Dragon Warding
+`1 29 300 1500 Amulet of Dramatic Death
+~1 10 29 300 1500 Amulet of Dramatic Death: Magical Fire
+~11 20 29 300 1500 Amulet of Dramatic Death: Electricity
+~21 30 29 300 1500 Amulet of Dramatic Death: Cold-Based Attacks
+~31 40 29 300 1500 Amulet of Dramatic Death: Petrification
+~41 50 29 300 1500 Amulet of Dramatic Death: Edged Weapons
+~51 60 29 300 1500 Amulet of Dramatic Death: Blunt Weapons
+~61 70 29 300 1500 Amulet of Dramatic Death: Piercing Weapons
+~71 80 29 300 1500 Amulet of Dramatic Death: Falling
+~81 90 29 300 1500 Amulet of Dramatic Death: Acid
+~91 100 29 300 1500 Amulet of Dramatic Death: Poisons
+`1 31 5000 50000 Draskilion's Amulet of Life
+`1 31 1000 10000 Amulet of Elemental Command
+`1 31 1000 5000 Amulet of Emotions
+`1 31 1200 6000 Amulet of Extensions
+`1 31 1000 5000 Amulet of Far Reaching
+`1 32 0 0 Fiend Amulet
+`1 32 500 2500 Amulet of Finding
+`1 32 1400 7000 Furyondy's Amulet
+`1 32 1500 12000 Amulet of the Golden Collar
+`1 32 5000 30000 Greenstone Amulet
+`1 33 5500 10000 Amulet, Hands of the Healing Spirit
+`1 34 300 1500 Hardwater Amulet
+`1 34 2000 10000 Health Amulet
+~1 90 34 2000 10000 Health Amulet
+~91 100 34 0 2000 Cursed Health Amulet
+`1 34 300 1500 Amulet of the Hero
+`1 34 1000 5000 Amulet of Holy Turning
+~1 30 34 1000 5000 Amulet of Holy Turning: 5th Level
+~31 55 34 1200 6000 Amulet of Holy Turning: 6th Level
+~56 75 34 1400 7000 Amulet of Holy Turning: 7th Level
+~76 90 34 1600 8000 Amulet of Holy Turning: 8th Level
+~91 100 34 1800 9000 Amulet of Holy Turning: 9th Level
+`1 35 0 0 Amulet of Hunting
+~1 40 35 600 3000 Amulet of Hunting +1
+~41 55 35 900 4500 Amulet of Hunting +2
+~56 65 35 1200 6000 Amulet of Hunting +3
+~66 75 35 1500 7500 Amulet of Hunting +4
+~76 85 35 1800 9000 Amulet of Hunting +5
+~86 90 35 0 1000 Cursed Amulet of Hunting -1
+~91 95 35 0 1200 Cursed Amulet of Hunting -2
+~96 100 35 0 1400 Cursed Amulet of Hunting -3
+`1 35 4000 20000 Amulet of Immunity to Charm
+`1 35 0 1000 Amulet of Inescapable Location
+`1 35 300 1500 Amulet of Insect Repellancy
+`1 35 6000 30000 Amulet, Kaleen's Undead Stone
+`1 35 6000 30000 Amulet of Lathander
+`1 35 5000 25000 Amulet of Leadership
+`1 36 5000 20000 Amulet of Life Protection
+`1 36 5000 25000 Amulet of Magic Resistance
+~1 14 36 5000 25000 Amulet of Magic Resistance: 5% for spell levels 1 to 6
+~15 26 36 6000 30000 Amulet of Magic Resistance: 10% for spell levels 1 to 6
+~27 35 36 7000 35000 Amulet of Magic Resistance: 15% for spell levels 1 to 6
+~36 42 36 8000 40000 Amulet of Magic Resistance: 20% for spell levels 1 to 6
+~43 47 36 9000 45000 Amulet of Magic Resistance: 25% for spell levels 1 to 6
+~48 50 36 10000 50000 Amulet of Magic Resistance: 30% for spell levels 1 to 6
+~51 64 36 5000 25000 Amulet of Magic Resistance: 5% for spell levels 1 to 9
+~65 77 36 6000 30000 Amulet of Magic Resistance: 10% for spell levels 1 to 9
+~78 86 36 7000 35000 Amulet of Magic Resistance: 15% for spell levels 1 to 9
+~87 93 36 8000 40000 Amulet of Magic Resistance: 20% for spell levels 1 to 9
+~94 97 36 9000 45000 Amulet of Magic Resistance: 25% for spell levels 1 to 9
+~98 100 36 10000 50000 Amulet of Magic Resistance: 30% for spell levels 1 to 9
+`1 36 3000 15000 Amulet of Metaspell Influence
+`1 37 1000 5000 Amulet of Neutrality
+`1 37 5000 25000 Noseeum Amulet
+`1 37 1000 5000 Orcish Amulet
+~1 9 37 1000 5000 Orcish Amulet: +1 bonus to attack rolls
+~10 18 37 1000 5000 Orcish Amulet: -1 bonus to AC
+~19 27 37 1000 5000 Orcish Amulet: +1 bonus to Damage
+~28 36 37 1000 5000 Orcish Amulet: +1 bonus to Saving Throws
+~37 45 37 1000 5000 Orcish Amulet: +1 bonus to an Ability Check
+~46 54 37 1000 5000 Orcish Amulet: +1 bonus to Strength
+~55 63 37 1000 5000 Orcish Amulet: +1 bonus to Dexterity
+~64 72 37 1000 5000 Orcish Amulet: +1 bonus to Wisdom
+~73 81 37 1000 5000 Orcish Amulet: +1 bonus to Intelligence
+~82 90 37 1000 5000 Orcish Amulet: +1 bonus to Constitution
+~91 100 37 1000 5000 Orcish Amulet: +1 bonus to Charisma
+`1 37 0 1000 Cursed Orcish Amulet
+~1 9 37 0 1000 Cursed Orcish Amulet: -1 bonus to attack rolls
+~10 18 37 0 1000 Cursed Orcish Amulet: +1 bonus to AC
+~19 27 37 0 1000 Cursed Orcish Amulet: -1 bonus to Damage
+~28 36 37 0 1000 Cursed Orcish Amulet: -1 bonus to Saving Throws
+~37 45 37 0 1000 Cursed Orcish Amulet: -1 bonus to an Ability Check
+~46 54 37 0 1000 Cursed Orcish Amulet: -1 bonus to Strength
+~55 63 37 0 1000 Cursed Orcish Amulet: -1 bonus to Dexterity
+~64 72 37 0 1000 Cursed Orcish Amulet: -1 bonus to Wisdom
+~73 81 37 0 1000 Cursed Orcish Amulet: -1 bonus to Intelligence
+~82 90 37 0 1000 Cursed Orcish Amulet: -1 bonus to Constitution
+~91 100 37 0 1000 Cursed Orcish Amulet: -1 bonus to Charisma
+`1 37 500 2500 Palm Sign Amulet
+`1 38 600 9000 Amulet of the Papyrus Scepter
+`1 38 2000 20000 Amulet of Perpetual Youth
+`1 38 0 2000 Amulet of Perpetual Youth and Inexperience
+`1 38 7000 30000 Phelthong's Amulet
+`1 38 6000 30000 Amulet of the Planes
+`1 39 12000 60000 Amulet of Power
+`1 39 4000 15000 Amulet of Proof vs. Detection and Location
+`1 39 0 0 Amulet of Protection
+~1 20 39 1000 10000 Amulet of Protection +1
+~21 40 39 2000 15000 Amulet of Protection +2
+~41 60 39 3000 20000 Amulet of Protection +3
+~61 80 39 4000 25000 Amulet of Protection +4
+~81 100 39 5000 30000 Amulet of Protection +5
+`1 39 3000 30000 Amulet of Protection vs. Alignment Change
+`1 39 4000 15000 Amulet of Protection vs. Crystal Balls and ESP
+`1 40 600 3000 Amulet of Protection from Good
+`1 40 600 2000 Amulet of Protection from Sleep
+`1 41 0 0 Amulet of Protection from Turning
+~1 20 41 1000 5000 Amulet of Protection from Turning +1
+~21 40 41 1500 7500 Amulet of Protection from Turning +2
+~41 60 41 2000 10000 Amulet of Protection from Turning +3
+~61 80 41 2500 12500 Amulet of Protection from Turning +4
+~81 100 41 3000 15000 Amulet of Protection from Turning +5
+`1 42 5000 7500 Amulet of Psionic Interference
+`1 42 2500 10000 Amulet of Psionic Reflection
+`1 42 3000 15000 Amulet of Psionic Protection
+`1 42 1000 5000 Amulet of Recall
+`1 42 6000 60000 Shakti Amulet
+`1 42 600 3000 Amulet, Shell of Protection from Sharks
+`1 43 750 7500 Shield Amulet
+`1 43 0 1000 Amulet of Sleeplessness
+`1 43 900 4500 Amulet of Spinecastle
+`1 43 1000 5000 Amulet of the Spirit
+`1 43 0 0 Amulet, Thet of Ptah
+`1 43 100 500 Amulet of Timekeeping
+`1 43 350 3500 Amulet of Transformation
+`1 44 1400 14000 Two Fingers Amulet
+`1 44 800 4000 Amulet of Undersea Friendship
+`1 44 0 2500 Amulet of Vadarin
+`1 44 700 1200 Vulture Amulet
+`1 44 5000 25000 Amulet of Weakening
+`1 47 0 0 Anhk of Life
+`1 47 0 0 Nithian Anhk
+~1 20 47 200 2000 Nithian Anhk (Ixion)
+~21 40 47 300 3000 Nithian Anhk (Kagyar)
+~41 60 47 250 2500 Nithian Anhk (Pflarr)
+~61 80 47 200 2000 Nithian Anhk (Rathanos)
+~81 100 47 200 2000 Nithian Anhk (Valerias)
+`1 48 0 0 Anhk of Power
+`1 48 0 0 Ra's Anhk
+`1 48 0 0 True Anhk
+`1 123 500 1000 Badge of Freedom
+`1 123 200 1000 Badge of Monster Control
+`1 48 2000 8000 Anklet, Equus
+`1 49 0 1200 Anklet of Growth
+`1 49 600 6000 Anklet of Hobbling
+`1 50 2500 17000 Anklet of Levitation
+`1 50 0 600 Anklet of Sinking
+`1 50 2000 16000 Anklet of Sure Footing
+`1 50 1200 6000 Anklet of Walking
+`1 216 2000 10000 Bracelet of Charms
+`1 217 10 100 Copper Bracelet
+`1 217 7000 35000 Dalamar's Bracelet
+`1 217 2000 8000 Bracelet, Equus
+`1 218 800 400 Bracelet of Hog-Tying
+`1 219 1500 7500 Ivy Bracelet
+`1 219 1500 15000 Medegian Bracelet of Lost Ships
+`1 219 2500 25000 Bracelet of Scaly Command
+`1 219 300 10000 Bracelet of Wishes
+`1 225 1200 12000 Abbor Alz's Brooch of Warning
+`1 225 4000 16000 Brooch of Begoing
+`1 225 800 4000 Brooch of Bones
+`1 225 2000 8000 Brooch, Equus
+`1 226 800 4000 Brooch of Falling
+`1 226 1200 12000 Brooch of Imog
+`1 226 5000 25000 Brooch of Imog II
+`1 227 1800 9000 Lunar Brooch
+`1 227 4000 20000 Brooch of Number Numbing
+`1 228 1000 5000 Brooch of Obsidian Shattering
+`1 228 1000 10000 Brooch, Pin of Communication
+`1 228 1000 10000 Brooch of Shielding
+`1 235 1000 9000 Cameo of Appearance
+`1 235 2000 8000 Cameo, Equus
+`1 236 0 1200 Cameo of Incompetence
+`1 281 200 1000 Charm of Boot Restoration
+`1 281 1000 5000 Charm of Distraction
+`1 281 1600 5000 Charm of Favor
+`1 282 100 500 Hunting Charm
+`1 282 0 0 Luck Charm (See chart in book for XP & GP values)
+`1 282 2000 10000 Charm of Open Doors
+`1 282 300 1500 Charm of Pest Protection
+`1 282 1000 5000 Charm of Protection from Disease
+`1 283 1000 5000 Charm of Protection from Fire
+`1 283 1000 5000 Charm of Protection from Spirits
+`1 283 1000 5000 Charm of Protection from Theft
+`1 283 250 1250 Charm, Rabbit's Foot
+`1 283 250 1250 Charm of Resource
+~1 20 283 250 1250 Charm of Resource (Asp: Resistance to Poison.)
+~21 40 283 250 1250 Charm of Resource (Bread: Provides a full day's food.)
+~41 60 283 250 1250 Charm of Resource (Fennec: Surprised only on a 1.)
+~61 80 283 250 1250 Charm of Resource (Hawk: Vision is enhanced 100 times.)
+~81 100 283 250 1250 Charm of Resource (Raindrop: Provides a full day's water.)
+`1 283 600 3000 Charm of Sympathetic Heating
+`1 283 100 500 Tree Climbing Charm
+`1 284 500 2500 Charm, Wolfspaw
+`1 332 0 2000 Black Crown of Aerdy
+`1 332 0 80000 Crown of Blackmoor
+`1 332 4000 20000 Crown of Corruption
+`1 333 2000 20000 Dark Crown
+`1 333 16500 127500 Emperor's Crown
+`1 333 5000 30000 Hooded Crown
+`1 334 750 45000 Crown of Imperium
+`1 334 3000 35000 Iron Crown of the Bandit Kingdom
+`1 334 1500 15000 Crown of Leadership
+`1 334 6000 45000 Naga Crown
+~1 10 334 7000 50000 Altering Naga Crown
+~11 30 334 8000 55000 Teleporting Naga Crown
+~31 100 334 6000 45000 Normal Naga Crown
+`1 336 1500 15000 Crown of Rulership
+`1 337 0 0 Scorpion Crown
+`1 337 2000 22500 Silver Crown of Veluna
+`1 337 12000 120000 Sorona Crown
+`1 337 20200 84000 Crown of Souls
+`1 338 20200 84000 Crown of Souls II
+`1 338 9000 36000 Crown of Stars
+`1 33 0 0 Crown of the Stars
+`1 33 4000 20000 Crown of Summation
+`1 33 1000 5000 Crown of the Unicorns
+`1 33 2500 10000 Velvet Crown
+`1 33 4000 40000 Crown of the Void
+`1 33 9000 45000 Crown of Yarus
+`1 341 20 100 Abelaat Crystal
+~1 10 341 40 200 Special Abelaat Crystal
+~11 100 341 20 100 Normal Abelaat Crystal
+`1 341 2500 20000 Crystal of Awareness
+`1 341 1000 5000 Crystal of Death Scrying
+`1 342 14000 72500 Crystal of the Ebon Flame
+`1 343 2000 10000 Phasing Crystal
+`1 344 10 50 Signaling Crystal
+`1 425 500 5000 Earring of Alignment Detection
+`1 425 0 1000 Earring of Burrowing
+`1 425 1000 7000 Earring of Defense
+`1 425 2000 8000 Earring, Equus
+`1 426 900 4500 Earring of Paralysis
+`1 426 1000 5000 Earring of Protection +1
+~1 60 426 1000 5000 Earring of Protection +1
+~61 90 426 2000 10000 Earring of Protection +2
+~91 100 426 3000 15000 Earring of Protection +3
+`1 426 500 2500 Earring of the Sea
+`1 427 500 2500 Earring of Seamanship
+`1 427 500 4000 Earring of Understanding
+`1 440 5000 10000 Eidolon of Khalk'Ru
+`1 451 200 500 Eye of Accuracy
+`1 452 7500 37500 Eye of Arik
+`1 452 500 2500 Assassin's Eyes
+`1 453 150 1500 Beady Eye
+`1 453 3000 20000 Black Opal Eye
+`1 453 3000 20000 Black Opal Eye II
+`1 453 1500 7500 Eyes of Cegilune's Hag
+`1 453 4000 24000 Eyes of Charming
+`1 453 1200 6000 Eye of Donoagi
+`1 454 3000 20000 Dragon's Eye
+~1 10 454 3000 20000 Gold Dragon's Eye (LG)
+~11 20 454 3000 20000 Silver Dragon's Eye (NG)
+~21 30 454 3000 20000 Copper Dragon's Eye (CG)
+~31 40 454 3000 20000 Brass Dragon's Eye (CN)
+~41 50 454 3000 20000 Red Dragon's Eye (CE)
+~51 60 454 3000 20000 Black Dragon's Eye (NE)
+~61 70 454 3000 20000 Blue Dragon's Eye (LE)
+~71 80 454 3000 20000 Bronze Dragon's Eye (LN)
+~81 100 454 3000 20000 Green Dragon's Eye (N)
+`1 455 3500 18000 Eyes of the Eagle
+`1 455 1500 15000 Eyes of the Immortals
+`1 455 500 5000 Eyes of Infravision
+`1 455 2000 12500 Eye of Leviathan
+`1 456 2000 12500 Eye of the Leviathan
+`1 457 250 500 Magical Eye
+~1 20 457 250 500 Magical Eye: Bowl-Lid (5 Uses)
+~21 40 457 200 400 Magical Eye: Buckler (4 Uses)
+~41 60 457 150 300 Magical Eye: Saucer (3 Uses)
+~61 80 457 100 200 Magical Eye: Trade-Token (2 Uses)
+~81 100 457 50 100 Magical Eye: Coin (1 Use)
+`1 458 1200 6000 Eyes, Mellifleur's Left Gem
+~1 50 458 1200 6000 Eyes, Mellifleur's Left Gem
+~51 100 458 1400 7000 Eyes, Mellifleur's Right Gem
+`1 458 2000 12500 Eyes of Minute Seeing
+`1 458 1000 5000 Eye of Night
+`1 458 2500 13000 Eyes of Petrification
+`1 459 2000 10000 Eye of Traldar
+`1 460 14000 70000 Eye of Vecna
+`1 461 4000 35000 Winking Eye
+`1 462 2000 10000 Eyeglasses of Arcanist
+`1 462 2000 10000 Eyeglasses of Arcanist II
+`1 462 2200 11000 Eyeglasses of Arcanist III
+`1 463 1000 7500 Eyeglasses of Enhanced Vision
+`1 463 3500 15000 Eyeglasses of Sight
+`1 463 1300 13000 Eyeglasses of True Seeing
+`1 463 2000 15000 Eyepatch of Tenh
+`1 517 500 4000 Gem of Atonement
+`1 517 3000 20000 Bimbomushi Gem
+`1 517 2000 17500 Gem of Brightness
+`1 517 0 0 Gem, Bupu's Emerald
+`1 518 1000 5000 Gem, Cindergem
+~1 16 518 1000 5000 Gem, Blue Cindergem
+~17 33 518 1200 6000 Gem, Green Cindergem
+~34 50 518 1300 6500 Gem, Indigo Cindergem
+~51 67 518 1000 5000 Gem, Orange Cindergem
+~68 84 518 1500 7500 Gem, Violet Cindergem
+~85 100 518 600 3000 Gem, Yellow Cindergem
+`1 519 600 5000 Gem of Curing
+`1 519 0 5000 Gem of Delusion
+`1 519 150 500 Gem of Detection
+~1 10 519 150 500 Gem of Detection: Clear Spindle
+~11 20 519 150 500 Gem of Detection: Deep Red Sphere
+~21 30 519 150 500 Gem of Detection: Pale Blue Rhomboid
+~31 40 519 150 500 Gem of Detection: Pale Green Prism
+~41 50 519 150 500 Gem of Detection: Pale Lavender Ellipsoid
+~51 60 519 150 500 Gem of Detection: Pearly White Spindle
+~61 70 519 150 500 Gem of Detection: Pink and Green Sphere
+~71 80 519 150 500 Gem of Detection: Pink Rhomboid
+~81 90 519 150 500 Gem of Detection: Scarlet and Blue Sphere
+~91 100 519 150 500 Gem of Detection: Vibrant Purple Prism
+`1 520 600 6000 Gem of Drusion
+`1 520 20000 100000 Gem, Elvenstar
+`1 521 4000 25000 Fire Gem
+`1 521 3000 30000 Gem of Foresight
+`1 521 2500 12500 Gamalon's Gem of Infravision and Detect Magic
+`1 521 900 4500 Gem of Ideas
+`1 521 1000 5000 Gem of Income
+`1 522 3000 30000 Gem of Insight
+`1 522 2000 10000 Ionian Gem
+~1 10 522 2700 13500 Master Ionian Gem
+~11 100 522 2000 10000 Normal Ionian Gem
+`1 522 0 1000 Gem, Jewel of Attacks
+`1 522 0 1000 Gem, Jewel of Atatcks Upon the Owner
+`1 522 100 1000 Gem, Jewel of Flawlessness: {10 100} Facets (XP & GP values are per facet)
+`1 523 10000 18000 Gem, Jewel of Neverwinter
+~1 11 523 10000 18000 Gem, Jewel of Neverwinter (Amethyst)
+~12 22 523 10000 18000 Gem, Jewel of Neverwinter (Carnelian)
+~23 33 523 10000 18000 Gem, Jewel of Neverwinter (Diamond)
+~34 44 523 10000 18000 Gem, Jewel of Neverwinter (Emerald)
+~45 55 523 10000 18000 Gem, Jewel of Neverwinter (Fire Opal)
+~56 66 523 10000 18000 Gem, Jewel of Neverwinter (Onyx)
+~67 77 523 10000 18000 Gem, Jewel of Neverwinter (Ruby)
+~78 88 523 10000 18000 Gem, Jewel of Neverwinter (Sapphire)
+~89 100 523 10000 18000 Gem, Jewel of Neverwinter (Topaz)
+`1 523 0 2500 Gem, Jewel of Obsession
+`1 524 5000 25000 Gem, Karathoth's Jewel
+`1 524 700 6000 Karma Gem
+`1 524 5000 50000 Gem of Life
+`1 525 1000 7500 Gem of Magic Missle Protection
+`1 525 1000 7500 Gem of Musing
+`1 525 3000 15000 Gem, Nightjewel
+`1 526 1000 10000 Gem, Opal of Olfactory Illusion
+`1 527 4000 35000 Gem of Protection
+`1 527 3000 35000 Purple Gem of the Vesve Forest
+`1 527 2000 10000 Gem of Retaliation
+`1 527 1500 7500 Gem of Returning
+`1 527 3500 17000 Gem of Scroll Reading
+`1 528 2000 25000 Gem of Seeing
+`1 528 300 5000 Gem of Shielding
+~1 16 528 450 7000 Pale Violet Gem of Shielding
+~17 33 528 300 5000 Pale Green Gem of Shielding
+~34 50 528 300 5000 Pale Orange Gem of Shielding
+~51 67 528 300 5000 Pale Yellow Gem of Shielding
+~68 84 528 300 5000 Pale Blue Gem of Shielding
+~85 100 528 500 8000 Clear Gem of Shielding
+`1 528 40000 200000 Soul Gem
+`1 529 1000 10000 Gem, Star
+~1 33 529 1000 10000 Gem, Khan-Pelar Star
+~34 66 529 1000 10000 Gem, Mo-Pelar Star
+~67 100 529 1000 10000 Gem, Shah-Pelar Star
+`1 530 2200 11000 Gem of {1 4} Wishes
+`1 536 1500 7500 Enlarging Glass
+`1 536 2000 10000 Glass of Distant Vision
+`1 537 3000 10000 Joal's Glass of Preserved Words
+`1 537 2000 25000 Glass, Loupe of Cormac
+`1 537 2000 10000 Glass of Preserved Words
+`1 547 700 1400 Goggles of Underwater Sight
+`1 547 750 3500 Troppenribb's Goggles
+`1 573 400 2000 Beating Heart
+`1 573 200 1000 Chicken Heart
+`1 573 600 3000 Heart of Hearing
+`1 573 1000 5000 Iron Heart
+`1 573 2000 10000 Heart of Kazgaroth
+`1 574 1200 6000 Lion Heart
+`1 574 2500 12000 Royal Heart
+`1 574 1000 7500 Shekinester's Crystalline Heart
+`1 574 800 6000 Heart of Stone
+`1 597 300 3000 Holy Symbol of Greyhawk
+`1 597 300 3000 Larmacian Holy Symbol
+`1 597 1000 5000 Prismal's Holy Symbol
+~1 20 597 1000 5000 Prismal's Celestian Holy Symbol
+~21 40 597 1000 5000 Prismal's Fharlanghn Holy Symbol
+~41 60 597 1000 5000 Prismal's Lathander Holy Symbol
+~61 80 597 1000 5000 Prismal's Paladine Holy Symbol
+~81 100 597 1000 5000 Prismal's Silvanus Holy Symbol
+`1 598 300 3000 Holy Symbol of Ravenkind
+`1 598 300 3000 Holy Symbol of Ravenkind II
+`1 607 1000 5000 Icon of Chemosh
+`1 609 0 19000 Icon of the Raven
+`1 609 7000 35000 Icon of Truth
+`1 609 7000 35000 Icon of Truth II
+`1 619 500 4500 Iron Pin of the Icy Sea
+`1 621 20000 100000 Jacinth of Inestimable Beauty
+`1 634 5000 35000 Kura, the Darkness
+`1 650 400 2000 Book Leaf
+`1 650 600 3000 Leaf of Colors
+`1 652 500 2500 Leaf of Crumbling
+`1 652 1750 4000 Enchanted Leaf
+~1 20 652 1750 4000 Enchanted Leaf of Convik Tree
+~21 40 652 2500 8000 Enchanted Leaf of His Tree
+~41 60 652 1000 2500 Enchanted Leaf of Kemis Tree
+~61 80 652 2000 4000 Enchanted Leaf of Mis Tree
+~81 100 652 500 2500 Enchanted Leaf of Pajon Tree
+`1 653 300 1500 Leaf of Falling
+`1 653 100 500 New Leaf
+`1 653 1200 6000 Leaf of Warmth
+`1 653 2000 10000 Lens of Activity Detection
+`1 653 0 1200 Lens of Blinding
+`1 653 4000 20000 Lens of Charming
+`1 654 250 2500 Lens of Detection
+`1 654 3500 18000 Lens of the Eagle
+`1 654 800 4000 Evelyn's Lens of Speedreading
+`1 654 2000 10000 Lens of Far Seeing
+`1 654 500 4000 Lens of Lighting
+`1 654 2000 10000 Lens of Minute Seeing
+`1 654 0 1800 Lens of Petrification
+`1 654 0 2200 Lens of Petrification II
+`1 655 500 2500 Lens of Reflection
+`1 655 1000 5000 Lens of Remote Viewing
+`1 655 2000 10000 Lens of Seeing
+`1 655 500 2500 Lens of Speed Reading
+`1 655 2800 14000 Lenses of Subtitles
+`1 656 0 22500 Lens of Transformation
+`1 656 750 5000 Lens of Ultravision (Ultravision was removed from AD&D)
+`1 657 1000 5000 Lens of Valuation
+`1 672 3500 25000 Locket of the Great Kingdom
+`1 672 1000 5000 Locket of Love
+`1 673 3200 18000 Locket of Natasha
+`1 710 400 2000 Medallion of the Arctic
+`1 710 1000 5000 Medallion of Defense
+`1 710 1500 15000 Medallion of Empathy
+`1 710 2000 8000 Medallion, Equus
+`1 711 1000 10000 Medallion of ESP
+~1 75 711 1000 10000 Medallion of ESP, 30' Range
+~76 90 711 1500 15000 Medallion of ESP, 30' Range with Empathy
+~91 95 711 2000 20000 Medallion of ESP, 60' Range
+~96 100 711 3000 30000 Medallion of ESP, 90' Range
+`1 712 400 2000 Medallion of EST
+`1 712 1000 10000 Medallion of Faith
+`1 713 1200 9000 Holy Medallion of Almor
+`1 713 1000 5000 Locke's Medallion of Thought Projection
+`1 713 1500 7500 Medallion of Malog
+`1 713 400 4000 Medallion of the Mirror
+`1 713 0 1000 Medallion of Missle Attraction
+`1 713 3000 15000 Pax's Medallion of Spell Exchange
+`1 713 500 5000 Medallion of Projection
+`1 714 2000 20000 Medallion, Soulsearcher
+`1 714 2000 20000 Medallion, Soulsearcher II
+`1 714 750 7500 Species Enemy Medallion
+`1 714 3000 15000 Medallion of Spell Exchange
+`1 715 500 2000 Medallion, Star of Celene
+`1 715 1000 10000 Medallion of Steadiness
+`1 715 0 1000 Medallion of Thought Projection
+`1 715 500 5000 Medallion of Time
+`1 715 1000 18000 Medallion, Tusmit's Battle Crescent
+`1 716 1000 2500 Medicine Bundle
+`1 740 7500 75000 Fire-Eye Monocle
+`1 741 5000 6000 Monocle of Magic
+`1 746 1000 10000 Necklace of Adaption
+`1 746 0 500 Necklace of Air Breathing
+`1 746 0 2000 Necklace of Almor
+`1 747 1000 5000 Necklace of Alteration
+`1 748 500 1000 Necklace of Bad Taste
+~1 25 748 0 1000 Cursed Necklace of Bad Taste
+~26 100 748 500 1000 Necklace of Bad Taste
+`1 748 1000 25000 Cosette's Necklace
+`1 749 600 3000 Necklace of Elegance
+`1 749 2000 10000 Frigga's Black Opal Necklace
+`1 749 500 2500 Glittering Necklace
+`1 749 0 1200 Necklace of Greed
+`1 749 1000 5500 Necklace of Harmonia
+`1 749 9000 82500 Necklace of Lilith
+`1 750 0 1200 Marv's Necklace of Memory Displacement
+`1 750 1000 5000 Necklace of Memory Enhancement
+`1 750 0 0 Necklace of Missiles
+~1 20 750 550 2200 Necklace of Missiles, Type I
+~21 40 750 800 3200 Necklace of Missiles, Type II
+~41 60 750 1150 4600 Necklace of Missiles, Type III
+~61 80 750 1800 7200 Necklace of Missiles, Type IV
+~81 90 750 1950 7800 Necklace of Missiles, Type V
+~91 95 750 2300 9200 Necklace of Missiles, Type VI
+~96 100 750 2950 11800 Necklace of Missiles, Type VII
+`1 750 4000 15000 Necklace of Mystic Eidolons
+`1 751 400 2000 Necklace of Night Seeing
+`1 751 0 1000 Noj's Necklace of Not-so-smart Missiles
+`1 751 0 2000 Necklace of Petrification
+`1 751 500 3000 Necklace of Prayer Beads; {25 30} Stones, {3 6} Special Stones
+`1 751 1000 5000 Necklace of Protection +1
+~1 50 751 1000 5000 Necklace of Protection +1
+~51 100 751 2000 10000 Necklace of Protection +2
+`1 752 2000 10000 Necklace of Protection Against Charm
+`1 752 1000 5600 Snake Necklace
+`1 752 0 1000 Necklace of Strangling
+`1 752 0 1000 Necklace of Strangulation
+`1 752 2400 12000 Syranita's Opal Necklace
+`1 752 0 1200 Necklace of Ugliness
+`1 753 2000 10000 Vergadain's Necklace
+`1 753 800 8000 Necklace of Water Breathing
+`1 804 500 2500 Black Pearl
+`1 804 10000 20000 Dragon Pearl
+`1 805 400 2000 Pearl of the Ebbing Tide
+`1 805 2000 10000 Pearl of Entrancement
+`1 805 300 1500 Pearl of Flying
+`1 805 2400 12000 Giant Black Pearl
+`1 805 400 2000 Gold Pearl
+`1 805 500 5000 Kathena's Pearl of Wisdom
+`1 805 100 1000 Pearl of Power
+~1 25 805 200 2000 Pearl of Power, Type I
+~26 45 805 400 4000 Pearl of Power, Type II
+~46 60 805 600 6000 Pearl of Power, Type III
+~61 75 805 800 8000 Pearl of Power, Type IV
+~76 85 805 1000 10000 Pearl of Power, Type V
+~86 92 805 1200 12000 Pearl of Power, Type VI
+~93 96 805 1400 14000 Pearl of Power, Type VII
+~97 98 805 1600 16000 Pearl of Power, Type VIII
+~99 99 805 1800 18000 Pearl of Power, Type IX
+~100 100 805 100 1000 Pearl of Power, Type X (XP & GP Values are per level of spell)
+`1 805 0 100 Cursed Pearl of Power
+~1 25 805 0 200 Cursed Pearl of Power, Type I
+~26 45 805 0 400 Cursed Pearl of Power, Type II
+~46 60 805 0 600 Cursed Pearl of Power, Type III
+~61 75 805 0 800 Cursed Pearl of Power, Type IV
+~76 85 805 0 1000 Cursed Pearl of Power, Type V
+~86 92 805 0 1200 Cursed Pearl of Power, Type VI
+~93 96 805 0 1400 Cursed Pearl of Power, Type VII
+~97 98 805 0 1600 Cursed Pearl of Power, Type VIII
+~99 99 805 0 1800 Cursed Pearl of Power, Type IX
+~100 100 805 0 100 Cursed Pearl of Power, Type X (XP & GP Values are per level of spell)
+`1 806 60000 300000 Pearl of Power II
+`1 807 1000 5000 Pearl of Protection from Fire
+`1 807 700 3500 Red Pearl
+`1 807 600 3000 Pearl of the Rising Tide
+`1 807 700 3500 Serpent Spirit Pearl
+`1 807 900 4500 Pearl of the Sirines
+`1 807 7500 37500 Storm Rider's Pearl
+`1 807 750 3750 Traveler's Pearl
+`1 808 0 600 Pearl of Ultimate Wisdom
+`1 808 500 5000 Pearl of Wisdom
+~1 10 808 0 500 Cursed Pearl of Wisdom
+~11 100 808 500 5000 Pearl of Wisdom
+`1 810 2000 8000 Pendant, Equus
+`1 811 3000 15000 Rahasia's Pendant
+`1 825 0 1000 Periapt of Foul Rotting
+`1 825 1000 10000 Periapt of Health
+`1 826 1500 12500 Periapt of Proof Against Poison
+~1 40 826 1500 12500 Periapt of Proof Against Poison +1
+~41 70 826 2000 15000 Periapt of Proof Against Poison +2
+~71 90 826 2500 20000 Periapt of Proof Against Poison +3
+~91 100 826 3000 25000 Periapt of Proof Against Poison +4
+`1 826 500 3000 Periapt of Proof Against Sound
+~1 40 826 500 3000 Periapt of Proof Against Sound +1
+~41 60 826 1000 6000 Periapt of Proof Against Sound +2
+~61 75 826 1500 9000 Periapt of Proof Against Sound +3
+~76 90 826 2000 12000 Periapt of Proof Against Sound +4
+~91 95 826 2500 15000 Periapt of Proof Against Sound +5
+~96 100 826 1000 6000 Periapt of Proof Against Sound +1, 5' Radius
+`1 827 1500 10000 Periapt of Prophecy Protection
+`1 827 160 9000 Periapt of Protection vs. Vampiric Ixitxachitl and Lacedons
+`1 827 1000 10000 Periapt of Wound Closure
+`1 830 1000 9000 Phylactery of Bravery
+`1 830 1000 7500 Phylactery of Faithfulness
+`1 830 1500 7500 Haroistem's Phylactery of Faithfulness
+`1 831 0 0 Phylactery of Long Years
+~1 5 831 0 2000 Cursed Phylactery of Long Years (Phylactery of Short Years)
+~6 100 831 3000 25000 Phylactery of Long Years
+`1 831 0 2000 Phylactery of Monsterous Attraction
+`1 831 1400 7000 Phylactery of Righteousness
+`1 912 800 4000 Prism of Distraction
+`1 912 1000 4500 Prism of Greyhawk
+`1 912 12000 60000 Prism of Kushk
+`1 913 1500 7500 Prism of Light Splitting
+`1 913 3500 17500 Sim's Prism of Light Splitting
+`1 1055 1000 5000 Benson's Scarab of Uncertain Friendship
+`1 1055 0 2500 Scarab of Death
+`1 1055 1000 7000 Scarab of Deception
+`1 1056 1000 8000 Scarab of Enraging Enemies
+`1 1056 2000 8000 Scarab, Equus
+`1 1057 0 0 Scarab of Golem Protection
+~1 30 1057 400 2000 Scarab of Golem Protection: Flesh
+~31 55 1057 500 2500 Scarab of Golem Protection: Clay
+~56 75 1057 600 3000 Scarab of Golem Protection: Stone
+~76 85 1057 800 4000 Scarab of Golem Protection: Iron
+~86 95 1057 900 4500 Scarab of Golem Protection: Flesh, Clay, and Wood
+~96 100 1057 1250 6250 Scarab of Golem Protection: Any
+`1 1057 1500 11000 Scarab of Insanity
+`1 1057 3000 15000 Scarab of Life
+`1 1058 3000 15000 Mark's Scarab of Protection
+`1 1058 0 2500 Mazrikoth's Scarab of Death
+`1 1058 1000 5000 Scarab, Mortos' Golem
+`1 1058 1000 5000 Scarab of Pest Protection
+`1 1058 1000 8000 Scarab of Protection
+`1 1058 1000 5000 Scarab of Protection II
+~1 20 1058 0 1000 Cursed Scarab of Protection II -1
+~21 25 1058 2000 10000 Scarab of Protection II +2
+~26 100 1058 1000 5000 Scarab of Protection II +1
+`1 1058 1000 5000 Scarab of Uncertainty
+`1 1059 2000 10000 Scarab of Venom
+`1 1060 4000 45000 Blast Sceptre
+`1 1060 1000 4000 Sceptre of Defense
+`1 1062 3000 45000 Sceptre of Entrapment
+`1 1062 1000 5500 Sceptre of the Forgotten City
+`1 1062 2000 10000 Jade Sceptre of Defending
+`1 1063 2000 10000 Jade Sceptre of Defending II
+`1 1063 3000 15000 Sceptre of Life
+`1 1063 1500 6000 Sceptre of Light
+`1 1064 6000 29000 Plague Sceptre
+`1 1064 2500 12500 Sceptre of Power
+`1 1066 1000 2000 Sceptre of Truth
+`1 1067 1500 6000 Scope of Celestial Analysis
+`1 1067 1000 10000 Scope of Seeing
+`1 1092 4000 20000 Shard of Shielding
+`1 1271 500 2500 Spyglass
+`1 1303 1000 6000 Holy Star of the Bright Desert
+`1 1420 0 0 Talisman of the Beast
+~1 17 1420 350 1750 Talisman of the Beast (Badger)
+~18 29 1420 4200 21000 Talisman of the Beast (Brown Bear)
+~30 41 1420 1200 6000 Talisman of the Beast (Deer)
+~42 53 1420 1750 8750 Talisman of the Beast (Eagle)
+~54 65 1420 1750 8750 Talisman of the Beast (Lynx)
+~66 77 1420 150 750 Talisman of the Beast (Porcupine)
+~78 89 1420 350 1750 Talisman of the Beast (Skunk)
+~90 100 1420 1200 6000 Talisman of the Beast (Wolf)
+`1 1421 2500 12500 Talisman of the Beast II
+`1 1421 3500 32500 Talisman of Chaos Supreme
+`1 1421 1000 5000 Talisman of the Chimera
+`1 1421 1000 5000 Talisman of the Cockatrice
+`1 1421 4500 45000 Talisman of Dreams
+`1 1421 750 7500 Lesser Talisman of Elemental Travel
+~1 20 1421 750 7500 Lesser Talisman of Earth Elemental Travel
+~21 40 1421 750 7500 Lesser Talisman of Air Elemental Travel
+~41 60 1421 750 7500 Lesser Talisman of Fire Elemental Travel
+~61 80 1421 750 7500 Lesser Talisman of Water Elemental Travel
+~81 100 1421 1000 10000 Greater Talisman of Elemental Travel (All Elements)
+`1 1422 1000 5000 Talisman of the Faerie
+`1 1422 2000 10000 Fiend Talisman
+`1 1422 3000 15000 Fiend Talisman II
+`1 1422 500 2500 Fire Pepper Talisman
+`1 1422 0 0 Talisman of the Golem
+~1 20 1422 900 9000 Talisman of Amber the Golem
+~21 40 1422 1800 18000 Talisman of Bone the Golem
+~41 60 1422 1300 13000 Talisman of Bronze the Golem
+~61 80 1422 1000 10000 Talisman of Obsidian the Golem
+~81 100 1422 500 5000 Talisman of Wood the Golem
+`1 1423 1000 5000 Talisman of the Griffon
+`1 1423 1000 5000 Hwesta's Talisman of Memorization
+`1 1423 3500 32500 Talisman of Lawfulness
+`1 1423 30 150 Talisman, Medicine Bundle
+`1 1424 1000 5000 Talisman of Memorization
+`1 1424 2250 6750 Mire Talisman
+`1 1424 1000 10000 Modified Talisman of Zagy
+`1 1424 2000 10000 Monkey Head Talisman
+`1 1425 5000 25000 Talisman of Orcus
+`1 1425 3500 27500 Talisman of Pure Good
+`1 1425 4000 20000 Talisman of Rahasia
+`1 1425 30 150 Talisman, Sacred Bundle
+`1 1425 1000 10000 Talisman of the Sphere
+`1 1426 00 000 Talisman of the Statue
+~1 33 1426 500 5000 Talisman of the Crystal Statue
+~34 66 1426 800 8000 Talisman of the Rock Statue
+~67 100 1426 1300 13000 Talisman of the Iron Statue
+`1 1426 3500 32500 Talisman of Tongues
+`1 1426 3500 27500 Talisman of Ultimate Evil
+`1 1426 1000 10000 Talisman of Zagy
+`1 1451 3400 17000 Belenus' Torc
+`1 1451 4000 20000 Torc of Craftmanship
+`1 1451 3000 15000 Torc of the Goddess
+`1 1452 5000 25000 Torc of the Gods
+`1 1452 5000 25000 Torc of the Gods II
+`1 1452 6000 30000 Torc of the Gods III
+`1 1452 10000 50000 Torc of the Gods at the Tor
+`1 1452 500 2500 Torc of Stability
+`1 1469 1000 5000 Vainamoinen's Tears

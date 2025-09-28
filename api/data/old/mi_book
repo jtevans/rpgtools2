@@ -1,0 +1,333 @@
+`3 185 0 60000 Book of Binding Souls
+`3 185 100000 500000 Disks of Mishakal
+`3 186 100000 500000 Disks of Mishakal II
+`3 187 4000 20000 Book of the Enlightened Gods
+`3 188 8000 40000 Book of Exalted Deeds
+`3 188 3000 30000 Book of Golems
+~1 11 188 3000 30000 Book of Clay Golems
+~12 22 188 3000 30000 Book of Doll Golems
+~23 33 188 3000 30000 Book of Gargoyle Golems
+~34 44 188 3000 30000 Book of Glass Golems
+~45 55 188 3000 30000 Book of Ice Golems
+~56 66 188 3000 30000 Book of Necrophidius Golems
+~67 77 188 3000 30000 Book of Scarecrow Golems
+~78 88 188 3000 30000 Book of Slime Golems
+~89 100 188 3000 30000 Book of Wood Golems
+`3 189 1000 6000 Book of Mystical Equations
+`3 189 2000 10000 Book of the Planes
+`3 189 0 0 Book of Ravenloft Golem
+~3 20 189 0 0 Book of Ravenloft Clay Golem
+~21 40 189 0 0 Book of Ravenloft Doll Golem
+~41 60 189 0 0 Book of Ravenloft Gargoyle Golem
+~61 80 189 0 0 Book of Ravenloft Glass Golem
+~81 100 189 0 0 Book of Ravenloft Mechanical Golem
+`3 192 8000 0 Thuba's Book of Vile Darkness
+`3 192 2200 22000 Book of Twelve Seals
+`3 192 8000 40000 Book of Vile Darkness
+`3 329 1000 5000 Contracts of Nepthas
+`3 657 8000 800000 Libram, Analect of Magic
+`3 657 5000 45000 Libram of the Black Heart
+`3 659 4500 35000 Libram, Boccob's Blessed Book
+`3 659 6250 62500 Libram, Codex of the Infinite Planes
+`3 660 8000 40000 Libram of Constructs
+`3 662 8000 30000 Libram of Destruction
+`3 662 6000 30000 Libram of Evaluation
+`3 662 8000 40000 Libram of Gainful Conjuration
+`3 662 3000 30000 Libram of Golems
+~1 4 662 3000 30000 Libram of Amber Golems
+~5 9 662 3000 30000 Libram of Ash Golems
+~10 13 662 3000 30000 Libram of Bone Golems
+~14 17 662 3000 30000 Libram of Bronze Golems
+~18 22 662 3000 30000 Libram of Caryatid Golems
+~23 26 662 3000 30000 Libram of Chitin Golems
+~27 30 662 3000 30000 Libram of Flesh Golems
+~31 35 662 3000 30000 Libram of Furnace Golems
+~36 39 662 3000 30000 Libram of Glass Golems
+~40 43 662 3000 30000 Libram of Guardian Golems
+~44 48 662 3000 30000 Libram of Ice Golems
+~49 52 662 3000 30000 Libram of Iron Golems
+~53 57 662 3000 30000 Libram of Jade Golems
+~58 61 662 3000 30000 Libram of Juggernaut Golems
+~62 66 662 3000 30000 Libram of Lightning Golems
+~67 70 662 3000 30000 Libram of Necrophidius Golems
+~71 74 662 3000 30000 Libram of Obsidian Golems
+~75 78 662 3000 30000 Libram of Radiant Golems
+~79 83 662 3000 30000 Libram of Rock Golems
+~84 87 662 3000 30000 Libram of Sand Golems
+~88 91 662 3000 30000 Libram of Silver Golems
+~92 96 662 3000 30000 Libram of Stone Golems
+~97 100 662 3000 30000 Libram of Tin Golems
+`3 663 0 20000 Cursed Libram of Golems (Under: Libram of Golems)
+~1 4 662 3000 20000 Cursed Libram of Amber Golems (Under: Libram of Golems)
+~5 9 662 3000 20000 Cursed Libram of Ash Golems (Under: Libram of Golems)
+~10 13 662 3000 20000 Cursed Libram of Bone Golems (Under: Libram of Golems)
+~14 17 662 3000 20000 Cursed Libram of Bronze Golems (Under: Libram of Golems)
+~18 22 662 3000 20000 Cursed Libram of Caryatid Golems (Under: Libram of Golems)
+~23 26 662 3000 20000 Cursed Libram of Chitin Golems (Under: Libram of Golems)
+~27 30 662 3000 20000 Cursed Libram of Flesh Golems (Under: Libram of Golems)
+~31 35 662 3000 20000 Cursed Libram of Furnace Golems (Under: Libram of Golems)
+~36 39 662 3000 20000 Cursed Libram of Glass Golems (Under: Libram of Golems)
+~40 43 662 3000 20000 Cursed Libram of Guardian Golems (Under: Libram of Golems)
+~44 48 662 3000 20000 Cursed Libram of Ice Golems (Under: Libram of Golems)
+~49 52 662 3000 20000 Cursed Libram of Iron Golems (Under: Libram of Golems)
+~53 57 662 3000 20000 Cursed Libram of Jade Golems (Under: Libram of Golems)
+~58 61 662 3000 20000 Cursed Libram of Juggernaut Golems (Under: Libram of Golems)
+~62 66 662 3000 20000 Cursed Libram of Lightning Golems (Under: Libram of Golems)
+~67 70 662 3000 20000 Cursed Libram of Necrophidius Golems (Under: Libram of Golems)
+~71 74 662 3000 20000 Cursed Libram of Obsidian Golems (Under: Libram of Golems)
+~75 78 662 3000 20000 Cursed Libram of Radiant Golems (Under: Libram of Golems)
+~79 83 662 3000 20000 Cursed Libram of Rock Golems (Under: Libram of Golems)
+~84 87 662 3000 20000 Cursed Libram of Sand Golems (Under: Libram of Golems)
+~88 91 662 3000 20000 Cursed Libram of Silver Golems (Under: Libram of Golems)
+~92 96 662 3000 20000 Cursed Libram of Stone Golems (Under: Libram of Golems)
+~97 100 662 3000 20000 Cursed Libram of Tin Golems (Under: Libram of Golems)
+`3 663 2000 20000 Libram, Gollum Construckzion
+`3 663 4000 40000 Libram, Grimoire of Archaic Alchemy
+`3 663 3000 25000 Libram of Identification
+`3 663 8000 40000 Libram of Ineffable Damnation
+`3 663 12000 120000 Libram of Keeping
+`3 664 2000 18000 Libram of Lawful Good Legends
+`3 664 2000 18000 Libram of Lawful Neutral Legends
+`3 664 2000 18000 Libram of Lawful Evil Legends
+`3 664 2000 18000 Libram of Neutral Good Legends
+`3 664 2000 18000 Libram of Neutral Legends
+`3 664 2000 18000 Libram of Neutral Evil Legends
+`3 664 2000 18000 Libram of Chaotic Good Legends
+`3 664 2000 18000 Libram of Chaotic Neutral Legends
+`3 664 2000 18000 Libram of Chaotic Evil Legends
+`3 664 6500 45000 Libram of the Planes
+`3 664 4000 24000 Libram, Mhzeutul's Runes
+`3 665 000 000 Libram of Ravenloft Golems
+~1 10 665 18000 90000 Libram of Ravenloft Golems (Bone)
+~11 20 665 5000 25000 Libram of Ravenloft Golems (Clay)
+~21 30 665 7000 35000 Libram of Ravenloft Golems (Doll)
+~31 40 665 5000 25000 Libram of Ravenloft Golems (Flesh)
+~41 50 665 16000 80000 Libram of Ravenloft Golems (Gargoyle)
+~51 60 665 5000 25000 Libram of Ravenloft Golems (Glass)
+~61 70 665 13000 65000 Libram of Ravenloft Golems (Iron)
+~71 80 665 15000 75000 Libram of Ravenloft Golems (Mechanical)
+~81 90 665 8000 40000 Libram of Ravenloft Golems (Stone)
+~91 100 665 17000 85000 Libram of Ravenloft Golems (Zombie)
+`3 668 5000 25000 Libram of Recording
+`3 668 8000 40000 Libram of Silver Magic
+`3 668 2000 18000 Libram of Study (Strength)
+`3 668 2000 18000 Libram of Study (Dexterity)
+`3 668 2000 18000 Libram of Study (Constitution)
+`3 668 2000 18000 Libram of Study (Intelligence)
+`3 668 2000 18000 Libram of Study (Wisdom)
+`3 668 2000 18000 Libram of Study (Charisma)
+`3 668 0 9000 Libram of Tedium
+`3 668 7500 35000 Libram of Teleportation Arches
+`3 668 3000 25000 Libram of Thoth
+`3 669 7000 42000 Libram of Translation
+`3 669 2200 22000 Libram of Twelve Seals
+`3 688 7000 35000 Manual, Grim Grimoire
+`3 688 8000 40000 Manual of Puissant Skill at Arms
+`3 688 8000 40000 Manual of Stealthy Pilfering
+`3 689 6500 59500 Manual of Stratagems
+`3 690 9500 57000 Map, Dane's Version, Charges: {20 120}
+`3 690 0 500 Map of Distortion
+`3 692 6000 36000 Map of Illusions, Charges: {20 80}
+`3 692 8750 52500 Map of Illusions and Secret Doors, Charges: {20 50}
+`3 692 8750 52500 Map of Illusions and Traps, Charges: {20 50}
+`3 692 5000 30000 Map of Magic, Charges: {20 80}
+`3 692 7500 45000 Map of Magic and Illusions, Charges: {20 50}
+`3 692 8000 48000 Map of Magic and Secret Doors, Charges: {20 50}
+`3 693 8000 48000 Map of Magic and Traps, Charges: {20 50}
+`3 693 3500 21000 Map of Mapping, Charges: {30 120}
+`3 693 6500 39000 Map of Mapping and Illusions, Charges: {20 80}
+`3 693 6000 36000 Map of Mapping and Magic, Charges: {20 80}
+`3 693 6250 37500 Map of Mapping and Secret Doors, Charges: {20 80}
+`3 694 6250 37500 Map of Mapping and Traps, Charges: {20 80}
+`3 694 0 500 Map of Misleading
+`3 695 5000 30000 Map of Navigation, Charges: {30 120}
+`3 695 5500 33000 Map of Secret Doors, Charges: {20 80}
+`3 695 8250 49500 Map of Secret Doors and Traps, Charges: {20 50}
+`3 695 5500 33000 Map of Traps, Charges: {20 80}
+`1 1133 17600 176000 -Spellbook, The Alcaister
+`1 1137 17200 172000 -Alokkair's Spellbook
+`1 1137 4800 48000 -Spellbook, Alterations of the Intrinsic Absolutes
+`1 1137 2400 24000 -Spellbook, Alterations of Tangibles and Intangibles
+`1 1137 2400 24000 -Spellbook, Ancient Cryptomancy
+`1 1137 7200 72000 -Anishta's Spellbook
+`1 1137 6800 68000 -Spellbook, Arcanabula of Jume
+`1 1140 2400 24000 -Spellbook, Arcane Manipulation of the Entourage
+`1 1140 1600 16000 -Spellbook, Arcane Puissance of Memory
+`1 1140 2400 24000 -Spellbook, Arcane Resistance of Dwarves and Halflings
+`1 1140 1600 16000 -Spellbook, Architecture
+`1 1140 2000 20000 -Spellbook, Art of Communications and Sigils
+`1 1140 9200 92000 -Ashakar's Spellbook
+`1 1141 7200 72000 -Spellbook, Aubavreer's Workbook
+`1 1143 4000 40000 -Avran Greenstrider's Spellbook
+`1 1143 1600 16000 -Barrik's Spellbook
+`1 1143 9600 96000 -Bashal's Spellbook
+`1 1143 8800 88000 -Spellbook of Bats
+`1 1146 6000 60000 -Bigby's Spellbook
+`1 1146 4000 40000 -Spellbook of Black Circles
+`1 1149 800 8000 -Spellbook, Blessed Book of Cures
+`1 1149 400 4000 -Spellbook of the Blind
+`1 1150 8400 84000 -Bosero the Drunkard's Spellbook
+`1 1150 21600 216000 -Spellbook, Bowgentle's Book
+`1 1152 2800 28000 -Spellbook, Bricks of the Spiritual Fortification
+`1 1152 4000 40000 -Spellbook, Briel's Book of Shadows
+`1 1154 1000 600 -Spellbook of the Bright Ages
+`1 1154 6000 60000 -Brother Richard the Flying Monk's Spellbook
+`1 1155 1600 16000 -Spellbook of the Cabalistic Protections
+`1 1155 1200 12000 -Spellbook, Caddelyn's Workbook
+`1 1156 44000 44000 -Spellbook, Chambeelon
+`1 1157 2800 28000 -Chief Shaman's Spellbook
+`1 1157 3200 32000 -Spellbook, Book of Clouds and Fog
+`1 1157 2400 24000 -Spellbook, Components and Reactions of Phosphorus
+`1 1157 1600 16000 -Spellbook, Cosmogony of Magnetic Fields
+`1 1157 1600 16000 -Spellbook of the Covenant
+`1 1160 1600 16000 -Spellbook, Creation and Modification of Matter
+`1 1160 5200 52000 -Cudzu's Spellbook
+`1 1160 13600 136000 -Daimos' Spellbook
+`1 1162 1000 10000 -Spellbook, Book of the Dark Ages
+`1 1162 2000 20000 -Spellbook, Dark Sides of the Memory
+`1 1162 2000 20000 -Spellbook, Deep Fears of Humanity
+`1 1162 8800 88000 -Spellbook, Detho's Libram
+`1 1165 2000 20000 -Spellbook of Displacements and Modeling the Milieu
+`1 1165 3600 36000 -Spellbook of Dissimulation and Obscuration
+`1 1165 1600 16000 -Spellbook, Doors and Passages Parallel Worlds
+`1 1165 6000 60000 -Dylan Longbranch's Spellbook
+`1 1165 2400 24000 -Spellbook, Echo and Resonance of Great Void
+`1 1165 1600 16000 -Spellbook, Epic Saga of the Great Conjurers
+`1 1165 1600 16000 -Spellbook, Evolution of Arcane Will Power
+`1 1165 250 1250 -Spellbook, Exalted Book of Ethnic Humor
+`1 1166 2400 24000 -Spellbook, Extreme Powers of Observation
+`1 1166 2800 28000 -Spellbook, Eyes, Vision and Arcane Sight
+`1 1166 3600 36000 -Spellbook, Fiendomicon of Iggwilv
+`1 1171 2000 20000 -Spellbook, Forgotten Arts of Oratory Magnetism
+`1 1171 1600 16000 -Spellbook, Foundations of Secret Authority
+`1 1172 2400 24000 -Spellbook, Galadaster's Orizon
+`1 1174 2400 24000 -Spellbook, Gazette of Norse Climates
+`1 1174 1600 16000 -Spellbook, Glandar's Grimoire
+`1 1176 4000 40000 -Spellbook, Glanvyl's Workbook
+`1 1178 400 4000 -Glyph Spellbooks
+`1 1178 2000 20000 -Spellbook, Great Paravisual Emanations
+`1 1179 10800 108000 -Spellbook, Hand of Helm
+`1 1180 2000 10000 -Spellbook, History of Evil Mages' Apprentices
+`1 1181 2000 10000 -Spellbook, History of Good Mages' Apprentices
+`1 1181 1200 12000 -Spellbook, Book of Hopeful Deeds
+`1 1181 2400 24000 -Spellbook, Idioms and Rare Cryptographs
+`1 1181 1200 12000 -Spellbook, Inexplicable Reflections
+`1 1181 2400 24000 -Spellbook, Influence on Solid Corpus
+`1 1181 2800 28000 -Spellbook, Influences and Suggestions
+`1 1182 1600 16000 -Spellbook, Intelligence and Intuitive Domination
+`1 1182 8000 80000 -Irid Newleaf's Spellbook
+`1 1182 2000 20000 -Spellbook, Jaluster's Orizon
+`1 1184 9000 45000 -Spellbook, Korr's Book of Infinite Spells
+`1 1184 3200 32000 -Spellbook, Laeral's Libram
+`1 1187 4000 40000 -Spellbook, Laeyndr's Book of Metamorphoses
+`1 1190 4000 40000 -Lareth's Spellbook
+`1 1190 6400 64000 -Spellbook of Lathintel
+`1 1191 2400 24000 -Legendary Spellbook of Great Arms and Fabulous Heroes
+`1 1191 2000 20000 -Legendary Spellbook of Phantoms and Ghosts
+`1 1191 10000 100000 -Spellbook, Lexicon of Spirits
+`1 1192 3200 32000 -Spellbook, Life of Nature: Its Secrets
+`1 1192 12800 128000 -Lord Yara's Spellbook
+`1 1192 2000 20000 -Spellbook, Lore of Subtle Communication
+`1 1192 4000 40000 -Spellbook, Luminescence and Coloration
+`1 1192 10400 104000 -Mad Dog of the Desert's Spellbook
+`1 1193 5000 50000 -Spellbook, The Magister
+`1 1194 1600 16000 -Spellbook, Magnetic and Electric Waves
+`1 1194 2400 24000 -Spellbook, Manor's Manual of Sight
+`1 1196 2400 24000 -Spellbook, Manual of Powers Beyond Life
+`1 1196 1600 16000 -Spellbook, Mental Impressions of the Retina
+`1 1196 1600 16000 -Spellbook, Minds of The Unknown
+`1 1197 7600 76000 -Mordenkainen's Spellbook
+`1 1197 2800 28000 -Spellbook, Multiple Application Perceptomancy
+`1 1197 11600 116000 -Spellbook, Mylsibis's Codex of Contention
+`1 1200 6400 64000 -Spellbook, The Nathlum
+`1 1202 1600 16000 -Spellbook, Nchaser's Elryomancia
+`1 1205 1600 16000 -Spellbook, Nonsubstance Encyclopaedia
+`1 1205 9600 96000 -Spellbook, Book of Num The Mad
+`1 1207 4800 48000 -Spellbook, Oerthmagik
+`1 1211 2400 24000 -Spellbook, Occult Magnetism
+`1 1211 5200 52000 -Spellbook, Occult Observations of Fluid
+`1 1211 1600 16000 -Spellbook, Ordinary Necromancy
+`1 1211 1600 16000 -Spellbook, Origins of Hour Glass Symbology
+`1 1211 2800 28000 -Spellbook, Orjalun's Arbatel
+`1 1214 1200 12000 -Spellbook, Peregrin's Treatise on Fixed Portals
+`1 1215 3200 32000 -Spellbook, Planes of Antimatter
+`1 1215 1600 16000 -Spellbook, Powers of the Spiritual Will
+`1 1215 4800 48000 -Raistlin's Spellbook
+`1 1215 11200 112000 -Raistlin's Spellbook II
+`1 1215 1600 16000 -Spellbook of Rathdaen
+`1 1218 20400 204000 -Spellbook, Red Book of War
+`1 1220 2400 24000 -Spellbook, Repertoire of Illustrations
+`1 1220 1600 16000 -Spellbook, Repertoire of Subconscious Apparitions
+`1 1220 2000 20000 -Spellbook, Representations of Sentient Plane
+`1 1221 5600 56000 -Riggby's Spellbook
+`1 1221 7200 72000 -Spellbook, Runes of Norzahk
+`1 1222 11600 116000 -Spellbook, Sabirine's Specular
+`1 1225 9200 92000 -Spellbook, Scalamagdrion
+`1 1226 8400 84000 -Spellbook, Science of Metaenchantment I
+`1 1226 5200 52000 -Spellbook, Science of Metaenchantment II
+`1 1227 12800 128000 -Spellbook, Selvar's Ineffable Conjurations, Magic and Phantasms
+`1 1230 30400 304000 -Sakatha's Spellbook
+`1 1230 10400 104000 -Spellbook, Serpin Lexicon
+`1 1231 10800 108000 -Senshock's Spellbook
+`1 1231 7200 72000 -Serinda's Spellbook
+`1 1231 2400 24000 -Spellbook, Seven Skies of the Universe
+`1 1231 3200 32000 -Spellbook, Shadowtome
+`1 1233 10000 100000 -Spellbook, Shandaril's Workbook
+`1 1236 1600 16000 -Spellbook of Shangalar the Black
+`1 1239 600 400 -Spellbook, Book of the Sighted
+`1 1239 13600 136000 -Spellbook, Book of the Silver Talon
+`1 1243 12800 128000 -Sir Celedon Kierney's Spellbook
+`1 1244 4800 48000 -Sir Olwyn Forestfriend's Spellbook
+`1 1244 2400 24000 -Spellbook, Spherogenesis of the Multiverses
+`1 1244 7600 76000 -Spellbook, Studies on the Fourth Dimension
+`1 1244 1600 16000 -Spellbook, Subconscious Repercussions of Pyromancy
+`1 1244 1600 16000 -Spellbook, Sublimated Oneiromancy
+`1 1244 1600 16000 -Spellbook, Sulphur: Influence and Actions
+`1 1244 6400 64000 -Talel el Hareidhin's Spellbook
+`1 1245 6400 64000 -Spellbook, Tasso's Arcanabula
+`1 1247 11600 116000 -Tharadodus' Spellbook
+`1 1247 2000 20000 -Spellbook, Thesis on Conditional Ruptures
+`1 1251 1200 12000 -Spellbook, Theories on Converging Transitions
+`1 1251 1600 16000 -Spellbook, Theory of the Invisible Forces
+`1 1251 1600 16000 -Spellbook, Theory of Occult Visual Shock
+`1 1251 1600 16000 -Spellbook, Theories on Perception
+`1 1251 1600 16000 -Spellbook of Thorns
+`1 1252 4400 44000 -Spellbook of Time
+`1 1252 10000 100000 -Tomorast's Spellbook
+`1 1252 1600 16000 -Spellbook, Trance of the Intellect
+`1 1253 1600 16000 -Spellbook, Transcendental Impenetrabilities
+`1 1253 7200 72000 -Spellbook, Tymessul's Enchiridion of Travel
+`1 1255 0 0 -Spellbook of Unicorns
+`1 1255 8400 84000 -Spellbook, Unique Mageries
+`1 1259 1600 16000 -Spellbook, Universal Astronomy
+`1 1259 2000 20000 -Spellbook, Unknown Movements of Universe
+`1 1259 2400 24000 -Spellbook, Vaerendroon's Ineffable Enchants
+`1 1261 1600 16000 -Spellbook, Variations on the Visual Perception
+`1 1261 2400 24000 -Spellbook, Weapons of the Ether
+`1 1261 2000 20000 -Spellbook, White's Codicil
+`1 1261 2800 28000 -Spellbook, Wizard's Workbook
+`1 1265 1600 16000 -Spellbook, Wyvernwater Circle
+`3 1439 5000 50000 _Tome of Bodily Health
+`3 1439 24000 120000 _Tome, Canon of Changes
+`3 1439 24000 120000 _Tome, Canon of Changes II
+`3 1439 8000 48000 _Tome of Clear Thought
+`3 1439 0 5000 _Tome of Dogmatic Methods
+`3 1440 0 5000 _Tome of Dogmatic Methods II
+`3 1440 6500 65000 _Tome, E'soa Ho-chi
+`3 1441 8000 40000 _Tome of the Fool
+`3 1441 5000 50000 _Tome of Gainful Exercise
+`3 1441 1500 8500 _Tome of Garden Flowers
+`3 1442 700 5000 _Tome of Hopeful Deeds
+`3 1442 0 5000 _Tome of Hopeless Deeds
+`3 1442 4000 20000 _Tome of Humorous Perspective
+`3 1442 1000 600 _Tome of Immoral Sanity
+`3 1442 9000 45000 _Tome of Infinite Spells
+`3 1442 6000 30000 _Tome, Juia Lo'tanu
+`3 1444 6000 60000 _Tome of Leadership of Influence
+`3 1444 5000 50000 _Tome of Psionic Interaction
+`3 1444 5000 50000 _Tome of Quickness of Action
+`3 1444 1000 6000 _Tome of Saintly Sanity
+`3 1444 2500 25000 _Tome of Seven Fingers
+`3 1445 8000 43500 _Tome of Understanding
+`3 1445 0 1000 _Tome, Vacuous Grimoire
+`3 1460 12000 120000 Trimia's Catalogue of Outer Planar Artifacts

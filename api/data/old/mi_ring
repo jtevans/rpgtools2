@@ -1,0 +1,438 @@
+`1 947 1600 8600 &Admundfort, Ring of Leadership
+`1 947 0 1500 &Ring of Affliction
+~1 16 947 0 1500 &Ring of Affliction (Abjuration)
+~17 28 947 0 1500 &Ring of Affliction (Alteration)
+~29 40 947 0 1500 &Ring of Affliction (Conjuration/Summoning)
+~41 52 947 0 1500 &Ring of Affliction (Enchantment/Charm)
+~53 64 947 0 1500 &Ring of Affliction (Illusion/Phantasm)
+~65 76 947 0 1500 &Ring of Affliction (Invocation/Evocation)
+~77 88 947 0 1500 &Ring of Affliction (Lesser/Greater Divination)
+~89 100 947 0 1500 &Ring of Affliction (Necromancy)
+`1 947 1500 7500 &Ring of Amasis
+`1 947 1000 5000 &Ring of Animal Control
+`1 947 1000 5000 &Ring of Animal Friendship, Charges: 27
+`1 948 1000 5000 &Ring of Animal Magnetism
+~1 90 948 1000 5000 &Ring of Animal Magnetism
+~91 100 948 0 1000 &Cursed Ring of Animal Magnetism
+`1 948 0 2000 &Ring of Annulment
+`1 948 5000 55000 &Anything Ring
+`1 948 0 1200 &Ring of Apathy
+`1 948 1000 5000 &Appearance Ring
+`1 948 1200 6000 &Ring of Aquatic Depth Location
+`1 949 1000 5000 &Ring of Arachnid Control
+`1 949 2000 10000 &Ring of Armoring
+`1 949 1000 5000 &Ring of Avian Control
+`1 949 1200 6000 &Ring of Awareness
+`1 949 3000 15000 &Bard's Ring
+`1 949 1200 6000 &Ring of Beauty
+`1 949 0 0 &Berranor Truesilver's Silver Ring
+~1 50 949 1000 5000 &Berranor Truesilver's Silver Ring of Detect Lies
+~51 100 949 5000 25000 &Berranor Truesilver's Silver Ring of Thief Negation
+`1 949 1500 7000 &Ring of Bladeturning, Charges: {3 30}
+`1 950 7000 25000 &Blink Ring
+`1 950 1000 5000 &Ring of Blinking
+`1 950 500 2500 &Ring of Boccob
+`1 950 4000 20000 &Bone Ring, Charges: {1 100}
+`1 950 7500 19000 &Browdow's Ring of Utmost Weapon Harm
+`1 951 4000 2000 &Ring of Burbul
+`1 952 0 1500 &Ring of Bureaucratic Wizardry
+`1 952 500 2500 &Ring of Cantrips
+`1 952 500 2500 &Cat's Eye Ring
+`1 952 1000 5000 &Ring of Chameleon Power
+`1 952 2000 10000 &Ring of Cirulon
+`1 952 4500 56000 &Cilidarius's Ring of Wizardry
+`1 953 1000 7500 &Ring of Clairaudience
+`1 953 1500 7500 &Ring of Clear Thought
+`1 953 0 3000 &Ring of Clumsiness
+~1 10 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Free Action
+~11 20 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Feather Falling
+~21 35 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Invisibility
+~36 50 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Jumping
+~51 60 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Swimming
+~61 80 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Warmth
+~81 100 953 0 3000 &Ring of Clumsiness - Appears to be a Ring of Water Walking
+`1 953 2000 10000 &Ring of the Comet
+`1 954 2000 10000 &Ring of Command, Charges: {3 30}
+`1 954 500 2500 &Ring of Continual Churning
+`1 955 0 1000 &Ring of Contrariness
+~1 20 955 0 1000 &Ring of Contrariness - Appears to be a Ring of Flying
+~21 40 955 0 1000 &Ring of Contrariness - Appears to be a Ring of Invisibility
+~41 60 955 0 1000 &Ring of Contrariness - Appears to be a Ring of Levitation
+~61 70 955 0 1000 &Ring of Contrariness - Appears to be a Ring of Shocking Grasp
+~71 80 955 0 1000 &Ring of Contrariness - Appears to be a Ring of Spell Turning
+~81 100 955 0 1000 &Ring of Contrariness - Appears to be a Ring of Strength (18/00)
+`1 955 1000 5000 &Ring of Coolness
+`1 955 1500 7500 &Corkitron's Ring of Human Influence
+`1 955 1000 5000 &Ring of Courtly Etiquette
+`1 955 3500 25000 &Crius's Ring
+`1 956 0 2000 &Cursed Ring of the Great Kingdom
+`1 956 5000 40000 &Dalamar's Ring of Healing
+`1 957 500 2500 &Dart Ring, Charges: {10 40}
+`1 957 1000 10000 &Depetrification Ring
+`1 957 600 3000 &Ring of Disguise
+`1 957 0 0 &Distraction Ring
+~1 5 957 0 1000 &Distraction Ring (Cursed Version)
+~6 25 957 1500 7500 &Distraction Ring (Rare Version)
+~26 100 957 1000 5000 &Distraction Ring (Normal Version)
+`1 957 0 2500 &Ring of Dizziness
+`1 958 3000 20000 &Ring of Djinni Summoning
+`1 958 4000 20000 &Draupnir Ring
+`1 958 4000 20000 &Draupnir Ring II
+`1 958 1000 5000 &Drow Ring
+`1 959 1000 5000 &Ring of the Eagle
+`1 959 600 3000 &Ring of the Ear
+`1 959 3000 15000 &Ring of Eelix
+`1 959 1000 5000 &Ring of Eelix II
+`1 959 2500 12500 &Ring of Elemental Adaptation
+~1 21 959 2500 12500 &Ring of Earth Elemental Adaptation
+~22 42 959 2500 12500 &Ring of Air Elemental Adaptation
+~43 63 959 2500 12500 &Ring of Fire Elemental Adaptation
+~64 84 959 2500 12500 &Ring of Water Elemental Adaptation
+~85 91 959 2500 12500 &Ring of Earth and Fire Elemental Adaptation
+~92 98 959 2500 12500 &Ring of Air and Water Elemental Adaptation
+~99 100 959 2500 12500 &Ring of Elemental Adaptation (All Elements)
+`1 960 5000 25000 &Ring of Elemental Command
+`1 961 3000 15000 &Ring of Elemental Metamorphosis
+~1 25 961 3000 15000 &Ring of Earth Elemental Metamorphosis
+~26 50 961 3000 15000 &Ring of Air Elemental Metamorphosis
+~51 75 961 3000 15000 &Ring of Fire Elemental Metamorphosis
+~76 100 961 3000 15000 &Ring of Water Elemental Metamorphosis
+`1 962 500 6000 &Ring of Energy
+`1 962 2000 16500 &Ring of ESP
+`1 962 1000 7500 &Ring of Faerie
+~1 5 962 1000 7500 &Ring of Faerie (Evil Aligned)
+~6 25 962 1000 7500 &Ring of Faerie (Neutral Aligned)
+~26 100 962 1000 7500 &Ring of Faerie (Good Aligned)
+`1 962 0 28000 &Famulus Ring
+`1 963 1000 3000 &Fashion Ring
+~1 10 963 1000 3000 &Fashion Ring (Normal Version)
+~11 100 963 1000 3000 &Fashion Ring (Rare Version)
+`1 963 1000 12000 &Ring of Fearlessness
+`1 963 1000 5000 &Ring of Feather Falling
+`1 963 1000 5000 &Ring of Fire Resistance
+`1 964 1000 3500 &Ring of Fire Starting
+`1 964 1000 7500 &Ring of Flying
+`1 964 1000 5000 &Flynn's Ring of Fire
+`1 964 1000 5000 &Ring of Fortitude
+~1 48 964 1000 5000 &Ring of Fortitude, Dexterity
+~49 88 964 1000 5000 &Ring of Fortitude, Wisdom
+~89 100 964 1000 5000 &Ring of Fortitude, Constitution
+`1 964 1000 5000 &Ring of Free Action
+`1 965 5000 25000 &Ring of Freedom
+`1 965 3000 6000 &Ring of Gargoyles
+~1 5 965 3000 6000 &Ring of Gargoyles  (Normal Version)
+~6 100 965 5000 10000 &Ring of Gargoyles (Margoyle Version)
+`1 967 3000 15000 &Ring of Genie Summoning ()
+~1 24 967 3000 15000 &Ring of Genie Summoning (Djinni)
+~25 48 967 3000 15000 &Ring of Genie Summoning (Dao)
+~49 73 967 3000 15000 &Ring of Genie Summoning (Efreeti)
+~74 96 967 3000 15000 &Ring of Genie Summoning (Marid)
+~97 97 967 4000 20000 &Ring of Genie Summoning (Noble Djinni)
+~98 98 967 4000 20000 &Ring of Genie Summoning (Noble Dao)
+~99 99 967 4000 20000 &Ring of Genie Summoning (Noble Efreeti)
+~100 100 967 4000 20000 &Ring of Genie Summoning (Noble Marid)
+`1 967 2000 10000 &Ring of {2 5} Glyphs
+`1 967 4000 20000 &Gold Seal Ring of Al-Kalim
+`1 967 3000 15000 &Golden Ring of Healing
+`1 967 0 2000 &Gordon's Magic Ring
+`1 968 1000 5000 &Ring of the Grasshopper
+`1 968 0 1000 &Halaster's Teleportation Ring
+`1 968 1000 5000 &Harmlessness Ring
+`1 969 1000 5000 &Ring of Health (CON 1)
+~1 45 969 1000 5000 &Ring of Health (CON 15)
+~46 90 969 1000 5000 &Ring of Health (CON 16)
+~91 95 969 1000 5000 &Ring of Health (CON 17)
+~96 99 969 1000 5000 &Ring of Health (CON 18)
+~100 100 969 1000 5000 &Ring of Health (CON 19)
+`1 969 4000 20000 &Ring of the Heirophant
+~1 25 969 4000 20000 &Ring of the Heirophant (Earth)
+~26 50 969 4000 20000 &Ring of the Heirophant (Air)
+~51 75 969 4000 20000 &Ring of the Heirophant (Fire)
+~76 100 969 4000 20000 &Ring of the Heirophant (Water)
+`1 969 2000 10000 &Hoinbee's Ring of Truth
+`1 969 2000 10000 &Ring of Holiness
+`1 970 3000 15000 &Ring of the Holy Slayer
+`1 970 3000 35000 &Horned Ring
+`1 970 2000 10000 &Ring of Human Control
+`1 970 2000 10000 &Ring of Human Influence
+`1 970 120 600 &Ring of Hunan Influence
+`1 970 250 2500 &Ring of Ice
+`1 971 2000 7500 &Ring of Icebolts, Charges: {3 30}
+`1 971 1000 5000 &Ring of Immunity
+`1 971 400 2000 &Impersonation Ring
+`1 971 1000 5000 &Infravision Ring
+`1 971 950 7000 &Ring of Infravision Negation
+`1 971 3000 15000 &Intier's Ring of Shooting Stars
+`1 971 1500 7500 &Ring of Invisibility
+~1 10 971 1500 7500 &Ring of Invisibility and Inaudibility
+~11 100 971 1500 7500 &Ring of Invisibility
+`1 971 1800 12000 &Ring of Invisibility Negation
+~1 80 971 1000 12000 &Ring of Invisibility Negation (Clarifier)
+~81 95 971 1800 20000 &Ring of Invisibility Negation (Killer)
+~96 100 971 1300 7000 &Ring of Invisibility Negation (Destroyer)
+`1 972 3000 12000 &Ring of Invulnerability, Charges: 20
+`1 972 7000 35000 &Ring of Izmur
+`1 972 40 200 &Jasmine Odor Ring
+`1 972 3000 11000 &Jhessail's Silver Ring
+`1 972 1000 5000 &Jolting Ring
+`1 972 1000 5000 &Ring of Jumping
+`1 927 500 2500 &Ring of Keys
+`1 972 5000 25000 &Ring of Kings
+`1 973 35000 175000 &Laduguer's Ring
+`1 973 1000 5000 &Ring of {2 8} Languages
+`1 973 4000 20000 &Lanolin's Ring of Power
+`1 974 50 200 &Lantern Ring
+`1 974 500 2500 &Ring of Life
+`1 974 5000 20000 &Ring of Life Protection, Charges {1 6}
+`1 974 1000 5000 &Light Ring
+`1 974 500 2500 &Ring of Lighting
+`1 974 1000 5000 &Ring of Lightning Resistance
+`1 974 1000 5000 &Ring of Limited Telepathy
+`1 975 750 4000 &Ring of Liquid Identification
+`1 975 4000 40000 &Ring of the Little People
+`1 975 4000 30000 &Ring of Lolth
+`1 976 3500 23500 &Lore Ring
+`1 976 500 3500 &Lucky Ring of the Wild Coast
+`1 977 2000 7000 &Ring of Lycanthropy
+~1 50 977 2500 7500 &Ring of Lycanthropy (Wolf)
+~51 75 977 2300 7100 &Ring of Lycanthropy (Rat)
+~76 85 977 2700 7900 &Ring of Lycanthropy (Bear)
+~86 95 977 2400 7300 &Ring of Lycanthropy (Boar)
+~96 100 977 2600 7700 &Ring of Lycanthropy (Tiger)
+`1 977 1750 17500 &Ring of Magic Detection, Charges: {1 100}
+`1 977 00 000 &Ring of Magic Resistance
+~1 15 977 1000 2000 &Ring of 5% Magic Resistance
+~16 30 977 1500 4000 &Ring of 10% Magic Resistance
+~31 45 977 2000 6000 &Ring of 15% Magic Resistance
+~46 60 977 2500 8000 &Ring of 20% Magic Resistance
+~61 75 977 3000 10000 &Ring of 25% Magic Resistance
+~76 85 977 3500 12000 &Ring of 30% Magic Resistance
+~86 92 977 4000 14000 &Ring of 35% Magic Resistance
+~93 97 977 4500 16000 &Ring of 40% Magic Resistance
+~98 99 977 5000 18000 &Ring of 45% Magic Resistance
+~100 100 977 5500 20000 &Ring of 50% Magic Resistance
+`1 978 1000 5000 &Ring of Mammal Control
+`1 978 5000 25000 &Ring of Many Wishes
+`1 978 2400 12000 &Ring of Materialization
+`1 978 1500 7500 &Ring of Memory
+`1 978 500 2500 &Message Ring
+`1 979 500 5000 &Ring of Mind Shielding
+`1 979 2000 12000 &Moodarvian Ring of Emotion
+~1 20 979 2000 12000 &Moodarvian Ring of Emotion (Sight)
+~21 40 979 2000 12000 &Moodarvian Ring of Emotion (Smell)
+~41 60 979 2000 12000 &Moodarvian Ring of Emotion (Sound)
+~61 80 979 2000 12000 &Moodarvian Ring of Emotion (Taste)
+~81 100 979 2000 12000 &Moodarvian Ring of Emotion (Touch)
+`1 981 1500 7500 &Mordmorgan's Ring of Warmth
+`1 981 1000 7500 &Ring of Movement
+`1 981 3000 15000 &Mud Ring
+`1 981 5000 25000 &Ring of {2 8} Wishes
+`1 982 2000 11000 &Ring of the Necromancer
+`1 983 1500 7500 &Ring of Neutralization, Charges: {4 16}
+~1 2 983 1500 7500 &Ring of Neutralization (Bigby's Crushing Hand), Charges: {4 16}
+~3 4 983 1500 7500 &Ring of Neutralization (Blindness), Charges: {4 16}
+~5 6 983 1500 7500 &Ring of Neutralization (Burning Hands), Charges: {4 16}
+~7 8 983 1500 7500 &Ring of Neutralization (Cantrips), Charges: {4 16}
+~9 10 983 1500 7500 &Ring of Neutralization (Chain Lightning), Charges: {4 16}
+~11 12 983 1500 7500 &Ring of Neutralization (Charm Person), Charges: {4 16}
+~13 14 983 1500 7500 &Ring of Neutralization (Chill Touch), Charges: {4 16}
+~15 16 983 1500 7500 &Ring of Neutralization (Coudkill), Charges: {4 16}
+~17 18 983 1500 7500 &Ring of Neutralization (Color Spray), Charges: {4 16}
+~19 20 983 1500 7500 &Ring of Neutralization (Cone of Cold), Charges: {4 16}
+~21 22 983 1500 7500 &Ring of Neutralization (Confusion), Charges: {4 16}
+~23 24 983 1500 7500 &Ring of Neutralization (Delayed Blast Fireball), Charges: {4 16}
+~25 26 983 1500 7500 &Ring of Neutralization (Disintegrate), Charges: {4 16}
+~27 28 983 1500 7500 &Ring of Neutralization (Domination), Charges: {4 16}
+~29 30 983 1500 7500 &Ring of Neutralization (Energy Drain), Charges: {4 16}
+~31 32 983 1500 7500 &Ring of Neutralization (Enervation), Charges: {4 16}
+~33 34 983 1500 7500 &Ring of Neutralization (Evard's Black Tentacles), Charges: {4 16}
+~35 36 983 1500 7500 &Ring of Neutralization (Explosive Runes), Charges: {4 16}
+~37 38 983 1500 7500 &Ring of Neutralization (Eyebite), Charges: {4 16}
+~39 40 983 1500 7500 &Ring of Neutralization (Fear), Charges: {4 16}
+~41 42 983 1500 7500 &Ring of Neutralization (Feeblemind), Charges: {4 16}
+~43 44 983 1500 7500 &Ring of Neutralization (Fire Trap), Charges: {4 16}
+~45 46 983 1500 7500 &Ring of Neutralization (Fireball), Charges: {4 16}
+~47 48 983 1500 7500 &Ring of Neutralization (Flaming Sphere), Charges: {4 16}
+~49 50 983 1500 7500 &Ring of Neutralization (Forget), Charges: {4 16}
+~51 52 983 1500 7500 &Ring of Neutralization (Geas), Charges: {4 16}
+~53 54 983 1500 7500 &Ring of Neutralization (Hypnotism), Charges: {4 16}
+~55 56 983 1500 7500 &Ring of Neutralization (Ice Storm), Charges: {4 16}
+~57 58 983 1500 7500 &Ring of Neutralization (Imprisonment), Charges: {4 16}
+~59 60 983 1500 7500 &Ring of Neutralization (Incendiary Cloud), Charges: {4 16}
+~61 62 983 1500 7500 &Ring of Neutralization (Lightning Bolt), Charges: {4 16}
+~63 64 983 1500 7500 &Ring of Neutralization (Magic Jar), Charges: {4 16}
+~65 66 983 1500 7500 &Ring of Neutralization (Magic Missle), Charges: {4 16}
+~67 68 983 1500 7500 &Ring of Neutralization (Massmorph), Charges: {4 16}
+~69 70 983 1500 7500 &Ring of Neutralization (Melf's Minute Meteors), Charges: {4 16}
+~71 72 983 1500 7500 &Ring of Neutralization (Melf's Acid Arrow), Charges: {4 16}
+~73 74 983 1500 7500 &Ring of Neutralization (Meteor Swarm), Charges: {4 16}
+~75 76 983 1500 7500 &Ring of Neutralization (Mind Blank), Charges: {4 16}
+~77 78 983 1500 7500 &Ring of Neutralization (Power Word: Blind), Charges: {4 16}
+~79 80 983 1500 7500 &Ring of Neutralization (Power Word: Kill), Charges: {4 16}
+~81 82 983 1500 7500 &Ring of Neutralization (Power Word: Stun), Charges: {4 16}
+~83 84 983 1500 7500 &Ring of Neutralization (Prismatic Spray), Charges: {4 16}
+~85 86 983 1500 7500 &Ring of Neutralization (Prismatic Wall), Charges: {4 16}
+~87 88 983 1500 7500 &Ring of Neutralization (Ray of Enfeeblement), Charges: {4 16}
+~89 90 983 1500 7500 &Ring of Neutralization (Shocking Grasp), Charges: {4 16}
+~91 92 983 1500 7500 &Ring of Neutralization (Suggestion), Charges: {4 16}
+~93 94 983 1500 7500 &Ring of Neutralization (Temporal Stasis), Charges: {4 16}
+~95 96 983 1500 7500 &Ring of Neutralization (Vampiric Touch), Charges: {4 16}
+~97 98 983 1500 7500 &Ring of Neutralization (Wall of Fire), Charges: {4 16}
+~99 100 983 1500 7500 &Ring of Neutralization (Wall of Ice), Charges: {4 16}
+`1 983 1000 5000 &Ring of the Nibelungen
+`1 983 1500 7500 &Ring of Night
+`1 984 3000 15000 &Noora's Ring of Djinni Summoning
+`1 984 0 1000 &Niggin's Cursed Ring of Armoring
+`1 984 500 2000 &Ring of Oak
+`1 984 1200 6000 &Onyx Ring of Negative Plane Protection, Charges: {2 40}
+`1 984 1000 5000 &Ring of Opposition
+`1 985 2000 18000 &Orbus Ring
+~1 60 985 2000 18000 &Orbus Ring +1
+~61 90 985 3000  7000 &Orbus Ring +2
+~91 100 985 5000 45000 &Orbus Ring +3
+`1 985 500 2500 &Ring of Plant Control
+`1 985 500 2500 &Ring of Plant Control II
+`1 985 500 2500 &Ring of Plant Control III
+`1 985 4000 20000 &Ring of Paraelemental Command
+~1 25 985 4000 20000 &Ring of Ice Paraelemental Command
+~26 50 985 4000 20000 &Ring of Ooze Paraelemental Command
+~51 75 985 4000 20000 &Ring of Magma Paraelemental Command
+~76 100 985 4000 20000 &Ring of Smoke Paraelemental Command
+`1 986 1500 7500 &Ring of Phantom Form
+`1 986 4000 20000 &Ring of the Pheonix
+`1 987 4000 20000 &Ring of the Pomarj
+`1 987 2000 10000 &Ring of Projection
+`1 987 500 5000 &Ring of Projection II
+`1 988 1000 5000 &Ring of Protection
+~1 70 988 1000 5000 &Ring of Protection +1
+~71 82 988 2000 15000 &Ring of Protection +2
+~83 83 988 2000 15000 &Ring of Protection +2, 5' Radius
+~84 90 988 3000 20000 &Ring of Protection +3
+~91 91 988 3000 25000 &Ring of Protection +3, 5' Radius
+~92 97 988 4000 24000 &Ring of Protection +4 on AC, +2 to Saving Throws
+~98 100 988 6000 30000 &Ring of Protection +6 on AC, +1 to Saving Throws
+`1 988 3600 18000 &Ring of Protection from Charming
+`1 988 2000 10000 &Ring of Protection from the Elementals
+`1 988 500 5000 &Ring of Protection from Stone Guardians
+`1 988 2500 7500 &Ring of Protection from Undead
+`1 988 3000 15000 &Pyros's Ring of Spell Storing
+`1 989 2000 10000 &Ring of Quasielemental Command
+~1 16 989 2000 10000 &Ring of Quasielemental Command (Ash)
+~17 28 989 2000 10000 &Ring of Quasielemental Command (Dust)
+~29 40 989 2000 10000 &Ring of Quasielemental Command (Lightning)
+~41 52 989 2000 10000 &Ring of Quasielemental Command (Mineral)
+~53 64 989 2000 10000 &Ring of Quasielemental Command (Radiance)
+~65 76 989 2000 10000 &Ring of Quasielemental Command (Salts)
+~77 88 989 2000 10000 &Ring of Quasielemental Command (Steam)
+~89 100 989 2000 10000 &Ring of Quasielemental Command (Vacuum)
+`1 990 1000 5000 &Ring of Quick Action, Charges: {2 20}
+`1 990 1000 5000 &Ring of Quickness
+`1 991 1500 7500 &Ring of the Ram, Charges: {6 60}
+`1 992 0 1500 &Ring of Randomness
+~1 25 992 0 1500 &Ring of Randomness (Protection from Evil)
+~26 40 992 0 1500 &Ring of Randomness (Continual Light)
+~41 60 992 0 1500 &Ring of Randomness (Bless)
+~61 70 992 0 1500 &Ring of Randomness (Cure Light Wounds)
+~71 80 992 0 1500 &Ring of Randomness (Remove Fear)
+~81 90 992 0 1500 &Ring of Randomness (Heat Metal)
+~91 100 992 0 1500 &Ring of Randomness (Cure Blindness or Cure Deafness)
+`1 992 2000 10000 &Ring of Range Extension, Charges: {2 40}
+`1 992 5000 50000 &Ring of Rapid Regeneration
+`1 992 2000 10000 &Ring of Readiness
+`1 993 5000 40000 &Ring of Regeneration
+~1 90 993 5000 40000 &Ring of Regeneration
+~91 100 993 4000 35000 &Ring of Vampiric Regeneration
+`1 994 2000 8000 &Ring of Remedies
+`1 994 1000 5000 &Ring of Resistance to
+~1 16 994 1000 5000 &Ring of Resistance to Abjuration
+~17 28 994 1000 5000 &Ring of Resistance to Alteration
+~29 40 994 1000 5000 &Ring of Resistance to Conjuration/Summoning
+~41 52 994 1000 5000 &Ring of Resistance to Enchantment/Charm
+~53 64 994 1000 5000 &Ring of Resistance to Illusion/Phantasm
+~65 76 994 1000 5000 &Ring of Resistance to Invocation/Evocation
+~77 88 994 1000 5000 &Ring of Resistance to Lesser/Greater Divination
+~89 100 994 1000 5000 &Ring of Resistance to Necromancy
+`1 994 5000 25000 &Ring of Resistance to Breath Weapons
+`1 994 1000 10000 &Ring of Reversion
+`1 995 1000 10000 &Ring of Reversion II
+`1 995 3500 17500 &Ring of Reversion III
+`1 995 800 4000 &Ring of Rhyming
+`1 995 0 1500 &Rocckoe's Ring of Bureaucratic Wizardry
+`1 995 2000 10000 &Ring of Safety, Charges: {1 4}
+`1 995 2000 12000 &Samander's Ring
+`1 997 500 2500 &Saurian Ring
+`1 997 2500 12500 &Ring of Seeing
+`1 997 2000 10000 &Ring of Serten's Spell Immunity
+`1 997 0 10000 &Ring of Servitude
+`1 997 2500 15000 &Ring of Shape Changing
+`1 997 1500 7500 &Ring of Shapechanging
+`1 998 1500 7500 &Sherry's Ring of Animal Friendship
+`1 998 400 2000 &Shield Ring
+`1 998 1000 5000 &Ring of Shocking Grasp
+`1 998 3000 15000 &Ring of Shooting Stars
+`1 999 800 3800 &Silence Ring
+`1 999 600 3000 &Silence Ring II
+`1 999 2500 4000 &Spellbattle Ring
+`1 1000 2100 20000 &Ring of Spell Eating
+`1 1000 2000 10000 &Ring of Spell Holding
+`1 1000 2000 17500 &Ring of Spell Storing
+`1 1000 2000 10000 &Ring of Spell Turning
+`1 1001 0 2000 &Ring of Spell "Turning"
+`1 1001 1600 7000 &Ring of Stone
+`1 1002 00 00 &Ring of Strength
+~1 35 1002 1500 7500 &Ring of Strength (18/00)
+~36 65 1002 2000 10000 &Ring of Strength (19)
+~66 80 1002 2500 15000 &Ring of Strength (20)
+~81 100 1002 0 3000 &Ring of Strength (Cursed)
+`1 1002 6000 30000 &Ring of Survival {101 200}
+`1 1002 500 3500 &Ring of Sustenance
+`1 1002 500 3500 &Ring of Sustenance II
+`1 1002 1000 5000 &Ring of Swimming
+`1 1002 200 1000 &Tasslehoff's Magic Mouse Ring
+`1 1003 2000 10000 &Ring of Telekinesis
+~1 25 1003 2000 10000 &Ring of Telekinesis, 25 pounds maximum
+~26 50 1003 2500 12500 &Ring of Telekinesis, 50 pounds maximum
+~51 90 1003 3000 15000 &Ring of Telekinesis, 100 pounds maximum
+~91 99 1003 3500 17500 &Ring of Telekinesis, 200 pounds maximum
+~100 100 1003 4000 20000 &Ring of Telekinesis, 400 pounds maximum
+`1 1003 2000 15000 &Ring of Teleportation, Charges: {3 10}
+`1 1003 300 1500 &Thal's Ring of Mind Shielding
+`1 1003 4000 20000 &Ring of Three Wishes
+~1 25 1003 3000 15000 &Ring of Three Limited Wishes
+~26 100 1003 4000 20000 &Ring of Three Wishes
+`1 1003 0 6000 &Ring of Three Witches
+`1 1003 4000 20000 &Ring of Thunder, Charges: {31 61}
+`1 1004 4000 20000 &Tika's Ring
+`1 1004 1000 5000 &Ring of Tongues
+`1 1004 1000 5000 &Ring of Throbriand
+~1 95 1004 1000 5000 &Ring of Throbriand (Normal Version)
+~96 100 1004 2000 10000 &Ring of Throbriand (Master Version)
+`1 1004 1000 5000 &Ring of Truth
+`1 1004 1500 5000 &Ring of Truth II
+`1 1004 500 2500 &Ring of Truthfulness
+`1 1004 1000 5000 &Ring of Truthlessness
+`1 1005 5000 35000 &Ring of the Valiant
+`1 1005 4000 35000 &Ring of Vapors
+`1 1005 1500 7500 &Varlo's Ring of Feather Falling
+`1 1005 1000 5000 &Ring of Vizier
+`1 1006 1500 7500 &Ring of Warding
+~1 95 1006 1500 7500 &Ring of Warding (Normal Version), Charges: 20
+~96 100 1006 2000 10000 &Ring of Warding (Stoneskin Version), Charges: 20
+`1 1006 1000 5000 &Ring of Warmth
+`1 1006 2500 12500 &Ring of Water Adaptation
+`1 1006 1000 5000 &Ring of Water Walking
+`1 1006 6000 30000 &Ring of Water Walking II
+`1 1006 0 1000 &Ring of Weakness
+`1 1007 1000 5000 &White Copper Ring of Fire
+`1 1007 1000 5000 &Ring of Windwarding
+`1 1007 40000 200000 &Ring of Winter
+`1 1007 4000 50000 &Ring of Wizardry, Doubles 1st Level Spells
+~1 50 1007 4000 50000 &Ring of Wizardry, Doubles 1st Level Spells
+~51 75 1007 4200 52000 &Ring of Wizardry, Doubles 2nd Level Spells
+~76 82 1007 4800 58000 &Ring of Wizardry, Doubles 3rd Level Spells
+~83 88 1007 4400 54000 &Ring of Wizardry, Doubles 1st & 2nd Level Spells
+~89 92 1007 5000 60000 &Ring of Wizardry, Doubles 4th Level Spells
+~93 95 1007 5200 62000 &Ring of Wizardry, Doubles 5th Level Spells
+~96 99 1007 4600 56000 &Ring of Wizardry, Doubles 1st to 3rd Level Spells
+~100 100 1007 5400 64000 &Ring of Wizardry, Doubles 4th and 5th Level Spells
+`1 1008 4000 35000 &Ring of X-Ray Vision

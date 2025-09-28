@@ -1,0 +1,121 @@
+`1 1473 2000 10000 *Almen's Wand of Illumination, Charges: {81 100}
+`1 1473 1250 10000 *Wand of Animal Location, Charges: {81 100}
+`1 1473 2500 15000 *Wand of Animation, Charges: {81 100}
+`1 1473 2500 12500 *Anything Wand, Charges: {81 100}
+`1 1473 5000 40000 *Wand of Arc Lightning, Charges: {81 100}
+`1 1474 600 3000 *Wand of Armory, Charges: {81 100}
+`1 1474 600 5000 *Wand of Armory II, Charges: {81 100}
+`1 1474 5000 30000 *Wand of Banishment, Charges: {81 100}
+`1 1475 6000 30000 *Wand of Beauty and Ugliness, Charges: {81 100}
+`1 1475 3000 15000 *Bisselite Wand of Peace, Charges: {81 100}
+`1 1476 2000 12000 *Bonewand, Charges: {81 100}
+`1 1476 1000 5000 *Buckler Wand, Charges: {81 100}
+`1 1476 0 2000 *Wand of Burdening, Charges: {81 100}
+`1 1476 120 600 *Wand of Cluny, Charges: {20 400}
+`1 1476 5000 40000 *Wand of Cold, Charges: {81 100}
+`1 1476 1000 7000 *Wand of Color, Charges: {81 100}
+`1 1476 7000 35000 *Wand of Conjuration, Charges: {81 100}
+`1 1477 500 2500 *Wand of Continual Light
+`1 1477 4000 20000 *Wand of Corridors, Charges: {81 100}
+`1 1477 4000 30000 *Dalamar's Wand of Lightning, Charges: 7
+`1 1477 1500 8000 *Dark Wand of the Sulhaut Mountains, Charges: {81 100}
+`1 1477 5000 30000 *Wand of Darkness, Charges: {81 100}
+~1 90 1477 4000 25000 *Lesser Wand of Darkness, Charges: {81 100}
+~91 100 1477 5000 30000 *Greater Wand of Darkness, Charges: {81 100}
+`1 1478 20000 100000 *Wand of Death, Charges: {81 100}
+`1 1478 1000 6000 *Wand of Defoliation, Charges: {81 100}
+`1 1479 3500 25000 *Wand of Displacement, Charges: {81 100}
+`1 1479 2000 10000 *Wand of Earth and Stone, Charges: {81 100}
+`1 1479 3000 15000 *Powerful Wand of Earth and Stone, Charges: {81 100}
+`1 1479 2000 10000 *Wand of Element Transmogrification, Charges: {81 100}
+`1 1480 2000 10000 *Wand of Enemy Detection, Charges: {81 100}
+`1 1480 3000 20000 *Wand of Eyes, Charges: {81 100}
+`1 1480 3000 15000 *Wand of Fear, Charges: {81 100}
+`1 1480 3000 15000 *Wand of Feathers, Charges: {10 100}
+`1 1480 4000 35000 *Fire Wand of Suloise, Charges: {81 100}
+`1 1481 4500 25000 *Wand of Fire, Charges: {81 100}
+`1 1481 2000 16000 *Wand of Fireballs, Charges: {81 100}
+`1 1481 2000 16000 *Wand of Fireballs II, Charges: {81 100}
+`1 1481 1500 10000 *Wand of Flame Extinguishing, Charges: {81 100}
+`1 1482 1750 8000 *Wand of Fog, Charges: {81 100}
+`1 1482 4000 20000 *Wand of Fog Control, Charges: {81 100}
+`1 1482 3000 30000 *Wand of Force, Charges: {81 100}
+`1 1482 1500 7500 *Wand of Freshness, Charges: {1 100}
+`1 1482 6000 50000 *Wand of Frost, Charges: {81 100}
+`1 1483 3000 10000 *Gremlin Wand, Charges: {81 100}
+`1 1483 1000 8000 *Wand of Hammerblows, Charges: {81 100}
+`1 1483 4000 18000 *Wand of Highfolk, Charges: {81 100}
+`1 1483 2500 20000 *Wand of Ice Storms, Charges: {81 100}
+`1 1483 2000 10000 *Wand of Illumination, Charges: {81 100}
+`1 1484 3000 20000 *Wand of Illusion, Charges: {81 100}
+`1 1484 19000 95000 *Iron Wand, Charges: {81 100}
+`1 1484 2750 18000 *Karelia's Wand of Illusion, Charges: {81 100}
+`1 1484 2500 15000 *Wand of Knock, Charges: {81 100}
+`1 1485 50 250 *Wand of Light, Charges: {81 100}
+`1 1485 1000 7500 *Wand of Lightening - (Yes, spelling is correct.), Charges: {81 100}
+`1 1485 4000 30000 *Wand of Lightning, Charges: {81 100}
+`1 1485 2000 16000 *Wand of Lightning Bolts, Charges: {81 100}
+`1 1485 2000 16000 *Wand of Lightning Bolts II, Charges: {81 100}
+`1 1485 200 2000 *Lightwand with Ring
+`1 1485 30 300 *Lightwand without Ring
+`1 1485 3000 25000 *Wand of Lloth, Charges: {81 100}
+`1 1486 4000 40000 *Mace-Wand of of Lightning, Charges: {81 100}
+`1 1486 2500 22000 *Wand of Magic Detection, Charges: {81 100}
+`1 1486 3000 20000 *Wand of Magical Mirrors, Charges: {81 100}
+`1 1487 4000 35000 *Wand of Magic Missiles, Charges: {81 100}
+`1 1487 4000 30000 *Meriadar's Wand of Size Alteration, Charges: {81 100}
+`1 1487 2500 10000 *Wand of Metal Command, Charges: {81 100}
+`1 1487 1500 7500 *Wand of Metal Detection, Charges: {81 100}
+`1 1487 1500 7500 *Wand of Metal and Mineral Detection, Charges: {81 100}
+`1 1487 4000 30000 *Mirynda's Wand of Polymorphing, Charges: {81 100}
+`1 1487 2000 10000 *Wand of Misplaced Objects, Charges: {81 100}
+`1 1488 1500 15000 *Mistletoe Wand, Charges: {40 78}
+`1 1488 1000 6000 *Mystic Wand, Charges: {81 100}
+`1 1488 4000 35000 *Nabil's Wand of Magic Missiles, Charges: {81 100}
+`1 1488 3500 15000 *Wand of Negation, Charges: {81 100}
+`1 1488 3500 25000 *Nidus' Wand of Endless Repetition, Charges: {4 48}
+`1 1488 2500 12500 *Wand of Obliteration, Charges: {81 100}
+`1 1490 3500 15000 *Wand of Ochalor's Eye, Charges: {81 100}
+`1 1490 10000 60000 *Odin's Rune Wand, Charges: {81 100}
+`1 1490 20000 100000 *Wand of Orcus, Charges: {81 100}
+`1 1491 6000 45000 *Orgel's Wand of Earth Passage, Charges: {81 100}
+`1 1491 3500 25000 *Wand of Paralyzation, Charges: {81 100}
+`1 1491 4700 30000 *Phandore's Wand of Fire, Charges: {81 100}
+`1 1491 3500 25000 *Wand of Polymorphing, Charges: {81 100}
+`1 1491 10000 25000 *Wand of Portraiture, Charges: {81 100}
+`1 1491 5000 28000 *Wand of Prime Material Pocket, Charges: {81 100}
+`1 1492 3000 25000 *Wand of Revealing, Charges: {81 100}
+`1 1492 3500 25000 *Robin Goodfellow's Wand, Charges: {81 100}
+`1 1492 4500 40000 *Wand, Runestick, Charges: {81 100}
+`1 1492 6000 35000 *Rust Wand, Charges: {81 100}
+`1 1493 5000 40000 *Wand of Salt, Charges: {81 100}
+`1 1493 6000 10000 *Sathallarin's Wand of Wonder, Charges: {81 100}
+`1 1493 6000 40000 *Scant Wand of Storms, Charges: {81 100}
+`1 1493 3000 25000 *Wand of Secret Door Detection, Charges: {81 100}
+`1 1493 5000 40000 *Wand of Secret Door and Trap Detection, Charges: {81 100}
+`1 1493 5000 40000 *Wand of Secret Door and Trap Location, Charges: {81 100}
+`1 1494 3000 20000 *Wand of Size Alteration, Charges: {81 100}
+`1 1494 4000 20000 *Wand of Sleep, Charges: {81 100}
+`1 1494 5000 20000 *Wand of the Squid, Charges: {81 100}
+`1 1494 4500 25000 *Wand of Steam and Vapor, Charges: {81 100}
+`1 1494 4000 8000 *Wand of the Sun, Charges: {81 100}
+`1 1495 3500 15000 *Wand of Teeth, Charges: {81 100}
+`1 1495 5000 30000 *Thithion's Wand of Fire, Charges: {81 100}
+`1 1495 15000 75000 *Titania's Wand, Charges: {81 100}
+`1 1495 3000 25000 *Wand of Trap Detection, Charges: {81 100}
+`1 1496 2000 19000 *Wand of the Underdark, Charges: {81 100}
+`1 1496 4500 25000 *Wand of Viscid Globs, Charges: {81 100}
+`1 1496 4000 20000 *Wand of Warding, Charges: {81 100}
+~1 90 1496 4000 20000 *Good Wand of Warding, Charges: {81 100}
+~91 100 1496 4000 20000 *Evil Wand of Warding, Charges: {81 100}
+`1 1496 2000 10000 *Wand of Water-Finding, Charges: {81 100}
+`1 1496 2500 12000 *Wand of Whips, Charges: {81 100}
+`1 1497 2000 10000 *Witch Wand, Charges: {81 100}
+`1 1497 6000 10000 *Wand of Wonder, Charges: {81 100}
+`1 1498 6000 10000 *Wand of Wonder II, Charges: {81 100}
+`1 1499 6000 10000 *Wand of Wonder III, Charges: {81 100}
+`1 1500 6000 10000 *Wand of Wonder IV, Charges: {81 100}
+`1 1500 1200 6000 *Wand of Wonder V (Alternate), Charges: {81 100}
+`1 1501 6000 10000 *Wand of a Wonder, Charges: {81 100}
+`1 1502 6000 10000 *Wand of Wondrousness, Charges: {81 100}
+`1 1504 3500 17500 *Yatil Wand of Zooming, Charges: {81 100}

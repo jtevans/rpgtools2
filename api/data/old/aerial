@@ -1,0 +1,70 @@
+:COMMON
+4 32 Bird, Crow
+5 12 Bird, Eagle, Wild
+1 2 Bird, Falcon
+1 2 Bird, Hawk, Large
+4 24 Bird, Kingfisher
+1 2 Bird, Owl
+3 32 Bird, Raven
+1 20 Bird, Skyfisher
+2 16 Bird, Swan
+4 24 Bird, Vulture
+:UNCOMMON
+3 18 Bat, Large
+1 12 Bat, Night Hunter
+4 15 Bird, Blood Hawk
+1 2 Bird, Condor
+2 20 Bird, Emre
+2 5 Bird, Owl, Giant
+4 16 Bird, Raven, Giant
+6 60 Bird, 'Wari
+1 4 Manticore
+1 6 Wyvern
+:RARE
+1 1 Bat, Azmyth
+1 6 Bat, Sinister
+1 2 Bird, Boobrie
+1 20 Bird, Eagle, Giant
+2 8 Bird, Raven, Huge
+1 8 Dog, Moon
+11 20 Giff
+1 1 Gloomwing, Moth
+2 12 Harpy
+2 16 Hippogriff
+1 6 Insect, Dragonfly, Giant
+2 8 Lammasu, Lesser
+1 4 Lycanthrope, Werebat
+1 2 Roc
+:VERY_RARE
+1 10 Aarakocra
+4 16 Bird, Eblis
+1 1 Bird, Owl, Talking
+1 1 Death Knight
+3 12 Doppleganger
+1 1 Elemental, Air
+1 1 Elemental, Air Kin, Sylph
+1 1 Elemental, Air Kin, Aerial Servant
+1 1 Elemental, Composite, Tempest
+1 10 Giant, Cloud
+1 1 Giant, Storm
+2 4 Giant, Storm
+2 8 Githyanki
+2 8 Githzerai
+1 1 Homonculous
+1 1 Imp, Common
+1 1 Imp, Quasit
+2 8 Imp, Mephit, Fire
+2 8 Imp, Mephit, Ice
+2 8 Imp, Mephit, Lava
+2 8 Imp, Mephit, Mist
+2 8 Imp, Mephit, Smoke
+2 8 Imp, Mephit, Steam
+1 1 Insect Swarm, Velvet Ants
+1 1 Insect Swarm, Grasshoppers
+1 1 Invisible Stalker
+1 1 Ki-rin
+1 2 Lammasu, Greater
+1 1 Nightmare
+1 10 Pegasus
+1 3 Phoenix
+:
