@@ -21,10 +21,10 @@ const style = {
 };
 
 export default function GenMagicItems3(props) {
-  const { sourcePrefix } = props;
+  const { minorAmount, mediumAmount, majorAmount } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getItems(sourcePrefix);
+    getItems(minorAmount, mediumAmount, majorAmount);
   }
   const handleClose = () => {
     setOpen(false);
@@ -37,8 +37,8 @@ export default function GenMagicItems3(props) {
   const [medium, setMedium] = React.useState(null);
   const [major, setMajor] = React.useState(null);
 
-  const getItems = async (sourcePrefix) => {
-    const itemData = await callAPI(sourcePrefix, 'all');
+  const getItems = async (minorAmount, mediumAmount, majorAmount) => {
+    const itemData = await callAPI(minorAmount, mediumAmount, majorAmount);
     setMinor(itemData['Minor']);
     setMedium(itemData['Medium']);
     setMajor(itemData['Major']);
@@ -63,44 +63,36 @@ export default function GenMagicItems3(props) {
     }
   };
 
-  async function callAPI(sourcePrefix, type, amount = 0) {
-    let args = '';
-
-    if (type === 'all') {
-      const minor = Math.max(0, Math.min(200, parseInt(document.getElementById(sourcePrefix + '-Minor').value)));
-      const medium = Math.max(0, Math.min(200, parseInt(document.getElementById(sourcePrefix + '-Medium').value)));
-      const major = Math.max(0, Math.min(200, parseInt(document.getElementById(sourcePrefix + '-Major').value)));
-
-      args = `minor=${minor}&medium=${medium}&major=${major}`;
-    }
-    else {
-      const amountInput = document.getElementById(sourcePrefix + type);
-      let newAmount = 0;
-      if (amountInput) {
-        newAmount = parseInt(amountInput.value);
-      }
-
-      if (amount === 0) {
-        amount = newAmount;
-      }
-      const argsType = type.toLowerCase()
-      args = `${argsType}=${amount}`;
-    }
-
+  async function callAPI(minorAmount, mediumAmount, majorAmount) {
+    const args = `minor=${minorAmount}&medium=${mediumAmount}&major=${majorAmount}`;
     let response = await fetch(`http://localhost:8080/tools2/api/mi.php?${args}`);
     return await response.json();
   }
 
-  async function replaceItem({ sourcePrefix, idx, type }) {
-    let newItem = await callAPI(sourcePrefix, type, 1);
+  async function replaceItem({ idx, type }) {
+    let minorAmount = 0;
+    let mediumAmount = 0;
+    let majorAmount = 0;
+
+    if (type === 'Minor')
+    {
+      minorAmount = 1;
+    }
+    if (type === 'Medium') {
+      mediumAmount = 1;
+    }
+    if (type === 'Major') {
+      majorAmount = 1;
+    }
+    let newItem = await callAPI(minorAmount, mediumAmount, majorAmount);
     updateItem(idx, newItem[type][0], type);
   }
 
-  function ItemList({ sourcePrefix, items, type }) {
+  function ItemList({ items, type }) {
     return (
       <div>
         {items.map((item, idx) => (
-          <div><span id={`span-${sourcePrefix}-${type}-${idx}`}>{item}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceItem({ sourcePrefix, idx, type })} /></div>
+          <div><span id={`span-${type}-${idx}`}>{item}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceItem({ idx, type })} /></div>
         ))}
       </div>
     );
@@ -109,7 +101,7 @@ export default function GenMagicItems3(props) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Magic Items</Button>
-      {(minor || medium || major) && <Modal
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -125,25 +117,25 @@ export default function GenMagicItems3(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Magic Items<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getItems(sourcePrefix)} />
+            Magic Items<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getItems(minorAmount, mediumAmount, majorAmount)} />
           </Typography>
           <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
             Minor Magic Items
           </Typography>
           <Typography>
-            <ItemList sourcePrefix={sourcePrefix} items={minor} type="Minor" />
+            <ItemList items={minor} type="Minor" />
           </Typography>
           <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
             Medium Magic Items
           </Typography>
           <Typography>
-            <ItemList sourcePrefix={sourcePrefix} items={medium} type="Medium" />
+            <ItemList items={medium} type="Medium" />
           </Typography>
           <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
             Major Magic Items
           </Typography>
           <Typography>
-            <ItemList sourcePrefix={sourcePrefix} items={major} type="Major" />
+            <ItemList items={major} type="Major" />
           </Typography>
         </Box>
       </Modal>}

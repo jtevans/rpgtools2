@@ -78,7 +78,7 @@ export default function GenGems1(props) {
   
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Generate Gems</Button>
+      <Button onClick={handleOpen}>Generate Spellbook</Button>
       {gems && <Modal
         open={open}
         onClose={(event, reason) => {

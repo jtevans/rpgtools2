@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$k(options) {
+	function style$i(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$j(props, keys) {
+	function style$h(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$j(props, marginKeys);
+	  return style$h(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$j(props, paddingKeys);
+	  return style$h(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$k({
+	  return style$i({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$k({
+	const gridColumn = style$i({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$k({
+	const gridRow = style$i({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$k({
+	const gridAutoFlow = style$i({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$k({
+	const gridAutoColumns = style$i({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$k({
+	const gridAutoRows = style$i({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$k({
+	const gridTemplateColumns = style$i({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$k({
+	const gridTemplateRows = style$i({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$k({
+	const gridTemplateAreas = style$i({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$k({
+	const gridArea = style$i({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$k({
+	const color = style$i({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$k({
+	const bgcolor = style$i({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$k({
+	const backgroundColor = style$i({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$k({
+	const width = style$i({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$k({
+	const minWidth = style$i({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$k({
+	const height = style$i({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$k({
+	const maxHeight = style$i({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$k({
+	const minHeight = style$i({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$k({
+	style$i({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$k({
+	style$i({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$k({
+	const boxSizing = style$i({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$i = {
+	const style$g = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$i
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$h = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$g = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$f = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$e = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$d = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$c = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$b = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,222 +30625,6 @@ export default theme;`;
 	  }
 	}
 
-	const style$a = {
-	  position: 'absolute',
-	  top: '50%',
-	  left: '50%',
-	  transform: 'translate(-50%, -50%)',
-	  width: '75%',
-	  bgcolor: 'background.paper',
-	  border: '2px solid #000',
-	  boxShadow: 24,
-	  p: 4,
-	  overflow: 'auto',
-	  maxHeight: '80%'
-	};
-	function GenGems3(props) {
-	  const {
-	    source
-	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
-	  const handleOpen = () => {
-	    getGems(source);
-	  };
-	  const handleClose = () => {
-	    setOpen(false);
-	    setGems(null);
-	  };
-	  const [gems, setGems] = reactExports.useState(null);
-	  const getGems = async source => {
-	    const gemsData = await callAPI(source);
-	    setGems(gemsData);
-	    setOpen(true);
-	  };
-	  const updateGem = async (indexToUpdate, newValue) => {
-	    setGems(gems.map((item, index) => index === indexToUpdate ? newValue : item));
-	  };
-	  async function callAPI(source) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	    const elem = document.getElementById(source);
-	    if (elem.value) {
-	      const newAmount = parseInt(elem.value);
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/gems3.php?amount=${amount}`);
-	    return await response.json();
-	  }
-	  async function replaceGem(_ref) {
-	    let {
-	      source,
-	      idx
-	    } = _ref;
-	    let newGem = await callAPI(source, 1);
-	    updateGem(idx, newGem[0]);
-	  }
-	  function GemsList(_ref2) {
-	    let {
-	      source,
-	      gems
-	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, gems.map((gem, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${idx}`
-	    }, gem), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	      sx: {
-	        paddingLeft: "5px",
-	        fontSize: "9pt"
-	      },
-	      onClick: () => replaceGem({
-	        source,
-	        idx
-	      })
-	    }))));
-	  }
-	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
-	    onClick: handleOpen
-	  }, "Generate Gems"), gems && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
-	    onClose: (event, reason) => {
-	    },
-	    disableEscapeKeyDown: true,
-	    disableBackdropClick: true,
-	    sx: {
-	      maxHeight: "80%"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
-	  }, /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
-	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "center"
-	    },
-	    variant: "h5",
-	    component: "h2"
-	  }, "Gems", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "10pt"
-	    },
-	    onClick: () => getGems(source)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(GemsList, {
-	    source: source,
-	    gems: gems
-	  })))));
-	}
-
-	const style$9 = {
-	  position: 'absolute',
-	  top: '50%',
-	  left: '50%',
-	  transform: 'translate(-50%, -50%)',
-	  width: '75%',
-	  bgcolor: 'background.paper',
-	  border: '2px solid #000',
-	  boxShadow: 24,
-	  p: 4,
-	  overflow: 'auto',
-	  maxHeight: '80%'
-	};
-	function GenArt3(props) {
-	  const {
-	    source
-	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
-	  const handleOpen = () => {
-	    getArt(source);
-	  };
-	  const handleClose = () => {
-	    setOpen(false);
-	    setArt(null);
-	  };
-	  const [arts, setArt] = reactExports.useState(null);
-	  const getArt = async source => {
-	    const artData = await callAPI(source);
-	    setArt(artData);
-	    setOpen(true);
-	  };
-	  const updateArt = async (indexToUpdate, newValue) => {
-	    setArt(arts.map((item, index) => index === indexToUpdate ? newValue : item));
-	  };
-	  async function callAPI(source) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	    const elem = document.getElementById(source);
-	    if (elem.value) {
-	      const newAmount = parseInt(elem.value);
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/art.php?amount=${amount}`);
-	    return await response.json();
-	  }
-	  async function replaceArt(_ref) {
-	    let {
-	      source,
-	      idx
-	    } = _ref;
-	    let newArt = await callAPI(source, 1);
-	    updateArt(idx, newArt[0]);
-	  }
-	  function ArtList(_ref2) {
-	    let {
-	      source,
-	      arts
-	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, arts.map((art, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, art), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	      sx: {
-	        paddingLeft: "5px",
-	        fontSize: "9pt"
-	      },
-	      onClick: () => replaceArt({
-	        source,
-	        idx
-	      })
-	    }))));
-	  }
-	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
-	    onClick: handleOpen
-	  }, "Generate Artwork"), arts && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
-	    onClose: (event, reason) => {
-	    },
-	    disableEscapeKeyDown: true,
-	    disableBackdropClick: true,
-	    sx: {
-	      maxHeight: "80%"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
-	  }, /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
-	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "center"
-	    },
-	    variant: "h5",
-	    component: "h2"
-	  }, "Artwork", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "10pt"
-	    },
-	    onClick: () => getArt(source)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ArtList, {
-	    source: source,
-	    arts: arts
-	  })))));
-	}
-
 	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
@@ -30854,68 +30638,63 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	function GenMundane3(props) {
-	  const {
-	    source
-	  } = props;
+	function GenSpecial3(_ref) {
+	  let {
+	    title,
+	    API,
+	    amount
+	  } = _ref;
+	  amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getMundane(source);
+	    getSpecials(API, amount);
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
-	    setMundane(null);
+	    setSpecials(null);
 	  };
-	  const [mundanes, setMundane] = reactExports.useState(null);
-	  const getMundane = async source => {
-	    const mundaneData = await callAPI(source);
-	    setMundane(mundaneData);
+	  const [specials, setSpecials] = reactExports.useState(null);
+	  const getSpecials = async (API, amount) => {
+	    const data = await callAPI(API, amount);
+	    setSpecials(data);
 	    setOpen(true);
 	  };
-	  const updateMundane = async (indexToUpdate, newValue) => {
-	    setMundane(mundanes.map((item, index) => index === indexToUpdate ? newValue : item));
+	  const updateSpecial = async (indexToUpdate, newValue) => {
+	    setSpecials(specials.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(source) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	    const elem = document.getElementById(source);
-	    if (elem.value) {
-	      const newAmount = parseInt(elem.value);
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/mundane.php?amount=${amount}`);
+	  async function callAPI(API, amount) {
+	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
 	    return await response.json();
 	  }
-	  async function replaceMundane(_ref) {
+	  async function replaceSpecial(_ref2) {
 	    let {
-	      source,
+	      API,
 	      idx
-	    } = _ref;
-	    let newMundane = await callAPI(source, 1);
-	    updateMundane(idx, newMundane[0]);
-	  }
-	  function MundaneList(_ref2) {
-	    let {
-	      source,
-	      mundanes
 	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, mundanes.map((mundane, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
+	    let data = await callAPI(API, 1);
+	    updateSpecial(idx, data[0]);
+	  }
+	  function SpecialsList(_ref3) {
+	    let {
+	      API,
+	      specials
+	    } = _ref3;
+	    return /*#__PURE__*/reactExports.createElement("div", null, specials.map((special, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
 	      id: `span-${idx}`
-	    }, mundane), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    }, special), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
-	      onClick: () => replaceMundane({
-	        source,
+	      onClick: () => replaceSpecial({
+	        API,
 	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Mundane Items"), mundanes && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate ", title), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -30938,15 +30717,15 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Mundane Items", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, title, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getMundane(source)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(MundaneList, {
-	    source: source,
-	    mundanes: mundanes
+	    onClick: () => getSpecials(API, amount)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpecialsList, {
+	    API: API,
+	    specials: specials
 	  })))));
 	}
 
@@ -30965,11 +30744,13 @@ export default theme;`;
 	};
 	function GenMagicItems3(props) {
 	  const {
-	    sourcePrefix
+	    minorAmount,
+	    mediumAmount,
+	    majorAmount
 	  } = props;
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getItems(sourcePrefix);
+	    getItems(minorAmount, mediumAmount, majorAmount);
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
@@ -30980,8 +30761,8 @@ export default theme;`;
 	  const [minor, setMinor] = reactExports.useState(null);
 	  const [medium, setMedium] = reactExports.useState(null);
 	  const [major, setMajor] = reactExports.useState(null);
-	  const getItems = async sourcePrefix => {
-	    const itemData = await callAPI(sourcePrefix, 'all');
+	  const getItems = async (minorAmount, mediumAmount, majorAmount) => {
+	    const itemData = await callAPI(minorAmount, mediumAmount, majorAmount);
 	    setMinor(itemData['Minor']);
 	    setMedium(itemData['Medium']);
 	    setMajor(itemData['Major']);
@@ -30998,53 +30779,44 @@ export default theme;`;
 	      setMajor(major.map((item, index) => index === indexToUpdate ? newValue : item));
 	    }
 	  };
-	  async function callAPI(sourcePrefix, type) {
-	    let amount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-	    let args = '';
-	    if (type === 'all') {
-	      const minor = Math.max(0, Math.min(200, parseInt(document.getElementById(sourcePrefix + '-Minor').value)));
-	      const medium = Math.max(0, Math.min(200, parseInt(document.getElementById(sourcePrefix + '-Medium').value)));
-	      const major = Math.max(0, Math.min(200, parseInt(document.getElementById(sourcePrefix + '-Major').value)));
-	      args = `minor=${minor}&medium=${medium}&major=${major}`;
-	    } else {
-	      const amountInput = document.getElementById(sourcePrefix + type);
-	      let newAmount = 0;
-	      if (amountInput) {
-	        newAmount = parseInt(amountInput.value);
-	      }
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	      const argsType = type.toLowerCase();
-	      args = `${argsType}=${amount}`;
-	    }
+	  async function callAPI(minorAmount, mediumAmount, majorAmount) {
+	    const args = `minor=${minorAmount}&medium=${mediumAmount}&major=${majorAmount}`;
 	    let response = await fetch(`http://localhost:8080/tools2/api/mi.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceItem(_ref) {
 	    let {
-	      sourcePrefix,
 	      idx,
 	      type
 	    } = _ref;
-	    let newItem = await callAPI(sourcePrefix, type, 1);
+	    let minorAmount = 0;
+	    let mediumAmount = 0;
+	    let majorAmount = 0;
+	    if (type === 'Minor') {
+	      minorAmount = 1;
+	    }
+	    if (type === 'Medium') {
+	      mediumAmount = 1;
+	    }
+	    if (type === 'Major') {
+	      majorAmount = 1;
+	    }
+	    let newItem = await callAPI(minorAmount, mediumAmount, majorAmount);
 	    updateItem(idx, newItem[type][0], type);
 	  }
 	  function ItemList(_ref2) {
 	    let {
-	      sourcePrefix,
 	      items,
 	      type
 	    } = _ref2;
 	    return /*#__PURE__*/reactExports.createElement("div", null, items.map((item, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${sourcePrefix}-${type}-${idx}`
+	      id: `span-${type}-${idx}`
 	    }, item), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceItem({
-	        sourcePrefix,
 	        idx,
 	        type
 	      })
@@ -31052,7 +30824,7 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Magic Items"), (minor || medium || major) && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate Magic Items"), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -31080,14 +30852,13 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getItems(sourcePrefix)
+	    onClick: () => getItems(minorAmount, mediumAmount, majorAmount)
 	  })), /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "center",
 	      fontWeight: "bold"
 	    }
 	  }, "Minor Magic Items"), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ItemList, {
-	    sourcePrefix: sourcePrefix,
 	    items: minor,
 	    type: "Minor"
 	  })), /*#__PURE__*/reactExports.createElement(Typography, {
@@ -31096,7 +30867,6 @@ export default theme;`;
 	      fontWeight: "bold"
 	    }
 	  }, "Medium Magic Items"), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ItemList, {
-	    sourcePrefix: sourcePrefix,
 	    items: medium,
 	    type: "Medium"
 	  })), /*#__PURE__*/reactExports.createElement(Typography, {
@@ -31105,7 +30875,6 @@ export default theme;`;
 	      fontWeight: "bold"
 	    }
 	  }, "Major Magic Items"), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ItemList, {
-	    sourcePrefix: sourcePrefix,
 	    items: major,
 	    type: "Major"
 	  })))));
@@ -31125,16 +30894,16 @@ export default theme;`;
 	  maxHeight: '80%'
 	};
 	async function callAPI$2() {
-	  const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value)));
-	  const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value)));
-	  const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value)));
-	  const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value)));
-	  const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value)));
-	  const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value)));
-	  const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value)));
-	  const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value)));
-	  const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value)));
-	  const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value)));
+	  const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value || 0)));
+	  const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value || 0)));
+	  const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value || 0)));
+	  const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value || 0)));
+	  const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value || 0)));
+	  const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value || 0)));
+	  const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value || 0)));
+	  const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value || 0)));
+	  const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value || 0)));
+	  const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value || 0)));
 	  let args = '';
 	  if (treasure3_cr0 !== 0 && treasure3_q0 !== 0) {
 	    args += `&cr0=${treasure3_cr0}&q0=${treasure3_q0}`;
@@ -31158,74 +30927,6 @@ export default theme;`;
 	  let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
 	  return await response.json();
 	}
-	async function replaceTreasure$1(_ref) {
-	  let {
-	    source,
-	    key
-	  } = _ref;
-	  let newTreasure = await callAPI$2();
-	  document.getElementById(`span-${key}`).innerHTML = `${key}: ${newTreasure[key]}`;
-	  if (source !== '') {
-	    document.getElementById(source).value = newTreasure[key];
-	  }
-	}
-	function TreasureList$1(_ref2) {
-	  let {
-	    treasure
-	  } = _ref2;
-	  let totalTreasure = 0;
-	  Object.keys(treasure).forEach(function (key) {
-	    totalTreasure += treasure[key];
-	  });
-	  return /*#__PURE__*/reactExports.createElement("div", null, totalTreasure === 0 ? 'No Treasure' : Object.keys(treasure).map(function (key) {
-	    let addButton = /*#__PURE__*/reactExports.createElement("span", null);
-	    let addForm = /*#__PURE__*/reactExports.createElement("input", {
-	      type: "hidden",
-	      id: `treasure3-${key}`,
-	      value: treasure[key]
-	    });
-	    let source = '';
-	    if (key === 'Gems' && treasure[key] > 0) {
-	      source = 'treasure3-Gems';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenGems3, {
-	        source: `${source}`
-	      });
-	    }
-	    if (key === 'Art' && treasure[key] > 0) {
-	      source = 'treasure3-Art';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenArt3, {
-	        source: `${source}`
-	      });
-	    }
-	    if (key === 'Mundane' && treasure[key] > 0) {
-	      source = 'treasure3-Mundane';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenMundane3, {
-	        source: `${source}`
-	      });
-	    }
-	    if (key === 'Minor' && treasure[key] > 0) {
-	      source = 'treasure3-Minor';
-	    }
-	    if (key === 'Medium' && treasure[key] > 0) {
-	      source = 'treasure3-Medium';
-	    }
-	    if (key === 'Major' && treasure[key] > 0) {
-	      source = 'treasure3-Major';
-	    }
-	    return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${key}`
-	    }, key, ": ", treasure[key]), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	      sx: {
-	        paddingLeft: "5px",
-	        fontSize: "9pt"
-	      },
-	      onClick: () => replaceTreasure$1({
-	        source,
-	        key
-	      })
-	    }), /*#__PURE__*/reactExports.createElement("br", null), addButton, addForm);
-	  }));
-	}
 	function GenTreasure3() {
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
@@ -31233,17 +30934,96 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
-	    setTreasure(null);
 	  };
-	  const [treasure, setTreasure] = reactExports.useState(null);
+	  const [cp3, setCP3] = reactExports.useState(0);
+	  const [sp3, setSP3] = reactExports.useState(0);
+	  const [gp3, setGP3] = reactExports.useState(0);
+	  const [pp3, setPP3] = reactExports.useState(0);
+	  const [gems3, setGems3] = reactExports.useState(0);
+	  const [art3, setArt3] = reactExports.useState(0);
+	  const [mundane3, setMundane3] = reactExports.useState(0);
+	  const [minor3, setMinor3] = reactExports.useState(0);
+	  const [medium3, setMedium3] = reactExports.useState(0);
+	  const [major3, setMajor3] = reactExports.useState(0);
+	  async function replaceTreasureItem(_ref) {
+	    let {
+	      type
+	    } = _ref;
+	    let newTreasure = await callAPI$2();
+	    if (type === 'CP') {
+	      setCP3(newTreasure['CP']);
+	    } else if (type === 'SP') {
+	      setSP3(newTreasure['SP']);
+	    } else if (type === 'GP') {
+	      setGP3(newTreasure['GP']);
+	    } else if (type === 'PP') {
+	      setPP3(newTreasure['PP']);
+	    } else if (type === 'Gems') {
+	      setGems3(newTreasure['Gems']);
+	    } else if (type === 'Art') {
+	      setArt3(newTreasure['Art']);
+	    } else if (type === 'Mundane') {
+	      setMundane3(newTreasure['Mundane']);
+	    } else if (type === 'Minor') {
+	      setMinor3(newTreasure['Minor']);
+	    } else if (type === 'Medium') {
+	      setMedium3(newTreasure['Medium']);
+	    } else if (type === 'Major') {
+	      setMajor3(newTreasure['Major']);
+	    }
+	  }
+	  function TreasureItem3(_ref2) {
+	    let {
+	      type,
+	      amount
+	    } = _ref2;
+	    let genButton = null;
+	    if (type === 'Gems' && amount > 0) {
+	      genButton = /*#__PURE__*/reactExports.createElement(GenSpecial3, {
+	        title: 'Gems',
+	        API: 'gems3.php',
+	        amount: amount
+	      });
+	    } else if (type === 'Art' && amount > 0) {
+	      genButton = /*#__PURE__*/reactExports.createElement(GenSpecial3, {
+	        title: "Art",
+	        API: "art.php",
+	        amount: amount
+	      });
+	    } else if (type === 'Mundane' && amount > 0) {
+	      genButton = /*#__PURE__*/reactExports.createElement(GenSpecial3, {
+	        title: "Mundane Items",
+	        API: "mundane.php",
+	        amount: amount
+	      });
+	    }
+	    return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, type, ": ", amount), genButton, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceTreasureItem({
+	        type
+	      })
+	    }));
+	  }
 	  const getTreasure = async () => {
 	    const treasureData = await callAPI$2();
-	    setTreasure(treasureData);
+	    setCP3(treasureData['CP']);
+	    setSP3(treasureData['SP']);
+	    setGP3(treasureData['GP']);
+	    setPP3(treasureData['PP']);
+	    setGems3(treasureData['Gems']);
+	    setArt3(treasureData['Art']);
+	    setMundane3(treasureData['Mundane']);
+	    setMinor3(treasureData['Minor']);
+	    setMedium3(treasureData['Medium']);
+	    setMajor3(treasureData['Major']);
 	    setOpen(true);
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Treasure"), treasure && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate Treasure"), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -31269,10 +31049,40 @@ export default theme;`;
 	      fontSize: "10pt"
 	    },
 	    onClick: () => getTreasure()
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TreasureList$1, {
-	    treasure: treasure
-	  }), treasure['Minor'] + treasure['Medium'] + treasure['Major'] > 0 ? /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(GenMagicItems3, {
-	    sourcePrefix: "treasure3"
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'CP',
+	    amount: cp3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'SP',
+	    amount: sp3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'GP',
+	    amount: gp3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'PP',
+	    amount: pp3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'Gems',
+	    amount: gems3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'Art',
+	    amount: art3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'Mundane',
+	    amount: mundane3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'Minor',
+	    amount: minor3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'Medium',
+	    amount: medium3
+	  }), /*#__PURE__*/reactExports.createElement(TreasureItem3, {
+	    type: 'Major',
+	    amount: major3
+	  }), minor3 + medium3 + major3 > 0 ? /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(GenMagicItems3, {
+	    minorAmount: minor3,
+	    mediumAmount: medium3,
+	    majorAmount: major3
 	  })) : /*#__PURE__*/reactExports.createElement("div", null)))));
 	}
 
@@ -31403,125 +31213,173 @@ export default theme;`;
 	  }
 	}
 
-	class Baubles3 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined"
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "D&D 3e/3.5/Pathfinder 1 Baubles"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "Gems",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenGems3, {
-	      source: "Gems"
-	    })), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "Art",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenArt3, {
-	      source: "Art"
-	    })), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "Mundane",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenMundane3, {
-	      source: "Mundane"
-	    }))));
-	  }
+	function Baubles3() {
+	  const [baubleData, setBaubleData] = reactExports.useState({
+	    gems: 0,
+	    art: 0,
+	    mundane: 0
+	  });
+	  const handleChange = event => {
+	    let {
+	      name,
+	      value
+	    } = event.target;
+	    value = parseInt(value ?? 0);
+	    setBaubleData(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/reactExports.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "D&D 3e/3.5/Pathfinder 1 Baubles"
+	  }), /*#__PURE__*/reactExports.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(OutlinedInput, {
+	    id: "gems",
+	    name: "gems",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }), /*#__PURE__*/reactExports.createElement("br", null), /*#__PURE__*/reactExports.createElement(GenSpecial3, {
+	    title: 'Gems',
+	    API: 'gems3.php',
+	    amount: baubleData.gems
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(OutlinedInput, {
+	    id: "art",
+	    name: "art",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }), /*#__PURE__*/reactExports.createElement("br", null), /*#__PURE__*/reactExports.createElement(GenSpecial3, {
+	    title: 'Art',
+	    API: 'art.php',
+	    amount: baubleData.art
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(OutlinedInput, {
+	    id: "mundane",
+	    name: "mundane",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }), /*#__PURE__*/reactExports.createElement("br", null), /*#__PURE__*/reactExports.createElement(GenSpecial3, {
+	    title: 'Mundane Items',
+	    API: 'mundane.php',
+	    amount: baubleData.mundane
+	  })))));
 	}
 
-	class MagicItems3 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined"
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "D&D 3e/3.5/Pathfinder 1 Magic Items"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      container: true
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Minor Magic Items:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "main-Minor",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Medium Magic Items:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "main-Medium",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Major Magic Items:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "main-Major",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }))), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(GenMagicItems3, {
-	      sourcePrefix: "main"
-	    }))));
-	  }
+	function MagicItems3() {
+	  const [itemData, setItemData] = reactExports.useState({
+	    minor: 0,
+	    medium: 0,
+	    major: 0
+	  });
+	  const handleChange = event => {
+	    let {
+	      name,
+	      value
+	    } = event.target;
+	    value = parseInt(value ?? 0);
+	    setItemData(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  return /*#__PURE__*/reactExports.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/reactExports.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "D&D 3e/3.5/Pathfinder 1 Magic Items"
+	  }), /*#__PURE__*/reactExports.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Grid, {
+	    container: true
+	  }, /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Minor Magic Items:"), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(OutlinedInput, {
+	    id: "minor",
+	    name: "minor",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Medium Magic Items:"), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(OutlinedInput, {
+	    id: "medium",
+	    name: "medium",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Major Magic Items:"), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(OutlinedInput, {
+	    id: "major",
+	    name: "major",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }))), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(GenMagicItems3, {
+	    minorAmount: itemData.minor,
+	    mediumAmount: itemData.medium,
+	    majorAmount: itemData.major
+	  }))));
 	}
 
 	var lib$7 = {};
@@ -44821,7 +44679,7 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Gems"), gems && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate Spellbook"), gems && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -44856,6 +44714,132 @@ export default theme;`;
 	  })))));
 	}
 
+	let schools = [];
+	schools.push({
+	  value: 'none',
+	  label: 'None'
+	});
+	schools.push({
+	  value: 'abjuration',
+	  label: 'Abjuration'
+	});
+	schools.push({
+	  value: 'conjuration',
+	  label: 'Conjuration'
+	});
+	schools.push({
+	  value: 'divination',
+	  label: 'Divination'
+	});
+	schools.push({
+	  value: 'enchantment',
+	  label: 'Enchantment'
+	});
+	schools.push({
+	  value: 'evocation',
+	  label: 'Evocation'
+	});
+	schools.push({
+	  value: 'illusion',
+	  label: 'Illusion'
+	});
+	schools.push({
+	  value: 'necromancy',
+	  label: 'Necromancy'
+	});
+	schools.push({
+	  value: 'transmutation',
+	  label: 'Transmutation'
+	});
+	const handleSelectChange = id => selectedOption => {
+	  let elem = document.getElementById(id);
+	  if (elem) {
+	    if (selectedOption) {
+	      elem.value = selectedOption.value;
+	    } else {
+	      elem.value = '';
+	    }
+	  }
+	};
+	const WizardLevel = () => {
+	  let options = [];
+	  for (let i = 1; i <= 20; i++) {
+	    const obj = {
+	      value: i,
+	      label: i
+	    };
+	    options.push(obj);
+	  }
+	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	    onChange: handleSelectChange('wizardLevel'),
+	    options: options,
+	    isClearable: true,
+	    placeholder: "Select Wizard Level",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  }), /*#__PURE__*/React.createElement("input", {
+	    id: "wizardLevel",
+	    type: "hidden",
+	    value: ""
+	  }));
+	};
+	const WizardIntelligence = () => {
+	  let options = [];
+	  for (let i = 10; i <= 30; i++) {
+	    const obj = {
+	      value: i,
+	      label: i
+	    };
+	    options.push(obj);
+	  }
+	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	    onChange: handleSelectChange('wizardIntelligence'),
+	    options: options,
+	    isClearable: true,
+	    placeholder: "Select Wizard Intelligence",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  }), /*#__PURE__*/React.createElement("input", {
+	    id: "wizardIntelligence",
+	    type: "hidden",
+	    value: ""
+	  }));
+	};
+	const WizardSpecialist = () => {
+	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	    onChange: handleSelectChange('wizardSpecialist'),
+	    options: schools,
+	    isClearable: true,
+	    placeholder: "Select Specialization (if any)",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  }), /*#__PURE__*/React.createElement("input", {
+	    id: "wizardSpecialist",
+	    type: "hidden",
+	    value: ""
+	  }));
+	};
+	const WizardRestricted = () => {
+	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	    multiple: true,
+	    onChange: handleSelectChange('wizardRestricted'),
+	    options: schools,
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  }), /*#__PURE__*/React.createElement("input", {
+	    id: "wizardRestricted",
+	    type: "hidden",
+	    value: ""
+	  }));
+	};
 	class SpellBooks3 extends React.Component {
 	  render() {
 	    return /*#__PURE__*/React.createElement(Card, {
@@ -44873,14 +44857,75 @@ export default theme;`;
 	      sx: {
 	        textAlign: "center"
 	      }
-	    }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "SpellBooks3",
-	      size: "small",
+	    }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
+	      container: true,
+	      spacing: 2
+	    }, /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
 	      sx: {
-	        width: "30%",
-	        height: "16pt"
+	        textAlign: "right"
 	      }
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenGems1, null))));
+	    }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "left"
+	      }
+	    }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "right"
+	      }
+	    }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "left"
+	      }
+	    }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "right"
+	      }
+	    }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "left"
+	      }
+	    }, /*#__PURE__*/React.createElement("input", {
+	      type: "checkbox",
+	      id: "adventure",
+	      name: "adventure",
+	      value: "1"
+	    }))), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "right"
+	      }
+	    }, "Specialist:")), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "left"
+	      }
+	    }, /*#__PURE__*/React.createElement(WizardSpecialist, null))), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "right"
+	      }
+	    }, "Restricted Schools (if any):")), /*#__PURE__*/React.createElement(Grid, {
+	      size: 6
+	    }, /*#__PURE__*/React.createElement(Typography, {
+	      sx: {
+	        textAlign: "left"
+	      }
+	    }, /*#__PURE__*/React.createElement(WizardRestricted, null)))), /*#__PURE__*/React.createElement(GenGems1, null))));
 	  }
 	}
 

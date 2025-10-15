@@ -20,66 +20,57 @@ const style = {
   maxHeight: '80%',
 };
 
-export default function GenArt3(props) {
-  const { source } = props;
+export default function GenSpecial3({ title, API, amount }) {
+  amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getArt(source);
+    getSpecials(API, amount);
   }
   const handleClose = () => {
     setOpen(false);
-    setArt(null);
+    setSpecials(null);
   };
 
-  const [arts, setArt] = React.useState(null);
+  const [specials, setSpecials] = React.useState(null);
 
-  const getArt = async (source) => {
-    const artData = await callAPI(source);
-    setArt(artData);
+  const getSpecials = async (API, amount) => {
+    const data = await callAPI(API, amount);
+    setSpecials(data);
     setOpen(true);
   };
 
-  const updateArt = async (indexToUpdate, newValue) => {
-    setArt(
-      arts.map((item, index) =>
+  const updateSpecial = async (indexToUpdate, newValue) => {
+    setSpecials(
+      specials.map((item, index) =>
         index === indexToUpdate ? newValue : item
       )
     );
   };
 
-  async function callAPI(source, amount = 0) {
-    const elem = document.getElementById(source);
-    if (elem.value) {
-      const newAmount = parseInt(elem.value);
-
-      if (amount === 0) {
-        amount = newAmount;
-      }
-    }
-
-    let response = await fetch(`http://localhost:8080/tools2/api/art.php?amount=${amount}`);
+  async function callAPI(API, amount) {
+    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
     return await response.json();
   }
 
-  async function replaceArt({ source, idx }) {
-    let newArt = await callAPI(source, 1);
-    updateArt(idx, newArt[0]);
+  async function replaceSpecial({ API, idx }) {
+    let data = await callAPI(API, 1);
+    updateSpecial(idx, data[0]);
   }
 
-  function ArtList({ source, arts }) {
+  function SpecialsList({ API, specials }) {
     return (
       <div>
-        {arts.map((art, idx) => (
-          <div><span>{art}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceArt({ source, idx })} /></div>
+        {specials.map((special, idx) => (
+          <div><span id={`span-${idx}`}>{special}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpecial({ API, idx })} /></div>
         ))}
       </div>
     );
   }
-
+  
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Generate Artwork</Button>
-      {arts && <Modal
+      <Button onClick={handleOpen}>Generate {title}</Button>
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -95,10 +86,10 @@ export default function GenArt3(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Artwork<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getArt(source)} />
+            {title}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpecials(API, amount)} />
           </Typography>
           <Typography>
-            <ArtList source={source} arts={arts} />
+            <SpecialsList API={API} specials={specials} />
           </Typography>
         </Box>
       </Modal>}

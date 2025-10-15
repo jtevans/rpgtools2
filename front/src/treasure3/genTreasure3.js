@@ -5,9 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
-import GenGems3 from '../baubles3/genGems3';
-import GenArt3 from '../baubles3/genArt3';
-import GenMundane3 from '../baubles3/genMundane3';
+import GenSpecial3 from '../baubles3/genSpecial3';
 import GenMagicItems3 from '../magicItems3/genMagicItems3';
 
 const style = {
@@ -25,17 +23,17 @@ const style = {
 };
 
 async function callAPI() {
-  const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value)));
-  const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value)));
-  const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value)));
-  const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value)));
-  const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value)));
+  const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value || 0)));
+  const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value || 0)));
+  const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value || 0)));
+  const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value || 0)));
+  const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value || 0)));
 
-  const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value)));
-  const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value)));
-  const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value)));
-  const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value)));
-  const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value)));
+  const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value || 0)));
+  const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value || 0)));
+  const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value || 0)));
+  const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value || 0)));
+  const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value || 0)));
 
   let args = '';
   if (treasure3_cr0 !== 0 && treasure3_q0 !== 0) {
@@ -62,58 +60,6 @@ async function callAPI() {
   return await response.json();
 }
 
-async function replaceTreasure({ source, key }) {
-  let newTreasure = await callAPI();
-  document.getElementById(`span-${key}`).innerHTML = `${key}: ${newTreasure[key]}`;
-  if (source !== '') {
-    document.getElementById(source).value = newTreasure[key];
-  }
-}
-
-function TreasureList({ treasure }) {
-  let totalTreasure = 0;
-  Object.keys(treasure).forEach(function (key) {
-    totalTreasure += treasure[key];    
-  });
-
-  return (
-    <div>
-      {totalTreasure === 0 ? 'No Treasure' : Object.keys(treasure).map(function (key) {
-        let addButton = <span></span>;
-        let addForm = <input type="hidden" id={`treasure3-${key}`} value={treasure[key]} />;
-        let source = '';
-        if (key === 'Gems' && treasure[key] > 0) {
-          source = 'treasure3-Gems';
-          addButton = <GenGems3 source={`${source}`} />
-        }
-        if (key === 'Art' && treasure[key] > 0) {
-          source = 'treasure3-Art';
-          addButton = <GenArt3 source={`${source}`} />
-        }
-        if (key === 'Mundane' && treasure[key] > 0) {
-          source = 'treasure3-Mundane';
-          addButton = <GenMundane3 source={`${source}`} />
-        }
-        if (key === 'Minor' && treasure[key] > 0) {
-          source = 'treasure3-Minor';
-        }
-        if (key === 'Medium' && treasure[key] > 0) {
-          source = 'treasure3-Medium';
-        }
-        if (key === 'Major' && treasure[key] > 0) {
-          source = 'treasure3-Major';
-        }
-
-        return <div>
-          <span id={`span-${key}`}>{key}: {treasure[key]}</span>
-          <ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceTreasure({ source, key })} />
-          <br />{addButton}{addForm}        
-        </div>
-      })}
-    </div>
-  );
-}
-
 export default function GenTreasure3() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -121,21 +67,89 @@ export default function GenTreasure3() {
   }
   const handleClose = () => {
     setOpen(false);
-    setTreasure(null);
   };
 
-  const [treasure, setTreasure] = React.useState(null);
+  const [cp3, setCP3] = React.useState(0);
+  const [sp3, setSP3] = React.useState(0);
+  const [gp3, setGP3] = React.useState(0);
+  const [pp3, setPP3] = React.useState(0);
+  const [gems3, setGems3] = React.useState(0);
+  const [art3, setArt3] = React.useState(0);
+  const [mundane3, setMundane3] = React.useState(0);
+  const [minor3, setMinor3] = React.useState(0);
+  const [medium3, setMedium3] = React.useState(0);
+  const [major3, setMajor3] = React.useState(0);
+
+
+  async function replaceTreasureItem({ type }) {
+    let newTreasure = await callAPI();
+    if (type === 'CP') {
+      setCP3(newTreasure['CP']);
+    }
+    else if (type === 'SP') {
+      setSP3(newTreasure['SP']);
+    }
+    else if (type === 'GP') {
+      setGP3(newTreasure['GP']);
+    }
+    else if (type === 'PP') {
+      setPP3(newTreasure['PP']);
+    }
+    else if (type === 'Gems') {
+      setGems3(newTreasure['Gems']);
+    }
+    else if (type === 'Art') {
+      setArt3(newTreasure['Art']);
+    }
+    else if (type === 'Mundane') {
+      setMundane3(newTreasure['Mundane']);
+    }
+    else if (type === 'Minor') {
+      setMinor3(newTreasure['Minor']);
+    }
+    else if (type === 'Medium') {
+      setMedium3(newTreasure['Medium']);
+    }
+    else if (type === 'Major') {
+      setMajor3(newTreasure['Major']);
+    }
+  }
+
+  function TreasureItem3({ type, amount }) {
+    let genButton = null;
+    if (type === 'Gems' && amount > 0) {
+      genButton = <GenSpecial3 title={'Gems'} API={'gems3.php'} amount={amount} />;
+    }
+    else if (type === 'Art' && amount > 0) {
+      genButton = <GenSpecial3 title="Art" API="art.php" amount={amount} />;
+    }
+    else if (type === 'Mundane' && amount > 0) {
+      genButton = <GenSpecial3 title="Mundane Items" API="mundane.php" amount={amount} />;
+    }
+    return <div>
+      <span>{type}: {amount}</span>{genButton}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceTreasureItem({ type })} />
+    </div>
+  }
 
   const getTreasure = async () => {
     const treasureData = await callAPI();
-    setTreasure(treasureData);
+    setCP3(treasureData['CP']);
+    setSP3(treasureData['SP']);
+    setGP3(treasureData['GP']);
+    setPP3(treasureData['PP']);
+    setGems3(treasureData['Gems']);
+    setArt3(treasureData['Art']);
+    setMundane3(treasureData['Mundane']);
+    setMinor3(treasureData['Minor']);
+    setMedium3(treasureData['Medium']);
+    setMajor3(treasureData['Major']);
     setOpen(true);
   };
 
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Treasure</Button>
-      {treasure && <Modal
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -153,8 +167,17 @@ export default function GenTreasure3() {
             Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTreasure()} />
           </Typography>
           <Typography>
-            <TreasureList treasure={treasure} />
-            {treasure['Minor'] + treasure['Medium'] + treasure['Major'] > 0 ? <div><GenMagicItems3 sourcePrefix="treasure3" /></div> : <div></div>}
+            <TreasureItem3 type={'CP'} amount={cp3} />
+            <TreasureItem3 type={'SP'} amount={sp3} />
+            <TreasureItem3 type={'GP'} amount={gp3} />
+            <TreasureItem3 type={'PP'} amount={pp3} />
+            <TreasureItem3 type={'Gems'} amount={gems3} />
+            <TreasureItem3 type={'Art'} amount={art3} />
+            <TreasureItem3 type={'Mundane'} amount={mundane3} />
+            <TreasureItem3 type={'Minor'} amount={minor3} />
+            <TreasureItem3 type={'Medium'} amount={medium3} />
+            <TreasureItem3 type={'Major'} amount={major3} />
+            {minor3 + medium3 + major3 > 0 ? <div><GenMagicItems3 minorAmount={minor3} mediumAmount={medium3} majorAmount={major3} /></div> : <div></div>}
           </Typography>
         </Box>
       </Modal>}
