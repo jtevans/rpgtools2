@@ -30921,7 +30921,7 @@ export default theme;`;
 	    args += `&cr4=${treasure3_cr4}&q4=${treasure3_q4}`;
 	  }
 	  if (args === '') {
-	    return '[]';
+	    return [];
 	  }
 	  args = args.slice(1);
 	  let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
@@ -44199,71 +44199,27 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	async function callAPI() {
-	  const treasure1_0 = document.getElementById('treasure1_0').value;
-	  const treasure1_1 = document.getElementById('treasure1_1').value;
-	  const treasure1_2 = document.getElementById('treasure1_2').value;
-	  const treasure1_3 = document.getElementById('treasure1_3').value;
-	  const treasure1_4 = document.getElementById('treasure1_4').value;
-	  const treasure1_5 = document.getElementById('treasure1_5').value;
-	  const treasure1_6 = document.getElementById('treasure1_6').value;
-	  const treasure1_7 = document.getElementById('treasure1_7').value;
-	  const treasure1_8 = document.getElementById('treasure1_8').value;
-	  const treasure1_9 = document.getElementById('treasure1_9').value;
-	  const treasure1_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q0').value)));
-	  const treasure1_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q1').value)));
-	  const treasure1_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q2').value)));
-	  const treasure1_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q3').value)));
-	  const treasure1_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q4').value)));
-	  const treasure1_q5 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q5').value)));
-	  const treasure1_q6 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q6').value)));
-	  const treasure1_q7 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q7').value)));
-	  const treasure1_q8 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q8').value)));
-	  const treasure1_q9 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q9').value)));
+	async function callAPI(treasureInput) {
 	  let args = '';
-	  if (treasure1_0 !== '' && treasure1_q0 !== 0) {
-	    args += `&type0=${treasure1_0}&q0=${treasure1_q0}`;
-	  }
-	  if (treasure1_1 !== '' && treasure1_q1 !== 0) {
-	    args += `&type1=${treasure1_1}&q1=${treasure1_q1}`;
-	  }
-	  if (treasure1_2 !== '' && treasure1_q2 !== 0) {
-	    args += `&type2=${treasure1_2}&q2=${treasure1_q2}`;
-	  }
-	  if (treasure1_3 !== '' && treasure1_q3 !== 0) {
-	    args += `&type3=${treasure1_3}&q3=${treasure1_q3}`;
-	  }
-	  if (treasure1_4 !== '' && treasure1_q4 !== 0) {
-	    args += `&type4=${treasure1_4}&q4=${treasure1_q4}`;
-	  }
-	  if (treasure1_5 !== '' && treasure1_q5 !== 0) {
-	    args += `&type5=${treasure1_5}&q5=${treasure1_q5}`;
-	  }
-	  if (treasure1_6 !== '' && treasure1_q6 !== 0) {
-	    args += `&type6=${treasure1_6}&q6=${treasure1_q6}`;
-	  }
-	  if (treasure1_7 !== '' && treasure1_q7 !== 0) {
-	    args += `&type7=${treasure1_7}&q7=${treasure1_q7}`;
-	  }
-	  if (treasure1_8 !== '' && treasure1_q8 !== 0) {
-	    args += `&type8=${treasure1_8}&q8=${treasure1_q8}`;
-	  }
-	  if (treasure1_9 !== '' && treasure1_q9 !== 0) {
-	    args += `&type9=${treasure1_9}&q9=${treasure1_q9}`;
-	  }
+	  treasureInput.forEach((choice, idx) => {
+	    if (choice.treasureType != '' && choice.quantity > 0) {
+	      args += `&type${idx}=${choice.treasureType}&q${idx}=${choice.quantity}`;
+	    }
+	  });
 	  if (args === '') {
-	    return '[]';
+	    return [];
 	  }
-	  args = args.slice(1);
+	  args = args.slice(1); // Remove the leading '&'
 	  let response = await fetch(`http://localhost:8080/tools2/api/treasure1.php?${args}`);
 	  return await response.json();
 	}
 	async function replaceTreasure(_ref) {
 	  let {
+	    treasureInput,
 	    source,
 	    key
 	  } = _ref;
-	  let newTreasure = await callAPI();
+	  let newTreasure = await callAPI(treasureInput);
 	  let display = key;
 	  if (key === 'Any') {
 	    display = 'Any Magic Item';
@@ -44293,6 +44249,7 @@ export default theme;`;
 	}
 	function TreasureList(_ref2) {
 	  let {
+	    treasureInput,
 	    treasure
 	  } = _ref2;
 	  let totalTreasure = 0;
@@ -44356,6 +44313,7 @@ export default theme;`;
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceTreasure({
+	        treasureInput,
 	        source,
 	        key
 	      })
@@ -44364,24 +44322,27 @@ export default theme;`;
 	    }, addButton, addForm));
 	  }));
 	}
-	function GenTreasure1() {
+	function GenTreasure1(props) {
+	  const {
+	    treasureInput
+	  } = props;
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getTreasure();
+	    getTreasure(treasureInput);
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
 	    setTreasure(null);
 	  };
 	  const [treasure, setTreasure] = reactExports.useState(null);
-	  const getTreasure = async () => {
-	    const treasureData = await callAPI();
+	  const getTreasure = async treasureInput => {
+	    const treasureData = await callAPI(treasureInput);
 	    setTreasure(treasureData);
 	    setOpen(true);
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Treasure"), treasure && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate Treasure"), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -44406,205 +44367,238 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getTreasure()
+	    onClick: () => getTreasure(treasureInput)
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TreasureList, {
+	    treasureInput: treasureInput,
 	    treasure: treasure
 	  }), treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + +treasure['AllExceptPotionScroll'] + +treasure['MiscMagic'] > 0 ? /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(GenMagicItems1, {
 	    source: "treasure1"
 	  })) : /*#__PURE__*/reactExports.createElement("div", null)))));
 	}
 
-	const handleAlphaSelectChange = id => selectedOption => {
-	  let elem = document.getElementById(id);
-	  if (elem) {
-	    if (selectedOption) {
-	      elem.value = selectedOption.value;
-	    } else {
-	      elem.value = '';
+	function Treasure1() {
+	  const [treasureData, setTreasureData] = React.useState([{
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }, {
+	    treasureType: '',
+	    quantity: 0
+	  }]);
+	  const handleQuantityChange = id => event => {
+	    setTreasureData(prevFormData => prevFormData.map((oldTreasure, idx) => idx === id ? {
+	      ...oldTreasure,
+	      quantity: parseInt(event.target.value) || 0
+	    } : oldTreasure));
+	  };
+	  const handleTypeChange = id => selectedOption => {
+	    setTreasureData(prevFormData => prevFormData.map((oldTreasure, idx) => idx === id ? {
+	      ...oldTreasure,
+	      treasureType: selectedOption.value
+	    } : oldTreasure));
+	  };
+	  const TypeSelect = targetID => {
+	    const id = parseInt(targetID.id.split('_')[1]);
+	    let options = [];
+	    for (let i = 65; i <= 90; i++) {
+	      const char = String.fromCharCode(i);
+	      const obj = {
+	        value: char,
+	        label: char
+	      };
+	      options.push(obj);
 	    }
-	  }
-	};
-	const AlphaSelect = targetID => {
-	  const id = targetID.id;
-	  let options = [];
-	  for (let i = 65; i <= 90; i++) {
-	    const char = String.fromCharCode(i);
-	    const obj = {
-	      value: char,
-	      label: char
-	    };
-	    options.push(obj);
-	  }
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	    onChange: handleAlphaSelectChange(id),
-	    options: options,
-	    isClearable: true,
-	    placeholder: "Pick Treasure Type",
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === treasureData[id].treasureType;
+	      }),
+	      onChange: handleTypeChange(id),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Pick Treasure Type",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
 	    sx: {
-	      width: "30%",
-	      height: "16pt"
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "1st Edition AD&D Treasure"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
 	    }
-	  }), /*#__PURE__*/React.createElement("input", {
-	    id: `${id}`,
-	    type: "hidden",
-	    value: ""
-	  }));
-	};
-	class Treasure1 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined"
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "1st Edition AD&D Treasure"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      container: true,
-	      spacing: 2
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "center"
-	      },
-	      variant: "h6",
-	      component: "h2"
-	    }, "Treasure Type")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "center"
-	      },
-	      variant: "h6",
-	      component: "h2"
-	    }, "Quantity (1-200)")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_0"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q0",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_1"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q1",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_2"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q2",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_3"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q3",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_4"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q4",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_5"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q5",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_6"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q6",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_7"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q7",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_8"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q8",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(AlphaSelect, {
-	      id: "treasure1_9"
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure1_q9",
-	      size: "small",
-	      sx: {
-	        width: "30%"
-	      }
-	    }))), /*#__PURE__*/React.createElement(GenTreasure1, null)));
-	  }
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "Treasure Type")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "Quantity (1-200)")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_0"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(0)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_1"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(1)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_2"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(2)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_3"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(3)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_4"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(4)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_5"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(5)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_6"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(6)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_7"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(7)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_8"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(8)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(TypeSelect, {
+	    id: "type_9"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(9)
+	  }))), /*#__PURE__*/React.createElement(GenTreasure1, {
+	    treasureInput: treasureData
+	  })));
 	}
 
 	const style = {

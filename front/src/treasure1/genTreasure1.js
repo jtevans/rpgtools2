@@ -23,71 +23,24 @@ const style = {
   maxHeight: '80%',
 };
 
-async function callAPI() {
-  const treasure1_0 = document.getElementById('treasure1_0').value;
-  const treasure1_1 = document.getElementById('treasure1_1').value;
-  const treasure1_2 = document.getElementById('treasure1_2').value;
-  const treasure1_3 = document.getElementById('treasure1_3').value;
-  const treasure1_4 = document.getElementById('treasure1_4').value;
-  const treasure1_5 = document.getElementById('treasure1_5').value;
-  const treasure1_6 = document.getElementById('treasure1_6').value;
-  const treasure1_7 = document.getElementById('treasure1_7').value;
-  const treasure1_8 = document.getElementById('treasure1_8').value;
-  const treasure1_9 = document.getElementById('treasure1_9').value;
-
-  const treasure1_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q0').value)));
-  const treasure1_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q1').value)));
-  const treasure1_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q2').value)));
-  const treasure1_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q3').value)));
-  const treasure1_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q4').value)));
-  const treasure1_q5 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q5').value)));
-  const treasure1_q6 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q6').value)));
-  const treasure1_q7 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q7').value)));
-  const treasure1_q8 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q8').value)));
-  const treasure1_q9 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure1_q9').value)));
-
+async function callAPI(treasureInput) {
   let args = '';
-  if (treasure1_0 !== '' && treasure1_q0 !== 0) {
-    args += `&type0=${treasure1_0}&q0=${treasure1_q0}`
-  }
-  if (treasure1_1 !== '' && treasure1_q1 !== 0) {
-    args += `&type1=${treasure1_1}&q1=${treasure1_q1}`
-  }
-  if (treasure1_2 !== '' && treasure1_q2 !== 0) {
-    args += `&type2=${treasure1_2}&q2=${treasure1_q2}`
-  }
-  if (treasure1_3 !== '' && treasure1_q3 !== 0) {
-    args += `&type3=${treasure1_3}&q3=${treasure1_q3}`
-  }
-  if (treasure1_4 !== '' && treasure1_q4 !== 0) {
-    args += `&type4=${treasure1_4}&q4=${treasure1_q4}`
-  }
-  if (treasure1_5 !== '' && treasure1_q5 !== 0) {
-    args += `&type5=${treasure1_5}&q5=${treasure1_q5}`
-  }
-  if (treasure1_6 !== '' && treasure1_q6 !== 0) {
-    args += `&type6=${treasure1_6}&q6=${treasure1_q6}`
-  }
-  if (treasure1_7 !== '' && treasure1_q7 !== 0) {
-    args += `&type7=${treasure1_7}&q7=${treasure1_q7}`
-  }
-  if (treasure1_8 !== '' && treasure1_q8 !== 0) {
-    args += `&type8=${treasure1_8}&q8=${treasure1_q8}`
-  }
-  if (treasure1_9 !== '' && treasure1_q9 !== 0) {
-    args += `&type9=${treasure1_9}&q9=${treasure1_q9}`
-  }
+  treasureInput.forEach((choice, idx) => {
+    if (choice.treasureType != '' && choice.quantity > 0) {
+      args += `&type${idx}=${choice.treasureType}&q${idx}=${choice.quantity}`;
+    }
+  });
 
   if (args === '') {
-    return '[]';
+    return [];
   }
-  args = args.slice(1);
+  args = args.slice(1); // Remove the leading '&'
   let response = await fetch(`http://localhost:8080/tools2/api/treasure1.php?${args}`);
   return await response.json();
 }
 
-async function replaceTreasure({ source, key }) {
-  let newTreasure = await callAPI();
+async function replaceTreasure({ treasureInput, source, key }) {
+  let newTreasure = await callAPI(treasureInput);
 
   let display = key;
   if (key === 'Any') {
@@ -118,7 +71,7 @@ async function replaceTreasure({ source, key }) {
   }
 }
 
-function TreasureList({ treasure }) {
+function TreasureList({ treasureInput, treasure }) {
   let totalTreasure = 0;
   Object.keys(treasure).forEach(function (key) {
     totalTreasure += treasure[key];    
@@ -170,7 +123,7 @@ function TreasureList({ treasure }) {
 
         return <div>
           <span id={`span-treasure1-${key}`}>{display}: {treasure[key]}</span>
-          <ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceTreasure({ source, key })} />
+          <ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceTreasure({ treasureInput, source, key })} />
           <div id={`addButton-${key}`}>{addButton}{addForm}</div>
         </div>
       })}
@@ -178,10 +131,11 @@ function TreasureList({ treasure }) {
   );
 }
 
-export default function GenTreasure1() {
+export default function GenTreasure1(props) {
+  const { treasureInput } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getTreasure();
+    getTreasure(treasureInput);
   }
   const handleClose = () => {
     setOpen(false);
@@ -190,8 +144,8 @@ export default function GenTreasure1() {
 
   const [treasure, setTreasure] = React.useState(null);
 
-  const getTreasure = async () => {
-    const treasureData = await callAPI();
+  const getTreasure = async (treasureInput) => {
+    const treasureData = await callAPI(treasureInput);
     setTreasure(treasureData);
     setOpen(true);
   };
@@ -199,7 +153,7 @@ export default function GenTreasure1() {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Treasure</Button>
-      {treasure && <Modal
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -214,10 +168,10 @@ export default function GenTreasure1() {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTreasure()} />
+            Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTreasure(treasureInput)} />
           </Typography>
           <Typography>
-            <TreasureList treasure={treasure} />
+            <TreasureList treasureInput={treasureInput} treasure={treasure} />
             {treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + + treasure['AllExceptPotionScroll'] + + treasure['MiscMagic'] > 0 ? <div><GenMagicItems1 source="treasure1" /></div> : <div></div>}
           </Typography>
         </Box>

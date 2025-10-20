@@ -53,7 +53,7 @@ async function callAPI() {
   }
 
   if (args === '') {
-    return '[]';
+    return [];
   }
   args = args.slice(1);
   let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
