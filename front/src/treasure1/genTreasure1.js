@@ -5,8 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
-import GenGems1 from '../baubles1/genGems1';
-import GenJewelry1 from '../baubles1/genJewelry1';
+import GenSpecial1 from '../baubles1/genSpecial1';
 import GenMagicItems1 from '../magicItems1/genMagicItems1';
 
 const style = {
@@ -86,11 +85,11 @@ function TreasureList({ treasureInput, treasure }) {
         let display = key;
         if (key === 'Gems' && treasure[key] > 0) {
           source = 'treasure1-Gems';
-          addButton = <GenGems1 source={`${source}`} />
+          addButton = <GenSpecial1 API={'gems1.php'} title={'Gems'} amount={ treasure[key] } />
         }
         if (key === 'Jewelry' && treasure[key] > 0) {
           source = 'treasure1-Jewelry';
-          addButton = <GenJewelry1 source={`${source}`} />
+          addButton = <GenSpecial1 API={'jewelry.php'} title={'Jewelry'} amount={treasure[key]} />
         }
         if (key === 'Any') {
           source = 'treasure1-Any';

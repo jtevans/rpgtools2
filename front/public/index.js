@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$i(options) {
+	function style$h(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$h(props, keys) {
+	function style$g(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$h(props, marginKeys);
+	  return style$g(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$h(props, paddingKeys);
+	  return style$g(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$i({
+	  return style$h({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$i({
+	const gridColumn = style$h({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$i({
+	const gridRow = style$h({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$i({
+	const gridAutoFlow = style$h({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$i({
+	const gridAutoColumns = style$h({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$i({
+	const gridAutoRows = style$h({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$i({
+	const gridTemplateColumns = style$h({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$i({
+	const gridTemplateRows = style$h({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$i({
+	const gridTemplateAreas = style$h({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$i({
+	const gridArea = style$h({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$i({
+	const color = style$h({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$i({
+	const bgcolor = style$h({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$i({
+	const backgroundColor = style$h({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$i({
+	const width = style$h({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$i({
+	const minWidth = style$h({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$i({
+	const height = style$h({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$i({
+	const maxHeight = style$h({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$i({
+	const minHeight = style$h({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$i({
+	style$h({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$i({
+	style$h({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$i({
+	const boxSizing = style$h({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$g = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$f = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$e = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$d = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$c = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$b = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$a = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$9 = {
+	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$8
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,7 +30625,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$8 = {
+	const style$7 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30704,7 +30704,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$7
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30729,7 +30729,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$7 = {
+	const style$6 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30834,7 +30834,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
+	    sx: style$6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30880,7 +30880,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$6 = {
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31030,7 +31030,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38683,7 +38683,7 @@ export default theme;`;
 
 	var parse = HTMLReactParser.default || HTMLReactParser;
 
-	const style$5 = {
+	const style$4 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38739,7 +38739,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38763,7 +38763,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$4 = {
+	const style$3 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38885,7 +38885,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$3
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -43745,6 +43745,13 @@ export default theme;`;
 	    sx: {
 	      width: "30%",
 	      height: "12pt"
+	    },
+	    menuPortalTarget: document.body,
+	    styles: {
+	      menuPortal: base => ({
+	        ...base,
+	        zIndex: 9999
+	      })
 	    }
 	  }), /*#__PURE__*/React.createElement("input", {
 	    id: "magicitem1-specificType",
@@ -43933,113 +43940,6 @@ export default theme;`;
 	  }
 	}
 
-	const style$3 = {
-	  position: 'absolute',
-	  top: '50%',
-	  left: '50%',
-	  transform: 'translate(-50%, -50%)',
-	  width: '75%',
-	  bgcolor: 'background.paper',
-	  border: '2px solid #000',
-	  boxShadow: 24,
-	  p: 4,
-	  overflow: 'auto',
-	  maxHeight: '80%'
-	};
-	function GenGems1$1(props) {
-	  const {
-	    source
-	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
-	  const handleOpen = () => {
-	    getGems(source);
-	  };
-	  const handleClose = () => {
-	    setOpen(false);
-	    setGems(null);
-	  };
-	  const [gems, setGems] = reactExports.useState(null);
-	  const getGems = async source => {
-	    const gemsData = await callAPI(source);
-	    setGems(gemsData);
-	    setOpen(true);
-	  };
-	  const updateGem = async (indexToUpdate, newValue) => {
-	    setGems(gems.map((item, index) => index === indexToUpdate ? newValue : item));
-	  };
-	  async function callAPI(source) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	    const elem = document.getElementById(source);
-	    if (elem.value) {
-	      const newAmount = parseInt(elem.value);
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/gems1.php?amount=${amount}`);
-	    return await response.json();
-	  }
-	  async function replaceGem(_ref) {
-	    let {
-	      source,
-	      idx
-	    } = _ref;
-	    let newGem = await callAPI(source, 1);
-	    updateGem(idx, newGem[0]);
-	  }
-	  function GemsList(_ref2) {
-	    let {
-	      source,
-	      gems
-	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, gems.map((gem, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, gem), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	      sx: {
-	        paddingLeft: "5px",
-	        fontSize: "9pt"
-	      },
-	      onClick: () => replaceGem({
-	        source,
-	        idx
-	      })
-	    }))));
-	  }
-	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
-	    onClick: handleOpen
-	  }, "Generate Gems"), gems && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
-	    onClose: (event, reason) => {
-	    },
-	    disableEscapeKeyDown: true,
-	    disableBackdropClick: true,
-	    sx: {
-	      maxHeight: "80%"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
-	  }, /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
-	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "center"
-	    },
-	    variant: "h5",
-	    component: "h2"
-	  }, "Gems", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "10pt"
-	    },
-	    onClick: () => getGems(source)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(GemsList, {
-	    source: source,
-	    gems: gems
-	  })))));
-	}
-
 	const style$2 = {
 	  position: 'absolute',
 	  top: '50%',
@@ -44053,66 +43953,63 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	function GenJewelry1(props) {
-	  const {
-	    source
-	  } = props;
+	function GenSpecial1(_ref) {
+	  let {
+	    title,
+	    API,
+	    amount
+	  } = _ref;
+	  amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getJewelry(source);
+	    getSpecials(API, amount);
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
-	    setJewlery(null);
+	    setSpecials(null);
 	  };
-	  const [jewlery, setJewlery] = reactExports.useState(null);
-	  const getJewelry = async source => {
-	    const jewleryData = await callAPI(source);
-	    setJewlery(jewleryData);
+	  const [specials, setSpecials] = reactExports.useState(null);
+	  const getSpecials = async (API, amount) => {
+	    const data = await callAPI(API, amount);
+	    setSpecials(data);
 	    setOpen(true);
 	  };
-	  const updateJewelry = async (indexToUpdate, newValue) => {
-	    setJewlery(jewlery.map((item, index) => index === indexToUpdate ? newValue : item));
+	  const updateSpecial = async (indexToUpdate, newValue) => {
+	    setSpecials(specials.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(source) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	    const elem = document.getElementById(source);
-	    if (elem.value) {
-	      const newAmount = parseInt(elem.value);
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/jewelry.php?amount=${amount}`);
+	  async function callAPI(API, amount) {
+	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
 	    return await response.json();
 	  }
-	  async function replaceJewelry(_ref) {
+	  async function replaceSpecial(_ref2) {
 	    let {
-	      source,
+	      API,
 	      idx
-	    } = _ref;
-	    let newJewelry = await callAPI(source, 1);
-	    updateJewelry(idx, newJewelry[0]);
-	  }
-	  function JewelryList(_ref2) {
-	    let {
-	      source,
-	      jewlery
 	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, jewlery.map((jewleryText, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, jewleryText), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    let data = await callAPI(API, 1);
+	    updateSpecial(idx, data[0]);
+	  }
+	  function SpecialsList(_ref3) {
+	    let {
+	      API,
+	      specials
+	    } = _ref3;
+	    return /*#__PURE__*/reactExports.createElement("div", null, specials.map((special, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
+	      id: `span-${idx}`
+	    }, special), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
-	      onClick: () => replaceJewelry({
-	        source,
+	      onClick: () => replaceSpecial({
+	        API,
 	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Jewlery"), jewlery && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate ", title), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -44135,55 +44032,76 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Jewlery", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, title, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getJewelry(source)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(JewelryList, {
-	    source: source,
-	    jewlery: jewlery
+	    onClick: () => getSpecials(API, amount)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpecialsList, {
+	    API: API,
+	    specials: specials
 	  })))));
 	}
 
-	class Baubles1 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined",
-	      sx: {
-	        height: 'fit-content'
-	      }
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "1st Edition AD&D Baubles"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "Gems1",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenGems1$1, {
-	      source: "Gems1"
-	    })), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "Jewelry1",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenJewelry1, {
-	      source: "Jewelry1"
-	    }))));
-	  }
+	function Baubles1() {
+	  const [bauble1Data, setBauble1Data] = React.useState({
+	    Gems1: 0,
+	    Jewelry1: 0
+	  });
+	  const handleChange = event => {
+	    let {
+	      name,
+	      value
+	    } = event.target;
+	    value = parseInt(value ?? 0);
+	    setBauble1Data(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "1st Edition AD&D Baubles"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "Gems1",
+	    name: "Gems1",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenSpecial1, {
+	    title: 'Gems',
+	    API: 'gems1.php',
+	    amount: bauble1Data.Gems1
+	  })), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "Jewelry1",
+	    name: "Jewelry1",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenSpecial1, {
+	    title: 'Jewelry',
+	    API: 'jewelry.php',
+	    amount: bauble1Data.Jewelry1
+	  }))));
 	}
 
 	const style$1 = {
@@ -44267,14 +44185,18 @@ export default theme;`;
 	    let display = key;
 	    if (key === 'Gems' && treasure[key] > 0) {
 	      source = 'treasure1-Gems';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenGems1$1, {
-	        source: `${source}`
+	      addButton = /*#__PURE__*/reactExports.createElement(GenSpecial1, {
+	        API: 'gems1.php',
+	        title: 'Gems',
+	        amount: treasure[key]
 	      });
 	    }
 	    if (key === 'Jewelry' && treasure[key] > 0) {
 	      source = 'treasure1-Jewelry';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenJewelry1, {
-	        source: `${source}`
+	      addButton = /*#__PURE__*/reactExports.createElement(GenSpecial1, {
+	        API: 'jewelry.php',
+	        title: 'Jewelry',
+	        amount: treasure[key]
 	      });
 	    }
 	    if (key === 'Any') {
@@ -44442,6 +44364,13 @@ export default theme;`;
 	      sx: {
 	        width: "30%",
 	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
 	      }
 	    }));
 	  };
@@ -44772,6 +44701,13 @@ export default theme;`;
 	    sx: {
 	      width: "30%",
 	      height: "16pt"
+	    },
+	    menuPortalTarget: document.body,
+	    styles: {
+	      menuPortal: base => ({
+	        ...base,
+	        zIndex: 9999
+	      })
 	    }
 	  }), /*#__PURE__*/React.createElement("input", {
 	    id: "wizardLevel",
@@ -44796,6 +44732,13 @@ export default theme;`;
 	    sx: {
 	      width: "30%",
 	      height: "16pt"
+	    },
+	    menuPortalTarget: document.body,
+	    styles: {
+	      menuPortal: base => ({
+	        ...base,
+	        zIndex: 9999
+	      })
 	    }
 	  }), /*#__PURE__*/React.createElement("input", {
 	    id: "wizardIntelligence",
@@ -44812,6 +44755,13 @@ export default theme;`;
 	    sx: {
 	      width: "30%",
 	      height: "16pt"
+	    },
+	    menuPortalTarget: document.body,
+	    styles: {
+	      menuPortal: base => ({
+	        ...base,
+	        zIndex: 9999
+	      })
 	    }
 	  }), /*#__PURE__*/React.createElement("input", {
 	    id: "wizardSpecialist",
@@ -44827,6 +44777,13 @@ export default theme;`;
 	    sx: {
 	      width: "30%",
 	      height: "16pt"
+	    },
+	    menuPortalTarget: document.body,
+	    styles: {
+	      menuPortal: base => ({
+	        ...base,
+	        zIndex: 9999
+	      })
 	    }
 	  }), /*#__PURE__*/React.createElement("input", {
 	    id: "wizardRestricted",

@@ -86,6 +86,8 @@ export default function Treasure1() {
         isClearable={true}
         placeholder="Pick Treasure Type"
         sx={{ width: "30%", height: "16pt" }}
+        menuPortalTarget={document.body}
+        styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}
       />
     </div>;
   }

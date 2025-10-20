@@ -20,66 +20,57 @@ const style = {
   maxHeight: '80%',
 };
 
-export default function GenJewelry1(props) {
-  const { source } = props;
+export default function GenSpecial1({ title, API, amount }) {
+  amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getJewelry(source);
+    getSpecials(API, amount);
   }
   const handleClose = () => {
     setOpen(false);
-    setJewlery(null);
+    setSpecials(null);
   };
 
-  const [jewlery, setJewlery] = React.useState(null);
+  const [specials, setSpecials] = React.useState(null);
 
-  const getJewelry = async (source) => {
-    const jewleryData = await callAPI(source);
-    setJewlery(jewleryData);
+  const getSpecials = async (API, amount) => {
+    const data = await callAPI(API, amount);
+    setSpecials(data);
     setOpen(true);
   };
 
-  const updateJewelry = async (indexToUpdate, newValue) => {
-    setJewlery(
-      jewlery.map((item, index) =>
+  const updateSpecial = async (indexToUpdate, newValue) => {
+    setSpecials(
+      specials.map((item, index) =>
         index === indexToUpdate ? newValue : item
       )
     );
   };
 
-  async function callAPI(source, amount = 0) {
-    const elem = document.getElementById(source);
-    if (elem.value) {
-      const newAmount = parseInt(elem.value);
-
-      if (amount === 0) {
-        amount = newAmount;
-      }
-    }
-
-    let response = await fetch(`http://localhost:8080/tools2/api/jewelry.php?amount=${amount}`);
+  async function callAPI(API, amount) {
+    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
     return await response.json();
   }
 
-  async function replaceJewelry({ source, idx }) {
-    let newJewelry = await callAPI(source, 1);
-    updateJewelry(idx, newJewelry[0]);
+  async function replaceSpecial({ API, idx }) {
+    let data = await callAPI(API, 1);
+    updateSpecial(idx, data[0]);
   }
 
-  function JewelryList({ source, jewlery }) {
+  function SpecialsList({ API, specials }) {
     return (
       <div>
-        {jewlery.map((jewleryText, idx) => (
-          <div><span>{jewleryText}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceJewelry({ source, idx })} /></div>
+        {specials.map((special, idx) => (
+          <div><span id={`span-${idx}`}>{special}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpecial({ API, idx })} /></div>
         ))}
       </div>
     );
   }
-
+  
   return (
     <React.Fragment>
-      <Button onClick={handleOpen}>Generate Jewlery</Button>
-      {jewlery && <Modal
+      <Button onClick={handleOpen}>Generate {title}</Button>
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -95,10 +86,10 @@ export default function GenJewelry1(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Jewlery<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getJewelry(source)} />
+            {title}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpecials(API, amount)} />
           </Typography>
           <Typography>
-            <JewelryList source={source} jewlery={jewlery} />
+            <SpecialsList API={API} specials={specials} />
           </Typography>
         </Box>
       </Modal>}

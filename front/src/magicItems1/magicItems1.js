@@ -39,11 +39,21 @@ const SpecificSelect = () => {
   options.push({ value: 'wand', label: 'Wands' });
   options.push({ value: 'weapon', label: 'Weapons' });
   options.push({ value: 'weird', label: 'Weird Items' });
-  return <div><Select onChange={handleSpecificSelectChange()} options={options} isClearable={true} placeholder="Pick Category Type" sx={{ width: "30%", height: "12pt" }} /><input id="magicitem1-specificType" type="hidden" value="" /></div>;
+  return <div>
+    <Select
+      onChange={handleSpecificSelectChange()}
+      options={options}
+      isClearable={true}
+      placeholder="Pick Category Type"
+      sx={{ width: "30%", height: "12pt" }}
+      menuPortalTarget={document.body}
+      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}  
+    />
+    <input id="magicitem1-specificType" type="hidden" value="" />
+  </div>;
 }
 
 class MagicItems1 extends React.Component {
-
   render() {
     return (
       <Card variant="outlined">

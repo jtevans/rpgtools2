@@ -36,7 +36,18 @@ const WizardLevel = () => {
     const obj = { value: i, label: i };
     options.push(obj);
   }
-  return <div><Select onChange={handleSelectChange('wizardLevel')} options={options} isClearable={true} placeholder="Select Wizard Level" sx={{ width: "30%", height: "16pt" }} /><input id="wizardLevel" type="hidden" value="" /></div>;
+  return <div>
+    <Select
+      onChange={handleSelectChange('wizardLevel')}
+      options={options}
+      isClearable={true}
+      placeholder="Select Wizard Level"
+      sx={{ width: "30%", height: "16pt" }}
+      menuPortalTarget={document.body}
+      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}  
+  />
+    <input id="wizardLevel" type="hidden" value="" />
+  </div>;
 }
 
 const WizardIntelligence = () => {
@@ -45,15 +56,47 @@ const WizardIntelligence = () => {
     const obj = { value: i, label: i };
     options.push(obj);
   }
-  return <div><Select onChange={handleSelectChange('wizardIntelligence')} options={options} isClearable={true} placeholder="Select Wizard Intelligence" sx={{ width: "30%", height: "16pt" }} /><input id="wizardIntelligence" type="hidden" value="" /></div>;
+  return <div>
+    <Select
+      onChange={handleSelectChange('wizardIntelligence')}
+      options={options}
+      isClearable={true}
+      placeholder="Select Wizard Intelligence"
+      sx={{ width: "30%", height: "16pt" }}
+      menuPortalTarget={document.body}
+      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}  
+    />
+    <input id="wizardIntelligence" type="hidden" value="" />
+  </div>;
 }
 
 const WizardSpecialist = () => {
-  return <div><Select onChange={handleSelectChange('wizardSpecialist')} options={schools} isClearable={true} placeholder="Select Specialization (if any)" sx={{ width: "30%", height: "16pt" }} /><input id="wizardSpecialist" type="hidden" value="" /></div>;
+  return <div>
+    <Select
+      onChange={handleSelectChange('wizardSpecialist')}
+      options={schools}
+      isClearable={true}
+      placeholder="Select Specialization (if any)"
+      sx={{ width: "30%", height: "16pt" }}
+      menuPortalTarget={document.body}
+      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}  
+    />
+    <input id="wizardSpecialist" type="hidden" value="" />
+  </div>;
 }
 
 const WizardRestricted = () => {
-  return <div><Select multiple={true} onChange={handleSelectChange('wizardRestricted')} options={schools} sx={{ width: "30%", height: "16pt" }} /><input id="wizardRestricted" type="hidden" value="" /></div>;
+  return <div>
+    <Select
+      multiple={true}
+      onChange={handleSelectChange('wizardRestricted')}
+      options={schools}
+      sx={{ width: "30%", height: "16pt" }}
+      menuPortalTarget={document.body}
+      styles={{ menuPortal: base => ({ ...base, zIndex: 9999 }) }}  
+    />
+    <input id="wizardRestricted" type="hidden" value="" />
+  </div>;
 }
 
 class SpellBooks3 extends React.Component {
