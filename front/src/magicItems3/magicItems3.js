@@ -22,8 +22,6 @@ export default function MagicItems3() {
     }));
   }
 
-
-
   return (
     <Card variant="outlined">
       <CardHeader sx={{ textAlign: "center", fontWeight: "bold" }} title="D&D 3e/3.5/Pathfinder 1 Magic Items" />

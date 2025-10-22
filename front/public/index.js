@@ -38778,57 +38778,42 @@ export default theme;`;
 	};
 	function GenMagicItems1(props) {
 	  const {
-	    source
+	    magicItemsInput
 	  } = props;
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getItems(source);
+	    getItems(magicItemsInput);
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
 	    setItems(null);
 	  };
 	  const [items, setItems] = reactExports.useState(null);
-	  const getItems = async source => {
-	    const itemData = await callAPI(source);
+	  const getItems = async magicItemsInput => {
+	    const itemData = await callAPI(magicItemsInput);
 	    setItems(itemData);
 	    setOpen(true);
 	  };
 	  const updateItem = async (indexToUpdate, newValue) => {
 	    setItems(items.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(source) {
-	    let type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'all';
-	    let amount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+	  async function callAPI(inputData, magicItemsInput) {
+	    let amount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 	    let args = '';
-	    if (type === 'all') {
-	      const Any = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Any`).value || 0)));
-	      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-WeaponOrArmor`).value || 0)));
-	      const Potion = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Potion`).value || 0)));
-	      const Scroll = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Scroll`).value || 0)));
-	      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-AnyExceptWeapon`).value || 0)));
-	      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-AllExceptPotionScroll`).value || 0)));
-	      const MiscMagic = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-MiscMagic`).value || 0)));
-	      let SpecificType = '';
-	      let Specific = 0;
-	      if (source === 'magicitem1') {
-	        SpecificType = document.getElementById(`${source}-specificType`).value;
-	        Specific = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Specific`).value || 0)));
-	      }
-	      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${SpecificType}&Specific=${Specific}`;
+	    if (amount === null) {
+	      const Any = Math.max(0, Math.min(50, parseInt(inputData.Any) || 0));
+	      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(inputData.WeaponOrArmor) || 0));
+	      const Potion = Math.max(0, Math.min(50, parseInt(inputData.Potion) || 0));
+	      const Scroll = Math.max(0, Math.min(50, parseInt(inputData.Scroll) || 0));
+	      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(inputData.AnyExceptWeapon) || 0));
+	      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(inputData.AllExceptPotionScroll) || 0));
+	      const MiscMagic = Math.max(0, Math.min(50, parseInt(inputData.MiscMagic) || 0));
+	      const Specific = Math.max(0, Math.min(50, parseInt(inputData.Specific) || 0));
+	      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${inputData.SpecificType}&Specific=${Specific}`;
 	    } else {
-	      const amountInput = document.getElementById(`${source}-${type}`);
-	      let newAmount = 0;
-	      if (amountInput) {
-	        newAmount = parseInt(amountInput.value);
-	      }
-	      if (amount === 0) {
-	        amount = newAmount;
-	      }
-	      args = `${type}=${amount}`;
-	      if (type === 'Specific') {
-	        const SpecificType = document.getElementById(`${source}-specificType`).value;
-	        args += `&specificType=${SpecificType}`;
+	      args = `${inputData}=${amount}`;
+	      if (inputData === 'Specific') {
+	        args += `&specificType=${magicItemsInput.SpecificType}`;
 	      }
 	    }
 	    let response = await fetch(`http://localhost:8080/tools2/api/1st_mi.php?${args}`);
@@ -38836,17 +38821,17 @@ export default theme;`;
 	  }
 	  async function replaceItem(_ref) {
 	    let {
-	      source,
 	      idx,
-	      item
+	      item,
+	      magicItemsInput
 	    } = _ref;
-	    let newItem = await callAPI(source, item.type, 1);
+	    let newItem = await callAPI(item.type, magicItemsInput, 1);
 	    updateItem(idx, newItem[0]);
 	  }
 	  function ItemList(_ref2) {
 	    let {
-	      source,
-	      items
+	      items,
+	      magicItemsInput
 	    } = _ref2;
 	    return /*#__PURE__*/reactExports.createElement("div", null, items.map(function (item, idx) {
 	      let volumePage = '';
@@ -38865,9 +38850,9 @@ export default theme;`;
 	          fontSize: "9pt"
 	        },
 	        onClick: () => replaceItem({
-	          source,
 	          idx,
-	          item
+	          item,
+	          magicItemsInput
 	        })
 	      }));
 	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, contents));
@@ -38875,7 +38860,7 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Magic Items"), items && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate Magic Items"), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -38903,10 +38888,10 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getItems(source)
+	    onClick: () => getItems(magicItemsInput)
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ItemList, {
 	    items: items,
-	    source: source
+	    magicItemsInput: magicItemsInput
 	  })))));
 	}
 
@@ -43649,295 +43634,326 @@ export default theme;`;
 	});
 	var StateManagedSelect$1 = StateManagedSelect;
 
-	const handleSpecificSelectChange = () => selectedOption => {
-	  let elem = document.getElementById('magicitem1-specificType');
-	  if (elem) {
-	    if (selectedOption) {
-	      elem.value = selectedOption.value;
-	    } else {
-	      elem.value = '';
+	function MagicItems1() {
+	  const [magicItemsInput, setItemData] = React.useState({
+	    Any: 0,
+	    WeaponOrArmor: 0,
+	    Potion: 0,
+	    Scroll: 0,
+	    AnyExceptWeapon: 0,
+	    AllExceptPotionScroll: 0,
+	    MiscMagic: 0,
+	    SpecificType: '',
+	    Specific: 0
+	  });
+	  const handleSpecificTypeChange = id => selectedOption => {
+	    setItemData(prevFormData => ({
+	      ...prevFormData,
+	      SpecificType: selectedOption?.value || ''
+	    }));
+	  };
+	  const handleChange = event => {
+	    let {
+	      name,
+	      value
+	    } = event.target;
+	    value = parseInt(value ?? 0);
+	    setItemData(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  const SpecificSelect = () => {
+	    let options = [];
+	    options.push({
+	      value: 'armor',
+	      label: 'Armor'
+	    });
+	    options.push({
+	      value: 'bag_bottle',
+	      label: 'Bags & Bottles'
+	    });
+	    options.push({
+	      value: 'book',
+	      label: 'Books'
+	    });
+	    options.push({
+	      value: 'boot_glove',
+	      label: 'Boots & Gloves'
+	    });
+	    options.push({
+	      value: 'clothing',
+	      label: 'Clothing'
+	    });
+	    options.push({
+	      value: 'dust_stone',
+	      label: 'Dusts & Stones'
+	    });
+	    options.push({
+	      value: 'gem_jewelry',
+	      label: 'Gems & Jewelry'
+	    });
+	    options.push({
+	      value: 'girdle_helm',
+	      label: 'Girdles & Helms'
+	    });
+	    options.push({
+	      value: 'household',
+	      label: 'Household Items'
+	    });
+	    options.push({
+	      value: 'humorous',
+	      label: 'Humorous'
+	    });
+	    options.push({
+	      value: 'musical_instrument',
+	      label: 'Musical Instruments'
+	    });
+	    options.push({
+	      value: 'potion',
+	      label: 'Potions'
+	    });
+	    options.push({
+	      value: 'ring',
+	      label: 'Rings'
+	    });
+	    options.push({
+	      value: 'rod',
+	      label: 'Rods'
+	    });
+	    options.push({
+	      value: 'scroll',
+	      label: 'Scrolls'
+	    });
+	    options.push({
+	      value: 'staff',
+	      label: 'Staves'
+	    });
+	    options.push({
+	      value: 'wand',
+	      label: 'Wands'
+	    });
+	    options.push({
+	      value: 'weapon',
+	      label: 'Weapons'
+	    });
+	    options.push({
+	      value: 'weird',
+	      label: 'Weird Items'
+	    });
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === magicItemsInput.SpecificType;
+	      }),
+	      onChange: handleSpecificTypeChange(),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Pick Category Type",
+	      sx: {
+	        width: "30%",
+	        height: "12pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "1st/2nd Edition AD&D Magic Items"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
 	    }
-	  }
-	};
-	const SpecificSelect = () => {
-	  let options = [];
-	  options.push({
-	    value: 'armor',
-	    label: 'Armor'
-	  });
-	  options.push({
-	    value: 'bag_bottle',
-	    label: 'Bags & Bottles'
-	  });
-	  options.push({
-	    value: 'book',
-	    label: 'Books'
-	  });
-	  options.push({
-	    value: 'boot_glove',
-	    label: 'Boots & Gloves'
-	  });
-	  options.push({
-	    value: 'clothing',
-	    label: 'Clothing'
-	  });
-	  options.push({
-	    value: 'dust_stone',
-	    label: 'Dusts & Stones'
-	  });
-	  options.push({
-	    value: 'gem_jewelry',
-	    label: 'Gems & Jewelry'
-	  });
-	  options.push({
-	    value: 'girdle_helm',
-	    label: 'Girdles & Helms'
-	  });
-	  options.push({
-	    value: 'household',
-	    label: 'Household Items'
-	  });
-	  options.push({
-	    value: 'humorous',
-	    label: 'Humorous'
-	  });
-	  options.push({
-	    value: 'musical_instrument',
-	    label: 'Musical Instruments'
-	  });
-	  options.push({
-	    value: 'potion',
-	    label: 'Potions'
-	  });
-	  options.push({
-	    value: 'ring',
-	    label: 'Rings'
-	  });
-	  options.push({
-	    value: 'rod',
-	    label: 'Rods'
-	  });
-	  options.push({
-	    value: 'scroll',
-	    label: 'Scrolls'
-	  });
-	  options.push({
-	    value: 'staff',
-	    label: 'Staves'
-	  });
-	  options.push({
-	    value: 'wand',
-	    label: 'Wands'
-	  });
-	  options.push({
-	    value: 'weapon',
-	    label: 'Weapons'
-	  });
-	  options.push({
-	    value: 'weird',
-	    label: 'Weird Items'
-	  });
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	    onChange: handleSpecificSelectChange(),
-	    options: options,
-	    isClearable: true,
-	    placeholder: "Pick Category Type",
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    }
+	  }, "Source: Encyclopedia Magica (the 4 volume set)"), /*#__PURE__*/React.createElement(Grid, {
+	    container: true
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Any Magic Item:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "Any",
+	    name: "Any",
+	    size: "small",
 	    sx: {
 	      width: "30%",
-	      height: "12pt"
+	      height: "16pt"
 	    },
-	    menuPortalTarget: document.body,
-	    styles: {
-	      menuPortal: base => ({
-	        ...base,
-	        zIndex: 9999
-	      })
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
 	    }
-	  }), /*#__PURE__*/React.createElement("input", {
-	    id: "magicitem1-specificType",
-	    type: "hidden",
-	    value: ""
-	  }));
-	};
-	class MagicItems1 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined"
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "1st/2nd Edition AD&D Magic Items"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      }
-	    }, "Source: Encyclopedia Magica (the 4 volume set)"), /*#__PURE__*/React.createElement(Grid, {
-	      container: true
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      size: 12,
-	      sx: {
-	        textAlign: "center",
-	        paddingRight: "2px"
-	      }
-	    }, "Specific Magic Category:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 12,
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(SpecificSelect, null)), /*#__PURE__*/React.createElement(Grid, {
-	      size: 12,
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, "(1-50) ", /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-Specific",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 12,
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement("hr", null)), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Any Magic Item:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-Any",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Weapon or Armor:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-WeaponOrArmor",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Potion:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-Potion",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Scroll"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-Scroll",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Any, Except Weapon:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-AnyExceptWeapon",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "1 Each, No Potion or Scroll:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-AllExceptPotionScroll",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "right",
-	        paddingRight: "2px"
-	      }
-	    }, "Misc. Magic Item:"), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6,
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "magicitem1-MiscMagic",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }))), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(GenMagicItems1, {
-	      source: "magicitem1"
-	    }))));
-	  }
+	  }, "Weapon or Armor:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "WeaponOrArmor",
+	    name: "WeaponOrArmor",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Potion:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "Potion",
+	    name: "Potion",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Scroll"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "Scroll",
+	    name: "Scroll",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Any, Except Weapon:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "AnyExceptWeapon",
+	    name: "AnyExceptWeapon",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "1 Each, No Potion or Scroll:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "AllExceptPotionScroll",
+	    name: "AllExceptPotionScroll",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Misc. Magic Item:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "MiscMagic",
+	    name: "MiscMagic",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 12,
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement("hr", null)), /*#__PURE__*/React.createElement(Grid, {
+	    size: 12,
+	    sx: {
+	      textAlign: "center",
+	      paddingRight: "2px"
+	    }
+	  }, "Specific Magic Category:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 12,
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(SpecificSelect, null)), /*#__PURE__*/React.createElement(Grid, {
+	    size: 12,
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, "(1-50) ", /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "Specific",
+	    name: "Specific",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }))), /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(GenMagicItems1, {
+	    magicItemsInput: magicItemsInput
+	  }))));
 	}
 
 	const style$2 = {
@@ -44256,10 +44272,32 @@ export default theme;`;
 	    setOpen(false);
 	    setTreasure(null);
 	  };
-	  const [treasure, setTreasure] = reactExports.useState(null);
+	  const [treasure, setTreasure] = reactExports.useState([]);
+	  const [magicItemsInput, setMagicItemData] = reactExports.useState({
+	    Any: 0,
+	    WeaponOrArmor: 0,
+	    Potion: 0,
+	    Scroll: 0,
+	    AnyExceptWeapon: 0,
+	    AllExceptPotionScroll: 0,
+	    MiscMagic: 0,
+	    SpecificType: '',
+	    Specific: 0
+	  });
 	  const getTreasure = async treasureInput => {
 	    const treasureData = await callAPI(treasureInput);
 	    setTreasure(treasureData);
+	    setMagicItemData({
+	      Any: treasureData['Any'],
+	      WeaponOrArmor: treasureData['WeaponOrArmor'],
+	      Potion: treasureData['Potion'],
+	      Scroll: treasureData['Scroll'],
+	      AnyExceptWeapon: treasureData['AnyExceptWeapon'],
+	      AllExceptPotionScroll: treasureData['AllExceptPotionScroll'],
+	      MiscMagic: treasureData['MiscMagic'],
+	      SpecificType: '',
+	      Specific: 0
+	    });
 	    setOpen(true);
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
@@ -44294,7 +44332,7 @@ export default theme;`;
 	    treasureInput: treasureInput,
 	    treasure: treasure
 	  }), treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + +treasure['AllExceptPotionScroll'] + +treasure['MiscMagic'] > 0 ? /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(GenMagicItems1, {
-	    source: "treasure1"
+	    magicItemsInput: magicItemsInput
 	  })) : /*#__PURE__*/reactExports.createElement("div", null)))));
 	}
 
@@ -44339,7 +44377,7 @@ export default theme;`;
 	  const handleTypeChange = id => selectedOption => {
 	    setTreasureData(prevFormData => prevFormData.map((oldTreasure, idx) => idx === id ? {
 	      ...oldTreasure,
-	      treasureType: selectedOption.value
+	      treasureType: selectedOption?.value || ''
 	    } : oldTreasure));
 	  };
 	  const TypeSelect = targetID => {

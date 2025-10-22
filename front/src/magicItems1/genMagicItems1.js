@@ -22,10 +22,10 @@ const style = {
 };
 
 export default function GenMagicItems1(props) {
-  const { source } = props;
+  const { magicItemsInput } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getItems(source);
+    getItems(magicItemsInput);
   }
   const handleClose = () => {
     setOpen(false);
@@ -34,8 +34,8 @@ export default function GenMagicItems1(props) {
 
   const [items, setItems] = React.useState(null);
 
-  const getItems = async (source) => {
-    const itemData = await callAPI(source);
+  const getItems = async (magicItemsInput) => {
+    const itemData = await callAPI(magicItemsInput);
     setItems(itemData);
     setOpen(true);
   };
@@ -48,41 +48,25 @@ export default function GenMagicItems1(props) {
     );
   };
 
-  async function callAPI(source, type = 'all', amount = 0) {
+  async function callAPI(inputData, magicItemsInput, amount = null) {
     let args = '';
 
-    if (type === 'all') {
-      const Any = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Any`).value || 0)));
-      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-WeaponOrArmor`).value || 0)));
-      const Potion = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Potion`).value || 0)));
-      const Scroll = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Scroll`).value || 0)));
-      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-AnyExceptWeapon`).value || 0)));
-      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-AllExceptPotionScroll`).value || 0)));
-      const MiscMagic = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-MiscMagic`).value || 0)));
-      let SpecificType = '';
-      let Specific = 0;
-      if (source === 'magicitem1') {
-        SpecificType = document.getElementById(`${source}-specificType`).value;
-        Specific = Math.max(0, Math.min(50, parseInt(document.getElementById(`${source}-Specific`).value || 0)));
-      }
-
-      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${SpecificType}&Specific=${Specific}`;
+    if (amount === null) {
+      const Any = Math.max(0, Math.min(50, parseInt(inputData.Any) || 0));
+      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(inputData.WeaponOrArmor) || 0));
+      const Potion = Math.max(0, Math.min(50, parseInt(inputData.Potion) || 0));
+      const Scroll = Math.max(0, Math.min(50, parseInt(inputData.Scroll) || 0));
+      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(inputData.AnyExceptWeapon) || 0));
+      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(inputData.AllExceptPotionScroll) || 0));
+      const MiscMagic = Math.max(0, Math.min(50, parseInt(inputData.MiscMagic) || 0));
+      const Specific = Math.max(0, Math.min(50, parseInt(inputData.Specific) || 0));
+      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${inputData.SpecificType}&Specific=${Specific}`;
     }
     else {
-      const amountInput = document.getElementById(`${source}-${type}`);
-      let newAmount = 0;
-      if (amountInput) {
-        newAmount = parseInt(amountInput.value);
-      }
+      args = `${inputData}=${amount}`;
 
-      if (amount === 0) {
-        amount = newAmount;
-      }
-      args = `${type}=${amount}`;
-
-      if (type === 'Specific') {
-        const SpecificType = document.getElementById(`${source}-specificType`).value;
-        args += `&specificType=${SpecificType}`;
+      if (inputData === 'Specific') {
+        args += `&specificType=${magicItemsInput.SpecificType}`;
       }
     }
 
@@ -90,12 +74,12 @@ export default function GenMagicItems1(props) {
     return await response.json();
   }
 
-  async function replaceItem({ source, idx, item }) {
-    let newItem = await callAPI(source, item.type, 1);
+  async function replaceItem({ idx, item, magicItemsInput }) {
+    let newItem = await callAPI(item.type, magicItemsInput, 1);
     updateItem(idx, newItem[0]);
   }
 
-  function ItemList({ source, items }) {
+  function ItemList({ items, magicItemsInput }) {
     return (
       <div>
         {items.map(function (item, idx) {
@@ -107,7 +91,7 @@ export default function GenMagicItems1(props) {
           if (item.intelligent) {
             intelligentButton = <IntelligentWeapon label={item.text} />
           }
-          const contents = <Typography>{item.text}{volumePage}{intelligentButton}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceItem({ source, idx, item })} /></Typography>;
+          const contents = <Typography>{item.text}{volumePage}{intelligentButton}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceItem({ idx, item, magicItemsInput })} /></Typography>;
           return <div><span>{contents}</span></div>
         })}
       </div>
@@ -117,7 +101,7 @@ export default function GenMagicItems1(props) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Magic Items</Button>
-      {items && <Modal
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -133,10 +117,10 @@ export default function GenMagicItems1(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Magic Items<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getItems(source)} />
+            Magic Items<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getItems(magicItemsInput)} />
           </Typography>
           <Typography>
-            <ItemList items={items} source={source} />
+            <ItemList items={items} magicItemsInput={ magicItemsInput } />
           </Typography>
         </Box>
       </Modal>}

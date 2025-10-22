@@ -141,11 +141,34 @@ export default function GenTreasure1(props) {
     setTreasure(null);
   };
 
-  const [treasure, setTreasure] = React.useState(null);
+  const [treasure, setTreasure] = React.useState([]);
+
+  const [magicItemsInput, setMagicItemData] = React.useState({
+    Any: 0,
+    WeaponOrArmor: 0,
+    Potion: 0,
+    Scroll: 0,
+    AnyExceptWeapon: 0,
+    AllExceptPotionScroll: 0,
+    MiscMagic: 0,
+    SpecificType: '',
+    Specific: 0,
+  });
 
   const getTreasure = async (treasureInput) => {
     const treasureData = await callAPI(treasureInput);
     setTreasure(treasureData);
+    setMagicItemData({
+      Any: treasureData['Any'],
+      WeaponOrArmor: treasureData['WeaponOrArmor'],
+      Potion: treasureData['Potion'],
+      Scroll: treasureData['Scroll'],
+      AnyExceptWeapon: treasureData['AnyExceptWeapon'],
+      AllExceptPotionScroll: treasureData['AllExceptPotionScroll'],
+      MiscMagic: treasureData['MiscMagic'],
+      SpecificType: '',
+      Specific: 0,
+    });
     setOpen(true);
   };
 
@@ -171,7 +194,7 @@ export default function GenTreasure1(props) {
           </Typography>
           <Typography>
             <TreasureList treasureInput={treasureInput} treasure={treasure} />
-            {treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + + treasure['AllExceptPotionScroll'] + + treasure['MiscMagic'] > 0 ? <div><GenMagicItems1 source="treasure1" /></div> : <div></div>}
+            {treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + + treasure['AllExceptPotionScroll'] + + treasure['MiscMagic'] > 0 ? <div><GenMagicItems1 magicItemsInput={ magicItemsInput } /></div> : <div></div>}
           </Typography>
         </Box>
       </Modal>}

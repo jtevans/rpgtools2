@@ -63,7 +63,7 @@ export default function Treasure1() {
   const handleTypeChange = (id) => (selectedOption) => {
     setTreasureData((prevFormData) =>
       prevFormData.map((oldTreasure, idx) =>
-        idx === id ? { ...oldTreasure, treasureType: selectedOption.value } : oldTreasure
+        idx === id ? { ...oldTreasure, treasureType: selectedOption?.value || '' } : oldTreasure
       )
     );
   };
