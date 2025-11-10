@@ -44581,66 +44581,94 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	function GenGems1(props) {
+	function GenSpells3(props) {
 	  const {
-	    source
+	    spellbookData
 	  } = props;
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getGems(source);
+	    getSpells(spellbookData);
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
-	    setGems(null);
+	    setSpellbook(null);
 	  };
-	  const [gems, setGems] = reactExports.useState(null);
-	  const getGems = async source => {
-	    const gemsData = await callAPI(source);
-	    setGems(gemsData);
+	  const [spellbook, setSpellbook] = reactExports.useState([[], [], [], [], [], [], [], [], []]);
+	  reactExports.useEffect(() => {
+	    // console.log(spellbook);
+	  }, [spellbook]);
+	  const getSpells = async spellbookData => {
+	    const newSpells = await callAPI(spellbookData);
+	    setSpellbook(newSpells);
 	    setOpen(true);
 	  };
-	  const updateGem = async (indexToUpdate, newValue) => {
-	    setGems(gems.map((item, index) => index === indexToUpdate ? newValue : item));
-	  };
-	  async function callAPI(source) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
-	    const elem = document.getElementById(source);
-	    if (elem.value) {
-	      const newAmount = parseInt(elem.value);
-	      if (amount === 0) {
-	        amount = newAmount;
+	  const updateSpell = async (indexToUpdate, level, newValue) => {
+	    setSpellbook(spellbook.map((spells, spellLevel) => {
+	      if (level === spellLevel) {
+	        return spells.map((spell, index) => {
+	          if (index === indexToUpdate) {
+	            return newValue;
+	          }
+	          return spell;
+	        });
+	      } else {
+	        return spells;
 	      }
+	    }));
+	  };
+	  async function callAPI(spellbookData) {
+	    let level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+	    const wizardLevel = spellbookData.level || '1';
+	    const intelligence = spellbookData.intelligence || '10';
+	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
+	    const specialist = spellbookData.specialist;
+	    const restrictedSchools = spellbookData.restrictedSchools.map(school => school.value).join('|');
+	    let phb = spellbookData.phb ? 'true' : 'false';
+	    const bvd = spellbookData.bvd ? 'true' : 'false';
+
+	    // Force at least one source to be used. Default to PHB.
+	    if (!(spellbookData.phb || spellbookData.bvd)) {
+	      phb = 'true';
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/gems1.php?amount=${amount}`);
+	    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&specialist=${specialist}&restrictedSchools=${restrictedSchools}&phb=${phb}&bvd=${bvd}`;
+	    if (level) {
+	      args += `&spellLevel=${level}`;
+	    }
+	    let response = await fetch(`http://localhost:8080/tools2/api/rnd_spellbook.php?${args}`);
 	    return await response.json();
 	  }
-	  async function replaceGem(_ref) {
-	    let {
-	      source,
-	      idx
-	    } = _ref;
-	    let newGem = await callAPI(source, 1);
-	    updateGem(idx, newGem[0]);
+	  async function replaceSpell(idx, level) {
+	    let newSpells = await callAPI(spellbookData, level);
+	    updateSpell(idx, level, newSpells[level][0]);
 	  }
-	  function GemsList(_ref2) {
+	  function SpellsList(_ref) {
 	    let {
-	      source,
-	      gems
-	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, gems.map((gem, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, gem), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	      sx: {
-	        paddingLeft: "5px",
-	        fontSize: "9pt"
-	      },
-	      onClick: () => replaceGem({
-	        source,
-	        idx
-	      })
-	    }))));
+	      spellbook
+	    } = _ref;
+	    const restrictedSchools = spellbookData.restrictedSchools.map(school => school.value).join(' ');
+	    if (spellbook.length == 1) {
+	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
+	    }
+	    console.log(spellbook);
+	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, "_________________________________"), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Specialist: ", spellbookData.specialist, /*#__PURE__*/reactExports.createElement("br", null), "Restricted School(s): ", restrictedSchools, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
+	      return spells.map((spell, index) => {
+	        if (spellLevel > 0) {
+	          return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	            sx: {
+	              paddingLeft: "5px",
+	              fontSize: "9pt"
+	            },
+	            onClick: () => replaceSpell(index, spellLevel)
+	          }));
+	        } else {
+	          return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell));
+	        }
+	      });
+	    }));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Spellbook"), gems && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Generate Spellbook"), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -44663,15 +44691,14 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Gems", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, "3rd Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getGems(source)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(GemsList, {
-	    source: source,
-	    gems: gems
+	    onClick: () => getSpells(spellbookData)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, {
+	    spellbook: spellbook
 	  })))));
 	}
 
@@ -44712,210 +44739,256 @@ export default theme;`;
 	  value: 'transmutation',
 	  label: 'Transmutation'
 	});
-	const handleSelectChange = id => selectedOption => {
-	  let elem = document.getElementById(id);
-	  if (elem) {
-	    if (selectedOption) {
-	      elem.value = selectedOption.value;
-	    } else {
-	      elem.value = '';
+	function spellbooks3() {
+	  const [spellbookData, setSpellbookData] = React.useState({
+	    level: '0',
+	    intelligence: '0',
+	    gainSpells: false,
+	    specialist: '',
+	    restrictedSchools: [],
+	    phb: true,
+	    bvd: false
+	  });
+	  const handleCheckboxChange = (checkboxName, box) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [checkboxName]: box?.target?.checked || false
+	    }));
+	  };
+	  const handleSelectChange = (selectName, option) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [selectName]: option?.value || ''
+	    }));
+	  };
+	  const handleRestrictedSchoolsChange = selected => {
+	    console.log(selected);
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      'restrictedSchools': selected
+	    }));
+	  };
+	  const WizardLevel = () => {
+	    let options = [];
+	    for (let i = 1; i <= 20; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
 	    }
-	  }
-	};
-	const WizardLevel = () => {
-	  let options = [];
-	  for (let i = 1; i <= 20; i++) {
-	    const obj = {
-	      value: i,
-	      label: i
-	    };
-	    options.push(obj);
-	  }
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	    onChange: handleSelectChange('wizardLevel'),
-	    options: options,
-	    isClearable: true,
-	    placeholder: "Select Wizard Level",
-	    sx: {
-	      width: "30%",
-	      height: "16pt"
-	    },
-	    menuPortalTarget: document.body,
-	    styles: {
-	      menuPortal: base => ({
-	        ...base,
-	        zIndex: 9999
-	      })
-	    }
-	  }), /*#__PURE__*/React.createElement("input", {
-	    id: "wizardLevel",
-	    type: "hidden",
-	    value: ""
-	  }));
-	};
-	const WizardIntelligence = () => {
-	  let options = [];
-	  for (let i = 10; i <= 30; i++) {
-	    const obj = {
-	      value: i,
-	      label: i
-	    };
-	    options.push(obj);
-	  }
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	    onChange: handleSelectChange('wizardIntelligence'),
-	    options: options,
-	    isClearable: true,
-	    placeholder: "Select Wizard Intelligence",
-	    sx: {
-	      width: "30%",
-	      height: "16pt"
-	    },
-	    menuPortalTarget: document.body,
-	    styles: {
-	      menuPortal: base => ({
-	        ...base,
-	        zIndex: 9999
-	      })
-	    }
-	  }), /*#__PURE__*/React.createElement("input", {
-	    id: "wizardIntelligence",
-	    type: "hidden",
-	    value: ""
-	  }));
-	};
-	const WizardSpecialist = () => {
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	    onChange: handleSelectChange('wizardSpecialist'),
-	    options: schools,
-	    isClearable: true,
-	    placeholder: "Select Specialization (if any)",
-	    sx: {
-	      width: "30%",
-	      height: "16pt"
-	    },
-	    menuPortalTarget: document.body,
-	    styles: {
-	      menuPortal: base => ({
-	        ...base,
-	        zIndex: 9999
-	      })
-	    }
-	  }), /*#__PURE__*/React.createElement("input", {
-	    id: "wizardSpecialist",
-	    type: "hidden",
-	    value: ""
-	  }));
-	};
-	const WizardRestricted = () => {
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	    multiple: true,
-	    onChange: handleSelectChange('wizardRestricted'),
-	    options: schools,
-	    sx: {
-	      width: "30%",
-	      height: "16pt"
-	    },
-	    menuPortalTarget: document.body,
-	    styles: {
-	      menuPortal: base => ({
-	        ...base,
-	        zIndex: 9999
-	      })
-	    }
-	  }), /*#__PURE__*/React.createElement("input", {
-	    id: "wizardRestricted",
-	    type: "hidden",
-	    value: ""
-	  }));
-	};
-	class SpellBooks3 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined",
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.level;
+	      }),
+	      name: "level",
+	      onChange: option => handleSelectChange('level', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Level",
 	      sx: {
-	        height: 'fit-content'
-	      }
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
+	        width: "30%",
+	        height: "16pt"
 	      },
-	      title: "3rd Edition AD&D Wizard Spellbooks"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
 	      }
-	    }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
-	      container: true,
-	      spacing: 2
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
+	    }));
+	  };
+	  const WizardIntelligence = () => {
+	    let options = [];
+	    for (let i = 10; i <= 30; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.intelligence;
+	      }),
+	      name: "intelligence",
+	      onChange: option => handleSelectChange('intelligence', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Intelligence",
 	      sx: {
-	        textAlign: "right"
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
 	      }
-	    }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
+	    }));
+	  };
+	  const WizardSpecialist = () => {
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: schools.filter(function (school) {
+	        return school.value === spellbookData.specialist;
+	      }),
+	      name: "specialist",
+	      onChange: option => handleSelectChange('specialist', option),
+	      options: schools,
+	      isClearable: true,
+	      placeholder: "Select Specialization (if any)",
 	      sx: {
-	        textAlign: "left"
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
 	      }
-	    }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
+	    }));
+	  };
+	  const WizardRestricted = () => {
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: spellbookData.restrictedSchools,
+	      name: "restrictedSchools",
+	      isMulti: true,
+	      onChange: handleRestrictedSchoolsChange,
+	      options: schools,
 	      sx: {
-	        textAlign: "right"
-	      }
-	    }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "right"
-	      }
-	    }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement("input", {
-	      type: "checkbox",
-	      id: "adventure",
-	      name: "adventure",
-	      value: "1"
-	    }))), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "right"
-	      }
-	    }, "Specialist:")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(WizardSpecialist, null))), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "right"
-	      }
-	    }, "Restricted Schools (if any):")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "left"
-	      }
-	    }, /*#__PURE__*/React.createElement(WizardRestricted, null)))), /*#__PURE__*/React.createElement(GenGems1, null))));
-	  }
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      },
+	      className: "basic-multi-select"
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "3rd Edition AD&D Wizard Spellbooks"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    type: "checkbox",
+	    id: "gainSpells",
+	    name: "gainSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('gainSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Specialist:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardSpecialist, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Restricted Schools (if any):")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardRestricted, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Sourcebooks:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, "Player's Handbook (PHB) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.phb,
+	    type: "checkbox",
+	    id: "phb",
+	    name: "phb",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('phb', box)
+	  }), /*#__PURE__*/React.createElement("br", null), "Book of Vile Darkness (BVD) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.bvd,
+	    type: "checkbox",
+	    id: "bvd",
+	    name: "bvd",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('bvd', box)
+	  })))), /*#__PURE__*/React.createElement(GenSpells3, {
+	    spellbookData: spellbookData
+	  }))));
 	}
 
 	class Test extends React.Component {
@@ -44955,7 +45028,7 @@ export default theme;`;
 	  label: "Generic Intelligent Weapon"
 	}))), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6
-	}, /*#__PURE__*/React.createElement(SpellBooks3, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(spellbooks3, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6

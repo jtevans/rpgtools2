@@ -6,18 +6,23 @@
 
 require("utils.php");
 
-$caster_level = intval(post_var("caster_level"));
-$intel = intval(post_var("intel"));
-$adventure = post_var("adventure");
-$specialist = post_var("specialist");
-$restricted = post_var("restricted");
+$caster_level = min(20, max(1, intval(get_var("wizardLevel", 1))));
+$intel = min(30, max(10, intval(get_var("intelligence"), 10)));
+$adventure = get_var("gainSpells") == 'true' ? true : false;
+$specialist = get_var("specialist", '');
+$restricted = get_var("restrictedSchools", '');
 
-if (! is_array($restricted)) {
-  $restricted = array();
+if ($restricted === '')
+{
+  $restricted = [];
+}
+else
+{
+  $restricted = explode('|', $restricted);
 }
 
-$PHB = post_var("phb");
-$BVD = post_var("bvd");
+$PHB = get_var("phb") == 'true' ? true : false;
+$BVD = get_var("bvd") == 'true' ? true : false;
 
 class Spell
 {
@@ -25,6 +30,13 @@ class Spell
   var $school;
   var $source;
   var $page;
+}
+
+function abort($message)
+{
+  print(json_encode([[$message]]));
+  exit;
+
 }
 
 function calculate_intel_bonus($intel)
@@ -97,9 +109,12 @@ function determine_max_spell_level($caster_level, $intel)
   return(min($maxlevel, $intel - 10));
 }
 
-
 function determine_restricted_schools(&$allowed_schools, $restricted, $specialist)
 {
+  if ($specialist === '')
+  {
+    return;
+  }
   $count = 0;
   if (count($restricted) != 0)
   {
@@ -129,7 +144,6 @@ function determine_restricted_schools(&$allowed_schools, $restricted, $specialis
     }
   }
 }
-
 
 function print_restricted_schools($allowed_schools)
 {
@@ -184,9 +198,9 @@ function read_spells_from_disk()
   return($spells);
 }
 
-function print_spell($spell)
+function get_spell($spell)
 {
-  print("_____" . $spell->name . " (" . $spell->source . "/" . $spell->page . ")<br />");
+  return($spell->name . " (" . $spell->source . "/" . $spell->page . ")");
 }
 
 function dupe($level, $name, $spells_known)
@@ -308,8 +322,6 @@ function determine_current_spell_level($caster_level, $max_spell_level)
 // ***************
 // START MAIN CODE
 // ***************
-start_html("Random Spellbook");
-
 $schools = array("abjuration", "conjuration", "divination", "enchantment",
                  "evocation", "illusion", "necromancy", "transmutation",
                  "universal");
@@ -321,7 +333,7 @@ foreach ($schools as $school)
 
 $max_spell_level = determine_max_spell_level($caster_level, $intel);
 
-if ($specialist != "none")
+if ($specialist != "")
 {
   determine_restricted_schools($allowed_schools, $restricted, $specialist);
 }
@@ -331,21 +343,9 @@ $spells = read_spells_from_disk();
 $intel_bonus = calculate_intel_bonus($intel);
 
 // Build out allowed sources
-$sources['PHB'] = ($PHB == "on");
-$sources['BVD'] = ($BVD == "on");
-?>
+$sources['PHB'] = $PHB;
+$sources['BVD'] = $BVD;
 
-<h1 align="center">Random Spellbook</h1>
-
-<p>
-Wizard Name: <u>_________________________________</u><br />
-Wizard Level: <?php echo $caster_level?><br />
-Wizard Intelligence: <?php echo $intel?> (+<?php echo $intel_bonus?>)<br />
-Wizard Specialist: <?php echo ucfirst($specialist)?><br />
-Restricted School(s): <?php print_restricted_schools($allowed_schools);?><br />
-</p>
-
-<?php
 // Gain spells via levelling up
 for ($level = 1; $level <= $caster_level; ++$level)
 {
@@ -392,18 +392,28 @@ for ($level = 0; $level <= 9; ++$level)
   }
 }
 
+$spellbook = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
 // display spells here.
 for ($level = 0; $level <= 9; ++$level)
 {
   if (array_key_exists($level, $spells_known) && count($spells_known[$level]) > 0)
   {
-    print("<h3>$level</h3>\n");
     for ($x = 0; $x < count($spells_known[$level]); ++$x)
     {
-      print_spell($spells_known[$level][$x]);
+      $spellbook[$level][] = get_spell($spells_known[$level][$x]);
     }
-    print("<hr>\n");
   }
 }
 
-end_html();
+print(json_encode($spellbook));

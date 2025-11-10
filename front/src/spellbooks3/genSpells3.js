@@ -20,58 +20,115 @@ const style = {
   maxHeight: '80%',
 };
 
-export default function GenGems1(props) {
-  const { source } = props;
+export default function GenSpells3(props) {
+  const { spellbookData } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getGems(source);
+    getSpells(spellbookData);
   }
   const handleClose = () => {
     setOpen(false);
-    setGems(null);
+    setSpellbook(null);
   };
 
-  const [gems, setGems] = React.useState(null);
+  const [spellbook, setSpellbook] = React.useState(
+    [
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+    ]
+  );
 
-  const getGems = async (source) => {
-    const gemsData = await callAPI(source);
-    setGems(gemsData);
+  React.useEffect(() => {
+    // console.log(spellbook);
+  }, [spellbook]);
+
+
+
+  const getSpells = async (spellbookData) => {
+    const newSpells = await callAPI(spellbookData);
+    setSpellbook(newSpells);
     setOpen(true);
   };
 
-  const updateGem = async (indexToUpdate, newValue) => {
-    setGems(
-      gems.map((item, index) =>
-        index === indexToUpdate ? newValue : item
-      )
+  const updateSpell = async (indexToUpdate, level, newValue) => {
+    setSpellbook(
+      spellbook.map((spells, spellLevel) => {
+        if (level === spellLevel) {
+          return spells.map((spell, index) => {
+            if (index === indexToUpdate) {
+              return newValue;
+            }
+            return spell;
+          });
+        }
+        else {
+          return spells;
+        }
+      })
     );
   };
 
-  async function callAPI(source, amount = 0) {
-    const elem = document.getElementById(source);
-    if (elem.value) {
-      const newAmount = parseInt(elem.value);
+  async function callAPI(spellbookData, level = null) {
+    const wizardLevel = spellbookData.level || '1';
+    const intelligence = spellbookData.intelligence || '10';
+    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
+    const specialist = spellbookData.specialist;
+    const restrictedSchools = spellbookData.restrictedSchools.map((school) => school.value).join('|');
+    let phb = spellbookData.phb ? 'true' : 'false';
+    const bvd = spellbookData.bvd ? 'true' : 'false';
 
-      if (amount === 0) {
-        amount = newAmount;
-      }
+    // Force at least one source to be used. Default to PHB.
+    if ( ! (spellbookData.phb || spellbookData.bvd) ) {
+      phb = 'true';
     }
 
-    let response = await fetch(`http://localhost:8080/tools2/api/gems1.php?amount=${amount}`);
+    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&specialist=${specialist}&restrictedSchools=${restrictedSchools}&phb=${phb}&bvd=${bvd}`;
+
+    if (level) {
+      args += `&spellLevel=${level}`;
+    }
+    let response = await fetch(`http://localhost:8080/tools2/api/rnd_spellbook.php?${args}`);
     return await response.json();
   }
 
-  async function replaceGem({ source, idx }) {
-    let newGem = await callAPI(source, 1);
-    updateGem(idx, newGem[0]);
+  async function replaceSpell(idx, level) {
+    let newSpells = await callAPI(spellbookData, level);
+    updateSpell(idx, level, newSpells[level][0]);
   }
 
-  function GemsList({ source, gems }) {
+  function SpellsList({ spellbook }) {
+    const restrictedSchools = spellbookData.restrictedSchools.map((school) => school.value).join(' ');
+
+    if (spellbook.length == 1) {
+      return (<div>{`${spellbook[0][0]}`}</div>);
+    }
+    console.log(spellbook);
     return (
       <div>
-        {gems.map((gem, idx) => (
-          <div><span>{gem}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceGem({ source, idx })} /></div>
-        ))}
+        Wizard Name: <u>_________________________________</u><br />
+        Wizard Level: {spellbookData.level}<br />
+        Wizard Intelligence: {spellbookData.intelligence}<br />
+        Wizard Specialist: {spellbookData.specialist}<br />
+        Restricted School(s): {restrictedSchools}<br />
+
+        {spellbook.map((spells, spellLevel) => {
+          return spells.map((spell, index) => {
+            if (spellLevel > 0) {
+              return <div><span>_____ ({spellLevel}) {spell}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpell(index, spellLevel)} /></div>
+            }
+            else
+            {
+              return <div><span>_____ ({spellLevel}) {spell}</span></div>
+            }
+            });
+        })}
       </div>
     );
   }
@@ -79,7 +136,7 @@ export default function GenGems1(props) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Spellbook</Button>
-      {gems && <Modal
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -95,10 +152,10 @@ export default function GenGems1(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Gems<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getGems(source)} />
+            3rd Edition Wizard Spellbook<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpells(spellbookData)} />
           </Typography>
           <Typography>
-            <GemsList source={source} gems={gems} />
+            <SpellsList spellbook={spellbook} />
           </Typography>
         </Box>
       </Modal>}
