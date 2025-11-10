@@ -24,6 +24,8 @@ else
 $PHB = get_var("phb") == 'true' ? true : false;
 $BVD = get_var("bvd") == 'true' ? true : false;
 
+$generateSpellLevel = get_var('spellLevel', null);
+
 class Spell
 {
   var $name;
@@ -322,6 +324,20 @@ function determine_current_spell_level($caster_level, $max_spell_level)
 // ***************
 // START MAIN CODE
 // ***************
+$spells_known = [];
+
+$spellbook = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
 $schools = array("abjuration", "conjuration", "divination", "enchantment",
                  "evocation", "illusion", "necromancy", "transmutation",
                  "universal");
@@ -345,6 +361,25 @@ $intel_bonus = calculate_intel_bonus($intel);
 // Build out allowed sources
 $sources['PHB'] = $PHB;
 $sources['BVD'] = $BVD;
+
+if ($generateSpellLevel)
+{
+  add_spells($spells_known, $allowed_schools, $intel, $caster_level, $spells, $sources, $generateSpellLevel, 1);
+  for ($level = 0; $level <= 9; ++$level)
+  {
+    if (array_key_exists($level, $spells_known) && count($spells_known[$level]) > 0)
+    {
+      for ($x = 0; $x < count($spells_known[$level]); ++$x)
+      {
+        $spellbook[$level][] = get_spell($spells_known[$level][$x]);
+      }
+    }
+  }
+
+  print(json_encode($spellbook));
+  exit();
+}
+
 
 // Gain spells via levelling up
 for ($level = 1; $level <= $caster_level; ++$level)
@@ -392,19 +427,7 @@ for ($level = 0; $level <= 9; ++$level)
   }
 }
 
-$spellbook = [
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-  [],
-];
-
-// display spells here.
+// Build spellbook here.
 for ($level = 0; $level <= 9; ++$level)
 {
   if (array_key_exists($level, $spells_known) && count($spells_known[$level]) > 0)

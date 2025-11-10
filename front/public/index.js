@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$h(options) {
+	function style$i(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$g(props, keys) {
+	function style$h(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$g(props, marginKeys);
+	  return style$h(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$g(props, paddingKeys);
+	  return style$h(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$h({
+	  return style$i({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$h({
+	const gridColumn = style$i({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$h({
+	const gridRow = style$i({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$h({
+	const gridAutoFlow = style$i({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$h({
+	const gridAutoColumns = style$i({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$h({
+	const gridAutoRows = style$i({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$h({
+	const gridTemplateColumns = style$i({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$h({
+	const gridTemplateRows = style$i({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$h({
+	const gridTemplateAreas = style$i({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$h({
+	const gridArea = style$i({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$h({
+	const color = style$i({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$h({
+	const bgcolor = style$i({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$h({
+	const backgroundColor = style$i({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$h({
+	const width = style$i({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$h({
+	const minWidth = style$i({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$h({
+	const height = style$i({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$h({
+	const maxHeight = style$i({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$h({
+	const minHeight = style$i({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$h({
+	style$i({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$h({
+	style$i({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$h({
+	const boxSizing = style$i({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$f = {
+	const style$g = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$e = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$d = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$c = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$b = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$a = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$9 = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$8 = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,7 +30625,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$7 = {
+	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30704,7 +30704,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
+	    sx: style$8
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30729,7 +30729,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$6 = {
+	const style$7 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30834,7 +30834,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$7
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30880,7 +30880,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$5 = {
+	const style$6 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31030,7 +31030,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38683,7 +38683,7 @@ export default theme;`;
 
 	var parse = HTMLReactParser.default || HTMLReactParser;
 
-	const style$4 = {
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38739,7 +38739,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38763,7 +38763,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$3 = {
+	const style$4 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38870,7 +38870,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
+	    sx: style$4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -43956,7 +43956,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$2 = {
+	const style$3 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44035,7 +44035,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$2
+	    sx: style$3
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44120,7 +44120,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$1 = {
+	const style$2 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44309,7 +44309,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$1
+	    sx: style$2
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44568,7 +44568,16 @@ export default theme;`;
 	  })));
 	}
 
-	const style = {
+	class Utils {
+	  static ucfirst(str) {
+	    if (!str) {
+	      return str;
+	    }
+	    return str.charAt(0).toUpperCase() + str.slice(1);
+	  }
+	}
+
+	const style$1 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44645,12 +44654,12 @@ export default theme;`;
 	    let {
 	      spellbook
 	    } = _ref;
-	    const restrictedSchools = spellbookData.restrictedSchools.map(school => school.value).join(' ');
+	    const restrictedSchools = spellbookData.restrictedSchools.map(school => Utils.ucfirst(school.value)).join(', ');
 	    if (spellbook.length == 1) {
 	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
 	    }
 	    console.log(spellbook);
-	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, "_________________________________"), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Specialist: ", spellbookData.specialist, /*#__PURE__*/reactExports.createElement("br", null), "Restricted School(s): ", restrictedSchools, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
+	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, "_________________________________"), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Specialist School: ", Utils.ucfirst(spellbookData.specialist) || 'None', /*#__PURE__*/reactExports.createElement("br", null), "Restricted School(s): ", restrictedSchools || 'None', /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
 	      return spells.map((spell, index) => {
 	        if (spellLevel > 0) {
 	          return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
@@ -44678,7 +44687,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style
+	    sx: style$1
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44991,6 +45000,255 @@ export default theme;`;
 	  }))));
 	}
 
+	const style = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenDrow(_ref) {
+	  let {
+	    drowData
+	  } = _ref;
+	  const [open, setOpen] = reactExports.useState(false);
+	  const handleOpen = () => {
+	    getDrowTreasure(drowData);
+	  };
+	  const handleClose = () => {
+	    setOpen(false);
+	    setDrowTreasure(null);
+	  };
+	  const [drowTreasure, setDrowTreasure] = reactExports.useState(null);
+	  const getDrowTreasure = async drowData => {
+	    const data = await callAPI(drowData);
+	    setDrowTreasure(data);
+	    setOpen(true);
+	  };
+	  async function callAPI(drowData) {
+	    let args = '';
+	    drowData.forEach(function (data, index) {
+	      args += `&l${index}=${data.drowLevel}&q${index}=${data.numDrow}`;
+	    });
+	    args = args.slice(1);
+	    let response = await fetch(`http://localhost:8080/tools2/api/drow_treasure.php?${args}`);
+	    return await response.json();
+	  }
+	  async function replaceDrowTreasure(_ref2) {
+	    let {
+	      drowData,
+	      key
+	    } = _ref2;
+	    const newTreasure = await callAPI(drowData);
+	    let display = key;
+	    if (key == "Gems") {
+	      display = '10 GP Moonstones';
+	    }
+	    document.getElementById(`span-treasure1-${key}`).innerHTML = `${display}: ${newTreasure[key]}`;
+	  }
+	  function DrowList(_ref3) {
+	    let {
+	      drowTreasure
+	    } = _ref3;
+	    let totalTreasure = 0;
+	    Object.keys(drowTreasure).forEach(function (key) {
+	      totalTreasure += drowTreasure[key];
+	    });
+	    return /*#__PURE__*/reactExports.createElement("div", null, totalTreasure === 0 ? 'No Treasure' : Object.keys(drowTreasure).map(function (key) {
+	      let display = key;
+	      if (key == "Gems") {
+	        display = '10 GP Moonstones';
+	      }
+	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
+	        id: `span-treasure1-${key}`
+	      }, display, ": ", drowTreasure[key]), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	        sx: {
+	          paddingLeft: "5px",
+	          fontSize: "9pt"
+	        },
+	        onClick: () => replaceDrowTreasure({
+	          drowData,
+	          key
+	        })
+	      }));
+	    }));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Generate Drow Treasure"), open && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: open,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "Incidental Drow Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getDrowTreasure(drowData)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(DrowList, {
+	    drowTreasure: drowTreasure
+	  })))));
+	}
+
+	function Drow() {
+	  const [drowData, setDrowData] = React.useState([{
+	    drowLevel: 0,
+	    numDrow: 0
+	  }, {
+	    drowLevel: 0,
+	    numDrow: 0
+	  }, {
+	    drowLevel: 0,
+	    numDrow: 0
+	  }]);
+	  const handleQuantityChange = id => event => {
+	    setDrowData(prevFormData => prevFormData.map((oldDrowData, idx) => idx === id ? {
+	      ...oldDrowData,
+	      numDrow: parseInt(event.target.value) || 0
+	    } : oldDrowData));
+	  };
+	  const handleDrowLevelChange = id => selectedOption => {
+	    setDrowData(prevFormData => prevFormData.map((oldDrowData, idx) => idx === id ? {
+	      ...oldDrowData,
+	      drowLevel: selectedOption?.value || 0
+	    } : oldDrowData));
+	  };
+	  const DrowLevelSelect = targetID => {
+	    const id = parseInt(targetID.id.split('_')[1]);
+	    let options = [];
+	    options.push({
+	      value: 1,
+	      label: '1-2'
+	    });
+	    options.push({
+	      value: 2,
+	      label: '3-7'
+	    });
+	    options.push({
+	      value: 3,
+	      label: '8+'
+	    });
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === drowData[id].drowLevel;
+	      }),
+	      onChange: handleDrowLevelChange(id),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Pick Drow Level",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "Incidental Drow Treasure"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "Drow Level")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "# of Drow")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(DrowLevelSelect, {
+	    id: "level_0"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(0)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(DrowLevelSelect, {
+	    id: "level_1"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(1)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(DrowLevelSelect, {
+	    id: "level_2"
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      width: "30%"
+	    },
+	    onChange: handleQuantityChange(2)
+	  }))), /*#__PURE__*/React.createElement(GenDrow, {
+	    drowData: drowData
+	  })));
+	}
+
 	class Test extends React.Component {
 	  render() {
 	    return /*#__PURE__*/React.createElement("span", null);
@@ -45010,28 +45268,22 @@ export default theme;`;
 	  size: 4
 	}, /*#__PURE__*/React.createElement(Traps, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(Treasure3, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(Treasure3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Treasure1, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(Baubles3, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(Baubles3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Baubles1, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Drow, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(MagicItems3, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 4
-	}, /*#__PURE__*/React.createElement(Treasure1, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 4
-	}, /*#__PURE__*/React.createElement(Baubles1, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 4
-	}, /*#__PURE__*/React.createElement(MagicItems1, null), /*#__PURE__*/React.createElement(Typography, {
+	}, /*#__PURE__*/React.createElement(MagicItems3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(MagicItems1, null), /*#__PURE__*/React.createElement(Typography, {
 	  sx: {
 	    textAlign: "center"
 	  }
 	}, /*#__PURE__*/React.createElement(IntelligentWeapon, {
 	  label: "Generic Intelligent Weapon"
 	}))), /*#__PURE__*/React.createElement(Grid, {
-	  size: 6
+	  size: 4
 	}, /*#__PURE__*/React.createElement(spellbooks3, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 6
+	  size: 4
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 6
+	  size: 4
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {

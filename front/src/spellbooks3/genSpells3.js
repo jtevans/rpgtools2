@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
+import Utils from '../utils';
 
 const style = {
   position: 'absolute',
@@ -104,7 +105,7 @@ export default function GenSpells3(props) {
   }
 
   function SpellsList({ spellbook }) {
-    const restrictedSchools = spellbookData.restrictedSchools.map((school) => school.value).join(' ');
+    const restrictedSchools = spellbookData.restrictedSchools.map((school) => Utils.ucfirst(school.value)).join(', ');
 
     if (spellbook.length == 1) {
       return (<div>{`${spellbook[0][0]}`}</div>);
@@ -115,8 +116,8 @@ export default function GenSpells3(props) {
         Wizard Name: <u>_________________________________</u><br />
         Wizard Level: {spellbookData.level}<br />
         Wizard Intelligence: {spellbookData.intelligence}<br />
-        Wizard Specialist: {spellbookData.specialist}<br />
-        Restricted School(s): {restrictedSchools}<br />
+        Wizard Specialist School: {Utils.ucfirst(spellbookData.specialist) || 'None'}<br />
+        Restricted School(s): {restrictedSchools || 'None'}<br />
 
         {spellbook.map((spells, spellLevel) => {
           return spells.map((spell, index) => {
