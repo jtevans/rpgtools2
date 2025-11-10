@@ -16,6 +16,7 @@ import SpellBooks3 from './spellbooks3/spellbooks3';
 import Drow from './drow/drow';
 import GiantBag from './giant/giant';
 import Test from './test';
+import Lowerplanes from './lowerplanes/lowerplanes';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -36,7 +37,8 @@ root.render(
 
       { /* Traps */}
       <Grid size={4}>
-        <Traps />
+        <Traps /><br />
+        <Lowerplanes />
       </Grid>
 
       { /* D&D 3e/3.5/Pathfinder 1 Treasure */ }

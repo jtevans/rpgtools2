@@ -1,10 +1,77 @@
 <?php
-/* John's D&D Utilities
- * Copyright (C) 2001-2025, John Evans
- * Released under GPLv3.
- */
-
 require("utils.php");
+
+class Creature
+{
+  public $head;
+  public $headAdornment;
+  public $visage;
+  public $ears;
+  public $eyeColor;
+  public $numEyes;
+  public $eyeType;
+  public $nose;
+  public $mouthType;
+  public $mouth;
+  public $numLegs;
+  public $torso;
+  public $generalOne;
+  public $generalTwo;
+  public $tail;
+  public $odor;
+  public $skin;
+  public $skinColor;
+  public $back;
+  public $wings;
+  public $numArms;
+  public $arms;
+  public $hands;
+  public $legsFeet;
+  public $beak;
+  public $tailPoison;
+  public $mouthPoison;
+  public $specialAttacks;
+  public $specialDefenses;
+  public $specialAbilities;
+
+  public function __construct($head, $headAdornment, $visage, $ears, $eyeColor, $numEyes, $eyeType, $nose,
+    $mouthType, $mouth, $numLegs, $torso, $generalOne, $generalTwo, $tail,
+    $odor, $skin, $skinColor, $back, $wings, $numArms, $arms, $hands, $legsFeet, $beak, $tailPoison,
+    $mouthPoison, $specialAttacks, $specialDefenses, $specialAbilities)
+  {
+    $this->head = $head;
+    $this->headAdornment = $headAdornment;
+    $this->visage = $visage;
+    $this->ears = $ears;
+    $this->eyeColor = $eyeColor;
+    $this->numEyes = $numEyes;
+    $this->eyeType = $eyeType;
+    $this->nose = $nose;
+    $this->mouthType = $mouthType;
+    $this->mouth = $mouth;
+    $this->numLegs = $numLegs;
+    $this->torso = $torso;
+    $this->generalOne = $generalOne;
+    $this->generalTwo = $generalTwo;
+    $this->tail = $tail;
+    $this->odor = $odor;
+    $this->skin = $skin;
+    $this->skinColor = $skinColor;
+    $this->back = $back;
+    $this->wings = $wings;
+    $this->numArms = $numArms;
+    $this->arms = $arms;
+    $this->hands = $hands;
+    $this->legsFeet = $legsFeet;
+    $this->beak = $beak;
+    $this->tailPoison = $tailPoison;
+    $this->mouthPoison = $mouthPoison;
+    $this->specialAttacks = $specialAttacks;
+    $this->specialDefenses = $specialDefenses;
+    $this->specialAbilities = $specialAbilities;
+  }
+}
+
 
 function pickChoice($arr) {
   return($arr[array_rand($arr)]);
@@ -164,7 +231,7 @@ function makeBeak() {
 }
 
 function makePoison() {
-  $choices = array('+1 on save', 'normal', '-1 on save', '-2 on save', 'insanity for 1-4 rounds', 'weakness: 1 point per hit die permanently lost');
+  $choices = array('+1 on save', 'normal', '-1 on save', '-2 on save', 'insanity for 1-4 rounds', 'weakness: 1 hit point per hit die permanently lost');
   return (pickChoice($choices));
 }
 
@@ -173,14 +240,21 @@ function makeSpecialAttacks() {
   $choices = array(
     'Sneak attack: 2d6',
     'Sneak attack: 4d6',
-// XXXJTE -- Still need to pull these from B1, B2, and B3    
+    'Ability Drain',
+    'Energy Drain (Cold)',
+    'Gaseous Discharge',
+    'Missile Discharge',
+    'Heat Generation',
+    'Life Level Drain',
+    'Spell-Like Abilities',
+    'Spell Use',
+    'Summon/Gate'
   );
-  $saText = '<ol>';
+  $attacks = [];
   for ($x = 1; $x <= $count; ++$x) {
-    $saText .= '<li>' . pickChoice($choices) . '</li>';
+    $attacks[] = pickChoice($choices);
   }
-  $saText .= '</ol>';
-  return $saText;
+  return $attacks;
 }
 
 function makeSpecialDefenses() {
@@ -196,19 +270,19 @@ function makeSpecialDefenses() {
     'Regeneration: (3 or 5 or 7) HP/round',
     'Spell Resistance: (13, 15, 17, 19, or 21)',
   );
-  $sdText = '<ol>';
-  $sdText .= '<li>DR: 5/good or cold iron</li>';
-  $sdText .= '<li>Immune: electricity</li>';
-  $sdText .= '<li>Immune: poison</li>';
-  $sdText .= '<li>Resist: acid 10</li>';
-  $sdText .= '<li>Resist: cold 10</li>';
-  $sdText .= '<li>Resist: fire 10</li>';
-  $sdText .= '<li>SR: 15</li>';
+  $defenses = [
+    'DR: 5/good or cold iron',
+    'Immune: electricity',
+    'Immune: poison',
+    'Resist: acid 10',
+    'Resist: cold 10',
+    'Resist: fire 10',
+    'SR: 15'
+  ];
   for ($x = 1; $x <= $count; ++$x) {
-    $sdText .= '<li>' . pickChoice($choices) . '</li>';
+    $defenses[] = pickChoice($choices);
   }
-  $sdText .= '</ol>';
-  return $sdText;
+  return $defenses;
 }
 
 function makeSpecialAbilities() {
@@ -240,24 +314,17 @@ function makeSpecialAbilities() {
     'Stinking Cloud -- (1/day)',
     'Arcane Lock -- (3/day)'
   );
-  $saText = '<ol>';
+  $abilities = [];
   for ($x = 1; $x <= $count; ++$x) {
-    $saText .= '<li>' . pickChoice($choices) . '</li>';
+    $abilities[] = pickChoice($choices);
   }
-  $saText .= '</ol>';
-  return $saText;
+  return $abilities;
 }
 
-$num = min(30, max(1, intval(get_var("num"))));
-?>
+$amount = min(30, max(1, intval(get_var("amount", 1))));
+$creatures = [];
 
-<p align="center">
-<a href="lowerplanes.php?num=<?php print($num); ?>">Generate More</a>
-</p>
-
-<?php
-
-for ($x = 1; $x <= $num; ++$x)
+for ($x = 1; $x <= $amount; ++$x)
 {
   $head = makeHead();
   $headAdornment = makeHeadAdornment();
@@ -305,136 +372,13 @@ for ($x = 1; $x <= $num; ++$x)
   $specialAttacks = makeSpecialAttacks();
   $specialDefenses = makeSpecialDefenses();
   $specialAbilities = makeSpecialAbilities();
-?>
 
-<h2 align="center">Lower Planes Creature #<?php echo $x ?></h2>
-
-<table cellpadding="3" cellspacing="0" align="center" width="80%" border="1">
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Head</td>
-    <td style="text-align: left;"><?php echo $head?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Head Adornment</td>
-    <td style="text-align: left;"><?php echo $headAdornment?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Visage</td>
-    <td style="text-align: left;"><?php echo $visage?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Ears</td>
-    <td style="text-align: left;"><?php echo $ears?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Eye Color</td>
-    <td style="text-align: left;"><?php echo $eyeColor?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Number of Eyes</td>
-    <td style="text-align: left;"><?php echo $numEyes?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Eye Type</td>
-    <td style="text-align: left;"><?php echo $eyeType?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Nose</td>
-    <td style="text-align: left;"><?php echo $nose?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Mouth Type</td>
-    <td style="text-align: left;"><?php echo $mouthType?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Mouth</td>
-    <td style="text-align: left;"><?php echo $mouth?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Number of Legs</td>
-    <td style="text-align: left;"><?php echo $numLegs?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Torso</td>
-    <td style="text-align: left;"><?php echo $torso?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">General Characteristics</td>
-    <td style="text-align: left;"><?php echo $generalOne?> and <?php echo $generalTwo?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Tail</td>
-    <td style="text-align: left;"><?php echo $tail?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Odor</td>
-    <td style="text-align: left;"><?php echo $odor?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Skin</td>
-    <td style="text-align: left;"><?php echo $skin?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Skin Color</td>
-    <td style="text-align: left;"><?php echo $skinColor?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Back</td>
-    <td style="text-align: left;"><?php echo $back?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Wings</td>
-    <td style="text-align: left;"><?php echo $wings?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Number of Arms</td>
-    <td style="text-align: left;"><?php echo $numArms?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Arms</td>
-    <td style="text-align: left;"><?php echo $arms?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Hands</td>
-    <td style="text-align: left;"><?php echo $hands?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Feet</td>
-    <td style="text-align: left;"><?php echo $legsFeet?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Beak</td>
-    <td style="text-align: left;"><?php echo $beak?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Tail Poison</td>
-    <td style="text-align: left;"><?php echo $tailPoison?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Mouth Poison</td>
-    <td style="text-align: left;"><?php echo $mouthPoison?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Special Attacks</td>
-    <td style="text-align: left;"><?php echo $specialAttacks?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Special Defenses</td>
-    <td style="text-align: left;"><?php echo $specialDefenses?></td>
-  </tr>
-  <tr>
-    <td style="font-weight: bold; text-align: right;">Special Abilities</td>
-    <td style="text-align: left;"><?php echo $specialAbilities?></td>
-  </tr>
-</table>
-
-<?php
+  $creatures[] = new Creature(
+    $head, $headAdornment, $visage, $ears, $eyeColor, $numEyes, $eyeType, $nose,
+    $mouthType, $mouth, $numLegs, $torso, $generalOne, $generalTwo, $tail,
+    $odor, $skin, $skinColor, $back, $wings, $numArms, $arms, $hands, $legsFeet, $beak, $tailPoison,
+    $mouthPoison, $specialAttacks, $specialDefenses, $specialAbilities
+  );
 }
 
-?>
-
-<p align="center">
-<a href="lowerplanes.php?num=<?php print($num); ?>">Generate More</a>
-</p>
-
-<?php end_html();
+print(json_encode($creatures));
