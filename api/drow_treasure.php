@@ -101,4 +101,5 @@ $treasure['PP'] += calc_pp($l3, $q3);
 $treasure['Gems'] += calc_gems($l1, $q1);
 $treasure['Gems'] += calc_gems($l2, $q2);
 $treasure['Gems'] += calc_gems($l3, $q3);
+
 print(json_encode($treasure));

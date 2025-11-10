@@ -54,7 +54,7 @@ export default function Drow() {
         })}
         onChange={handleDrowLevelChange(id)}
         options={options}
-        isClearable={true}
+        isClearable={false}
         placeholder="Pick Drow Level"
         sx={{ width: "30%", height: "16pt" }}
         menuPortalTarget={document.body}

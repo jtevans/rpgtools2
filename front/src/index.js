@@ -11,9 +11,10 @@ import MagicItems3 from './magicItems3/magicItems3';
 import MagicItems1 from './magicItems1/magicItems1';
 import Baubles1 from './baubles1/baubles1';
 import Treasure1 from './treasure1/treasure1';
-import IntelligentWeapon from './magicItems1/genIntelligentWeapon'
-import SpellBooks3 from './spellbooks3/spellbooks3'
-import Drow from './drow/drow'
+import IntelligentWeapon from './magicItems1/genIntelligentWeapon';
+import SpellBooks3 from './spellbooks3/spellbooks3';
+import Drow from './drow/drow';
+import GiantBag from './giant/giant';
 import Test from './test';
 
 const rootElement = document.getElementById('root');
@@ -48,7 +49,8 @@ root.render(
       <Grid size={4}>
         <Baubles3 /><br />
         <Baubles1 /><br />
-        <Drow />
+        <Drow /><br />
+        <GiantBag />
       </Grid>
     
       { /* D&D 3.0/3.5/Pathfinder 1 Magic Items */ }

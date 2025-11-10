@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$i(options) {
+	function style$j(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$h(props, keys) {
+	function style$i(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$h(props, marginKeys);
+	  return style$i(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$h(props, paddingKeys);
+	  return style$i(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$i({
+	  return style$j({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$i({
+	const gridColumn = style$j({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$i({
+	const gridRow = style$j({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$i({
+	const gridAutoFlow = style$j({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$i({
+	const gridAutoColumns = style$j({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$i({
+	const gridAutoRows = style$j({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$i({
+	const gridTemplateColumns = style$j({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$i({
+	const gridTemplateRows = style$j({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$i({
+	const gridTemplateAreas = style$j({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$i({
+	const gridArea = style$j({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$i({
+	const color = style$j({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$i({
+	const bgcolor = style$j({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$i({
+	const backgroundColor = style$j({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$i({
+	const width = style$j({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$i({
+	const minWidth = style$j({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$i({
+	const height = style$j({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$i({
+	const maxHeight = style$j({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$i({
+	const minHeight = style$j({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$i({
+	style$j({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$i({
+	style$j({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$i({
+	const boxSizing = style$j({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$g = {
+	const style$h = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$h
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$f = {
+	const style$g = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$e = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$d = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$c = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$b = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$a = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$9 = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,7 +30625,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$8 = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30704,7 +30704,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30729,7 +30729,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$7 = {
+	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30834,7 +30834,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
+	    sx: style$8
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30880,7 +30880,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$6 = {
+	const style$7 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31030,7 +31030,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$7
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38683,7 +38683,7 @@ export default theme;`;
 
 	var parse = HTMLReactParser.default || HTMLReactParser;
 
-	const style$5 = {
+	const style$6 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38739,7 +38739,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38763,7 +38763,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$4 = {
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38870,7 +38870,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -43956,7 +43956,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$3 = {
+	const style$4 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44035,7 +44035,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
+	    sx: style$4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44120,7 +44120,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$2 = {
+	const style$3 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44309,7 +44309,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$2
+	    sx: style$3
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44577,7 +44577,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$1 = {
+	const style$2 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44687,7 +44687,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$1
+	    sx: style$2
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45000,7 +45000,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style = {
+	const style$1 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45091,7 +45091,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style
+	    sx: style$1
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45159,7 +45159,7 @@ export default theme;`;
 	      }),
 	      onChange: handleDrowLevelChange(id),
 	      options: options,
-	      isClearable: true,
+	      isClearable: false,
 	      placeholder: "Pick Drow Level",
 	      sx: {
 	        width: "30%",
@@ -45249,6 +45249,184 @@ export default theme;`;
 	  })));
 	}
 
+	const style = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenGiant(_ref) {
+	  let {
+	    giantType
+	  } = _ref;
+	  const [open, setOpen] = reactExports.useState(false);
+	  const handleOpen = () => {
+	    getGiantBag(giantType);
+	  };
+	  const handleClose = () => {
+	    setOpen(false);
+	    setGiantBag(null);
+	  };
+	  const [giantBag, setGiantBag] = reactExports.useState([]);
+	  const getGiantBag = async giantType => {
+	    const data = await callAPI(giantType);
+	    setGiantBag(data);
+	    setOpen(true);
+	  };
+	  const updateContent = async (indexToUpdate, newValue) => {
+	    setGiantBag(giantBag.map((item, index) => index === indexToUpdate ? newValue : item));
+	  };
+	  async function callAPI(giantType) {
+	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+	    let amountArgs = '';
+	    if (amount != 0) {
+	      amountArgs = `&amount=${amount}`;
+	    }
+	    let response = await fetch(`http://localhost:8080/tools2/api/giant_bag.php?type=${giantType}${amountArgs}`);
+	    return await response.json();
+	  }
+	  async function replaceContent(_ref2) {
+	    let {
+	      giantType,
+	      idx
+	    } = _ref2;
+	    let data = await callAPI(giantType, 1);
+	    updateContent(idx, data[0]);
+	  }
+	  function BagList(_ref3) {
+	    let {
+	      giantBag,
+	      giantType
+	    } = _ref3;
+	    return /*#__PURE__*/reactExports.createElement("div", null, giantBag.map((content, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
+	      id: `span-${idx}`
+	    }, content), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceContent({
+	        giantType,
+	        idx
+	      })
+	    }))));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Generate Bag Contents"), open && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: open,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "Giant Bag Contents", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getGiantBag(giantType)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(BagList, {
+	    giantBag: giantBag,
+	    giantType: giantType
+	  })))));
+	}
+
+	function GiantBag() {
+	  const [giantType, setGiantType] = React.useState(1);
+	  const handleGiantTypeChange = selectedOption => {
+	    setGiantType(selectedOption?.value || 1);
+	  };
+	  const GiantTypeSelect = () => {
+	    let options = [];
+	    options.push({
+	      value: 1,
+	      label: 'Cloud Giant'
+	    });
+	    options.push({
+	      value: 2,
+	      label: 'Fire Giant'
+	    });
+	    options.push({
+	      value: 3,
+	      label: 'Frost Giant'
+	    });
+	    options.push({
+	      value: 4,
+	      label: 'Hill Giant'
+	    });
+	    options.push({
+	      value: 5,
+	      label: 'Stone Giant'
+	    });
+	    options.push({
+	      value: 6,
+	      label: 'Storm Giant'
+	    });
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === giantType;
+	      }),
+	      onChange: handleGiantTypeChange,
+	      options: options,
+	      isClearable: false,
+	      placeholder: "Pick Giant Type",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "Giant Bags"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(GiantTypeSelect, null), /*#__PURE__*/React.createElement(GenGiant, {
+	    giantType: giantType
+	  })));
+	}
+
 	class Test extends React.Component {
 	  render() {
 	    return /*#__PURE__*/React.createElement("span", null);
@@ -45270,7 +45448,7 @@ export default theme;`;
 	  size: 4
 	}, /*#__PURE__*/React.createElement(Treasure3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Treasure1, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(Baubles3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Baubles1, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Drow, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(Baubles3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Baubles1, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Drow, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GiantBag, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
 	}, /*#__PURE__*/React.createElement(MagicItems3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(MagicItems1, null), /*#__PURE__*/React.createElement(Typography, {
 	  sx: {
