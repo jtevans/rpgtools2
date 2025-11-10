@@ -15,8 +15,11 @@ import IntelligentWeapon from './magicItems1/genIntelligentWeapon';
 import SpellBooks3 from './spellbooks3/spellbooks3';
 import Drow from './drow/drow';
 import GiantBag from './giant/giant';
+import Lowerplanes from './lowerplanes/lowerplanes';
+import CraftCalculator from './craftCalculator/craftCalculator'
 import Test from './test';
 import Lowerplanes from './lowerplanes/lowerplanes';
+
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -58,10 +61,11 @@ root.render(
       { /* D&D 3.0/3.5/Pathfinder 1 Magic Items */ }
       <Grid size={4}>
         <MagicItems3 /><br />
-        <MagicItems1 />
+        <MagicItems1 /><br />
         <Typography sx={{ textAlign: "center" }}>
           <IntelligentWeapon label="Generic Intelligent Weapon" />
-        </Typography>
+        </Typography><br />
+        <CraftCalculator />
       </Grid>
    
       { /* Random Wizard Spellbooks (D&D 3.5) */}

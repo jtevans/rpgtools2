@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$k(options) {
+	function style$j(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$j(props, keys) {
+	function style$i(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$j(props, marginKeys);
+	  return style$i(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$j(props, paddingKeys);
+	  return style$i(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$k({
+	  return style$j({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$k({
+	const gridColumn = style$j({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$k({
+	const gridRow = style$j({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$k({
+	const gridAutoFlow = style$j({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$k({
+	const gridAutoColumns = style$j({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$k({
+	const gridAutoRows = style$j({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$k({
+	const gridTemplateColumns = style$j({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$k({
+	const gridTemplateRows = style$j({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$k({
+	const gridTemplateAreas = style$j({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$k({
+	const gridArea = style$j({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$k({
+	const color = style$j({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$k({
+	const bgcolor = style$j({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$k({
+	const backgroundColor = style$j({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$k({
+	const width = style$j({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$k({
+	const minWidth = style$j({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$k({
+	const height = style$j({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$k({
+	const maxHeight = style$j({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$k({
+	const minHeight = style$j({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$k({
+	style$j({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$k({
+	style$j({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$k({
+	const boxSizing = style$j({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$i = {
+	const style$h = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$i
+	    sx: style$h
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$h = {
+	const style$g = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$g = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$f = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$e = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$d = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$c = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$b = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,7 +30625,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$a = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30704,7 +30704,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30729,7 +30729,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$9 = {
+	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30834,7 +30834,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$8
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30880,7 +30880,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$8 = {
+	const style$7 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31030,7 +31030,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$7
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38683,7 +38683,7 @@ export default theme;`;
 
 	var parse = HTMLReactParser.default || HTMLReactParser;
 
-	const style$7 = {
+	const style$6 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38739,7 +38739,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
+	    sx: style$6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38763,7 +38763,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$6 = {
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38870,7 +38870,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -43956,7 +43956,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$5 = {
+	const style$4 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44035,7 +44035,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44120,7 +44120,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$4 = {
+	const style$3 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44309,7 +44309,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$3
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44580,7 +44580,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$3 = {
+	const style$2 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44690,7 +44690,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
+	    sx: style$2
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45003,7 +45003,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$2 = {
+	const style$1 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45094,7 +45094,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$2
+	    sx: style$1
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45252,7 +45252,7 @@ export default theme;`;
 	  })));
 	}
 
-	const style$1 = {
+	const style = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45333,7 +45333,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$1
+	    sx: style
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45428,6 +45428,390 @@ export default theme;`;
 	  }, /*#__PURE__*/React.createElement(GiantTypeSelect, null), /*#__PURE__*/React.createElement(GenGiant, {
 	    giantType: giantType
 	  })));
+	}
+
+	const style$1 = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenLowerplanes(_ref) {
+	  let {
+	    amount
+	  } = _ref;
+	  amount = Math.max(1, Math.min(30, parseInt(amount) || 0));
+	  const [open, setOpen] = reactExports.useState(false);
+	  const handleOpen = () => {
+	    getLower(amount);
+	  };
+	  const handleClose = () => {
+	    setOpen(false);
+	    setLower(null);
+	  };
+	  const [lower, setLower] = reactExports.useState(null);
+	  const getLower = async amount => {
+	    const data = await callAPI(amount);
+	    setLower(data);
+	    setOpen(true);
+	  };
+	  const updateLower = async (indexToUpdate, newValue) => {
+	    setLower(lower.map((creature, index) => index === indexToUpdate ? newValue : creature));
+	  };
+	  async function callAPI(amount) {
+	    let response = await fetch(`http://localhost:8080/tools2/api/lowerplanes.php?amount=${amount}`);
+	    return await response.json();
+	  }
+	  async function replaceLower(_ref2) {
+	    let {
+	      idx
+	    } = _ref2;
+	    let data = await callAPI(1);
+	    updateLower(idx, data[0]);
+	  }
+	  function LowerList(_ref3) {
+	    let {
+	      lower
+	    } = _ref3;
+	    return /*#__PURE__*/reactExports.createElement("div", null, lower.map((creature, idx) => {
+	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(Typography, {
+	        sx: {
+	          textAlign: "center",
+	          fontWeight: "bold"
+	        }
+	      }, `Creature #${idx + 1}`, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	        sx: {
+	          paddingLeft: "5px",
+	          fontSize: "9pt"
+	        },
+	        onClick: () => replaceLower({
+	          idx
+	        })
+	      }), /*#__PURE__*/reactExports.createElement("br", null)), /*#__PURE__*/reactExports.createElement(Typography, {
+	        sx: {
+	          textAlign: "left"
+	        }
+	      }, Object.keys(creature).map(function (key) {
+	        const display = Utils.ucfirst(key);
+	        let value = '';
+	        if (typeof creature[key] == 'object') {
+	          value = creature[key].join(', ');
+	        } else {
+	          value = Utils.ucfirst(creature[key]) || 'None';
+	        }
+	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("b", null, display), ": ", value);
+	      })));
+	    }));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Generate Lower Planes Creatures"), open && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: open,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style$1
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "Lower Planes Creatures", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getLower(amount)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(LowerList, {
+	    lower: lower
+	  })))));
+	}
+
+	function Lowerplanes() {
+	  const [lowerAmount, setLowerAmount] = React.useState(0);
+	  const handleChange = event => {
+	    setLowerAmount(parseInt(event.target.value) || 0);
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "Generate Creatures from the Lower Planes"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Typography, null, "Number to Generate (1-30): ", /*#__PURE__*/React.createElement(OutlinedInput, {
+	    value: lowerAmount,
+	    id: "lowerAmount",
+	    name: "lowerAmount",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenLowerplanes, {
+	    amount: lowerAmount
+	  }))));
+	}
+
+	const style = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenCraftCalculator(_ref) {
+	  let {
+	    craftData
+	  } = _ref;
+	  craftData.SP = Math.max(1, Math.min(20000, parseInt(craftData.SP || 1)));
+	  craftData.DC = parseInt(craftData.DC || 0) || 1;
+	  craftData.bonus = parseInt(craftData.bonus || 0) || 0;
+	  const [open, setOpen] = reactExports.useState(false);
+	  const handleOpen = () => {
+	    calcCraft(craftData);
+	    setOpen(true);
+	  };
+	  const handleClose = () => {
+	    setOpen(false);
+	  };
+	  const [weeks, setWeeks] = reactExports.useState([]);
+	  function calcCraft(craftData) {
+	    let progress = 0;
+	    let progressPercent = 0;
+	    let newWeeks = [];
+	    while (progress <= craftData.SP) {
+	      const skillRoll = Math.floor(Math.random() * 20) + 1 + craftData.bonus;
+	      if (skillRoll >= craftData.DC) {
+	        progress += craftData.DC * skillRoll;
+	      }
+	      progressPercent = Math.min(100, Math.round(progress / craftData.SP * 100));
+	      newWeeks.push({
+	        roll: skillRoll,
+	        sp: progress,
+	        percentage: progressPercent
+	      });
+	    }
+	    setWeeks(newWeeks);
+	  }
+	  function TimeDisplay(_ref2) {
+	    let {
+	      craftData
+	    } = _ref2;
+	    return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(Grid, {
+	      container: true
+	    }, /*#__PURE__*/reactExports.createElement(Grid, {
+	      size: 4,
+	      sx: {
+	        textAlign: "center",
+	        paddingRight: "2px"
+	      }
+	    }, "Week Number"), /*#__PURE__*/reactExports.createElement(Grid, {
+	      size: 4,
+	      sx: {
+	        textAlign: "center",
+	        paddingRight: "2px"
+	      }
+	    }, "Skill Roll"), /*#__PURE__*/reactExports.createElement(Grid, {
+	      size: 4,
+	      sx: {
+	        textAlign: "center",
+	        paddingRight: "2px"
+	      }
+	    }, "Progress (SP / %)"), weeks.map((week, idx) => {
+	      return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Grid, {
+	        size: 4,
+	        sx: {
+	          textAlign: "center",
+	          paddingRight: "2px"
+	        }
+	      }, `${idx + 1}`), /*#__PURE__*/reactExports.createElement(Grid, {
+	        size: 4,
+	        sx: {
+	          textAlign: "center",
+	          paddingRight: "2px"
+	        }
+	      }, `${week.roll}`), /*#__PURE__*/reactExports.createElement(Grid, {
+	        size: 4,
+	        sx: {
+	          textAlign: "center",
+	          paddingRight: "2px"
+	        }
+	      }, `${week.sp}`, " / ", `${week.percentage}`));
+	    })));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Calculate Time"), open && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: open,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "Weeks to Craft", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => calcCraft(craftData)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TimeDisplay, {
+	    craftData: craftData
+	  })))));
+	}
+
+	function CraftCalculator() {
+	  const [craftData, setCraftData] = React.useState({
+	    SP: 0,
+	    DC: 0,
+	    bonus: 0
+	  });
+	  const handleChange = event => {
+	    let {
+	      name,
+	      value
+	    } = event.target;
+	    value = parseInt(value ?? 0);
+	    setCraftData(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "D&D 3e/3.5/Pathfinder 1 Craft Calculator"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    container: true
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Final Price in SP:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "SP",
+	    name: "SP",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Crafting DC:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "DC",
+	    name: "DC",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "right",
+	      paddingRight: "2px"
+	    }
+	  }, "Craft Skill Bonus:"), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6,
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "bonus",
+	    name: "bonus",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 12,
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(GenCraftCalculator, {
+	    craftData: craftData
+	  })))));
 	}
 
 	class Test extends React.Component {
@@ -45604,13 +45988,13 @@ export default theme;`;
 	  size: 4
 	}, /*#__PURE__*/React.createElement(Baubles3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Baubles1, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Drow, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GiantBag, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(MagicItems3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(MagicItems1, null), /*#__PURE__*/React.createElement(Typography, {
+	}, /*#__PURE__*/React.createElement(MagicItems3, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(MagicItems1, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Typography, {
 	  sx: {
 	    textAlign: "center"
 	  }
 	}, /*#__PURE__*/React.createElement(IntelligentWeapon, {
 	  label: "Generic Intelligent Weapon"
-	}))), /*#__PURE__*/React.createElement(Grid, {
+	})), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(CraftCalculator, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
 	}, /*#__PURE__*/React.createElement(spellbooks3, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
