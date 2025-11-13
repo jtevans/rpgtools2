@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$m(options) {
+	function style$n(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$l(props, keys) {
+	function style$m(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$l(props, marginKeys);
+	  return style$m(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$l(props, paddingKeys);
+	  return style$m(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$m({
+	  return style$n({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$m({
+	const gridColumn = style$n({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$m({
+	const gridRow = style$n({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$m({
+	const gridAutoFlow = style$n({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$m({
+	const gridAutoColumns = style$n({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$m({
+	const gridAutoRows = style$n({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$m({
+	const gridTemplateColumns = style$n({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$m({
+	const gridTemplateRows = style$n({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$m({
+	const gridTemplateAreas = style$n({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$m({
+	const gridArea = style$n({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$m({
+	const color = style$n({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$m({
+	const bgcolor = style$n({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$m({
+	const backgroundColor = style$n({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$m({
+	const width = style$n({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$m({
+	const minWidth = style$n({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$m({
+	const height = style$n({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$m({
+	const maxHeight = style$n({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$m({
+	const minHeight = style$n({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$m({
+	style$n({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$m({
+	style$n({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$m({
+	const boxSizing = style$n({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$k = {
+	const style$l = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$k
+	    sx: style$l
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$j = {
+	const style$k = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$j
+	    sx: style$k
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$i = {
+	const style$j = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$i
+	    sx: style$j
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$h = {
+	const style$i = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$i
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$g = {
+	const style$h = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$h
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$f = {
+	const style$g = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$e = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$d = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,7 +30625,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$c = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30704,7 +30704,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30729,7 +30729,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$b = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30834,7 +30834,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30880,7 +30880,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$a = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31030,7 +31030,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31086,131 +31086,129 @@ export default theme;`;
 	  })) : /*#__PURE__*/reactExports.createElement("div", null)))));
 	}
 
-	class Treasure3 extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined"
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "D&D 3e/3.5/Pathfinder 1 Treasure"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      container: true,
-	      spacing: 2
-	    }, /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "center"
-	      },
-	      variant: "h6",
-	      component: "h2"
-	    }, "CR (1-20)")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(Typography, {
-	      sx: {
-	        textAlign: "center"
-	      },
-	      variant: "h6",
-	      component: "h2"
-	    }, "Quantity (1-200)")), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_cr0",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_q0",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_cr1",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_q1",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_cr2",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_q2",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_cr3",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_q3",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_cr4",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    })), /*#__PURE__*/React.createElement(Grid, {
-	      size: 6
-	    }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	      id: "treasure3_q4",
-	      size: "small",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      }
-	    }))), /*#__PURE__*/React.createElement(GenTreasure3, null)));
-	  }
+	function Treasure3() {
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "D&D 3e/3.5/Pathfinder 1 Treasure"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "CR (1-20)")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "Quantity (1-200)")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_cr0",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_q0",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_cr1",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_q1",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_cr2",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_q2",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_cr3",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_q3",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_cr4",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "treasure3_q4",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    }
+	  }))), /*#__PURE__*/React.createElement(GenTreasure3, null)));
 	}
 
 	function Baubles3() {
@@ -38683,7 +38681,7 @@ export default theme;`;
 
 	var parse = HTMLReactParser.default || HTMLReactParser;
 
-	const style$9 = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38739,7 +38737,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38763,7 +38761,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$8 = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38870,7 +38868,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -43956,7 +43954,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$7 = {
+	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44035,7 +44033,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
+	    sx: style$8
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44120,7 +44118,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$6 = {
+	const style$7 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44309,7 +44307,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$7
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44580,7 +44578,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$5 = {
+	const style$6 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44686,7 +44684,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45000,7 +44998,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$4 = {
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45101,7 +45099,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45350,7 +45348,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$3 = {
+	const style$4 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45441,7 +45439,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
+	    sx: style$4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45599,7 +45597,7 @@ export default theme;`;
 	  })));
 	}
 
-	const style$2 = {
+	const style$3 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45680,7 +45678,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$2
+	    sx: style$3
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45777,7 +45775,7 @@ export default theme;`;
 	  })));
 	}
 
-	const style$1 = {
+	const style$2 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45869,7 +45867,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$1
+	    sx: style$2
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45928,7 +45926,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style = {
+	const style$1 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -46033,7 +46031,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style
+	    sx: style$1
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -46161,6 +46159,820 @@ export default theme;`;
 	  })))));
 	}
 
+	const style = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenXPCalculator(_ref) {
+	  let {
+	    partyData,
+	    monsterData
+	  } = _ref;
+	  const [open, setOpen] = reactExports.useState(false);
+	  const handleOpen = () => {
+	    calcXP();
+	  };
+	  const handleClose = () => {
+	    setOpen(false);
+	  };
+	  const [total, setTotal] = reactExports.useState(0);
+	  const [share, setShare] = reactExports.useState(0);
+	  const calcXP = () => {
+	    let total = 0;
+	    let share = 0;
+	    partyData.partyLevel = Math.max(1, Math.min(20, parseInt(partyData.partyLevel || 1) || 1));
+	    partyData.numChars = Math.max(1, parseInt(partyData.partyLevel || 1) || 1);
+	    let xp = Array.from({
+	      length: 21
+	    }, () => []);
+	    xp.forEach(row => {
+	      Array.from({
+	        length: 21
+	      }, () => []);
+	    });
+	    xp[1][1] = 300;
+	    xp[1][2] = 600;
+	    xp[1][3] = 900;
+	    xp[1][4] = 1350;
+	    xp[1][5] = 1800;
+	    xp[1][6] = 2700;
+	    xp[1][7] = 3600;
+	    xp[1][8] = 5400;
+	    xp[1][9] = 7200;
+	    xp[1][10] = 10800;
+	    xp[1][11] = 0;
+	    xp[1][12] = 0;
+	    xp[1][13] = 0;
+	    xp[1][14] = 0;
+	    xp[1][15] = 0;
+	    xp[1][16] = 0;
+	    xp[1][17] = 0;
+	    xp[1][18] = 0;
+	    xp[1][19] = 0;
+	    xp[1][20] = 0;
+	    xp[2][1] = 300;
+	    xp[2][2] = 600;
+	    xp[2][3] = 900;
+	    xp[2][4] = 1350;
+	    xp[2][5] = 1800;
+	    xp[2][6] = 2700;
+	    xp[2][7] = 3600;
+	    xp[2][8] = 5400;
+	    xp[2][9] = 7200;
+	    xp[2][10] = 10800;
+	    xp[2][11] = 0;
+	    xp[2][12] = 0;
+	    xp[2][13] = 0;
+	    xp[2][14] = 0;
+	    xp[2][15] = 0;
+	    xp[2][16] = 0;
+	    xp[2][17] = 0;
+	    xp[2][18] = 0;
+	    xp[2][19] = 0;
+	    xp[2][20] = 0;
+	    xp[3][1] = 300;
+	    xp[3][2] = 600;
+	    xp[3][3] = 900;
+	    xp[3][4] = 1350;
+	    xp[3][5] = 1800;
+	    xp[3][6] = 2700;
+	    xp[3][7] = 3600;
+	    xp[3][8] = 5400;
+	    xp[3][9] = 7200;
+	    xp[3][10] = 10800;
+	    xp[3][11] = 0;
+	    xp[3][12] = 0;
+	    xp[3][13] = 0;
+	    xp[3][14] = 0;
+	    xp[3][15] = 0;
+	    xp[3][16] = 0;
+	    xp[3][17] = 0;
+	    xp[3][18] = 0;
+	    xp[3][19] = 0;
+	    xp[3][20] = 0;
+	    xp[4][1] = 300;
+	    xp[4][2] = 600;
+	    xp[4][3] = 800;
+	    xp[4][4] = 1200;
+	    xp[4][5] = 1600;
+	    xp[4][6] = 2400;
+	    xp[4][7] = 3200;
+	    xp[4][8] = 4800;
+	    xp[4][9] = 6400;
+	    xp[4][10] = 9600;
+	    xp[4][11] = 12800;
+	    xp[4][12] = 0;
+	    xp[4][13] = 0;
+	    xp[4][14] = 0;
+	    xp[4][15] = 0;
+	    xp[4][16] = 0;
+	    xp[4][17] = 0;
+	    xp[4][18] = 0;
+	    xp[4][19] = 0;
+	    xp[4][20] = 0;
+	    xp[5][1] = 300;
+	    xp[5][2] = 500;
+	    xp[5][3] = 750;
+	    xp[5][4] = 1000;
+	    xp[5][5] = 1500;
+	    xp[5][6] = 2250;
+	    xp[5][7] = 3000;
+	    xp[5][8] = 4500;
+	    xp[5][9] = 6000;
+	    xp[5][10] = 9000;
+	    xp[5][11] = 12000;
+	    xp[5][12] = 18000;
+	    xp[5][13] = 0;
+	    xp[5][14] = 0;
+	    xp[5][15] = 0;
+	    xp[5][16] = 0;
+	    xp[5][17] = 0;
+	    xp[5][18] = 0;
+	    xp[5][19] = 0;
+	    xp[5][20] = 0;
+	    xp[6][1] = 300;
+	    xp[6][2] = 450;
+	    xp[6][3] = 600;
+	    xp[6][4] = 900;
+	    xp[6][5] = 1200;
+	    xp[6][6] = 1800;
+	    xp[6][7] = 2700;
+	    xp[6][8] = 3600;
+	    xp[6][9] = 5400;
+	    xp[6][10] = 7200;
+	    xp[6][11] = 10800;
+	    xp[6][12] = 14400;
+	    xp[6][13] = 21600;
+	    xp[6][14] = 0;
+	    xp[6][15] = 0;
+	    xp[6][16] = 0;
+	    xp[6][17] = 0;
+	    xp[6][18] = 0;
+	    xp[6][19] = 0;
+	    xp[6][20] = 0;
+	    xp[7][1] = 263;
+	    xp[7][2] = 350;
+	    xp[7][3] = 525;
+	    xp[7][4] = 700;
+	    xp[7][5] = 1050;
+	    xp[7][6] = 1400;
+	    xp[7][7] = 2100;
+	    xp[7][8] = 3150;
+	    xp[7][9] = 4200;
+	    xp[7][10] = 6300;
+	    xp[7][11] = 8400;
+	    xp[7][12] = 12600;
+	    xp[7][13] = 16800;
+	    xp[7][14] = 25200;
+	    xp[7][15] = 0;
+	    xp[7][16] = 0;
+	    xp[7][17] = 0;
+	    xp[7][18] = 0;
+	    xp[7][19] = 0;
+	    xp[7][20] = 0;
+	    xp[8][1] = 200;
+	    xp[8][2] = 300;
+	    xp[8][3] = 400;
+	    xp[8][4] = 600;
+	    xp[8][5] = 800;
+	    xp[8][6] = 1200;
+	    xp[8][7] = 1600;
+	    xp[8][8] = 2400;
+	    xp[8][9] = 3600;
+	    xp[8][10] = 4800;
+	    xp[8][11] = 7200;
+	    xp[8][12] = 9600;
+	    xp[8][13] = 14400;
+	    xp[8][14] = 19200;
+	    xp[8][15] = 28800;
+	    xp[8][16] = 0;
+	    xp[8][17] = 0;
+	    xp[8][18] = 0;
+	    xp[8][19] = 0;
+	    xp[8][20] = 0;
+	    xp[9][1] = 0;
+	    xp[9][2] = 225;
+	    xp[9][3] = 338;
+	    xp[9][4] = 450;
+	    xp[9][5] = 675;
+	    xp[9][6] = 900;
+	    xp[9][7] = 1350;
+	    xp[9][8] = 1800;
+	    xp[9][9] = 2700;
+	    xp[9][10] = 4050;
+	    xp[9][11] = 5400;
+	    xp[9][12] = 8100;
+	    xp[9][13] = 10800;
+	    xp[9][14] = 16200;
+	    xp[9][15] = 21600;
+	    xp[9][16] = 32400;
+	    xp[9][17] = 0;
+	    xp[9][18] = 0;
+	    xp[9][19] = 0;
+	    xp[9][20] = 0;
+	    xp[10][1] = 0;
+	    xp[10][2] = 0;
+	    xp[10][3] = 250;
+	    xp[10][4] = 375;
+	    xp[10][5] = 500;
+	    xp[10][6] = 750;
+	    xp[10][7] = 1000;
+	    xp[10][8] = 1500;
+	    xp[10][9] = 2000;
+	    xp[10][10] = 3000;
+	    xp[10][11] = 4500;
+	    xp[10][12] = 6000;
+	    xp[10][13] = 9000;
+	    xp[10][14] = 12000;
+	    xp[10][15] = 18000;
+	    xp[10][16] = 2400;
+	    xp[10][17] = 36000;
+	    xp[10][18] = 0;
+	    xp[10][19] = 0;
+	    xp[10][20] = 0;
+	    xp[11][1] = 0;
+	    xp[11][2] = 0;
+	    xp[11][3] = 0;
+	    xp[11][4] = 275;
+	    xp[11][5] = 413;
+	    xp[11][6] = 550;
+	    xp[11][7] = 825;
+	    xp[11][8] = 1100;
+	    xp[11][9] = 1650;
+	    xp[11][10] = 2200;
+	    xp[11][11] = 3300;
+	    xp[11][12] = 4950;
+	    xp[11][13] = 6600;
+	    xp[11][14] = 9900;
+	    xp[11][15] = 13200;
+	    xp[11][16] = 19800;
+	    xp[11][17] = 26400;
+	    xp[11][18] = 39600;
+	    xp[11][19] = 0;
+	    xp[11][20] = 0;
+	    xp[12][1] = 0;
+	    xp[12][2] = 0;
+	    xp[12][3] = 0;
+	    xp[12][4] = 0;
+	    xp[12][5] = 300;
+	    xp[12][6] = 450;
+	    xp[12][7] = 600;
+	    xp[12][8] = 900;
+	    xp[12][9] = 1200;
+	    xp[12][10] = 1800;
+	    xp[12][11] = 2400;
+	    xp[12][12] = 3600;
+	    xp[12][13] = 5400;
+	    xp[12][14] = 7200;
+	    xp[12][15] = 10800;
+	    xp[12][16] = 14400;
+	    xp[12][17] = 21600;
+	    xp[12][18] = 28800;
+	    xp[12][19] = 23200;
+	    xp[12][20] = 0;
+	    xp[13][1] = 0;
+	    xp[13][2] = 0;
+	    xp[13][3] = 0;
+	    xp[13][4] = 0;
+	    xp[13][5] = 0;
+	    xp[13][6] = 325;
+	    xp[13][7] = 488;
+	    xp[13][8] = 650;
+	    xp[13][9] = 975;
+	    xp[13][10] = 1300;
+	    xp[13][11] = 1950;
+	    xp[13][12] = 2600;
+	    xp[13][13] = 3900;
+	    xp[13][14] = 5850;
+	    xp[13][15] = 7800;
+	    xp[13][16] = 11700;
+	    xp[13][17] = 15600;
+	    xp[13][18] = 23400;
+	    xp[13][19] = 31200;
+	    xp[13][20] = 46800;
+	    xp[14][1] = 0;
+	    xp[14][2] = 0;
+	    xp[14][3] = 0;
+	    xp[14][4] = 0;
+	    xp[14][5] = 0;
+	    xp[14][6] = 0;
+	    xp[14][7] = 350;
+	    xp[14][8] = 525;
+	    xp[14][9] = 700;
+	    xp[14][10] = 1050;
+	    xp[14][11] = 1400;
+	    xp[14][12] = 2100;
+	    xp[14][13] = 2800;
+	    xp[14][14] = 4200;
+	    xp[14][15] = 6300;
+	    xp[14][16] = 8400;
+	    xp[14][17] = 12600;
+	    xp[14][18] = 16800;
+	    xp[14][19] = 25200;
+	    xp[14][20] = 33600;
+	    xp[15][1] = 0;
+	    xp[15][2] = 0;
+	    xp[15][3] = 0;
+	    xp[15][4] = 0;
+	    xp[15][5] = 0;
+	    xp[15][6] = 0;
+	    xp[15][7] = 0;
+	    xp[15][8] = 375;
+	    xp[15][9] = 563;
+	    xp[15][10] = 750;
+	    xp[15][11] = 1125;
+	    xp[15][12] = 1500;
+	    xp[15][13] = 2250;
+	    xp[15][14] = 3000;
+	    xp[15][15] = 4500;
+	    xp[15][16] = 6750;
+	    xp[15][17] = 9000;
+	    xp[15][18] = 13500;
+	    xp[15][19] = 18000;
+	    xp[15][20] = 27000;
+	    xp[16][1] = 0;
+	    xp[16][2] = 0;
+	    xp[16][3] = 0;
+	    xp[16][4] = 0;
+	    xp[16][5] = 0;
+	    xp[16][6] = 0;
+	    xp[16][7] = 0;
+	    xp[16][8] = 0;
+	    xp[16][9] = 400;
+	    xp[16][10] = 600;
+	    xp[16][11] = 800;
+	    xp[16][12] = 1200;
+	    xp[16][13] = 1600;
+	    xp[16][14] = 2400;
+	    xp[16][15] = 3200;
+	    xp[16][16] = 4800;
+	    xp[16][17] = 7200;
+	    xp[16][18] = 9600;
+	    xp[16][19] = 14400;
+	    xp[16][20] = 19200;
+	    xp[17][1] = 0;
+	    xp[17][2] = 0;
+	    xp[17][3] = 0;
+	    xp[17][4] = 0;
+	    xp[17][5] = 0;
+	    xp[17][6] = 0;
+	    xp[17][7] = 0;
+	    xp[17][8] = 0;
+	    xp[17][9] = 0;
+	    xp[17][10] = 425;
+	    xp[17][11] = 638;
+	    xp[17][12] = 850;
+	    xp[17][13] = 1275;
+	    xp[17][14] = 1700;
+	    xp[17][15] = 2550;
+	    xp[17][16] = 3400;
+	    xp[17][17] = 5100;
+	    xp[17][18] = 7650;
+	    xp[17][19] = 10200;
+	    xp[17][20] = 15300;
+	    xp[18][1] = 0;
+	    xp[18][2] = 0;
+	    xp[18][3] = 0;
+	    xp[18][4] = 0;
+	    xp[18][5] = 0;
+	    xp[18][6] = 0;
+	    xp[18][7] = 0;
+	    xp[18][8] = 0;
+	    xp[18][9] = 0;
+	    xp[18][10] = 0;
+	    xp[18][11] = 450;
+	    xp[18][12] = 675;
+	    xp[18][13] = 900;
+	    xp[18][14] = 1350;
+	    xp[18][15] = 1800;
+	    xp[18][16] = 2700;
+	    xp[18][17] = 3600;
+	    xp[18][18] = 5400;
+	    xp[18][19] = 8100;
+	    xp[18][20] = 10800;
+	    xp[19][1] = 0;
+	    xp[19][2] = 0;
+	    xp[19][3] = 0;
+	    xp[19][4] = 0;
+	    xp[19][5] = 0;
+	    xp[19][6] = 0;
+	    xp[19][7] = 0;
+	    xp[19][8] = 0;
+	    xp[19][9] = 0;
+	    xp[19][10] = 0;
+	    xp[19][11] = 0;
+	    xp[19][12] = 475;
+	    xp[19][13] = 713;
+	    xp[19][14] = 950;
+	    xp[19][15] = 1425;
+	    xp[19][16] = 1900;
+	    xp[19][17] = 2850;
+	    xp[19][18] = 3800;
+	    xp[19][19] = 5700;
+	    xp[19][20] = 8550;
+	    xp[20][1] = 0;
+	    xp[20][2] = 0;
+	    xp[20][3] = 0;
+	    xp[20][4] = 0;
+	    xp[20][5] = 0;
+	    xp[20][6] = 0;
+	    xp[20][7] = 0;
+	    xp[20][8] = 0;
+	    xp[20][9] = 0;
+	    xp[20][10] = 0;
+	    xp[20][11] = 0;
+	    xp[20][12] = 0;
+	    xp[20][13] = 500;
+	    xp[20][14] = 750;
+	    xp[20][15] = 1000;
+	    xp[20][16] = 1500;
+	    xp[20][17] = 2000;
+	    xp[20][18] = 3000;
+	    xp[20][19] = 4000;
+	    xp[20][20] = 6000;
+	    for (let x = 0; x <= 9; ++x) {
+	      total += monsterData[x].cr > 0 ? xp[partyData.partyLevel][monsterData[x].cr] * monsterData[x].q : 0;
+	    }
+	    share = Math.round(total / partyData.numChars);
+	    setTotal(total);
+	    setShare(share);
+	    setOpen(true);
+	  };
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Calculate XP"), open && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: open,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "XP Results"), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, "The total XP is ", /*#__PURE__*/reactExports.createElement("b", null, total), " and each share is ", /*#__PURE__*/reactExports.createElement("b", null, share), "."))));
+	}
+
+	function XPCalculator() {
+	  const [partyData, setPartyData] = React.useState({
+	    partyLevel: 0,
+	    numChars: 0
+	  });
+	  const [monsterData, setMonsterData] = React.useState([{
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }, {
+	    cr: 0,
+	    q: 0
+	  }]);
+	  React.useEffect(() => {
+	    console.log(partyData, monsterData);
+	  }, [partyData, monsterData]);
+	  const handleQuantityChange = id => event => {
+	    setMonsterData(prevFormData => prevFormData.map((oldData, idx) => idx === id ? {
+	      ...oldData,
+	      q: parseInt(event.target.value) || 0
+	    } : oldData));
+	  };
+	  const handleCRChange = id => event => {
+	    setMonsterData(prevFormData => prevFormData.map((oldData, idx) => idx === id ? {
+	      ...oldData,
+	      cr: parseInt(event.target.value) || 0
+	    } : oldData));
+	  };
+	  const handleChange = event => {
+	    let {
+	      name,
+	      value
+	    } = event.target;
+	    value = parseInt(value ?? 0);
+	    setPartyData(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "D&D 3e/3.5/Pathfinder 1 XP Calculator"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "Party Level:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "partyLevel",
+	    name: "partyLevel",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "# Party Members:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "numChars",
+	    name: "numChars",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleChange
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "CR (1-20)")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h6",
+	    component: "h2"
+	  }, "Quantity (1-200)")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr0",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(0)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q0",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(0)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr1",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(1)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q1",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(1)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr2",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(2)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q2",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(2)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr3",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(3)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q3",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(3)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr4",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(4)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q4",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(4)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr5",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(5)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q5",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(5)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr6",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(6)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q6",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(6)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr7",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(7)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q7",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(7)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr8",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(8)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q8",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(8)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "cr9",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleCRChange(9)
+	  })), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    id: "q9",
+	    size: "small",
+	    sx: {
+	      width: "30%",
+	      height: "16pt"
+	    },
+	    onChange: handleQuantityChange(9)
+	  }))), /*#__PURE__*/React.createElement(GenXPCalculator, {
+	    partyData: partyData,
+	    monsterData: monsterData
+	  })));
+	}
+
 	class Test extends React.Component {
 	  render() {
 	    return /*#__PURE__*/React.createElement("span", null);
@@ -46196,7 +47008,7 @@ export default theme;`;
 	  size: 4
 	}, /*#__PURE__*/React.createElement(SpellBooks1, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(XPCalculator, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6
