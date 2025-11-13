@@ -57,10 +57,6 @@ export default function XPCalculator() {
     ]
   );
 
-  React.useEffect(() => {
-    console.log(partyData, monsterData);
-  }, [partyData, monsterData]);
-
   const handleQuantityChange = (id) => (event) => {
     setMonsterData((prevFormData) =>
       prevFormData.map((oldData, idx) =>

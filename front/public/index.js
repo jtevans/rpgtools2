@@ -46672,9 +46672,6 @@ export default theme;`;
 	    cr: 0,
 	    q: 0
 	  }]);
-	  React.useEffect(() => {
-	    console.log(partyData, monsterData);
-	  }, [partyData, monsterData]);
 	  const handleQuantityChange = id => event => {
 	    setMonsterData(prevFormData => prevFormData.map((oldData, idx) => idx === id ? {
 	      ...oldData,
