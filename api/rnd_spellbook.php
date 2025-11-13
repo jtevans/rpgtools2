@@ -336,6 +336,7 @@ $spellbook = [
   [],
   [],
   [],
+  [],
 ];
 
 $schools = array("abjuration", "conjuration", "divination", "enchantment",
@@ -381,7 +382,7 @@ if ($generateSpellLevel)
 }
 
 
-// Gain spells via levelling up
+// Gain spells via leveling up
 for ($level = 1; $level <= $caster_level; ++$level)
 {
   if ($level == 1)

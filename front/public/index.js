@@ -17081,7 +17081,7 @@
 	  }
 	  return value;
 	}
-	function style$j(options) {
+	function style$m(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17236,17 +17236,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$i(props, keys) {
+	function style$l(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$i(props, marginKeys);
+	  return style$l(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$i(props, paddingKeys);
+	  return style$l(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17281,7 +17281,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$j({
+	  return style$m({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17360,31 +17360,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$j({
+	const gridColumn = style$m({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$j({
+	const gridRow = style$m({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$j({
+	const gridAutoFlow = style$m({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$j({
+	const gridAutoColumns = style$m({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$j({
+	const gridAutoRows = style$m({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$j({
+	const gridTemplateColumns = style$m({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$j({
+	const gridTemplateRows = style$m({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$j({
+	const gridTemplateAreas = style$m({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$j({
+	const gridArea = style$m({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17395,18 +17395,18 @@
 	  }
 	  return value;
 	}
-	const color = style$j({
+	const color = style$m({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$j({
+	const bgcolor = style$m({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$j({
+	const backgroundColor = style$m({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17416,7 +17416,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$j({
+	const width = style$m({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17443,33 +17443,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$j({
+	const minWidth = style$m({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$j({
+	const height = style$m({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$j({
+	const maxHeight = style$m({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$j({
+	const minHeight = style$m({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$j({
+	style$m({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$j({
+	style$m({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$j({
+	const boxSizing = style$m({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -29361,7 +29361,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$h = {
+	const style$k = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29435,7 +29435,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$k
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29505,7 +29505,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$g = {
+	const style$j = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29590,7 +29590,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$j
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29647,7 +29647,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$f = {
+	const style$i = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29726,7 +29726,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$i
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29781,7 +29781,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$e = {
+	const style$h = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29853,7 +29853,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$h
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -29908,7 +29908,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$d = {
+	const style$g = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -29976,7 +29976,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$g
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30028,7 +30028,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$c = {
+	const style$f = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30160,7 +30160,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30237,7 +30237,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$f
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30323,7 +30323,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$b = {
+	const style$e = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30401,7 +30401,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$e
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30484,7 +30484,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$a = {
+	const style$d = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30566,7 +30566,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$d
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30625,7 +30625,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$9 = {
+	const style$c = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30704,7 +30704,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$c
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30729,7 +30729,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$8 = {
+	const style$b = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -30834,7 +30834,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$b
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30880,7 +30880,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$7 = {
+	const style$a = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31030,7 +31030,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
+	    sx: style$a
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38683,7 +38683,7 @@ export default theme;`;
 
 	var parse = HTMLReactParser.default || HTMLReactParser;
 
-	const style$6 = {
+	const style$9 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38739,7 +38739,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$9
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -38763,7 +38763,7 @@ export default theme;`;
 	  })))));
 	}
 
-	const style$5 = {
+	const style$8 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -38870,7 +38870,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$8
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -43956,7 +43956,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$4 = {
+	const style$7 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44035,7 +44035,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$7
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44120,7 +44120,7 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$3 = {
+	const style$6 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44309,7 +44309,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
+	    sx: style$6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44580,7 +44580,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$2 = {
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44605,10 +44605,7 @@ export default theme;`;
 	    setOpen(false);
 	    setSpellbook(null);
 	  };
-	  const [spellbook, setSpellbook] = reactExports.useState([[], [], [], [], [], [], [], [], []]);
-	  reactExports.useEffect(() => {
-	    // console.log(spellbook);
-	  }, [spellbook]);
+	  const [spellbook, setSpellbook] = reactExports.useState([[], [], [], [], [], [], [], [], [], []]);
 	  const getSpells = async spellbookData => {
 	    const newSpells = await callAPI(spellbookData);
 	    setSpellbook(newSpells);
@@ -44661,7 +44658,6 @@ export default theme;`;
 	    if (spellbook.length == 1) {
 	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
 	    }
-	    console.log(spellbook);
 	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, "_________________________________"), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Specialist School: ", Utils.ucfirst(spellbookData.specialist) || 'None', /*#__PURE__*/reactExports.createElement("br", null), "Restricted School(s): ", restrictedSchools || 'None', /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
 	      return spells.map((spell, index) => {
 	        if (spellLevel > 0) {
@@ -44690,7 +44686,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$2
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44751,7 +44747,7 @@ export default theme;`;
 	  value: 'transmutation',
 	  label: 'Transmutation'
 	});
-	function spellbooks3() {
+	function SpellBooks3() {
 	  const [spellbookData, setSpellbookData] = React.useState({
 	    level: '0',
 	    intelligence: '0',
@@ -44943,6 +44939,7 @@ export default theme;`;
 	      textAlign: "left"
 	    }
 	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.gainSpells,
 	    type: "checkbox",
 	    id: "gainSpells",
 	    name: "gainSpells",
@@ -45003,7 +45000,357 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$1 = {
+	const style$4 = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenSpells1(props) {
+	  const {
+	    spellbookData
+	  } = props;
+	  const [open, setOpen] = reactExports.useState(false);
+	  const handleOpen = () => {
+	    getSpells(spellbookData);
+	  };
+	  const handleClose = () => {
+	    setOpen(false);
+	    setSpellbook(null);
+	  };
+	  const [spellbook, setSpellbook] = reactExports.useState([[], [], [], [], [], [], [], [], [], []]);
+	  const getSpells = async spellbookData => {
+	    const newSpells = await callAPI(spellbookData);
+	    setSpellbook(newSpells);
+	    setOpen(true);
+	  };
+	  const updateSpell = async (indexToUpdate, level, newValue) => {
+	    setSpellbook(spellbook.map((spells, spellLevel) => {
+	      if (level === spellLevel) {
+	        return spells.map((spell, index) => {
+	          if (index === indexToUpdate) {
+	            return newValue;
+	          }
+	          return spell;
+	        });
+	      } else {
+	        return spells;
+	      }
+	    }));
+	  };
+	  async function callAPI(spellbookData) {
+	    let level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+	    const wizardLevel = spellbookData.level || '1';
+	    const intelligence = spellbookData.intelligence || '10';
+	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
+	    const maxNumSpells = spellbookData.maxNumSpells ? 'true' : 'false';
+	    let phb = spellbookData.phb ? 'true' : 'false';
+	    const ua = spellbookData.ua ? 'true' : 'false';
+	    const av = spellbookData.av ? 'true' : 'false';
+
+	    // Force at least one source to be used. Default to PHB.
+	    if (!(spellbookData.phb || spellbookData.ua || spellbookData.av)) {
+	      phb = 'true';
+	    }
+	    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&maxNumSpells=${maxNumSpells}&phb=${phb}&ua=${ua}&av=${av}`;
+	    if (level) {
+	      args += `&spellLevel=${level}`;
+	    }
+	    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
+	    return await response.json();
+	  }
+	  async function replaceSpell(idx, level) {
+	    let newSpells = await callAPI(spellbookData, level);
+	    updateSpell(idx, level, newSpells[level][0]);
+	  }
+	  function SpellsList(_ref) {
+	    let {
+	      spellbook
+	    } = _ref;
+	    if (spellbook.length == 1) {
+	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
+	    }
+	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, spellbookData.name || 'Unknown'), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
+	      return spells.map((spell, index) => {
+	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	          sx: {
+	            paddingLeft: "5px",
+	            fontSize: "9pt"
+	          },
+	          onClick: () => replaceSpell(index, spellLevel)
+	        }));
+	      });
+	    }));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Generate Spellbook"), open && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: open,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style$4
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "1st Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getSpells(spellbookData)
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, {
+	    spellbook: spellbook
+	  })))));
+	}
+
+	function SpellBooks1() {
+	  const [spellbookData, setSpellbookData] = React.useState({
+	    level: '0',
+	    intelligence: '0',
+	    maxNumSpells: true,
+	    gainSpells: false,
+	    phb: true,
+	    ua: false,
+	    av: false,
+	    name: ''
+	  });
+	  const handleNameChange = id => event => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      name: event?.target?.value || ''
+	    }));
+	  };
+	  const handleCheckboxChange = (checkboxName, box) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [checkboxName]: box?.target?.checked || false
+	    }));
+	  };
+	  const handleSelectChange = (selectName, option) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [selectName]: option?.value || ''
+	    }));
+	  };
+	  const WizardLevel = () => {
+	    let options = [];
+	    for (let i = 1; i <= 18; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.level;
+	      }),
+	      name: "level",
+	      onChange: option => handleSelectChange('level', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Level",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  const WizardIntelligence = () => {
+	    let options = [];
+	    for (let i = 9; i <= 19; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.intelligence;
+	      }),
+	      name: "intelligence",
+	      onChange: option => handleSelectChange('intelligence', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Intelligence",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "1st Edition AD&D Wizard Spellbooks"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Generate max # of spells per level based on intelligence?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.maxNumSpells,
+	    type: "checkbox",
+	    id: "maxNumSpells",
+	    name: "maxNumSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('maxNumSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.gainSpells,
+	    type: "checkbox",
+	    id: "gainSpells",
+	    name: "gainSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('gainSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Sourcebooks:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, "Player's Handbook (PHB) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.phb,
+	    type: "checkbox",
+	    id: "phb",
+	    name: "phb",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('phb', box)
+	  }), /*#__PURE__*/React.createElement("br", null), "Unearthed Arcana (UA) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.ua,
+	    type: "checkbox",
+	    id: "ua",
+	    name: "ua",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('ua', box)
+	  }), "Arden Vul (AV) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.av,
+	    type: "checkbox",
+	    id: "av",
+	    name: "av",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('av', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard name:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      height: "16pt"
+	    },
+	    onChange: handleNameChange()
+	  }))), /*#__PURE__*/React.createElement(GenSpells1, {
+	    spellbookData: spellbookData
+	  }))));
+	}
+
+	const style$3 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45094,7 +45441,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$1
+	    sx: style$3
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45252,7 +45599,7 @@ export default theme;`;
 	  })));
 	}
 
-	const style = {
+	const style$2 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -45333,7 +45680,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style
+	    sx: style$2
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45820,157 +46167,6 @@ export default theme;`;
 	  }
 	}
 
-	const style = {
-	  position: 'absolute',
-	  top: '50%',
-	  left: '50%',
-	  transform: 'translate(-50%, -50%)',
-	  width: '75%',
-	  bgcolor: 'background.paper',
-	  border: '2px solid #000',
-	  boxShadow: 24,
-	  p: 4,
-	  overflow: 'auto',
-	  maxHeight: '80%'
-	};
-	function GenLowerplanes(_ref) {
-	  let {
-	    amount
-	  } = _ref;
-	  amount = Math.max(1, Math.min(30, parseInt(amount) || 0));
-	  const [open, setOpen] = reactExports.useState(false);
-	  const handleOpen = () => {
-	    getLower(amount);
-	  };
-	  const handleClose = () => {
-	    setOpen(false);
-	    setLower(null);
-	  };
-	  const [lower, setLower] = reactExports.useState(null);
-	  const getLower = async amount => {
-	    const data = await callAPI(amount);
-	    setLower(data);
-	    setOpen(true);
-	  };
-	  const updateLower = async (indexToUpdate, newValue) => {
-	    setLower(lower.map((creature, index) => index === indexToUpdate ? newValue : creature));
-	  };
-	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/lowerplanes.php?amount=${amount}`);
-	    return await response.json();
-	  }
-	  async function replaceLower(_ref2) {
-	    let {
-	      idx
-	    } = _ref2;
-	    let data = await callAPI(1);
-	    updateLower(idx, data[0]);
-	  }
-	  function LowerList(_ref3) {
-	    let {
-	      lower
-	    } = _ref3;
-	    return /*#__PURE__*/reactExports.createElement("div", null, lower.map((creature, idx) => {
-	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(Typography, {
-	        sx: {
-	          textAlign: "center",
-	          fontWeight: "bold"
-	        }
-	      }, `Creature #${idx + 1}`, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	        sx: {
-	          paddingLeft: "5px",
-	          fontSize: "9pt"
-	        },
-	        onClick: () => replaceLower({
-	          idx
-	        })
-	      }), /*#__PURE__*/reactExports.createElement("br", null)), /*#__PURE__*/reactExports.createElement(Typography, {
-	        sx: {
-	          textAlign: "left"
-	        }
-	      }, Object.keys(creature).map(function (key) {
-	        const display = Utils.ucfirst(key);
-	        let value = '';
-	        if (typeof creature[key] == 'object') {
-	          value = creature[key].join(', ');
-	        } else {
-	          value = Utils.ucfirst(creature[key]) || 'None';
-	        }
-	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("b", null, display), ": ", value);
-	      })));
-	    }));
-	  }
-	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
-	    onClick: handleOpen
-	  }, "Generate Lower Planes Creatures"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
-	    onClose: (event, reason) => {
-	    },
-	    disableEscapeKeyDown: true,
-	    disableBackdropClick: true,
-	    sx: {
-	      maxHeight: "80%"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style
-	  }, /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
-	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "center"
-	    },
-	    variant: "h5",
-	    component: "h2"
-	  }, "Lower Planes Creatures", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "10pt"
-	    },
-	    onClick: () => getLower(amount)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(LowerList, {
-	    lower: lower
-	  })))));
-	}
-
-	function Lowerplanes() {
-	  const [lowerAmount, setLowerAmount] = React.useState(0);
-	  const handleChange = event => {
-	    setLowerAmount(parseInt(event.target.value) || 0);
-	  };
-	  return /*#__PURE__*/React.createElement(Card, {
-	    variant: "outlined",
-	    sx: {
-	      height: 'fit-content'
-	    }
-	  }, /*#__PURE__*/React.createElement(CardHeader, {
-	    sx: {
-	      textAlign: "center",
-	      fontWeight: "bold"
-	    },
-	    title: "Generate Creatures from the Lower Planes"
-	  }), /*#__PURE__*/React.createElement(CardContent, {
-	    sx: {
-	      textAlign: "center"
-	    }
-	  }, /*#__PURE__*/React.createElement(Typography, null, "Number to Generate (1-30): ", /*#__PURE__*/React.createElement(OutlinedInput, {
-	    value: lowerAmount,
-	    id: "lowerAmount",
-	    name: "lowerAmount",
-	    size: "small",
-	    sx: {
-	      width: "30%",
-	      height: "16pt"
-	    },
-	    onChange: handleChange
-	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenLowerplanes, {
-	    amount: lowerAmount
-	  }))));
-	}
-
 	const rootElement = document.getElementById('root');
 	const root = clientExports.createRoot(rootElement);
 	root.render(/*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(CssBaseline, null), /*#__PURE__*/React.createElement(Grid, {
@@ -45996,16 +46192,10 @@ export default theme;`;
 	  label: "Generic Intelligent Weapon"
 	})), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(CraftCalculator, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(spellbooks3, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(SpellBooks3, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
+	}, /*#__PURE__*/React.createElement(SpellBooks1, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 4
-	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 6
-	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 6
-	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
-	  size: 6
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {
 	  size: 6
 	}, /*#__PURE__*/React.createElement(Test, null)), /*#__PURE__*/React.createElement(Grid, {

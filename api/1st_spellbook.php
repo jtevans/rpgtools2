@@ -6,21 +6,15 @@
 
 require("utils.php");
 
-$caster_level = intval(post_var("caster_level"));
-$intel = intval(post_var("intel"));
-$adventure = post_var("adventure");
-$always_max_num_spells = post_var("always_max_num_spells");
 
-$PHB = post_var("phb");
-$UA = post_var("ua");
-$AV = post_var("av");
+$caster_level = min(18, max(1, intval(get_var("wizardLevel", 1))));
+$intel = min(19, max(9, intval(get_var("intelligence"), 10)));
+$adventure = get_var("gainSpells") == 'true' ? true : false;
+$always_max_num_spells = get_var("maxNumSpells") == 'true' ? true : false;
 
-$wizard_name = trim(post_var("wizard_name"));
-
-if (empty($wizard_name))
-{
-  $wizard_name = "Unknown Wizard";
-}
+$PHB = get_var("phb") == 'true' ? true : false;
+$UA = get_var("ua") == 'true' ? true : false;
+$AV = get_var("av") == 'true' ? true : false;
 
 class Spell
 {
@@ -146,9 +140,9 @@ function read_spells_from_disk()
   return($spells);
 }
 
-function print_spell($spell)
+function get_spell($spell)
 {
-  print("_____" . $spell->name . " (" . $spell->source . " / " . $spell->page . ")<br />");
+  return($spell->name . " (" . $spell->source . "/" . $spell->page . ")");
 }
 
 function dupe($level, $name, $spells_known)
@@ -212,26 +206,28 @@ function add_spells(&$spells_known, $spells, $sources, $spell_level, $quantity)
 // ***************
 // START MAIN CODE
 // ***************
-// Build out allowed sources
-$sources['PHB'] = ($PHB == "on");
-$sources['UA'] = ($UA == "on");
-$sources['AV'] = ($AV == "on");
+$spells_known = [];
 
-start_html($wizard_name . "'s Spellbook");
+$spellbook = [
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+  [],
+];
+
+// Build out allowed sources
+$sources['PHB'] = $PHB;
+$sources['UA'] = $UA;
+$sources['AV'] = $AV;
 
 [ $min_num_spells, $max_num_spells ] = calc_min_max_num_spells($intel);
 $spells = read_spells_from_disk();
-?>
-
-<h1 align="center"><?php echo $wizard_name?>'s Spellbook</h1>
-
-<p>
-Wizard Name: <u><?php echo $wizard_name ?></u><br />
-Wizard Level: <?php echo $caster_level?><br />
-Wizard Intelligence: <?php echo $intel?>
-</p>
-
-<?php
 
 $read_magic = new Spell();
 $read_magic->name = 'Read Magic';
@@ -245,7 +241,7 @@ $write->page = 69;
 
 $spells_known = array(1 => [ $read_magic, $write ]);
 
-// Gain spells via levelling up
+// Gain spells via leveling up
 for ($level = 1; $level <= $caster_level; ++$level)
 {
   $num_spells_to_generate = $max_num_spells;
@@ -298,18 +294,16 @@ for ($level = 0; $level <= 9; ++$level)
   }
 }
 
-// display spells here.
+// Build spellbook here.
 for ($level = 0; $level <= 9; ++$level)
 {
   if (array_key_exists($level, $spells_known) && count($spells_known[$level]) > 0)
   {
-    print("<h3>$level</h3>\n");
     for ($x = 0; $x < count($spells_known[$level]); ++$x)
     {
-      print_spell($spells_known[$level][$x]);
+      $spellbook[$level][] = get_spell($spells_known[$level][$x]);
     }
-    print("<hr>\n");
   }
 }
 
-end_html();
+print(json_encode($spellbook));

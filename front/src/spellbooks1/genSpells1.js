@@ -21,7 +21,7 @@ const style = {
   maxHeight: '80%',
 };
 
-export default function GenSpells3(props) {
+export default function GenSpells1(props) {
   const { spellbookData } = props;
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -75,22 +75,22 @@ export default function GenSpells3(props) {
     const wizardLevel = spellbookData.level || '1';
     const intelligence = spellbookData.intelligence || '10';
     const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
-    const specialist = spellbookData.specialist;
-    const restrictedSchools = spellbookData.restrictedSchools.map((school) => school.value).join('|');
+    const maxNumSpells = spellbookData.maxNumSpells ? 'true' : 'false';
     let phb = spellbookData.phb ? 'true' : 'false';
-    const bvd = spellbookData.bvd ? 'true' : 'false';
+    const ua = spellbookData.ua ? 'true' : 'false';
+    const av = spellbookData.av ? 'true' : 'false';
 
     // Force at least one source to be used. Default to PHB.
-    if ( ! (spellbookData.phb || spellbookData.bvd) ) {
+    if ( ! (spellbookData.phb || spellbookData.ua || spellbookData.av) ) {
       phb = 'true';
     }
 
-    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&specialist=${specialist}&restrictedSchools=${restrictedSchools}&phb=${phb}&bvd=${bvd}`;
+    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&maxNumSpells=${maxNumSpells}&phb=${phb}&ua=${ua}&av=${av}`;
 
     if (level) {
       args += `&spellLevel=${level}`;
     }
-    let response = await fetch(`http://localhost:8080/tools2/api/rnd_spellbook.php?${args}`);
+    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
     return await response.json();
   }
 
@@ -100,30 +100,20 @@ export default function GenSpells3(props) {
   }
 
   function SpellsList({ spellbook }) {
-    const restrictedSchools = spellbookData.restrictedSchools.map((school) => Utils.ucfirst(school.value)).join(', ');
-
     if (spellbook.length == 1) {
       return (<div>{`${spellbook[0][0]}`}</div>);
     }
 
     return (
       <div>
-        Wizard Name: <u>_________________________________</u><br />
+        Wizard Name: <u>{spellbookData.name || 'Unknown'}</u><br />
         Wizard Level: {spellbookData.level}<br />
         Wizard Intelligence: {spellbookData.intelligence}<br />
-        Wizard Specialist School: {Utils.ucfirst(spellbookData.specialist) || 'None'}<br />
-        Restricted School(s): {restrictedSchools || 'None'}<br />
-
+        
         {spellbook.map((spells, spellLevel) => {
           return spells.map((spell, index) => {
-            if (spellLevel > 0) {
-              return <div><span>_____ ({spellLevel}) {spell}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpell(index, spellLevel)} /></div>
-            }
-            else
-            {
-              return <div><span>_____ ({spellLevel}) {spell}</span></div>
-            }
-            });
+            return <div><span>_____ ({spellLevel}) {spell}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpell(index, spellLevel)} /></div>
+          });
         })}
       </div>
     );
@@ -148,7 +138,7 @@ export default function GenSpells3(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            3rd Edition Wizard Spellbook<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpells(spellbookData)} />
+            1st Edition Wizard Spellbook<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpells(spellbookData)} />
           </Typography>
           <Typography>
             <SpellsList spellbook={spellbook} />
