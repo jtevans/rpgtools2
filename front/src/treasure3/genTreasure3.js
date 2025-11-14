@@ -22,44 +22,6 @@ const style = {
   maxHeight: '80%',
 };
 
-async function callAPI() {
-  const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value || 0)));
-  const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value || 0)));
-  const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value || 0)));
-  const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value || 0)));
-  const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value || 0)));
-
-  const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value || 0)));
-  const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value || 0)));
-  const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value || 0)));
-  const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value || 0)));
-  const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value || 0)));
-
-  let args = '';
-  if (treasure3_cr0 !== 0 && treasure3_q0 !== 0) {
-    args += `&cr0=${treasure3_cr0}&q0=${treasure3_q0}`
-  }
-  if (treasure3_cr1 !== 0 && treasure3_q1 !== 0) {
-    args += `&cr1=${treasure3_cr1}&q1=${treasure3_q1}`
-  }
-  if (treasure3_cr2 !== 0 && treasure3_q2 !== 0) {
-    args += `&cr2=${treasure3_cr2}&q2=${treasure3_q2}`
-  }
-  if (treasure3_cr3 !== 0 && treasure3_q3 !== 0) {
-    args += `&cr3=${treasure3_cr3}&q3=${treasure3_q3}`
-  }
-  if (treasure3_cr4 !== 0 && treasure3_q4 !== 0) {
-    args += `&cr4=${treasure3_cr4}&q4=${treasure3_q4}`
-  }
-
-  if (args === '') {
-    return [];
-  }
-  args = args.slice(1);
-  let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
-  return await response.json();
-}
-
 export default function GenTreasure3() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -80,6 +42,43 @@ export default function GenTreasure3() {
   const [medium3, setMedium3] = React.useState(0);
   const [major3, setMajor3] = React.useState(0);
 
+  async function callAPI() {
+    const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value || 0)));
+    const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value || 0)));
+    const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value || 0)));
+    const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value || 0)));
+    const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value || 0)));
+
+    const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value || 0)));
+    const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value || 0)));
+    const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value || 0)));
+    const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value || 0)));
+    const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value || 0)));
+
+    let args = '';
+    if (treasure3_cr0 !== 0 && treasure3_q0 !== 0) {
+      args += `&cr0=${treasure3_cr0}&q0=${treasure3_q0}`
+    }
+    if (treasure3_cr1 !== 0 && treasure3_q1 !== 0) {
+      args += `&cr1=${treasure3_cr1}&q1=${treasure3_q1}`
+    }
+    if (treasure3_cr2 !== 0 && treasure3_q2 !== 0) {
+      args += `&cr2=${treasure3_cr2}&q2=${treasure3_q2}`
+    }
+    if (treasure3_cr3 !== 0 && treasure3_q3 !== 0) {
+      args += `&cr3=${treasure3_cr3}&q3=${treasure3_q3}`
+    }
+    if (treasure3_cr4 !== 0 && treasure3_q4 !== 0) {
+      args += `&cr4=${treasure3_cr4}&q4=${treasure3_q4}`
+    }
+
+    if (args === '') {
+      return [];
+    }
+    args = args.slice(1);
+    let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
+    return await response.json();
+  }
 
   async function replaceTreasureItem({ type }) {
     let newTreasure = await callAPI();

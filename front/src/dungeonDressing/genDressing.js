@@ -20,7 +20,7 @@ const style = {
   maxHeight: '80%',
 };
 
-export default function Dressing(props) {
+export default function GenDressing(props) {
   let { type, label } = props;
 
   const validTypes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
@@ -28,21 +28,18 @@ export default function Dressing(props) {
     type = '1';
   }
 
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getDressings(20, type);
+    getDressings();
   }
   const handleClose = () => {
-    setOpen(false);
     setDressings(null);
   };
 
   const [dressings, setDressings] = React.useState(null);
 
-  const getDressings = async (amount, type) => {
-    const dressingData = await callAPI(amount, type);
+  const getDressings = async () => {
+    const dressingData = await callAPI(20);
     setDressings(dressingData);
-    setOpen(true);
   };
 
   const updateDressing = async (indexToUpdate, newValue) => {
@@ -53,21 +50,21 @@ export default function Dressing(props) {
     );
   };
 
-  async function callAPI(amount, type) {
+  async function callAPI(amount) {
     let response = await fetch(`http://localhost:8080/tools2/api/dressing.php?amount=${amount}&type=${type}`);
     return await response.json();
   }
 
-  async function replaceDressing({ idx, type }) {
-    let newDressing = await callAPI(1, type);
+  async function replaceDressing({ idx }) {
+    let newDressing = await callAPI(1);
     updateDressing(idx, newDressing[0]);
   }
 
-  function DressingList({ dressings, type }) {
+  function DressingList() {
     return (
       <div>
         {dressings.map((dressing, idx) => (
-          <div><span id={`span-${idx}`}>{dressing}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceDressing({ idx, type })} /></div>
+          <div>{dressing}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceDressing({ idx })} /></div>
         ))}
       </div>
     );
@@ -77,7 +74,7 @@ export default function Dressing(props) {
     <React.Fragment>
       <Button onClick={handleOpen}>{ label }</Button>
       {dressings && <Modal
-        open={open}
+        open={dressings != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -91,10 +88,10 @@ export default function Dressing(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            { label }<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getDressings(20, type)} />
+            { label }<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getDressings()} />
           </Typography>
           <Typography sx={{ textAlign: "center" }}>
-            <DressingList dressings={dressings} type={type} />
+            <DressingList />
           </Typography>
         </Box>
       </Modal>}

@@ -25,18 +25,18 @@ export default function GenCraftCalculator({ craftData }) {
   craftData.SP = Math.max(1, Math.min(20000, parseInt(craftData.SP || 1)));
   craftData.DC = parseInt(craftData.DC || 0) || 1;
   craftData.bonus = parseInt(craftData.bonus || 0) || 0;
-  const [open, setOpen] = React.useState(false);
+
   const handleOpen = () => {
-    calcCraft(craftData);
-    setOpen(true);
+    calcCraft();
+
   }
   const handleClose = () => {
-    setOpen(false);
+    setWeeks(null);
   };
 
-  const [weeks, setWeeks] = React.useState([]);
+  const [weeks, setWeeks] = React.useState(null);
 
-  function calcCraft(craftData) {
+  function calcCraft() {
     let progress = 0;
     let progressPercent = 0;
     let newWeeks = [];
@@ -77,8 +77,8 @@ export default function GenCraftCalculator({ craftData }) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Calculate Time</Button>
-      {open && <Modal
-        open={open}
+      {weeks && <Modal
+        open={weeks != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -93,7 +93,7 @@ export default function GenCraftCalculator({ craftData }) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Weeks to Craft<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => calcCraft(craftData)} />
+            Weeks to Craft<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => calcCraft()} />
           </Typography>
           <Typography>
             <TimeDisplay craftData={craftData} />

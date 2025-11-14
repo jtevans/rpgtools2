@@ -17,7 +17,7 @@ export default function Lowerplanes() {
       <CardHeader sx={{ textAlign: "center", fontWeight: "bold" }} title="Generate Creatures from the Lower Planes" />
       <CardContent sx={{ textAlign: "center" }}>
         <Typography>
-          Number to Generate (1-30): <OutlinedInput value={lowerAmount} id="lowerAmount" name="lowerAmount" size="small" sx={{ width: "30%", height: "16pt" }} onChange={handleChange} /><br />
+          Number to Generate (1-30): <OutlinedInput id="lowerAmount" name="lowerAmount" size="small" sx={{ width: "30%", height: "16pt" }} onChange={handleChange} /><br />
           <GenLowerplanes amount={lowerAmount} />
         </Typography>
       </CardContent>

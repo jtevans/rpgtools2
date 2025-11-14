@@ -22,21 +22,18 @@ const style = {
 
 export default function GenSpecial3({ title, API, amount }) {
   amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getSpecials(API, amount);
+    getSpecials();
   }
   const handleClose = () => {
-    setOpen(false);
     setSpecials(null);
   };
 
   const [specials, setSpecials] = React.useState(null);
 
-  const getSpecials = async (API, amount) => {
-    const data = await callAPI(API, amount);
+  const getSpecials = async () => {
+    const data = await callAPI();
     setSpecials(data);
-    setOpen(true);
   };
 
   const updateSpecial = async (indexToUpdate, newValue) => {
@@ -47,21 +44,25 @@ export default function GenSpecial3({ title, API, amount }) {
     );
   };
 
-  async function callAPI(API, amount) {
-    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
+  async function callAPI(newAmount = 0) {
+    let targetAmount = amount;
+    if (newAmount != 0) {
+      targetAmount = newAmount;
+    }
+    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${targetAmount}`);
     return await response.json();
   }
 
-  async function replaceSpecial({ API, idx }) {
-    let data = await callAPI(API, 1);
+  async function replaceSpecial({ idx }) {
+    let data = await callAPI(1);
     updateSpecial(idx, data[0]);
   }
 
-  function SpecialsList({ API, specials }) {
+  function SpecialsList({ specials }) {
     return (
       <div>
         {specials.map((special, idx) => (
-          <div><span id={`span-${idx}`}>{special}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpecial({ API, idx })} /></div>
+          <div>{special}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceSpecial({ idx })} /></div>
         ))}
       </div>
     );
@@ -70,8 +71,8 @@ export default function GenSpecial3({ title, API, amount }) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate {title}</Button>
-      {open && <Modal
-        open={open}
+      {specials && <Modal
+        open={specials != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -86,7 +87,7 @@ export default function GenSpecial3({ title, API, amount }) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            {title}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpecials(API, amount)} />
+            {title}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpecials(amount)} />
           </Typography>
           <Typography>
             <SpecialsList API={API} specials={specials} />

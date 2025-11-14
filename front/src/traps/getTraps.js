@@ -28,19 +28,17 @@ export default function Trap(props) {
     type = 'harmless';
   }
 
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getTraps(5, type);
+    getTraps();
   }
   const handleClose = () => {
-    setOpen(false);
     setTraps(null);
   };
 
   const [traps, setTraps] = React.useState(null);
 
-  const getTraps = async (amount, type) => {
-    const trapData = await callAPI(amount, type);
+  const getTraps = async () => {
+    const trapData = await callAPI(5);
     setTraps(trapData);
     setOpen(true);
   };
@@ -53,21 +51,21 @@ export default function Trap(props) {
     );
   };
 
-  async function callAPI(amount, type) {
-    let response = await fetch(`http://localhost:8080/tools2/api/traps.php?amount=${amount}&type=${type}`);
+  async function callAPI(amount) {
+    const response = await fetch(`http://localhost:8080/tools2/api/traps.php?amount=${amount}&type=${type}`);
     return await response.json();
   }
 
-  async function replaceTrap({ idx, type }) {
-    let newTrap = await callAPI(1, type);
+  async function replaceTrap({ idx }) {
+    const newTrap = await callAPI(1);
     updateTrap(idx, newTrap[0]);
   }
 
-  function TrapList({ traps, type }) {
+  function TrapList() {
     return (
       <div>
         {traps.map((trap, idx) => (
-          <div style={{ paddingBottom: "10px" }}><span id={`span-${idx}`}>{trap}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceTrap({ idx, type })} /></div>
+          <div style={{ paddingBottom: "10px" }}>{trap}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceTrap({ idx })} /></div>
         ))}
       </div>
     );
@@ -77,7 +75,7 @@ export default function Trap(props) {
     <React.Fragment>
       <Button onClick={handleOpen}>{ label }</Button>
       {traps && <Modal
-        open={open}
+        open={traps != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -91,10 +89,10 @@ export default function Trap(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            { label }<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTraps(5, type)} />
+            { label }<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTraps()} />
           </Typography>
           <Typography sx={{ textAlign: "center" }}>
-            <TrapList traps={traps} type={type} />
+            <TrapList />
           </Typography>
         </Box>
       </Modal>}

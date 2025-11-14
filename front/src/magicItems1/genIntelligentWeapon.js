@@ -21,44 +21,43 @@ const style = {
   maxHeight: '95%',
 };
 
-async function callAPI() {
-  let response = await fetch(`http://localhost:8080/tools2/api/intelligent.php`);
-  const responseText = await response.json();
-  return parse(responseText);
-}
-
-function StatsDisplay({ stats }) {
-  return (
-    <div>
-      <div><span id={`span-intelligent`}>{stats}</span></div>
-    </div>
-  );
-}
-
 export default function IntelligentWeapon(props) {
   const { label } = props;
-  const [open, setOpen] = React.useState(false);
+
   const handleOpen = () => {
     getStats();
   }
+
   const handleClose = () => {
-    setOpen(false);
     setStats(null);
   };
 
   const [stats, setStats] = React.useState(null);
 
+  async function callAPI() {
+    let response = await fetch(`http://localhost:8080/tools2/api/intelligent.php`);
+    const responseText = await response.json();
+    return parse(responseText);
+  }
+
+  function StatsDisplay() {
+    return (
+      <div>
+        {stats}
+      </div>
+    );
+  }
+
   const getStats = async () => {
     const statsData = await callAPI();
     setStats(statsData);
-    setOpen(true);
   };
 
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Intelligent Weapon Stats</Button>
       {stats && <Modal
-        open={open}
+        open={stats != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -76,7 +75,7 @@ export default function IntelligentWeapon(props) {
             { label } <ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getStats()} />
           </Typography>
           <Typography>
-            <StatsDisplay stats={stats} />
+            <StatsDisplay />
           </Typography>
         </Box>
       </Modal>}

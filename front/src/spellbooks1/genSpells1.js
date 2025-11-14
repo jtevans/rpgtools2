@@ -23,34 +23,18 @@ const style = {
 
 export default function GenSpells1(props) {
   const { spellbookData } = props;
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getSpells(spellbookData);
+    getSpells();
   }
   const handleClose = () => {
-    setOpen(false);
     setSpellbook(null);
   };
 
-  const [spellbook, setSpellbook] = React.useState(
-    [
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-      [],
-    ]
-  );
+  const [spellbook, setSpellbook] = React.useState(null);
 
-  const getSpells = async (spellbookData) => {
-    const newSpells = await callAPI(spellbookData);
+  const getSpells = async () => {
+    const newSpells = await callAPI();
     setSpellbook(newSpells);
-    setOpen(true);
   };
 
   const updateSpell = async (indexToUpdate, level, newValue) => {
@@ -71,7 +55,7 @@ export default function GenSpells1(props) {
     );
   };
 
-  async function callAPI(spellbookData, level = null) {
+  async function callAPI(level = null) {
     const wizardLevel = spellbookData.level || '1';
     const intelligence = spellbookData.intelligence || '10';
     const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
@@ -99,7 +83,7 @@ export default function GenSpells1(props) {
     updateSpell(idx, level, newSpells[level][0]);
   }
 
-  function SpellsList({ spellbook }) {
+  function SpellsList() {
     if (spellbook.length == 1) {
       return (<div>{`${spellbook[0][0]}`}</div>);
     }
@@ -122,8 +106,8 @@ export default function GenSpells1(props) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Spellbook</Button>
-      {open && <Modal
-        open={open}
+      {spellbook && <Modal
+        open={spellbook != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -138,10 +122,10 @@ export default function GenSpells1(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            1st Edition Wizard Spellbook<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpells(spellbookData)} />
+            1st Edition Wizard Spellbook<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getSpells()} />
           </Typography>
           <Typography>
-            <SpellsList spellbook={spellbook} />
+            <SpellsList />
           </Typography>
         </Box>
       </Modal>}

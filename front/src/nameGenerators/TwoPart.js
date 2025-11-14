@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
 import { Grid } from '@mui/material';
+import Utils from '../utils';
 
 const style = {
   position: 'absolute',
@@ -29,48 +30,47 @@ export default function TwoPartName(props) {
     type = 'elf';
   }
 
-  const ucType = type.charAt(0).toUpperCase() + type.slice(1);
+  const ucType = Utils.ucfirst(type);
 
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getNames(20, type);
+    getNames();
   }
   const handleClose = () => {
-    setOpen(false);
     setNames(null);
   };
 
   const [names, setNames] = React.useState(null);
 
-  const getNames = async (amount, type) => {
-    const nameData = await callAPI(amount, type);
+  const getNames = async () => {
+    const nameData = await callAPI(20);
     setNames(nameData);
-    setOpen(true);
   };
 
-  const updateName = async (indexToUpdate, newValue) => {
+  const updateName = async (columnToUpdate, indexToUpdate, newValue) => {
     setNames(
-      names.map((item, index) =>
-        index === indexToUpdate ? newValue : item
-      )
+      names.map((arr, colIndex) => {
+        return colIndex === columnToUpdate ? arr.map((item, index) => {
+          return index === indexToUpdate ? newValue : item
+        }) : arr;
+      })
     );
   };
 
-  async function callAPI(amount, type) {
+  async function callAPI(amount) {
     let response = await fetch(`http://localhost:8080/tools2/api/twopartnames.php?amount=${amount}&type=${type}`);
     return await response.json();
   }
 
-  async function replaceName({ column, idx, type }) {
-    let newName = await callAPI(1, type);
-    updateName(idx, newName[0]);
+  async function replaceName({ column, idx }) {
+    let newName = await callAPI(1);
+    updateName(column, idx, newName[0][0]);
   }
 
-  function NameList({ column, names, type }) {
+  function NameList({ column }) {
     return (
       <div>
-        {names.map((name, idx) => (
-          <div><span id={`span-${column}-${idx}`}>{name}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx, type })} /></div>
+        {names[column].map((name, idx) => (
+          <div>{name}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
         ))}
       </div>
     );
@@ -80,7 +80,7 @@ export default function TwoPartName(props) {
     <React.Fragment>
       <Button onClick={handleOpen}>{ ucType }</Button>
       {names && <Modal
-        open={open}
+        open={names != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -94,22 +94,22 @@ export default function TwoPartName(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            {ucType} Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames(20, type)} />
+            {ucType} Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames()} />
           </Typography>
           <Grid container spacing={2}>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={1} names={names[0]} type={type} />
+                <NameList column={0} />
               </Typography>
             </Grid>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={2} names={names[1]} type={type} />
+                <NameList column={1} />
               </Typography>
             </Grid>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={3} names={names[2]} type={type} />
+                <NameList column={2} />
               </Typography>
             </Grid>
           </Grid>

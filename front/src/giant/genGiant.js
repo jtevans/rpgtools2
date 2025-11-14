@@ -21,21 +21,18 @@ const style = {
 };
 
 export default function GenGiant({ giantType }) {
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getGiantBag(giantType);
+    getGiantBag();
   }
   const handleClose = () => {
-    setOpen(false);
     setGiantBag(null);
   };
 
-  const [giantBag, setGiantBag] = React.useState([]);
+  const [giantBag, setGiantBag] = React.useState(null);
 
-  const getGiantBag = async (giantType) => {
-    const data = await callAPI(giantType);
+  const getGiantBag = async () => {
+    const data = await callAPI();
     setGiantBag(data);
-    setOpen(true);
   };
 
   const updateContent = async (indexToUpdate, newValue) => {
@@ -46,7 +43,7 @@ export default function GenGiant({ giantType }) {
     );
   };
 
-  async function callAPI(giantType, amount = 0) {
+  async function callAPI(amount = 0) {
     let amountArgs = ''
     if (amount != 0) {
       amountArgs = `&amount=${amount}`;
@@ -55,16 +52,16 @@ export default function GenGiant({ giantType }) {
     return await response.json();
   }
 
-  async function replaceContent({ giantType, idx }) {
-    let data = await callAPI(giantType, 1);
+  async function replaceContent({ idx }) {
+    let data = await callAPI(1);
     updateContent(idx, data[0]);
   }
 
-  function BagList({ giantBag, giantType }) {
+  function BagList() {
     return (
       <div>
         {giantBag.map((content, idx) => (
-          <div><span id={`span-${idx}`}>{content}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceContent({ giantType, idx })} /></div>
+          <div>{content}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceContent({ idx })} /></div>
         ))}
       </div>
     );
@@ -73,8 +70,8 @@ export default function GenGiant({ giantType }) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Bag Contents</Button>
-      {open && <Modal
-        open={open}
+      {giantBag && <Modal
+        open={giantBag != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -89,10 +86,10 @@ export default function GenGiant({ giantType }) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Giant Bag Contents<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getGiantBag(giantType)} />
+            Giant Bag Contents<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getGiantBag()} />
           </Typography>
           <Typography>
-            <BagList giantBag={giantBag} giantType={giantType} />
+            <BagList />
           </Typography>
         </Box>
       </Modal>}

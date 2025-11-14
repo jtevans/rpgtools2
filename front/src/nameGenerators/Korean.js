@@ -21,51 +21,60 @@ const style = {
   maxHeight: '80%',
 };
 
-async function callAPI(amount) {
-  let response = await fetch(`http://localhost:8080/tools2/api/korean.php?amount=${amount}`);
-  return await response.json();
-}
-
-async function replaceName({ label, idx }) {
-  let newName = await callAPI(1);
-  if (label === 'male') { newName = newName[0][0] }
-  else if (label === 'female') { newName = newName[1][0] }
-  document.getElementById(`${label}-${idx}-span`).innerHTML = newName;
-}
-
-function NameList({ label, names }) {
-  return (
-    <div>
-      {names.map((name, idx) => (
-        <div><span id={`${label}-${idx}-span`}>{name}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ label, idx })} /></div>
-      ))}
-    </div>
-  );
-}
-
 export default function KoreanName() {
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getNames(20);
+    getNames();
   }
   const handleClose = () => {
-    setOpen(false);
     setNames(null);
   };
 
   const [names, setNames] = React.useState(null);
 
-  const getNames = async (amount) => {
-    const nameData = await callAPI(amount);
+  const getNames = async () => {
+    const nameData = await callAPI(20);
     setNames(nameData);
-    setOpen(true);
   };
+
+  async function callAPI(amount) {
+    let response = await fetch(`http://localhost:8080/tools2/api/korean.php?amount=${amount}`);
+    return await response.json();
+  }
+
+  async function replaceName({ column, idx }) {
+    let newName = await callAPI(1);
+
+    setNames(prevNames => {
+      return prevNames.map((col, cIdx) => {
+        if (cIdx === column) {
+          return col.map((item, rIdx) => {
+            if (rIdx === idx) {
+              return newName[column][0];
+            }
+            return item;
+          });
+        }
+        return col;
+      });
+    });
+
+  }
+
+  function NameList({ column }) {
+    return (
+      <div>
+        {names[column].map((name, idx) => (
+          <div>{name}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Korean</Button>
       {names && <Modal
-        open={open}
+        open={names !== null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -79,7 +88,7 @@ export default function KoreanName() {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Korean Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames(20)} />
+            Korean Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames()} />
           </Typography>
           <Grid container spacing={2}>
             <Grid size={6}>
@@ -87,7 +96,7 @@ export default function KoreanName() {
                 Male Names
               </Typography>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList label="male" names={names[0]} />
+                <NameList column={0} />
               </Typography>
             </Grid>
             <Grid size={6}>
@@ -95,7 +104,7 @@ export default function KoreanName() {
                 Female Names
               </Typography>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList label="female" names={names[1]} />
+                <NameList column={1} />
               </Typography>
             </Grid>
           </Grid>

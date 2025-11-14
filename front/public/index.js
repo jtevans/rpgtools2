@@ -29374,62 +29374,61 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	async function callAPI$5(amount) {
-	  let response = await fetch(`http://localhost:8080/tools2/api/dwarf.php?amount=${amount}`);
-	  return await response.json();
-	}
-	async function replaceName$3(_ref) {
-	  let {
-	    label,
-	    idx
-	  } = _ref;
-	  let newName = await callAPI$5(1);
-	  if (label === 'male') {
-	    newName = newName[0][0];
-	  } else if (label === 'female') {
-	    newName = newName[1][0];
-	  } else if (label === 'stronghold') {
-	    newName = newName[1][0];
-	  }
-	  document.getElementById(`${label}-${idx}-span`).innerHTML = newName;
-	}
-	function NameList$3(_ref2) {
-	  let {
-	    label,
-	    names
-	  } = _ref2;
-	  return /*#__PURE__*/reactExports.createElement("div", null, names.map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	    id: `${label}-${idx}-span`
-	  }, name), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "9pt"
-	    },
-	    onClick: () => replaceName$3({
-	      label,
-	      idx
-	    })
-	  }))));
-	}
 	function DwarfName() {
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getNames(20);
+	    getNames();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setNames(null);
 	  };
 	  const [names, setNames] = reactExports.useState(null);
-	  const getNames = async amount => {
-	    const nameData = await callAPI$5(amount);
+	  const getNames = async () => {
+	    const nameData = await callAPI(20);
 	    setNames(nameData);
-	    setOpen(true);
 	  };
+	  async function callAPI(amount) {
+	    let response = await fetch(`http://localhost:8080/tools2/api/dwarf.php?amount=${amount}`);
+	    return await response.json();
+	  }
+	  async function replaceName(_ref) {
+	    let {
+	      column,
+	      idx
+	    } = _ref;
+	    let newName = await callAPI(1);
+	    setNames(prevNames => {
+	      return prevNames.map((col, cIdx) => {
+	        if (cIdx === column) {
+	          return col.map((item, rIdx) => {
+	            if (rIdx === idx) {
+	              return newName[column][0];
+	            }
+	            return item;
+	          });
+	        }
+	        return col;
+	      });
+	    });
+	  }
+	  function NameList(_ref2) {
+	    let {
+	      column
+	    } = _ref2;
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceName({
+	        column,
+	        idx
+	      })
+	    }))));
+	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, "Dwarf"), names && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: names !== null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -29453,7 +29452,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getNames(20)
+	    onClick: () => getNames()
 	  })), /*#__PURE__*/reactExports.createElement(Grid, {
 	    container: true,
 	    spacing: 2
@@ -29469,9 +29468,8 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$3, {
-	    label: "male",
-	    names: names[0]
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 0
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -29484,9 +29482,8 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$3, {
-	    label: "female",
-	    names: names[1]
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 1
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -29499,10 +29496,21 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$3, {
-	    label: "stronghold",
-	    names: names[2]
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 2
 	  })))))));
+	}
+
+	class Utils {
+	  static ucfirst(str) {
+	    if (!str) {
+	      return str;
+	    }
+	    if (typeof str != 'string') {
+	      str = str.toString();
+	    }
+	    return str.charAt(0).toUpperCase() + str.slice(1);
+	  }
 	}
 
 	const style$k = {
@@ -29518,46 +29526,6 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	async function callAPI$4(amount, type) {
-	  let response = await fetch(`http://localhost:8080/tools2/api/mfnames.php?amount=${amount}&type=${type}`);
-	  return await response.json();
-	}
-	async function replaceName$2(_ref) {
-	  let {
-	    label,
-	    idx,
-	    type
-	  } = _ref;
-	  let newName = await callAPI$4(1, type);
-	  if (label === 'male') {
-	    newName = newName[0][0];
-	  } else if (label === 'female') {
-	    newName = newName[1][0];
-	  }
-	  document.getElementById(`${label}-${idx}-span`).innerHTML = newName;
-	}
-	function NameList$2(_ref2) {
-	  let {
-	    label,
-	    names,
-	    type
-	  } = _ref2;
-	  return /*#__PURE__*/reactExports.createElement("div", null, names.map((name, idx) => /*#__PURE__*/reactExports.createElement("div", {
-	    id: `${label}-${idx}-div`
-	  }, /*#__PURE__*/reactExports.createElement("span", {
-	    id: `${label}-${idx}-span`
-	  }, name), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "9pt"
-	    },
-	    onClick: () => replaceName$2({
-	      label,
-	      idx,
-	      type
-	    })
-	  }))));
-	}
 	function MFName(props) {
 	  let {
 	    type
@@ -29566,25 +29534,61 @@ export default theme;`;
 	  if (!validTypes.includes(type)) {
 	    type = 'drow';
 	  }
-	  const ucType = type.charAt(0).toUpperCase() + type.slice(1);
-	  const [open, setOpen] = reactExports.useState(false);
+	  const ucType = Utils.ucfirst(type);
 	  const handleOpen = () => {
-	    getNames(20, type);
+	    getNames();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setNames(null);
 	  };
 	  const [names, setNames] = reactExports.useState(null);
-	  const getNames = async (amount, type) => {
-	    const nameData = await callAPI$4(amount, type);
+	  const getNames = async () => {
+	    const nameData = await callAPI(20);
 	    setNames(nameData);
-	    setOpen(true);
 	  };
+	  async function callAPI(amount) {
+	    let response = await fetch(`http://localhost:8080/tools2/api/mfnames.php?amount=${amount}&type=${type}`);
+	    return await response.json();
+	  }
+	  async function replaceName(_ref) {
+	    let {
+	      column,
+	      idx
+	    } = _ref;
+	    let newName = await callAPI(1);
+	    setNames(prevNames => {
+	      return prevNames.map((col, cIdx) => {
+	        if (cIdx === column) {
+	          return col.map((item, rIdx) => {
+	            if (rIdx === idx) {
+	              return newName[column][0];
+	            }
+	            return item;
+	          });
+	        }
+	        return col;
+	      });
+	    });
+	  }
+	  function NameList(_ref2) {
+	    let {
+	      column
+	    } = _ref2;
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceName({
+	        column,
+	        idx
+	      })
+	    }))));
+	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, ucType), names && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: names != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -29608,7 +29612,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getNames(20, type)
+	    onClick: () => getNames()
 	  })), /*#__PURE__*/reactExports.createElement(Grid, {
 	    container: true,
 	    spacing: 2
@@ -29624,10 +29628,8 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$2, {
-	    label: "male",
-	    names: names[0],
-	    type: type
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 0
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -29640,10 +29642,8 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$2, {
-	    label: "female",
-	    names: names[1],
-	    type: type
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 1
 	  })))))));
 	}
 
@@ -29668,59 +29668,56 @@ export default theme;`;
 	  if (!validTypes.includes(type)) {
 	    type = 'elf';
 	  }
-	  const ucType = type.charAt(0).toUpperCase() + type.slice(1);
-	  const [open, setOpen] = reactExports.useState(false);
+	  const ucType = Utils.ucfirst(type);
 	  const handleOpen = () => {
-	    getNames(20, type);
+	    getNames();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setNames(null);
 	  };
 	  const [names, setNames] = reactExports.useState(null);
-	  const getNames = async (amount, type) => {
-	    const nameData = await callAPI(amount, type);
+	  const getNames = async () => {
+	    const nameData = await callAPI(20);
 	    setNames(nameData);
-	    setOpen(true);
 	  };
-	  const updateName = async (indexToUpdate, newValue) => {
-	    setNames(names.map((item, index) => index === indexToUpdate ? newValue : item));
+	  const updateName = async (columnToUpdate, indexToUpdate, newValue) => {
+	    setNames(names.map((arr, colIndex) => {
+	      return colIndex === columnToUpdate ? arr.map((item, index) => {
+	        return index === indexToUpdate ? newValue : item;
+	      }) : arr;
+	    }));
 	  };
-	  async function callAPI(amount, type) {
+	  async function callAPI(amount) {
 	    let response = await fetch(`http://localhost:8080/tools2/api/twopartnames.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
 	    let {
-	      idx,
-	      type
+	      column,
+	      idx
 	    } = _ref;
-	    let newName = await callAPI(1, type);
-	    updateName(idx, newName[0]);
+	    let newName = await callAPI(1);
+	    updateName(column, idx, newName[0][0]);
 	  }
 	  function NameList(_ref2) {
 	    let {
-	      column,
-	      names,
-	      type
+	      column
 	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, names.map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${column}-${idx}`
-	    }, name), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceName({
-	        idx,
-	        type
+	        column,
+	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, ucType), names && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: names != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -29744,7 +29741,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getNames(20, type)
+	    onClick: () => getNames()
 	  })), /*#__PURE__*/reactExports.createElement(Grid, {
 	    container: true,
 	    spacing: 2
@@ -29755,9 +29752,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 1,
-	    names: names[0],
-	    type: type
+	    column: 0
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -29765,9 +29760,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 2,
-	    names: names[1],
-	    type: type
+	    column: 1
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -29775,9 +29768,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 3,
-	    names: names[2],
-	    type: type
+	    column: 2
 	  })))))));
 	}
 
@@ -29794,60 +29785,61 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	async function callAPI$3(amount) {
-	  let response = await fetch(`http://localhost:8080/tools2/api/korean.php?amount=${amount}`);
-	  return await response.json();
-	}
-	async function replaceName$1(_ref) {
-	  let {
-	    label,
-	    idx
-	  } = _ref;
-	  let newName = await callAPI$3(1);
-	  if (label === 'male') {
-	    newName = newName[0][0];
-	  } else if (label === 'female') {
-	    newName = newName[1][0];
-	  }
-	  document.getElementById(`${label}-${idx}-span`).innerHTML = newName;
-	}
-	function NameList$1(_ref2) {
-	  let {
-	    label,
-	    names
-	  } = _ref2;
-	  return /*#__PURE__*/reactExports.createElement("div", null, names.map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	    id: `${label}-${idx}-span`
-	  }, name), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "9pt"
-	    },
-	    onClick: () => replaceName$1({
-	      label,
-	      idx
-	    })
-	  }))));
-	}
 	function KoreanName() {
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getNames(20);
+	    getNames();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setNames(null);
 	  };
 	  const [names, setNames] = reactExports.useState(null);
-	  const getNames = async amount => {
-	    const nameData = await callAPI$3(amount);
+	  const getNames = async () => {
+	    const nameData = await callAPI(20);
 	    setNames(nameData);
-	    setOpen(true);
 	  };
+	  async function callAPI(amount) {
+	    let response = await fetch(`http://localhost:8080/tools2/api/korean.php?amount=${amount}`);
+	    return await response.json();
+	  }
+	  async function replaceName(_ref) {
+	    let {
+	      column,
+	      idx
+	    } = _ref;
+	    let newName = await callAPI(1);
+	    setNames(prevNames => {
+	      return prevNames.map((col, cIdx) => {
+	        if (cIdx === column) {
+	          return col.map((item, rIdx) => {
+	            if (rIdx === idx) {
+	              return newName[column][0];
+	            }
+	            return item;
+	          });
+	        }
+	        return col;
+	      });
+	    });
+	  }
+	  function NameList(_ref2) {
+	    let {
+	      column
+	    } = _ref2;
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceName({
+	        column,
+	        idx
+	      })
+	    }))));
+	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, "Korean"), names && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: names !== null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -29871,7 +29863,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getNames(20)
+	    onClick: () => getNames()
 	  })), /*#__PURE__*/reactExports.createElement(Grid, {
 	    container: true,
 	    spacing: 2
@@ -29887,9 +29879,8 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$1, {
-	    label: "male",
-	    names: names[0]
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 0
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 6
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -29902,9 +29893,8 @@ export default theme;`;
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(NameList$1, {
-	    label: "female",
-	    names: names[1]
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 1
 	  })))))));
 	}
 
@@ -29924,20 +29914,24 @@ export default theme;`;
 	function AllNames() {
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getNames(20);
+	    getNames();
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
 	    setNames(null);
 	  };
 	  const [names, setNames] = reactExports.useState(null);
-	  const getNames = async amount => {
-	    const nameData = await callAPI(amount);
+	  const getNames = async () => {
+	    const nameData = await callAPI(20);
 	    setNames(nameData);
 	    setOpen(true);
 	  };
-	  const updateName = async (indexToUpdate, newValue) => {
-	    setNames(names.map((item, index) => index === indexToUpdate ? newValue : item));
+	  const updateName = async (columnToUpdate, indexToUpdate, newValue) => {
+	    setNames(names.map((arr, colIndex) => {
+	      return colIndex === columnToUpdate ? arr.map((item, index) => {
+	        return index === indexToUpdate ? newValue : item;
+	      }) : arr;
+	    }));
 	  };
 	  async function callAPI(amount) {
 	    let response = await fetch(`http://localhost:8080/tools2/api/twopartnames.php?amount=${amount}`);
@@ -29945,31 +29939,30 @@ export default theme;`;
 	  }
 	  async function replaceName(_ref) {
 	    let {
+	      column,
 	      idx
 	    } = _ref;
 	    let newName = await callAPI(1);
-	    updateName(idx, newName[0]);
+	    updateName(column, idx, newName[0][0]);
 	  }
 	  function NameList(_ref2) {
 	    let {
-	      column,
-	      names
+	      column
 	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, names.map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${column}-${idx}`
-	    }, name), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceName({
+	        column,
 	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "All Names"), names && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "All Names"), open && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: open,
 	    onClose: (event, reason) => {
 	    },
@@ -29994,7 +29987,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getNames(20)
+	    onClick: () => getNames()
 	  })), /*#__PURE__*/reactExports.createElement(Grid, {
 	    container: true,
 	    spacing: 2
@@ -30005,8 +29998,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 1,
-	    names: names[0]
+	    column: 0
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -30014,8 +30006,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 2,
-	    names: names[1]
+	    column: 1
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -30023,8 +30014,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 3,
-	    names: names[2]
+	    column: 2
 	  })))))));
 	}
 
@@ -30041,91 +30031,20 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	const c = "b c d f g h j k l m n p q r s t v w x y z";
-	const ch = "ck ch th sh gh st qu ph";
-	const v = "a e i o u";
-	const vo = "ae ea oo ee ei ie ou";
-	const allowedCharsMerge = c + ' ' + c.toUpperCase() + ' ' + v + ' ' + v.toUpperCase() + ' ' + '\' = - _ . *';
-	const conMerge = c + ' ' + c + ' ' + ch;
-	const vowMerge = v + ' ' + v + ' ' + vo;
-	const allMerge = conMerge + ' ' + vowMerge;
-	const con = conMerge.split(' ');
-	const vow = vowMerge.split(' ');
-	const all = allMerge.split(' ');
-	let allowedChars = allowedCharsMerge.split(' ');
-	allowedChars.push(' ');
-	function getRandom(arr) {
-	  const randomIndex = Math.floor(Math.random() * arr.length);
-	  return arr[randomIndex];
-	}
-	function makeName(pattern) {
-	  let lastchar = '';
-	  let newchar = '';
-	  let name = '';
-	  for (let x = 0; x < pattern.length; ++x) {
-	    let char = pattern[x];
-	    if (!allowedChars.includes(char)) {
-	      continue;
-	    }
-	    if (char === '-') {
-	      newchar = getRandom(con);
-	    } else if (char === '=') {
-	      newchar = getRandom(vow);
-	    } else if (char === '*') {
-	      newchar = getRandom(all);
-	    } else if (char === '.') {
-	      newchar = lastchar;
-	    } else {
-	      newchar = char;
-	    }
-	    lastchar = newchar;
-	    name += newchar;
-	  }
-	  name = name.toLowerCase();
-	  name = name.charAt(0).toUpperCase() + name.slice(1);
-	  return name;
-	}
-	function makeNames(amount, pattern) {
-	  let names = [[], [], []];
-	  for (let x = 0; x < amount; ++x) {
-	    names[0][x] = makeName(pattern);
-	    names[1][x] = makeName(pattern);
-	    names[2][x] = makeName(pattern);
-	  }
-	  return names;
-	}
-	function replaceName(_ref) {
-	  let {
-	    column,
-	    idx
-	  } = _ref;
-	  const pattern = document.getElementById('pattern').value;
-	  const newName = makeNames(1, pattern);
-	  document.getElementById(`span-${column}-${idx}`).innerHTML = newName[0][0];
-	}
-	function NameList(_ref2) {
-	  let {
-	    column,
-	    names
-	  } = _ref2;
-	  return /*#__PURE__*/reactExports.createElement("div", null, names.map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	    id: `span-${column}-${idx}`
-	  }, name), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "9pt"
-	    },
-	    onClick: () => replaceName({
-	      column,
-	      idx
-	    })
-	  }))));
-	}
-	function setPattern() {
-	  const prebuilt = document.getElementById('prebuilt');
-	  document.getElementById('pattern').value = prebuilt.value;
-	}
 	function RandomNames() {
+	  const c = "b c d f g h j k l m n p q r s t v w x y z";
+	  const ch = "ck ch th sh gh st qu ph";
+	  const v = "a e i o u";
+	  const vo = "ae ea oo ee ei ie ou";
+	  const allowedCharsMerge = c + ' ' + c.toUpperCase() + ' ' + v + ' ' + v.toUpperCase() + ' ' + '\' = - _ . *';
+	  const conMerge = c + ' ' + c + ' ' + ch;
+	  const vowMerge = v + ' ' + v + ' ' + vo;
+	  const allMerge = conMerge + ' ' + vowMerge;
+	  const con = conMerge.split(' ');
+	  const vow = vowMerge.split(' ');
+	  const all = allMerge.split(' ');
+	  let allowedChars = allowedCharsMerge.split(' ');
+	  allowedChars.push(' ');
 	  const [openForm, setOpenForm] = reactExports.useState(false);
 	  const handleOpenForm = () => {
 	    setOpenForm(true);
@@ -30133,24 +30052,92 @@ export default theme;`;
 	  const handleCloseForm = () => {
 	    setOpenForm(false);
 	  };
-	  const [openNames, setOpenNames] = reactExports.useState(false);
 	  const handleOpenNames = () => {
 	    const pattern = document.getElementById('pattern').value;
 	    const nameData = makeNames(20, pattern);
 	    setNames(nameData);
-	    setOpenNames(true);
 	  };
 	  const handleCloseNames = () => {
-	    setOpenNames(false);
 	    setNames(null);
 	  };
 	  const [names, setNames] = reactExports.useState(null);
-	  const getNames = async amount => {
+	  const getNames = async () => {
 	    const pattern = document.getElementById('pattern').value;
-	    const nameData = makeNames(amount, pattern);
+	    const nameData = makeNames(20, pattern);
 	    setNames(nameData);
-	    setOpenNames(true);
 	  };
+	  function getRandom(arr) {
+	    const randomIndex = Math.floor(Math.random() * arr.length);
+	    return arr[randomIndex];
+	  }
+	  function makeName(pattern) {
+	    let lastchar = '';
+	    let newchar = '';
+	    let name = '';
+	    for (let x = 0; x < pattern.length; ++x) {
+	      let char = pattern[x];
+	      if (!allowedChars.includes(char)) {
+	        continue;
+	      }
+	      if (char === '-') {
+	        newchar = getRandom(con);
+	      } else if (char === '=') {
+	        newchar = getRandom(vow);
+	      } else if (char === '*') {
+	        newchar = getRandom(all);
+	      } else if (char === '.') {
+	        newchar = lastchar;
+	      } else {
+	        newchar = char;
+	      }
+	      lastchar = newchar;
+	      name += newchar;
+	    }
+	    name = name.toLowerCase();
+	    name = name.charAt(0).toUpperCase() + name.slice(1);
+	    return name;
+	  }
+	  function makeNames(amount, pattern) {
+	    let names = [[], [], []];
+	    for (let x = 0; x < amount; ++x) {
+	      names[0][x] = makeName(pattern);
+	      names[1][x] = makeName(pattern);
+	      names[2][x] = makeName(pattern);
+	    }
+	    return names;
+	  }
+	  function replaceName(_ref) {
+	    let {
+	      column,
+	      idx
+	    } = _ref;
+	    const pattern = document.getElementById('pattern').value;
+	    const newName = makeNames(1, pattern);
+	    setNames(names.map((arr, colIndex) => {
+	      return colIndex === column ? arr.map((item, index) => {
+	        return index === idx ? newName[0][0] : item;
+	      }) : arr;
+	    }));
+	  }
+	  function NameList(_ref2) {
+	    let {
+	      column
+	    } = _ref2;
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceName({
+	        column,
+	        idx
+	      })
+	    }))));
+	  }
+	  function setPattern() {
+	    const prebuilt = document.getElementById('prebuilt');
+	    document.getElementById('pattern').value = prebuilt.value;
+	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpenForm
 	  }, "Random Names"), /*#__PURE__*/reactExports.createElement(Modal, {
@@ -30231,7 +30218,7 @@ export default theme;`;
 	  }), /*#__PURE__*/reactExports.createElement("br", null), /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpenNames
 	  }, "Generate Names")))), names && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: openNames,
+	    open: names != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -30255,7 +30242,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getNames(20)
+	    onClick: () => getNames()
 	  })), /*#__PURE__*/reactExports.createElement(Grid, {
 	    container: true,
 	    spacing: 2
@@ -30266,8 +30253,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 1,
-	    names: names[0]
+	    column: 0
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -30275,8 +30261,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 2,
-	    names: names[1]
+	    column: 1
 	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
 	    size: 4
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
@@ -30284,8 +30269,7 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(NameList, {
-	    column: 3,
-	    names: names[2]
+	    column: 2
 	  })))))));
 	}
 
@@ -30336,7 +30320,7 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	function Dressing(props) {
+	function GenDressing(props) {
 	  let {
 	    type,
 	    label
@@ -30345,57 +30329,46 @@ export default theme;`;
 	  if (!validTypes.includes(type)) {
 	    type = '1';
 	  }
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getDressings(20, type);
+	    getDressings();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setDressings(null);
 	  };
 	  const [dressings, setDressings] = reactExports.useState(null);
-	  const getDressings = async (amount, type) => {
-	    const dressingData = await callAPI(amount, type);
+	  const getDressings = async () => {
+	    const dressingData = await callAPI(20);
 	    setDressings(dressingData);
-	    setOpen(true);
 	  };
 	  const updateDressing = async (indexToUpdate, newValue) => {
 	    setDressings(dressings.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(amount, type) {
+	  async function callAPI(amount) {
 	    let response = await fetch(`http://localhost:8080/tools2/api/dressing.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceDressing(_ref) {
 	    let {
-	      idx,
-	      type
+	      idx
 	    } = _ref;
-	    let newDressing = await callAPI(1, type);
+	    let newDressing = await callAPI(1);
 	    updateDressing(idx, newDressing[0]);
 	  }
-	  function DressingList(_ref2) {
-	    let {
-	      dressings,
-	      type
-	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, dressings.map((dressing, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${idx}`
-	    }, dressing), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  function DressingList() {
+	    return /*#__PURE__*/reactExports.createElement("div", null, dressings.map((dressing, idx) => /*#__PURE__*/reactExports.createElement("div", null, dressing, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceDressing({
-	        idx,
-	        type
+	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, label), dressings && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: dressings != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -30419,69 +30392,64 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getDressings(20, type)
+	    onClick: () => getDressings()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(DressingList, {
-	    dressings: dressings,
-	    type: type
-	  })))));
+	  }, /*#__PURE__*/reactExports.createElement(DressingList, null)))));
 	}
 
-	class DungeonDressing extends React.Component {
-	  render() {
-	    return /*#__PURE__*/React.createElement(Card, {
-	      variant: "outlined"
-	    }, /*#__PURE__*/React.createElement(CardHeader, {
-	      sx: {
-	        textAlign: "center",
-	        fontWeight: "bold"
-	      },
-	      title: "Dungeon Dressing"
-	    }), /*#__PURE__*/React.createElement(CardContent, {
-	      sx: {
-	        textAlign: "center"
-	      }
-	    }, /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Air Current",
-	      type: "1"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Air Odor",
-	      type: "2"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Air Content",
-	      type: "3"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Sounds",
-	      type: "4"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "General Items",
-	      type: "5"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Furniture",
-	      type: "6"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Religious Items",
-	      type: "7"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Torture Chamber",
-	      type: "8"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Mage Furnishings",
-	      type: "9"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Container Contents",
-	      type: "10"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Utensils",
-	      type: "11"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Dressing, {
-	      label: "Random Assortment",
-	      type: "0"
-	    }), /*#__PURE__*/React.createElement("br", null)));
-	  }
+	function DungeonDressing() {
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined"
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "Dungeon Dressing"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Air Current",
+	    type: "1"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Air Odor",
+	    type: "2"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Air Content",
+	    type: "3"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Sounds",
+	    type: "4"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "General Items",
+	    type: "5"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Furniture",
+	    type: "6"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Religious Items",
+	    type: "7"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Torture Chamber",
+	    type: "8"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Mage Furnishings",
+	    type: "9"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Container Contents",
+	    type: "10"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Utensils",
+	    type: "11"
+	  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(GenDressing, {
+	    label: "Random Assortment",
+	    type: "0"
+	  }), /*#__PURE__*/React.createElement("br", null)));
 	}
 
 	const style$e = {
@@ -30506,61 +30474,51 @@ export default theme;`;
 	  if (!validTypes.includes(type)) {
 	    type = 'harmless';
 	  }
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getTraps(5, type);
+	    getTraps();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setTraps(null);
 	  };
 	  const [traps, setTraps] = reactExports.useState(null);
-	  const getTraps = async (amount, type) => {
-	    const trapData = await callAPI(amount, type);
+	  const getTraps = async () => {
+	    const trapData = await callAPI(5);
 	    setTraps(trapData);
 	    setOpen(true);
 	  };
 	  const updateTrap = async (indexToUpdate, newValue) => {
 	    setTraps(traps.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(amount, type) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/traps.php?amount=${amount}&type=${type}`);
+	  async function callAPI(amount) {
+	    const response = await fetch(`http://localhost:8080/tools2/api/traps.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceTrap(_ref) {
 	    let {
-	      idx,
-	      type
+	      idx
 	    } = _ref;
-	    let newTrap = await callAPI(1, type);
+	    const newTrap = await callAPI(1);
 	    updateTrap(idx, newTrap[0]);
 	  }
-	  function TrapList(_ref2) {
-	    let {
-	      traps,
-	      type
-	    } = _ref2;
+	  function TrapList() {
 	    return /*#__PURE__*/reactExports.createElement("div", null, traps.map((trap, idx) => /*#__PURE__*/reactExports.createElement("div", {
 	      style: {
 	        paddingBottom: "10px"
 	      }
-	    }, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${idx}`
-	    }, trap), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    }, trap, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceTrap({
-	        idx,
-	        type
+	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, label), traps && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: traps != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -30584,15 +30542,12 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getTraps(5, type)
+	    onClick: () => getTraps()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "center"
 	    }
-	  }, /*#__PURE__*/reactExports.createElement(TrapList, {
-	    traps: traps,
-	    type: type
-	  })))));
+	  }, /*#__PURE__*/reactExports.createElement(TrapList, null)))));
 	}
 
 	class Traps extends React.Component {
@@ -30645,57 +30600,54 @@ export default theme;`;
 	    amount
 	  } = _ref;
 	  amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getSpecials(API, amount);
+	    getSpecials();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setSpecials(null);
 	  };
 	  const [specials, setSpecials] = reactExports.useState(null);
-	  const getSpecials = async (API, amount) => {
-	    const data = await callAPI(API, amount);
+	  const getSpecials = async () => {
+	    const data = await callAPI();
 	    setSpecials(data);
-	    setOpen(true);
 	  };
 	  const updateSpecial = async (indexToUpdate, newValue) => {
 	    setSpecials(specials.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(API, amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
+	  async function callAPI() {
+	    let newAmount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+	    let targetAmount = amount;
+	    if (newAmount != 0) {
+	      targetAmount = newAmount;
+	    }
+	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${targetAmount}`);
 	    return await response.json();
 	  }
 	  async function replaceSpecial(_ref2) {
 	    let {
-	      API,
 	      idx
 	    } = _ref2;
-	    let data = await callAPI(API, 1);
+	    let data = await callAPI(1);
 	    updateSpecial(idx, data[0]);
 	  }
 	  function SpecialsList(_ref3) {
 	    let {
-	      API,
 	      specials
 	    } = _ref3;
-	    return /*#__PURE__*/reactExports.createElement("div", null, specials.map((special, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${idx}`
-	    }, special), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    return /*#__PURE__*/reactExports.createElement("div", null, specials.map((special, idx) => /*#__PURE__*/reactExports.createElement("div", null, special, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceSpecial({
-	        API,
 	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate ", title), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate ", title), specials && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: specials != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -30722,7 +30674,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getSpecials(API, amount)
+	    onClick: () => getSpecials()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpecialsList, {
 	    API: API,
 	    specials: specials
@@ -30748,12 +30700,10 @@ export default theme;`;
 	    mediumAmount,
 	    majorAmount
 	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getItems(minorAmount, mediumAmount, majorAmount);
+	    getItems();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setMinor(null);
 	    setMedium(null);
 	    setMajor(null);
@@ -30761,12 +30711,11 @@ export default theme;`;
 	  const [minor, setMinor] = reactExports.useState(null);
 	  const [medium, setMedium] = reactExports.useState(null);
 	  const [major, setMajor] = reactExports.useState(null);
-	  const getItems = async (minorAmount, mediumAmount, majorAmount) => {
-	    const itemData = await callAPI(minorAmount, mediumAmount, majorAmount);
+	  const getItems = async () => {
+	    const itemData = await callAPI();
 	    setMinor(itemData['Minor']);
 	    setMedium(itemData['Medium']);
 	    setMajor(itemData['Major']);
-	    setOpen(true);
 	  };
 	  const updateItem = async (indexToUpdate, newValue, type) => {
 	    if (type === 'Minor') {
@@ -30779,8 +30728,23 @@ export default theme;`;
 	      setMajor(major.map((item, index) => index === indexToUpdate ? newValue : item));
 	    }
 	  };
-	  async function callAPI(minorAmount, mediumAmount, majorAmount) {
-	    const args = `minor=${minorAmount}&medium=${mediumAmount}&major=${majorAmount}`;
+	  async function callAPI() {
+	    let passedMinorAmount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    let passedMediumAmount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+	    let passedMajorAmount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+	    let minorAmt = minorAmount;
+	    let mediumAmt = mediumAmount;
+	    let majorAmt = majorAmount;
+	    if (passedMinorAmount) {
+	      minorAmt = passedMinorAmount;
+	    }
+	    if (passedMediumAmount) {
+	      mediumAmt = passedMediumAmount;
+	    }
+	    if (passedMajorAmount) {
+	      majorAmt = passedMajorAmount;
+	    }
+	    const args = `minor=${minorAmt}&medium=${mediumAmt}&major=${majorAmt}`;
 	    let response = await fetch(`http://localhost:8080/tools2/api/mi.php?${args}`);
 	    return await response.json();
 	  }
@@ -30789,19 +30753,19 @@ export default theme;`;
 	      idx,
 	      type
 	    } = _ref;
-	    let minorAmount = 0;
-	    let mediumAmount = 0;
-	    let majorAmount = 0;
+	    let minorAmt = 0;
+	    let mediumAmt = 0;
+	    let majorAmt = 0;
 	    if (type === 'Minor') {
-	      minorAmount = 1;
+	      minorAmt = 1;
 	    }
 	    if (type === 'Medium') {
-	      mediumAmount = 1;
+	      mediumAmt = 1;
 	    }
 	    if (type === 'Major') {
-	      majorAmount = 1;
+	      majorAmt = 1;
 	    }
-	    let newItem = await callAPI(minorAmount, mediumAmount, majorAmount);
+	    let newItem = await callAPI(minorAmt, mediumAmt, majorAmt);
 	    updateItem(idx, newItem[type][0], type);
 	  }
 	  function ItemList(_ref2) {
@@ -30809,9 +30773,7 @@ export default theme;`;
 	      items,
 	      type
 	    } = _ref2;
-	    return /*#__PURE__*/reactExports.createElement("div", null, items.map((item, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${type}-${idx}`
-	    }, item), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    return /*#__PURE__*/reactExports.createElement("div", null, items.map((item, idx) => /*#__PURE__*/reactExports.createElement("div", null, item, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
@@ -30824,8 +30786,8 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Magic Items"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Magic Items"), (minor || medium || major) && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: minor || medium || major,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -30852,7 +30814,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getItems(minorAmount, mediumAmount, majorAmount)
+	    onClick: () => getItems()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "center",
@@ -30893,40 +30855,6 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	async function callAPI$2() {
-	  const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value || 0)));
-	  const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value || 0)));
-	  const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value || 0)));
-	  const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value || 0)));
-	  const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value || 0)));
-	  const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value || 0)));
-	  const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value || 0)));
-	  const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value || 0)));
-	  const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value || 0)));
-	  const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value || 0)));
-	  let args = '';
-	  if (treasure3_cr0 !== 0 && treasure3_q0 !== 0) {
-	    args += `&cr0=${treasure3_cr0}&q0=${treasure3_q0}`;
-	  }
-	  if (treasure3_cr1 !== 0 && treasure3_q1 !== 0) {
-	    args += `&cr1=${treasure3_cr1}&q1=${treasure3_q1}`;
-	  }
-	  if (treasure3_cr2 !== 0 && treasure3_q2 !== 0) {
-	    args += `&cr2=${treasure3_cr2}&q2=${treasure3_q2}`;
-	  }
-	  if (treasure3_cr3 !== 0 && treasure3_q3 !== 0) {
-	    args += `&cr3=${treasure3_cr3}&q3=${treasure3_q3}`;
-	  }
-	  if (treasure3_cr4 !== 0 && treasure3_q4 !== 0) {
-	    args += `&cr4=${treasure3_cr4}&q4=${treasure3_q4}`;
-	  }
-	  if (args === '') {
-	    return [];
-	  }
-	  args = args.slice(1);
-	  let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
-	  return await response.json();
-	}
 	function GenTreasure3() {
 	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
@@ -30945,11 +30873,45 @@ export default theme;`;
 	  const [minor3, setMinor3] = reactExports.useState(0);
 	  const [medium3, setMedium3] = reactExports.useState(0);
 	  const [major3, setMajor3] = reactExports.useState(0);
+	  async function callAPI() {
+	    const treasure3_cr0 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr0').value || 0)));
+	    const treasure3_cr1 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr1').value || 0)));
+	    const treasure3_cr2 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr2').value || 0)));
+	    const treasure3_cr3 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr3').value || 0)));
+	    const treasure3_cr4 = Math.max(0, Math.min(20, parseInt(document.getElementById('treasure3_cr4').value || 0)));
+	    const treasure3_q0 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q0').value || 0)));
+	    const treasure3_q1 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q1').value || 0)));
+	    const treasure3_q2 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q2').value || 0)));
+	    const treasure3_q3 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q3').value || 0)));
+	    const treasure3_q4 = Math.max(0, Math.min(200, parseInt(document.getElementById('treasure3_q4').value || 0)));
+	    let args = '';
+	    if (treasure3_cr0 !== 0 && treasure3_q0 !== 0) {
+	      args += `&cr0=${treasure3_cr0}&q0=${treasure3_q0}`;
+	    }
+	    if (treasure3_cr1 !== 0 && treasure3_q1 !== 0) {
+	      args += `&cr1=${treasure3_cr1}&q1=${treasure3_q1}`;
+	    }
+	    if (treasure3_cr2 !== 0 && treasure3_q2 !== 0) {
+	      args += `&cr2=${treasure3_cr2}&q2=${treasure3_q2}`;
+	    }
+	    if (treasure3_cr3 !== 0 && treasure3_q3 !== 0) {
+	      args += `&cr3=${treasure3_cr3}&q3=${treasure3_q3}`;
+	    }
+	    if (treasure3_cr4 !== 0 && treasure3_q4 !== 0) {
+	      args += `&cr4=${treasure3_cr4}&q4=${treasure3_q4}`;
+	    }
+	    if (args === '') {
+	      return [];
+	    }
+	    args = args.slice(1);
+	    let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
+	    return await response.json();
+	  }
 	  async function replaceTreasureItem(_ref) {
 	    let {
 	      type
 	    } = _ref;
-	    let newTreasure = await callAPI$2();
+	    let newTreasure = await callAPI();
 	    if (type === 'CP') {
 	      setCP3(newTreasure['CP']);
 	    } else if (type === 'SP') {
@@ -31008,7 +30970,7 @@ export default theme;`;
 	    }));
 	  }
 	  const getTreasure = async () => {
-	    const treasureData = await callAPI$2();
+	    const treasureData = await callAPI();
 	    setCP3(treasureData['CP']);
 	    setSP3(treasureData['SP']);
 	    setGP3(treasureData['GP']);
@@ -38694,41 +38656,33 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '95%'
 	};
-	async function callAPI$1() {
-	  let response = await fetch(`http://localhost:8080/tools2/api/intelligent.php`);
-	  const responseText = await response.json();
-	  return parse(responseText);
-	}
-	function StatsDisplay(_ref) {
-	  let {
-	    stats
-	  } = _ref;
-	  return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	    id: `span-intelligent`
-	  }, stats)));
-	}
 	function IntelligentWeapon(props) {
 	  const {
 	    label
 	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
 	    getStats();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setStats(null);
 	  };
 	  const [stats, setStats] = reactExports.useState(null);
+	  async function callAPI() {
+	    let response = await fetch(`http://localhost:8080/tools2/api/intelligent.php`);
+	    const responseText = await response.json();
+	    return parse(responseText);
+	  }
+	  function StatsDisplay() {
+	    return /*#__PURE__*/reactExports.createElement("div", null, stats);
+	  }
 	  const getStats = async () => {
-	    const statsData = await callAPI$1();
+	    const statsData = await callAPI();
 	    setStats(statsData);
-	    setOpen(true);
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
 	  }, "Intelligent Weapon Stats"), stats && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	    open: stats != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -38756,9 +38710,7 @@ export default theme;`;
 	      fontSize: "10pt"
 	    },
 	    onClick: () => getStats()
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(StatsDisplay, {
-	    stats: stats
-	  })))));
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(StatsDisplay, null)))));
 	}
 
 	const style$9 = {
@@ -38778,36 +38730,34 @@ export default theme;`;
 	  const {
 	    magicItemsInput
 	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getItems(magicItemsInput);
+	    getItems();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setItems(null);
 	  };
 	  const [items, setItems] = reactExports.useState(null);
-	  const getItems = async magicItemsInput => {
-	    const itemData = await callAPI(magicItemsInput);
+	  const getItems = async () => {
+	    const itemData = await callAPI();
 	    setItems(itemData);
-	    setOpen(true);
 	  };
 	  const updateItem = async (indexToUpdate, newValue) => {
 	    setItems(items.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(inputData, magicItemsInput) {
-	    let amount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+	  async function callAPI() {
+	    let inputData = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 	    let args = '';
 	    if (amount === null) {
-	      const Any = Math.max(0, Math.min(50, parseInt(inputData.Any) || 0));
-	      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(inputData.WeaponOrArmor) || 0));
-	      const Potion = Math.max(0, Math.min(50, parseInt(inputData.Potion) || 0));
-	      const Scroll = Math.max(0, Math.min(50, parseInt(inputData.Scroll) || 0));
-	      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(inputData.AnyExceptWeapon) || 0));
-	      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(inputData.AllExceptPotionScroll) || 0));
-	      const MiscMagic = Math.max(0, Math.min(50, parseInt(inputData.MiscMagic) || 0));
-	      const Specific = Math.max(0, Math.min(50, parseInt(inputData.Specific) || 0));
-	      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${inputData.SpecificType}&Specific=${Specific}`;
+	      const Any = Math.max(0, Math.min(50, parseInt(magicItemsInput.Any) || 0));
+	      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(magicItemsInput.WeaponOrArmor) || 0));
+	      const Potion = Math.max(0, Math.min(50, parseInt(magicItemsInput.Potion) || 0));
+	      const Scroll = Math.max(0, Math.min(50, parseInt(magicItemsInput.Scroll) || 0));
+	      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(magicItemsInput.AnyExceptWeapon) || 0));
+	      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(magicItemsInput.AllExceptPotionScroll) || 0));
+	      const MiscMagic = Math.max(0, Math.min(50, parseInt(magicItemsInput.MiscMagic) || 0));
+	      const Specific = Math.max(0, Math.min(50, parseInt(magicItemsInput.Specific) || 0));
+	      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${magicItemsInput.SpecificType}&Specific=${Specific}`;
 	    } else {
 	      args = `${inputData}=${amount}`;
 	      if (inputData === 'Specific') {
@@ -38820,17 +38770,12 @@ export default theme;`;
 	  async function replaceItem(_ref) {
 	    let {
 	      idx,
-	      item,
-	      magicItemsInput
+	      item
 	    } = _ref;
-	    let newItem = await callAPI(item.type, magicItemsInput, 1);
+	    let newItem = await callAPI(item.type, 1);
 	    updateItem(idx, newItem[0]);
 	  }
-	  function ItemList(_ref2) {
-	    let {
-	      items,
-	      magicItemsInput
-	    } = _ref2;
+	  function ItemList() {
 	    return /*#__PURE__*/reactExports.createElement("div", null, items.map(function (item, idx) {
 	      let volumePage = '';
 	      let intelligentButton = '';
@@ -38842,24 +38787,22 @@ export default theme;`;
 	          label: item.text
 	        });
 	      }
-	      const contents = /*#__PURE__*/reactExports.createElement(Typography, null, item.text, volumePage, intelligentButton, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(Typography, null, item.text, volumePage, intelligentButton, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	        sx: {
 	          paddingLeft: "5px",
 	          fontSize: "9pt"
 	        },
 	        onClick: () => replaceItem({
 	          idx,
-	          item,
-	          magicItemsInput
+	          item
 	        })
-	      }));
-	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, contents));
+	      })));
 	    }));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Magic Items"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Magic Items"), items && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: items != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -38886,11 +38829,8 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getItems(magicItemsInput)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ItemList, {
-	    items: items,
-	    magicItemsInput: magicItemsInput
-	  })))));
+	    onClick: () => getItems()
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(ItemList, null)))));
 	}
 
 	function _typeof(o) {
@@ -43974,57 +43914,54 @@ export default theme;`;
 	    amount
 	  } = _ref;
 	  amount = Math.max(1, Math.min(2000, parseInt(amount || 0)));
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getSpecials(API, amount);
+	    getSpecials();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setSpecials(null);
 	  };
 	  const [specials, setSpecials] = reactExports.useState(null);
-	  const getSpecials = async (API, amount) => {
-	    const data = await callAPI(API, amount);
+	  const getSpecials = async () => {
+	    const data = await callAPI();
 	    setSpecials(data);
-	    setOpen(true);
 	  };
 	  const updateSpecial = async (indexToUpdate, newValue) => {
 	    setSpecials(specials.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(API, amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${amount}`);
+	  async function callAPI() {
+	    let newAmount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+	    let targetAmount = amount;
+	    if (newAmount != 0) {
+	      targetAmount = newAmount;
+	    }
+	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${targetAmount}`);
 	    return await response.json();
 	  }
 	  async function replaceSpecial(_ref2) {
 	    let {
-	      API,
 	      idx
 	    } = _ref2;
-	    let data = await callAPI(API, 1);
+	    let data = await callAPI(1);
 	    updateSpecial(idx, data[0]);
 	  }
 	  function SpecialsList(_ref3) {
 	    let {
-	      API,
 	      specials
 	    } = _ref3;
-	    return /*#__PURE__*/reactExports.createElement("div", null, specials.map((special, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${idx}`
-	    }, special), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    return /*#__PURE__*/reactExports.createElement("div", null, specials.map((special, idx) => /*#__PURE__*/reactExports.createElement("div", null, special, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceSpecial({
-	        API,
 	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate ", title), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate ", title), specials && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: specials != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -44051,7 +43988,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getSpecials(API, amount)
+	    onClick: () => getSpecials()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpecialsList, {
 	    API: API,
 	    specials: specials
@@ -44131,147 +44068,18 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	async function callAPI(treasureInput) {
-	  let args = '';
-	  treasureInput.forEach((choice, idx) => {
-	    if (choice.treasureType != '' && choice.quantity > 0) {
-	      args += `&type${idx}=${choice.treasureType}&q${idx}=${choice.quantity}`;
-	    }
-	  });
-	  if (args === '') {
-	    return [];
-	  }
-	  args = args.slice(1); // Remove the leading '&'
-	  let response = await fetch(`http://localhost:8080/tools2/api/treasure1.php?${args}`);
-	  return await response.json();
-	}
-	async function replaceTreasure(_ref) {
-	  let {
-	    treasureInput,
-	    source,
-	    key
-	  } = _ref;
-	  let newTreasure = await callAPI(treasureInput);
-	  let display = key;
-	  if (key === 'Any') {
-	    display = 'Any Magic Item';
-	  }
-	  if (key === 'WeaponOrArmor') {
-	    display = 'Weapon or Armor';
-	  }
-	  if (key === 'Potion') {
-	    display = 'Potions';
-	  }
-	  if (key === 'Scroll') {
-	    display = 'Scrolls';
-	  }
-	  if (key === 'AnyExceptWeapon') {
-	    display = 'Any Magic Item, Except Weapons';
-	  }
-	  if (key === 'AllExceptPotionScroll') {
-	    display = 'All Except Potions and Scrolls';
-	  }
-	  if (key === 'MiscMagic') {
-	    display = 'Misc. Magic Items';
-	  }
-	  document.getElementById(`span-treasure1-${key}`).innerHTML = `${display}: ${newTreasure[key]}`;
-	  if (source !== '') {
-	    document.getElementById(`${source}`).value = newTreasure[key];
-	  }
-	}
-	function TreasureList(_ref2) {
-	  let {
-	    treasureInput,
-	    treasure
-	  } = _ref2;
-	  let totalTreasure = 0;
-	  Object.keys(treasure).forEach(function (key) {
-	    totalTreasure += treasure[key];
-	  });
-	  return /*#__PURE__*/reactExports.createElement("div", null, totalTreasure === 0 ? 'No Treasure' : Object.keys(treasure).map(function (key) {
-	    let addButton = /*#__PURE__*/reactExports.createElement("span", null);
-	    let addForm = /*#__PURE__*/reactExports.createElement("input", {
-	      type: "hidden",
-	      id: `treasure1-${key}`,
-	      value: treasure[key]
-	    });
-	    let source = '';
-	    let display = key;
-	    if (key === 'Gems' && treasure[key] > 0) {
-	      source = 'treasure1-Gems';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenSpecial1, {
-	        API: 'gems1.php',
-	        title: 'Gems',
-	        amount: treasure[key]
-	      });
-	    }
-	    if (key === 'Jewelry' && treasure[key] > 0) {
-	      source = 'treasure1-Jewelry';
-	      addButton = /*#__PURE__*/reactExports.createElement(GenSpecial1, {
-	        API: 'jewelry.php',
-	        title: 'Jewelry',
-	        amount: treasure[key]
-	      });
-	    }
-	    if (key === 'Any') {
-	      source = 'treasure1-Any';
-	      display = 'Any Magic Item';
-	    }
-	    if (key === 'WeaponOrArmor') {
-	      source = 'treasure1-WeaponOrArmor';
-	      display = 'Weapon or Armor';
-	    }
-	    if (key === 'Potion') {
-	      source = 'treasure1-Potion';
-	      display = 'Potions';
-	    }
-	    if (key === 'Scroll') {
-	      source = 'treasure1-Scroll';
-	      display = 'Scrolls';
-	    }
-	    if (key === 'AnyExceptWeapon') {
-	      source = 'treasure1-AnyExceptWeapon';
-	      display = 'Any Magic Item, Except Weapons';
-	    }
-	    if (key === 'AllExceptPotionScroll') {
-	      source = 'treasure1-AllExceptPotionScroll';
-	      display = 'All Except Potions and Scrolls';
-	    }
-	    if (key === 'MiscMagic') {
-	      source = 'treasure1-MiscMagic';
-	      display = 'Misc. Magic Items';
-	    }
-	    return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-treasure1-${key}`
-	    }, display, ": ", treasure[key]), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	      sx: {
-	        paddingLeft: "5px",
-	        fontSize: "9pt"
-	      },
-	      onClick: () => replaceTreasure({
-	        treasureInput,
-	        source,
-	        key
-	      })
-	    }), /*#__PURE__*/reactExports.createElement("div", {
-	      id: `addButton-${key}`
-	    }, addButton, addForm));
-	  }));
-	}
 	function GenTreasure1(props) {
 	  const {
 	    treasureInput
 	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getTreasure(treasureInput);
+	    getTreasure();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setTreasure(null);
 	  };
-	  const [treasure, setTreasure] = reactExports.useState([]);
-	  const [magicItemsInput, setMagicItemData] = reactExports.useState({
+	  const [treasure, setTreasure] = reactExports.useState(null);
+	  const [magicItemsData, setMagicItemData] = reactExports.useState({
 	    Any: 0,
 	    WeaponOrArmor: 0,
 	    Potion: 0,
@@ -44282,8 +44090,105 @@ export default theme;`;
 	    SpecificType: '',
 	    Specific: 0
 	  });
-	  const getTreasure = async treasureInput => {
-	    const treasureData = await callAPI(treasureInput);
+	  async function callAPI() {
+	    let args = '';
+	    treasureInput.forEach((choice, idx) => {
+	      if (choice.treasureType != '' && choice.quantity > 0) {
+	        args += `&type${idx}=${choice.treasureType}&q${idx}=${choice.quantity}`;
+	      }
+	    });
+	    if (args === '') {
+	      return [];
+	    }
+	    args = args.slice(1); // Remove the leading '&'
+	    const response = await fetch(`http://localhost:8080/tools2/api/treasure1.php?${args}`);
+	    return await response.json();
+	  }
+	  const handleTreasureChange = (name, value) => {
+	    setTreasure(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  const handleMagicItemChange = (name, value) => {
+	    setMagicItemData(prevFormData => ({
+	      ...prevFormData,
+	      [name]: value
+	    }));
+	  };
+	  async function replaceTreasure(_ref) {
+	    let {
+	      key
+	    } = _ref;
+	    let treasureData = await callAPI();
+	    handleTreasureChange(key, treasureData[key]);
+	    handleMagicItemChange(key, treasureData[key]);
+	  }
+	  function TreasureList() {
+	    let totalTreasure = 0;
+	    Object.keys(treasure).forEach(function (key) {
+	      totalTreasure += treasure[key];
+	    });
+	    return /*#__PURE__*/reactExports.createElement("div", null, totalTreasure === 0 ? 'No Treasure' : /*#__PURE__*/reactExports.createElement("div", null, Object.keys(treasure).map(function (key) {
+	      let addButton = /*#__PURE__*/reactExports.createElement("span", null);
+	      let addForm = /*#__PURE__*/reactExports.createElement("input", {
+	        type: "hidden",
+	        id: `treasure1-${key}`,
+	        value: treasure[key]
+	      });
+	      let display = key;
+	      if (key === 'Gems' && treasure[key] > 0) {
+	        addButton = /*#__PURE__*/reactExports.createElement(GenSpecial1, {
+	          API: 'gems1.php',
+	          title: 'Gems',
+	          amount: treasure[key]
+	        });
+	      }
+	      if (key === 'Jewelry' && treasure[key] > 0) {
+	        addButton = /*#__PURE__*/reactExports.createElement(GenSpecial1, {
+	          API: 'jewelry.php',
+	          title: 'Jewelry',
+	          amount: treasure[key]
+	        });
+	      }
+	      if (key === 'Any') {
+	        display = 'Any Magic Item';
+	      }
+	      if (key === 'WeaponOrArmor') {
+	        display = 'Weapon or Armor';
+	      }
+	      if (key === 'Potion') {
+	        display = 'Potions';
+	      }
+	      if (key === 'Scroll') {
+	        display = 'Scrolls';
+	      }
+	      if (key === 'AnyExceptWeapon') {
+	        display = 'Any Magic Item, Except Weapons';
+	      }
+	      if (key === 'AllExceptPotionScroll') {
+	        display = 'All Except Potions and Scrolls';
+	      }
+	      if (key === 'MiscMagic') {
+	        display = 'Misc. Magic Items';
+	      }
+	      return /*#__PURE__*/reactExports.createElement("div", null, display, ": ", treasure[key], /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	        sx: {
+	          paddingLeft: "5px",
+	          fontSize: "9pt"
+	        },
+	        onClick: () => replaceTreasure({
+	          key
+	        })
+	      }), /*#__PURE__*/reactExports.createElement("div", {
+	        id: `addButton-${key}`
+	      }, addButton, addForm));
+	    }), treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + +treasure['AllExceptPotionScroll'] + +treasure['MiscMagic'] > 0 ? /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(GenMagicItems1, {
+	      magicItemsInput: magicItemsData
+	    })) : /*#__PURE__*/reactExports.createElement("div", null)));
+	  }
+	  const getTreasure = async () => {
+	    const treasureData = await callAPI();
 	    setTreasure(treasureData);
 	    setMagicItemData({
 	      Any: treasureData['Any'],
@@ -44296,12 +44201,11 @@ export default theme;`;
 	      SpecificType: '',
 	      Specific: 0
 	    });
-	    setOpen(true);
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Treasure"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Treasure"), treasure && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: treasure != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -44325,13 +44229,8 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getTreasure(treasureInput)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TreasureList, {
-	    treasureInput: treasureInput,
-	    treasure: treasure
-	  }), treasure['Any'] + treasure['WeaponOrArmor'] + treasure['Potion'] + treasure['Scroll'] + treasure['AnyExceptWeapon'] + +treasure['AllExceptPotionScroll'] + +treasure['MiscMagic'] > 0 ? /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement(GenMagicItems1, {
-	    magicItemsInput: magicItemsInput
-	  })) : /*#__PURE__*/reactExports.createElement("div", null)))));
+	    onClick: () => getTreasure()
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TreasureList, null)))));
 	}
 
 	function Treasure1() {
@@ -44566,19 +44465,349 @@ export default theme;`;
 	  })));
 	}
 
-	class Utils {
-	  static ucfirst(str) {
-	    if (!str) {
-	      return str;
+	const style$6 = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenSpells1(props) {
+	  const {
+	    spellbookData
+	  } = props;
+	  const handleOpen = () => {
+	    getSpells();
+	  };
+	  const handleClose = () => {
+	    setSpellbook(null);
+	  };
+	  const [spellbook, setSpellbook] = reactExports.useState(null);
+	  const getSpells = async () => {
+	    const newSpells = await callAPI();
+	    setSpellbook(newSpells);
+	  };
+	  const updateSpell = async (indexToUpdate, level, newValue) => {
+	    setSpellbook(spellbook.map((spells, spellLevel) => {
+	      if (level === spellLevel) {
+	        return spells.map((spell, index) => {
+	          if (index === indexToUpdate) {
+	            return newValue;
+	          }
+	          return spell;
+	        });
+	      } else {
+	        return spells;
+	      }
+	    }));
+	  };
+	  async function callAPI() {
+	    let level = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    const wizardLevel = spellbookData.level || '1';
+	    const intelligence = spellbookData.intelligence || '10';
+	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
+	    const maxNumSpells = spellbookData.maxNumSpells ? 'true' : 'false';
+	    let phb = spellbookData.phb ? 'true' : 'false';
+	    const ua = spellbookData.ua ? 'true' : 'false';
+	    const av = spellbookData.av ? 'true' : 'false';
+
+	    // Force at least one source to be used. Default to PHB.
+	    if (!(spellbookData.phb || spellbookData.ua || spellbookData.av)) {
+	      phb = 'true';
 	    }
-	    if (typeof str != 'string') {
-	      str = str.toString();
+	    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&maxNumSpells=${maxNumSpells}&phb=${phb}&ua=${ua}&av=${av}`;
+	    if (level) {
+	      args += `&spellLevel=${level}`;
 	    }
-	    return str.charAt(0).toUpperCase() + str.slice(1);
+	    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
+	    return await response.json();
 	  }
+	  async function replaceSpell(idx, level) {
+	    let newSpells = await callAPI(spellbookData, level);
+	    updateSpell(idx, level, newSpells[level][0]);
+	  }
+	  function SpellsList() {
+	    if (spellbook.length == 1) {
+	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
+	    }
+	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, spellbookData.name || 'Unknown'), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
+	      return spells.map((spell, index) => {
+	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	          sx: {
+	            paddingLeft: "5px",
+	            fontSize: "9pt"
+	          },
+	          onClick: () => replaceSpell(index, spellLevel)
+	        }));
+	      });
+	    }));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Generate Spellbook"), spellbook && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: spellbook != null,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style$6
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "1st Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getSpells()
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, null)))));
 	}
 
-	const style$6 = {
+	function SpellBooks1() {
+	  const [spellbookData, setSpellbookData] = React.useState({
+	    level: '0',
+	    intelligence: '0',
+	    maxNumSpells: true,
+	    gainSpells: false,
+	    phb: true,
+	    ua: false,
+	    av: false,
+	    name: ''
+	  });
+	  const handleNameChange = id => event => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      name: event?.target?.value || ''
+	    }));
+	  };
+	  const handleCheckboxChange = (checkboxName, box) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [checkboxName]: box?.target?.checked || false
+	    }));
+	  };
+	  const handleSelectChange = (selectName, option) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [selectName]: option?.value || ''
+	    }));
+	  };
+	  const WizardLevel = () => {
+	    let options = [];
+	    for (let i = 1; i <= 18; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.level;
+	      }),
+	      name: "level",
+	      onChange: option => handleSelectChange('level', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Level",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  const WizardIntelligence = () => {
+	    let options = [];
+	    for (let i = 9; i <= 19; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.intelligence;
+	      }),
+	      name: "intelligence",
+	      onChange: option => handleSelectChange('intelligence', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Intelligence",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "1st Edition AD&D Wizard Spellbooks"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Generate max # of spells per level based on intelligence?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.maxNumSpells,
+	    type: "checkbox",
+	    id: "maxNumSpells",
+	    name: "maxNumSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('maxNumSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.gainSpells,
+	    type: "checkbox",
+	    id: "gainSpells",
+	    name: "gainSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('gainSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Sourcebooks:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, "Player's Handbook (PHB) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.phb,
+	    type: "checkbox",
+	    id: "phb",
+	    name: "phb",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('phb', box)
+	  }), /*#__PURE__*/React.createElement("br", null), "Unearthed Arcana (UA) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.ua,
+	    type: "checkbox",
+	    id: "ua",
+	    name: "ua",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('ua', box)
+	  }), "Arden Vul (AV) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.av,
+	    type: "checkbox",
+	    id: "av",
+	    name: "av",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('av', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard name:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      height: "16pt"
+	    },
+	    onChange: handleNameChange()
+	  }))), /*#__PURE__*/React.createElement(GenSpells1, {
+	    spellbookData: spellbookData
+	  }))));
+	}
+
+	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -44595,19 +44824,16 @@ export default theme;`;
 	  const {
 	    spellbookData
 	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getSpells(spellbookData);
+	    getSpells();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setSpellbook(null);
 	  };
-	  const [spellbook, setSpellbook] = reactExports.useState([[], [], [], [], [], [], [], [], [], []]);
+	  const [spellbook, setSpellbook] = reactExports.useState(null);
 	  const getSpells = async spellbookData => {
 	    const newSpells = await callAPI(spellbookData);
 	    setSpellbook(newSpells);
-	    setOpen(true);
 	  };
 	  const updateSpell = async (indexToUpdate, level, newValue) => {
 	    setSpellbook(spellbook.map((spells, spellLevel) => {
@@ -44623,8 +44849,8 @@ export default theme;`;
 	      }
 	    }));
 	  };
-	  async function callAPI(spellbookData) {
-	    let level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+	  async function callAPI() {
+	    let level = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 	    const wizardLevel = spellbookData.level || '1';
 	    const intelligence = spellbookData.intelligence || '10';
 	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
@@ -44648,10 +44874,7 @@ export default theme;`;
 	    let newSpells = await callAPI(spellbookData, level);
 	    updateSpell(idx, level, newSpells[level][0]);
 	  }
-	  function SpellsList(_ref) {
-	    let {
-	      spellbook
-	    } = _ref;
+	  function SpellsList() {
 	    const restrictedSchools = spellbookData.restrictedSchools.map(school => Utils.ucfirst(school.value)).join(', ');
 	    if (spellbook.length == 1) {
 	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
@@ -44674,8 +44897,8 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Spellbook"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Spellbook"), spellbook && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: spellbook != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -44684,7 +44907,7 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$5
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -44702,10 +44925,8 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getSpells(spellbookData)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, {
-	    spellbook: spellbook
-	  })))));
+	    onClick: () => getSpells()
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, null)))));
 	}
 
 	let schools = [];
@@ -44998,356 +45219,6 @@ export default theme;`;
 	  }))));
 	}
 
-	const style$5 = {
-	  position: 'absolute',
-	  top: '50%',
-	  left: '50%',
-	  transform: 'translate(-50%, -50%)',
-	  width: '75%',
-	  bgcolor: 'background.paper',
-	  border: '2px solid #000',
-	  boxShadow: 24,
-	  p: 4,
-	  overflow: 'auto',
-	  maxHeight: '80%'
-	};
-	function GenSpells1(props) {
-	  const {
-	    spellbookData
-	  } = props;
-	  const [open, setOpen] = reactExports.useState(false);
-	  const handleOpen = () => {
-	    getSpells(spellbookData);
-	  };
-	  const handleClose = () => {
-	    setOpen(false);
-	    setSpellbook(null);
-	  };
-	  const [spellbook, setSpellbook] = reactExports.useState([[], [], [], [], [], [], [], [], [], []]);
-	  const getSpells = async spellbookData => {
-	    const newSpells = await callAPI(spellbookData);
-	    setSpellbook(newSpells);
-	    setOpen(true);
-	  };
-	  const updateSpell = async (indexToUpdate, level, newValue) => {
-	    setSpellbook(spellbook.map((spells, spellLevel) => {
-	      if (level === spellLevel) {
-	        return spells.map((spell, index) => {
-	          if (index === indexToUpdate) {
-	            return newValue;
-	          }
-	          return spell;
-	        });
-	      } else {
-	        return spells;
-	      }
-	    }));
-	  };
-	  async function callAPI(spellbookData) {
-	    let level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-	    const wizardLevel = spellbookData.level || '1';
-	    const intelligence = spellbookData.intelligence || '10';
-	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
-	    const maxNumSpells = spellbookData.maxNumSpells ? 'true' : 'false';
-	    let phb = spellbookData.phb ? 'true' : 'false';
-	    const ua = spellbookData.ua ? 'true' : 'false';
-	    const av = spellbookData.av ? 'true' : 'false';
-
-	    // Force at least one source to be used. Default to PHB.
-	    if (!(spellbookData.phb || spellbookData.ua || spellbookData.av)) {
-	      phb = 'true';
-	    }
-	    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&maxNumSpells=${maxNumSpells}&phb=${phb}&ua=${ua}&av=${av}`;
-	    if (level) {
-	      args += `&spellLevel=${level}`;
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
-	    return await response.json();
-	  }
-	  async function replaceSpell(idx, level) {
-	    let newSpells = await callAPI(spellbookData, level);
-	    updateSpell(idx, level, newSpells[level][0]);
-	  }
-	  function SpellsList(_ref) {
-	    let {
-	      spellbook
-	    } = _ref;
-	    if (spellbook.length == 1) {
-	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
-	    }
-	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, spellbookData.name || 'Unknown'), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
-	      return spells.map((spell, index) => {
-	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	          sx: {
-	            paddingLeft: "5px",
-	            fontSize: "9pt"
-	          },
-	          onClick: () => replaceSpell(index, spellLevel)
-	        }));
-	      });
-	    }));
-	  }
-	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
-	    onClick: handleOpen
-	  }, "Generate Spellbook"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
-	    onClose: (event, reason) => {
-	    },
-	    disableEscapeKeyDown: true,
-	    disableBackdropClick: true,
-	    sx: {
-	      maxHeight: "80%"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
-	  }, /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
-	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "center"
-	    },
-	    variant: "h5",
-	    component: "h2"
-	  }, "1st Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "10pt"
-	    },
-	    onClick: () => getSpells(spellbookData)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, {
-	    spellbook: spellbook
-	  })))));
-	}
-
-	function SpellBooks1() {
-	  const [spellbookData, setSpellbookData] = React.useState({
-	    level: '0',
-	    intelligence: '0',
-	    maxNumSpells: true,
-	    gainSpells: false,
-	    phb: true,
-	    ua: false,
-	    av: false,
-	    name: ''
-	  });
-	  const handleNameChange = id => event => {
-	    setSpellbookData(prevFormData => ({
-	      ...prevFormData,
-	      name: event?.target?.value || ''
-	    }));
-	  };
-	  const handleCheckboxChange = (checkboxName, box) => {
-	    setSpellbookData(prevFormData => ({
-	      ...prevFormData,
-	      [checkboxName]: box?.target?.checked || false
-	    }));
-	  };
-	  const handleSelectChange = (selectName, option) => {
-	    setSpellbookData(prevFormData => ({
-	      ...prevFormData,
-	      [selectName]: option?.value || ''
-	    }));
-	  };
-	  const WizardLevel = () => {
-	    let options = [];
-	    for (let i = 1; i <= 18; i++) {
-	      const num = i.toString();
-	      const obj = {
-	        value: num,
-	        label: num
-	      };
-	      options.push(obj);
-	    }
-	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	      value: options.filter(function (option) {
-	        return option.value === spellbookData.level;
-	      }),
-	      name: "level",
-	      onChange: option => handleSelectChange('level', option),
-	      options: options,
-	      isClearable: true,
-	      placeholder: "Select Wizard Level",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      },
-	      menuPortalTarget: document.body,
-	      styles: {
-	        menuPortal: base => ({
-	          ...base,
-	          zIndex: 9999
-	        })
-	      }
-	    }));
-	  };
-	  const WizardIntelligence = () => {
-	    let options = [];
-	    for (let i = 9; i <= 19; i++) {
-	      const num = i.toString();
-	      const obj = {
-	        value: num,
-	        label: num
-	      };
-	      options.push(obj);
-	    }
-	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	      value: options.filter(function (option) {
-	        return option.value === spellbookData.intelligence;
-	      }),
-	      name: "intelligence",
-	      onChange: option => handleSelectChange('intelligence', option),
-	      options: options,
-	      isClearable: true,
-	      placeholder: "Select Wizard Intelligence",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      },
-	      menuPortalTarget: document.body,
-	      styles: {
-	        menuPortal: base => ({
-	          ...base,
-	          zIndex: 9999
-	        })
-	      }
-	    }));
-	  };
-	  return /*#__PURE__*/React.createElement(Card, {
-	    variant: "outlined",
-	    sx: {
-	      height: 'fit-content'
-	    }
-	  }, /*#__PURE__*/React.createElement(CardHeader, {
-	    sx: {
-	      textAlign: "center",
-	      fontWeight: "bold"
-	    },
-	    title: "1st Edition AD&D Wizard Spellbooks"
-	  }), /*#__PURE__*/React.createElement(CardContent, {
-	    sx: {
-	      textAlign: "center"
-	    }
-	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
-	    container: true,
-	    spacing: 2
-	  }, /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Generate max # of spells per level based on intelligence?")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.maxNumSpells,
-	    type: "checkbox",
-	    id: "maxNumSpells",
-	    name: "maxNumSpells",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('maxNumSpells', box)
-	  }))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.gainSpells,
-	    type: "checkbox",
-	    id: "gainSpells",
-	    name: "gainSpells",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('gainSpells', box)
-	  }))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Sourcebooks:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, "Player's Handbook (PHB) ", /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.phb,
-	    type: "checkbox",
-	    id: "phb",
-	    name: "phb",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('phb', box)
-	  }), /*#__PURE__*/React.createElement("br", null), "Unearthed Arcana (UA) ", /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.ua,
-	    type: "checkbox",
-	    id: "ua",
-	    name: "ua",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('ua', box)
-	  }), "Arden Vul (AV) ", /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.av,
-	    type: "checkbox",
-	    id: "av",
-	    name: "av",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('av', box)
-	  }))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Wizard name:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	    size: "small",
-	    sx: {
-	      height: "16pt"
-	    },
-	    onChange: handleNameChange()
-	  }))), /*#__PURE__*/React.createElement(GenSpells1, {
-	    spellbookData: spellbookData
-	  }))));
-	}
-
 	const style$4 = {
 	  position: 'absolute',
 	  top: '50%',
@@ -45365,21 +45236,18 @@ export default theme;`;
 	  let {
 	    drowData
 	  } = _ref;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getDrowTreasure(drowData);
+	    getDrowTreasure();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setDrowTreasure(null);
 	  };
 	  const [drowTreasure, setDrowTreasure] = reactExports.useState(null);
-	  const getDrowTreasure = async drowData => {
-	    const data = await callAPI(drowData);
+	  const getDrowTreasure = async () => {
+	    const data = await callAPI();
 	    setDrowTreasure(data);
-	    setOpen(true);
 	  };
-	  async function callAPI(drowData) {
+	  async function callAPI() {
 	    let args = '';
 	    drowData.forEach(function (data, index) {
 	      args += `&l${index}=${data.drowLevel}&q${index}=${data.numDrow}`;
@@ -45390,12 +45258,11 @@ export default theme;`;
 	  }
 	  async function replaceDrowTreasure(_ref2) {
 	    let {
-	      drowData,
 	      key
 	    } = _ref2;
-	    const newTreasure = await callAPI(drowData);
+	    const newTreasure = await callAPI();
 	    let display = key;
-	    if (key == "Gems") {
+	    if (key == 'Gems') {
 	      display = '10 GP Moonstones';
 	    }
 	    document.getElementById(`span-treasure1-${key}`).innerHTML = `${display}: ${newTreasure[key]}`;
@@ -45410,7 +45277,7 @@ export default theme;`;
 	    });
 	    return /*#__PURE__*/reactExports.createElement("div", null, totalTreasure === 0 ? 'No Treasure' : Object.keys(drowTreasure).map(function (key) {
 	      let display = key;
-	      if (key == "Gems") {
+	      if (key == 'Gems') {
 	        display = '10 GP Moonstones';
 	      }
 	      return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
@@ -45421,7 +45288,6 @@ export default theme;`;
 	          fontSize: "9pt"
 	        },
 	        onClick: () => replaceDrowTreasure({
-	          drowData,
 	          key
 	        })
 	      }));
@@ -45429,8 +45295,8 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Drow Treasure"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Drow Treasure"), drowTreasure && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: drowTreasure != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -45457,7 +45323,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getDrowTreasure(drowData)
+	    onClick: () => getDrowTreasure()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(DrowList, {
 	    drowTreasure: drowTreasure
 	  })))));
@@ -45614,25 +45480,22 @@ export default theme;`;
 	  let {
 	    giantType
 	  } = _ref;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getGiantBag(giantType);
+	    getGiantBag();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setGiantBag(null);
 	  };
-	  const [giantBag, setGiantBag] = reactExports.useState([]);
-	  const getGiantBag = async giantType => {
-	    const data = await callAPI(giantType);
+	  const [giantBag, setGiantBag] = reactExports.useState(null);
+	  const getGiantBag = async () => {
+	    const data = await callAPI();
 	    setGiantBag(data);
-	    setOpen(true);
 	  };
 	  const updateContent = async (indexToUpdate, newValue) => {
 	    setGiantBag(giantBag.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
-	  async function callAPI(giantType) {
-	    let amount = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+	  async function callAPI() {
+	    let amount = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 	    let amountArgs = '';
 	    if (amount != 0) {
 	      amountArgs = `&amount=${amount}`;
@@ -45642,34 +45505,26 @@ export default theme;`;
 	  }
 	  async function replaceContent(_ref2) {
 	    let {
-	      giantType,
 	      idx
 	    } = _ref2;
-	    let data = await callAPI(giantType, 1);
+	    let data = await callAPI(1);
 	    updateContent(idx, data[0]);
 	  }
-	  function BagList(_ref3) {
-	    let {
-	      giantBag,
-	      giantType
-	    } = _ref3;
-	    return /*#__PURE__*/reactExports.createElement("div", null, giantBag.map((content, idx) => /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", {
-	      id: `span-${idx}`
-	    }, content), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  function BagList() {
+	    return /*#__PURE__*/reactExports.createElement("div", null, giantBag.map((content, idx) => /*#__PURE__*/reactExports.createElement("div", null, content, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	      sx: {
 	        paddingLeft: "5px",
 	        fontSize: "9pt"
 	      },
 	      onClick: () => replaceContent({
-	        giantType,
 	        idx
 	      })
 	    }))));
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Bag Contents"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Bag Contents"), giantBag && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: giantBag != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -45696,11 +45551,8 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getGiantBag(giantType)
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(BagList, {
-	    giantBag: giantBag,
-	    giantType: giantType
-	  })))));
+	    onClick: () => getGiantBag()
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(BagList, null)))));
 	}
 
 	function GiantBag() {
@@ -45793,24 +45645,21 @@ export default theme;`;
 	    amount
 	  } = _ref;
 	  amount = Math.max(1, Math.min(30, parseInt(amount) || 0));
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    getLower(amount);
+	    getLower();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
 	    setLower(null);
 	  };
 	  const [lower, setLower] = reactExports.useState(null);
-	  const getLower = async amount => {
-	    const data = await callAPI(amount);
+	  const getLower = async () => {
+	    const data = await callAPI();
 	    setLower(data);
-	    setOpen(true);
 	  };
 	  const updateLower = async (indexToUpdate, newValue) => {
 	    setLower(lower.map((creature, index) => index === indexToUpdate ? newValue : creature));
 	  };
-	  async function callAPI(amount) {
+	  async function callAPI() {
 	    let response = await fetch(`http://localhost:8080/tools2/api/lowerplanes.php?amount=${amount}`);
 	    return await response.json();
 	  }
@@ -45818,7 +45667,7 @@ export default theme;`;
 	    let {
 	      idx
 	    } = _ref2;
-	    let data = await callAPI(1);
+	    let data = await callAPI();
 	    updateLower(idx, data[0]);
 	  }
 	  function LowerList(_ref3) {
@@ -45857,8 +45706,8 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Generate Lower Planes Creatures"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Generate Lower Planes Creatures"), lower && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: lower != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -45885,7 +45734,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => getLower(amount)
+	    onClick: () => getLower()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(LowerList, {
 	    lower: lower
 	  })))));
@@ -45912,7 +45761,6 @@ export default theme;`;
 	      textAlign: "center"
 	    }
 	  }, /*#__PURE__*/React.createElement(Typography, null, "Number to Generate (1-30): ", /*#__PURE__*/React.createElement(OutlinedInput, {
-	    value: lowerAmount,
 	    id: "lowerAmount",
 	    name: "lowerAmount",
 	    size: "small",
@@ -45946,16 +45794,14 @@ export default theme;`;
 	  craftData.SP = Math.max(1, Math.min(20000, parseInt(craftData.SP || 1)));
 	  craftData.DC = parseInt(craftData.DC || 0) || 1;
 	  craftData.bonus = parseInt(craftData.bonus || 0) || 0;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
-	    calcCraft(craftData);
-	    setOpen(true);
+	    calcCraft();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
+	    setWeeks(null);
 	  };
-	  const [weeks, setWeeks] = reactExports.useState([]);
-	  function calcCraft(craftData) {
+	  const [weeks, setWeeks] = reactExports.useState(null);
+	  function calcCraft() {
 	    let progress = 0;
 	    let progressPercent = 0;
 	    let newWeeks = [];
@@ -46021,8 +45867,8 @@ export default theme;`;
 	  }
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Calculate Time"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Calculate Time"), weeks && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: weeks != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
@@ -46049,7 +45895,7 @@ export default theme;`;
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
 	    },
-	    onClick: () => calcCraft(craftData)
+	    onClick: () => calcCraft()
 	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(TimeDisplay, {
 	    craftData: craftData
 	  })))));
@@ -46177,18 +46023,18 @@ export default theme;`;
 	    partyData,
 	    monsterData
 	  } = _ref;
-	  const [open, setOpen] = reactExports.useState(false);
 	  const handleOpen = () => {
 	    calcXP();
 	  };
 	  const handleClose = () => {
-	    setOpen(false);
+	    setTotal(null);
+	    setShare(null);
 	  };
-	  const [total, setTotal] = reactExports.useState(0);
-	  const [share, setShare] = reactExports.useState(0);
+	  const [total, setTotal] = reactExports.useState(null);
+	  const [share, setShare] = reactExports.useState(null);
 	  const calcXP = () => {
-	    let total = 0;
-	    let share = 0;
+	    let newTotal = 0;
+	    let newShare = 0;
 	    partyData.partyLevel = Math.max(1, Math.min(20, parseInt(partyData.partyLevel || 1) || 1));
 	    partyData.numChars = Math.max(1, parseInt(partyData.partyLevel || 1) || 1);
 	    let xp = Array.from({
@@ -46600,17 +46446,16 @@ export default theme;`;
 	    xp[20][19] = 4000;
 	    xp[20][20] = 6000;
 	    for (let x = 0; x <= 9; ++x) {
-	      total += monsterData[x].cr > 0 ? xp[partyData.partyLevel][monsterData[x].cr] * monsterData[x].q : 0;
+	      newTotal += monsterData[x].cr > 0 ? xp[partyData.partyLevel][monsterData[x].cr] * monsterData[x].q : 0;
 	    }
-	    share = Math.round(total / partyData.numChars);
-	    setTotal(total);
-	    setShare(share);
-	    setOpen(true);
+	    newShare = Math.round(newTotal / partyData.numChars);
+	    setTotal(newTotal);
+	    setShare(newShare);
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Calculate XP"), open && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: open,
+	  }, "Calculate XP"), total && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: total != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,

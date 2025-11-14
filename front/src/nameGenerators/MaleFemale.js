@@ -6,6 +6,7 @@ import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
 import { Grid } from '@mui/material';
+import Utils from '../utils';
 
 const style = {
   position: 'absolute',
@@ -21,28 +22,6 @@ const style = {
   maxHeight: '80%',
 };
 
-async function callAPI(amount, type) {
-  let response = await fetch(`http://localhost:8080/tools2/api/mfnames.php?amount=${amount}&type=${type}`);
-  return await response.json();
-}
-
-async function replaceName({ label, idx, type }) {
-  let newName = await callAPI(1, type);
-  if (label === 'male') { newName = newName[0][0] }
-  else if (label === 'female') { newName = newName[1][0] }
-  document.getElementById(`${label}-${idx}-span`).innerHTML = newName;
-}
-
-function NameList({ label, names, type }) {
-  return (
-    <div>
-      {names.map((name, idx) => (
-        <div id={`${label}-${idx}-div`}><span id={`${label}-${idx}-span`}>{name}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ label, idx, type })} /></div>
-      ))}
-    </div>
-  );
-}
-
 export default function MFName(props) {
   let { type } = props;
 
@@ -51,30 +30,61 @@ export default function MFName(props) {
     type = 'drow';
   }
 
-  const ucType = type.charAt(0).toUpperCase() + type.slice(1);
+  const ucType = Utils.ucfirst(type);
 
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getNames(20, type);
+    getNames();
   }
+
   const handleClose = () => {
-    setOpen(false);
     setNames(null);
   };
 
   const [names, setNames] = React.useState(null);
 
-  const getNames = async (amount, type) => {
-    const nameData = await callAPI(amount, type);
+  const getNames = async () => {
+    const nameData = await callAPI(20);
     setNames(nameData);
-    setOpen(true);
   };
+
+  async function callAPI(amount) {
+    let response = await fetch(`http://localhost:8080/tools2/api/mfnames.php?amount=${amount}&type=${type}`);
+    return await response.json();
+  }
+
+  async function replaceName({ column, idx }) {
+    let newName = await callAPI(1, type);
+
+    setNames(prevNames => {
+      return prevNames.map((col, cIdx) => {
+        if (cIdx === column) {
+          return col.map((item, rIdx) => {
+            if (rIdx === idx) {
+              return newName[column][0];
+            }
+            return item;
+          });
+        }
+        return col;
+      });
+    });
+  }
+
+  function NameList({ column }) {
+    return (
+      <div>
+        {names[column].map((name, idx) => (
+          <div>{name}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>{ ucType }</Button>
       {names && <Modal
-        open={open}
+        open={names != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -88,7 +98,7 @@ export default function MFName(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            {ucType} Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames(20, type)} />
+            {ucType} Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames()} />
           </Typography>
           <Grid container spacing={2}>
             <Grid size={6}>
@@ -96,7 +106,7 @@ export default function MFName(props) {
                 Male Names
               </Typography>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList label="male" names={names[0]} type={type} />
+                <NameList column={0} />
               </Typography>
             </Grid>
             <Grid size={6}>
@@ -104,7 +114,7 @@ export default function MFName(props) {
                 Female Names
               </Typography>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList label="female" names={names[1]} type={type} />
+                <NameList column={1} />
               </Typography>
             </Grid>
           </Grid>

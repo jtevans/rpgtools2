@@ -23,21 +23,18 @@ const style = {
 
 export default function GenMagicItems1(props) {
   const { magicItemsInput } = props;
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getItems(magicItemsInput);
+    getItems();
   }
   const handleClose = () => {
-    setOpen(false);
     setItems(null);
   };
 
   const [items, setItems] = React.useState(null);
 
-  const getItems = async (magicItemsInput) => {
-    const itemData = await callAPI(magicItemsInput);
+  const getItems = async () => {
+    const itemData = await callAPI();
     setItems(itemData);
-    setOpen(true);
   };
 
   const updateItem = async (indexToUpdate, newValue) => {
@@ -48,19 +45,19 @@ export default function GenMagicItems1(props) {
     );
   };
 
-  async function callAPI(inputData, magicItemsInput, amount = null) {
+  async function callAPI(inputData = null, amount = null) {
     let args = '';
 
     if (amount === null) {
-      const Any = Math.max(0, Math.min(50, parseInt(inputData.Any) || 0));
-      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(inputData.WeaponOrArmor) || 0));
-      const Potion = Math.max(0, Math.min(50, parseInt(inputData.Potion) || 0));
-      const Scroll = Math.max(0, Math.min(50, parseInt(inputData.Scroll) || 0));
-      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(inputData.AnyExceptWeapon) || 0));
-      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(inputData.AllExceptPotionScroll) || 0));
-      const MiscMagic = Math.max(0, Math.min(50, parseInt(inputData.MiscMagic) || 0));
-      const Specific = Math.max(0, Math.min(50, parseInt(inputData.Specific) || 0));
-      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${inputData.SpecificType}&Specific=${Specific}`;
+      const Any = Math.max(0, Math.min(50, parseInt(magicItemsInput.Any) || 0));
+      const WeaponOrArmor = Math.max(0, Math.min(50, parseInt(magicItemsInput.WeaponOrArmor) || 0));
+      const Potion = Math.max(0, Math.min(50, parseInt(magicItemsInput.Potion) || 0));
+      const Scroll = Math.max(0, Math.min(50, parseInt(magicItemsInput.Scroll) || 0));
+      const AnyExceptWeapon = Math.max(0, Math.min(50, parseInt(magicItemsInput.AnyExceptWeapon) || 0));
+      const AllExceptPotionScroll = Math.max(0, Math.min(50, parseInt(magicItemsInput.AllExceptPotionScroll) || 0));
+      const MiscMagic = Math.max(0, Math.min(50, parseInt(magicItemsInput.MiscMagic) || 0));
+      const Specific = Math.max(0, Math.min(50, parseInt(magicItemsInput.Specific) || 0));
+      args = `Any=${Any}&WeaponOrArmor=${WeaponOrArmor}&Potion=${Potion}&Scroll=${Scroll}&AnyExceptWeapon=${AnyExceptWeapon}&AllExceptPotionScroll=${AllExceptPotionScroll}&MiscMagic=${MiscMagic}&specificType=${magicItemsInput.SpecificType}&Specific=${Specific}`;
     }
     else {
       args = `${inputData}=${amount}`;
@@ -74,12 +71,12 @@ export default function GenMagicItems1(props) {
     return await response.json();
   }
 
-  async function replaceItem({ idx, item, magicItemsInput }) {
-    let newItem = await callAPI(item.type, magicItemsInput, 1);
+  async function replaceItem({ idx, item }) {
+    let newItem = await callAPI(item.type, 1);
     updateItem(idx, newItem[0]);
   }
 
-  function ItemList({ items, magicItemsInput }) {
+  function ItemList() {
     return (
       <div>
         {items.map(function (item, idx) {
@@ -91,8 +88,11 @@ export default function GenMagicItems1(props) {
           if (item.intelligent) {
             intelligentButton = <IntelligentWeapon label={item.text} />
           }
-          const contents = <Typography>{item.text}{volumePage}{intelligentButton}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceItem({ idx, item, magicItemsInput })} /></Typography>;
-          return <div><span>{contents}</span></div>
+          return <div>
+            <Typography>
+              {item.text}{volumePage}{intelligentButton}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceItem({ idx, item })} />              
+            </Typography>
+          </div>
         })}
       </div>
     );
@@ -101,8 +101,8 @@ export default function GenMagicItems1(props) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Magic Items</Button>
-      {open && <Modal
-        open={open}
+      {items && <Modal
+        open={items != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -117,10 +117,10 @@ export default function GenMagicItems1(props) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Magic Items<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getItems(magicItemsInput)} />
+            Magic Items<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getItems()} />
           </Typography>
           <Typography>
-            <ItemList items={items} magicItemsInput={ magicItemsInput } />
+            <ItemList />
           </Typography>
         </Box>
       </Modal>}

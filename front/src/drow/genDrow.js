@@ -21,24 +21,21 @@ const style = {
 };
 
 export default function GenDrow({ drowData }) {
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getDrowTreasure(drowData);
+    getDrowTreasure();
   }
   const handleClose = () => {
-    setOpen(false);
     setDrowTreasure(null);
   };
 
   const [drowTreasure, setDrowTreasure] = React.useState(null);
 
-  const getDrowTreasure = async (drowData) => {
-    const data = await callAPI(drowData);
+  const getDrowTreasure = async () => {
+    const data = await callAPI();
     setDrowTreasure(data);
-    setOpen(true);
   };
 
-  async function callAPI(drowData) {
+  async function callAPI() {
     let args = '';
     drowData.forEach(function (data, index) {
       args += `&l${index}=${data.drowLevel}&q${index}=${data.numDrow}`;
@@ -48,10 +45,10 @@ export default function GenDrow({ drowData }) {
     return await response.json();
   }
 
-  async function replaceDrowTreasure({ drowData, key }) {
-    const newTreasure = await callAPI(drowData);
+  async function replaceDrowTreasure({ key }) {
+    const newTreasure = await callAPI();
     let display = key;
-    if (key == "Gems") {
+    if (key == 'Gems') {
       display = '10 GP Moonstones';
     }
 
@@ -68,13 +65,13 @@ export default function GenDrow({ drowData }) {
       <div>
         {totalTreasure === 0 ? 'No Treasure' : Object.keys(drowTreasure).map(function (key) {
           let display = key;
-          if (key == "Gems")
+          if (key == 'Gems')
           {
             display = '10 GP Moonstones';
           }
           return <div>
             <span id={`span-treasure1-${key}`}>{display}: {drowTreasure[key]}</span>
-            <ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceDrowTreasure({ drowData, key })} />
+            <ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceDrowTreasure({ key })} />
           </div>
         })}
       </div>
@@ -84,8 +81,8 @@ export default function GenDrow({ drowData }) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Drow Treasure</Button>
-      {open && <Modal
-        open={open}
+      {drowTreasure && <Modal
+        open={drowTreasure != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -100,7 +97,7 @@ export default function GenDrow({ drowData }) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Incidental Drow Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getDrowTreasure(drowData)} />
+            Incidental Drow Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getDrowTreasure()} />
           </Typography>
           <Typography>
             <DrowList drowTreasure={drowTreasure} />

@@ -20,20 +20,20 @@ const style = {
 };
 
 export default function GenXPCalculator({partyData, monsterData}) {
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
     calcXP();
   }
   const handleClose = () => {
-    setOpen(false);
+    setTotal(null);
+    setShare(null);
   };
 
-  const [total, setTotal] = React.useState(0);
-  const [share, setShare] = React.useState(0);
+  const [total, setTotal] = React.useState(null);
+  const [share, setShare] = React.useState(null);
 
   const calcXP = () => {
-    let total = 0;
-    let share = 0;
+    let newTotal = 0;
+    let newShare = 0;
     partyData.partyLevel = Math.max(1, Math.min(20, parseInt(partyData.partyLevel || 1) || 1));
     partyData.numChars = Math.max(1, parseInt(partyData.partyLevel || 1) || 1);
 
@@ -463,21 +463,20 @@ export default function GenXPCalculator({partyData, monsterData}) {
     xp[20][20] = 6000;
 
     for (let x = 0; x <= 9; ++x) {
-      total += monsterData[x].cr > 0 ? xp[partyData.partyLevel][monsterData[x].cr] * monsterData[x].q : 0;
+      newTotal += monsterData[x].cr > 0 ? xp[partyData.partyLevel][monsterData[x].cr] * monsterData[x].q : 0;
     }
 
-    share = Math.round(total / partyData.numChars);
+    newShare = Math.round(newTotal / partyData.numChars);
 
-    setTotal(total);
-    setShare(share);
-    setOpen(true);
+    setTotal(newTotal);
+    setShare(newShare);
   };
 
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Calculate XP</Button>
-      {open && <Modal
-        open={open}
+      {total && <Modal
+        open={total != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;

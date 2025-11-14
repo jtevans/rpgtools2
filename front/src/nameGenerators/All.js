@@ -24,7 +24,7 @@ const style = {
 export default function AllNames() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getNames(20);
+    getNames();
   }
   const handleClose = () => {
     setOpen(false);
@@ -33,17 +33,19 @@ export default function AllNames() {
 
   const [names, setNames] = React.useState(null);
 
-  const getNames = async (amount) => {
-    const nameData = await callAPI(amount);
+  const getNames = async () => {
+    const nameData = await callAPI(20);
     setNames(nameData);
     setOpen(true);
   };
 
-  const updateName = async (indexToUpdate, newValue) => {
+  const updateName = async (columnToUpdate, indexToUpdate, newValue) => {
     setNames(
-      names.map((item, index) =>
-        index === indexToUpdate ? newValue : item
-      )
+      names.map((arr, colIndex) => {
+        return colIndex === columnToUpdate ? arr.map((item, index) => {
+          return index === indexToUpdate ? newValue : item
+        }) : arr;
+      })
     );
   };
 
@@ -54,14 +56,14 @@ export default function AllNames() {
 
   async function replaceName({ column, idx }) {
     let newName = await callAPI(1);
-    updateName(idx, newName[0]);
+    updateName(column, idx, newName[0][0]);
   }
 
-  function NameList({ column, names }) {
+  function NameList({ column }) {
     return (
       <div>
-        {names.map((name, idx) => (
-          <div><span id={`span-${column}-${idx}`}>{name}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
+        {names[column].map((name, idx) => (
+          <div>{name}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
         ))}
       </div>
     );
@@ -70,7 +72,7 @@ export default function AllNames() {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>All Names</Button>
-      {names && <Modal
+      {open && <Modal
         open={open}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
@@ -85,22 +87,22 @@ export default function AllNames() {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            All Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames(20)} />
+            All Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames()} />
           </Typography>
           <Grid container spacing={2}>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={1} names={names[0]} />
+                <NameList column={0} />
               </Typography>
             </Grid>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={2} names={names[1]} />
+                <NameList column={1} />
               </Typography>
             </Grid>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={3} names={names[2]} />
+                <NameList column={2} />
               </Typography>
             </Grid>
           </Grid>

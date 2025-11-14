@@ -23,21 +23,18 @@ const style = {
 
 export default function GenLowerplanes({ amount }) {
   amount = Math.max(1, Math.min(30, parseInt(amount) || 0));
-  const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
-    getLower(amount);
+    getLower();
   }
   const handleClose = () => {
-    setOpen(false);
     setLower(null);
   };
 
   const [lower, setLower] = React.useState(null);
 
-  const getLower = async (amount) => {
-    const data = await callAPI(amount);
+  const getLower = async () => {
+    const data = await callAPI();
     setLower(data);
-    setOpen(true);
   };
 
   const updateLower = async (indexToUpdate, newValue) => {
@@ -48,7 +45,7 @@ export default function GenLowerplanes({ amount }) {
     );
   };
 
-  async function callAPI(amount) {
+  async function callAPI() {
     let response = await fetch(`http://localhost:8080/tools2/api/lowerplanes.php?amount=${amount}`);
     return await response.json();
   }
@@ -63,7 +60,9 @@ export default function GenLowerplanes({ amount }) {
       <div>
         {lower.map((creature, idx) => {
           return <div>
-            <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>{`Creature #${idx + 1}`}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceLower({ idx })} /><br /></Typography>
+            <Typography sx={{ textAlign: "center", fontWeight: "bold" }}>
+              {`Creature #${idx + 1}`}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceLower({ idx })} /><br />
+            </Typography>
             <Typography sx={{ textAlign: "left" }}>              
               {Object.keys(creature).map(function (key) {
                 const display = Utils.ucfirst(key);
@@ -89,8 +88,8 @@ export default function GenLowerplanes({ amount }) {
   return (
     <React.Fragment>
       <Button onClick={handleOpen}>Generate Lower Planes Creatures</Button>
-      {open && <Modal
-        open={open}
+      {lower && <Modal
+        open={lower != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleClose;
@@ -105,7 +104,7 @@ export default function GenLowerplanes({ amount }) {
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Lower Planes Creatures<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getLower(amount)} />
+            Lower Planes Creatures<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getLower()} />
           </Typography>
           <Typography>
             <LowerList lower={lower} />

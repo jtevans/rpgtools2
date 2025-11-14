@@ -21,94 +21,24 @@ const style = {
   maxHeight: '80%',
 };
 
-const c = "b c d f g h j k l m n p q r s t v w x y z";
-const ch = "ck ch th sh gh st qu ph";
-const v = "a e i o u";
-const vo = "ae ea oo ee ei ie ou";
-
-const allowedCharsMerge = c + ' ' + c.toUpperCase() + ' ' + v + ' ' + v.toUpperCase() + ' ' + '\' = - _ . *';
-
-const conMerge = c + ' ' + c + ' ' + ch;
-const vowMerge = v + ' ' + v + ' ' + vo;
-const allMerge = conMerge + ' ' + vowMerge;
-
-const con = conMerge.split(' ');
-const vow = vowMerge.split(' ');
-const all = allMerge.split(' ');
-let allowedChars = allowedCharsMerge.split(' ');
-allowedChars.push(' ');
-
-function getRandom(arr) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
-  return arr[randomIndex];
-}
-
-function makeName(pattern) {
-  let lastchar = '';
-  let newchar = '';
-  let name = '';
-
-  for (let x = 0; x < pattern.length; ++x) {
-    let char = pattern[x];
-    if (!allowedChars.includes(char)) {
-      continue;
-    }
-    if (char === '-') {
-      newchar = getRandom(con);
-    }
-    else if (char === '=') {
-      newchar = getRandom(vow);
-    }
-    else if (char === '*') {
-      newchar = getRandom(all);
-    }
-    else if (char === '.') {
-      newchar = lastchar;
-    }
-    else {
-      newchar = char;
-    }
-
-    lastchar = newchar;
-    name += newchar;
-  }
-  name = name.toLowerCase();
-  name = name.charAt(0).toUpperCase() + name.slice(1);
-  return name;
-}
-
-function makeNames(amount, pattern) {
-  let names = [[], [], []];
-  for (let x = 0; x < amount; ++x) {
-    names[0][x] = makeName(pattern);
-    names[1][x] = makeName(pattern);
-    names[2][x] = makeName(pattern);
-  }
-  return names;
-}
-
-function replaceName({ column, idx }) {
-  const pattern = document.getElementById('pattern').value;
-  const newName = makeNames(1, pattern);
-  document.getElementById(`span-${column}-${idx}`).innerHTML = newName[0][0];
-}
-
-function NameList({ column, names }) {
-  return (
-    <div>
-      {names.map((name, idx) => (
-        <div><span id={`span-${column}-${idx}`}>{name}</span><ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
-      ))}
-    </div>
-  );
-}
-
-function setPattern() {
-  const prebuilt = document.getElementById('prebuilt');
-  document.getElementById('pattern').value = prebuilt.value;
-}
-
 export default function RandomNames() {
+  const c = "b c d f g h j k l m n p q r s t v w x y z";
+  const ch = "ck ch th sh gh st qu ph";
+  const v = "a e i o u";
+  const vo = "ae ea oo ee ei ie ou";
+
+  const allowedCharsMerge = c + ' ' + c.toUpperCase() + ' ' + v + ' ' + v.toUpperCase() + ' ' + '\' = - _ . *';
+
+  const conMerge = c + ' ' + c + ' ' + ch;
+  const vowMerge = v + ' ' + v + ' ' + vo;
+  const allMerge = conMerge + ' ' + vowMerge;
+
+  const con = conMerge.split(' ');
+  const vow = vowMerge.split(' ');
+  const all = allMerge.split(' ');
+  let allowedChars = allowedCharsMerge.split(' ');
+  allowedChars.push(' ');
+
   let pattern = '';
   const [openForm, setOpenForm] = React.useState(false);
   const handleOpenForm = () => {
@@ -118,26 +48,98 @@ export default function RandomNames() {
     setOpenForm(false);
   };
   
-  const [openNames, setOpenNames] = React.useState(false);
   const handleOpenNames = () => {
     const pattern = document.getElementById('pattern').value;
     const nameData = makeNames(20, pattern);
     setNames(nameData);
-    setOpenNames(true);
   }
   const handleCloseNames = () => {
-    setOpenNames(false);
     setNames(null);
   };
 
   const [names, setNames] = React.useState(null);
 
-  const getNames = async (amount) => {
+  const getNames = async () => {
     const pattern = document.getElementById('pattern').value;
-    const nameData = makeNames(amount, pattern);
+    const nameData = makeNames(20, pattern);
     setNames(nameData);
-    setOpenNames(true);
   };
+
+  function getRandom(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
+  }
+
+  function makeName(pattern) {
+    let lastchar = '';
+    let newchar = '';
+    let name = '';
+
+    for (let x = 0; x < pattern.length; ++x) {
+      let char = pattern[x];
+      if (!allowedChars.includes(char)) {
+        continue;
+      }
+      if (char === '-') {
+        newchar = getRandom(con);
+      }
+      else if (char === '=') {
+        newchar = getRandom(vow);
+      }
+      else if (char === '*') {
+        newchar = getRandom(all);
+      }
+      else if (char === '.') {
+        newchar = lastchar;
+      }
+      else {
+        newchar = char;
+      }
+
+      lastchar = newchar;
+      name += newchar;
+    }
+    name = name.toLowerCase();
+    name = name.charAt(0).toUpperCase() + name.slice(1);
+    return name;
+  }
+
+  function makeNames(amount, pattern) {
+    let names = [[], [], []];
+    for (let x = 0; x < amount; ++x) {
+      names[0][x] = makeName(pattern);
+      names[1][x] = makeName(pattern);
+      names[2][x] = makeName(pattern);
+    }
+    return names;
+  }
+
+  function replaceName({ column, idx }) {
+    const pattern = document.getElementById('pattern').value;
+    const newName = makeNames(1, pattern);
+    setNames(
+      names.map((arr, colIndex) => {
+        return colIndex === column ? arr.map((item, index) => {
+          return index === idx ? newName[0][0] : item
+        }) : arr;
+      })
+    );
+  }
+
+  function NameList({ column }) {
+    return (
+      <div>
+        {names[column].map((name, idx) => (
+          <div>{name}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "9pt" }} onClick={() => replaceName({ column, idx })} /></div>
+        ))}
+      </div>
+    );
+  }
+
+  function setPattern() {
+    const prebuilt = document.getElementById('prebuilt');
+    document.getElementById('pattern').value = prebuilt.value;
+  }
 
   return (
     <React.Fragment>
@@ -197,7 +199,7 @@ export default function RandomNames() {
         </Box>
       </Modal>
       {names && <Modal
-        open={openNames}
+        open={names != null}
         onClose={(event, reason) => {
           if (reason !== 'backdropClick' && reason !== 'escapeKeyDown') {
             handleCloseNames;
@@ -211,22 +213,22 @@ export default function RandomNames() {
             <CloseIcon onClick={handleCloseNames} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Random Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames(20)} />
+            Random Names<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getNames()} />
           </Typography>
           <Grid container spacing={2}>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={1} names={names[0]} />
+                <NameList column={0} />
               </Typography>
             </Grid>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={2} names={names[1]} />
+                <NameList column={1} />
               </Typography>
             </Grid>
             <Grid size={4}>
               <Typography sx={{ textAlign: "center" }}>
-                <NameList column={3} names={names[2]} />
+                <NameList column={2} />
               </Typography>
             </Grid>
           </Grid>
