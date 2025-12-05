@@ -19,7 +19,6 @@ import GiantBag from './giant/giant';
 import Lowerplanes from './lowerplanes/lowerplanes';
 import CraftCalculator from './craftCalculator/craftCalculator'
 import XPCalculator from './xp/xpCalculator'
-import Test from './test';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -72,14 +71,6 @@ root.render(
 
       <Grid size={4}>
         <XPCalculator />
-      </Grid>
-
-      <Grid size={6}>
-        <Test />
-      </Grid>
-
-      <Grid size={6}>
-        <Test />
       </Grid>
 
     </Grid>
