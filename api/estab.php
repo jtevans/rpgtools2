@@ -1,12 +1,8 @@
 <?php
-/* John's D&D Utilities
- * Copyright (C) 2001-2025, John Evans
- * Released under GPLv3.
- */
-
 require("utils.php");
 
-start_html("Establishment Names");
+$amount = max(1, min(20, intval(get_var('amount', 20))));
+$names = [[], [], []];
 
 $Data = fopen("./data/names/estab.adj", "r");
 if (!$Data)
@@ -41,27 +37,14 @@ while (!feof($Data))
   }
 }
 fclose($Data);
-?>
 
-<p>
-<table cellpadding=3 cellspacing=0 align="center" border=0 width="60%">
-  <tr>
-    <th colspan=5>Establishment Names</th>
-  </tr>
-<?php
-for ($x = 1; $x <= 20; ++$x) {
-  print("  <tr>\n");
 
-  printf("    <td align=\"center\" class=\"pt9\">%s %s</td>\n", get_random($before), get_random($after));
-  print ("    <td style=\"width: 8px;\"></td>\n");
-  printf("    <td align=\"center\" class=\"pt9\">%s %s</td>\n", get_random($before), get_random($after));
-  print ("    <td style=\"width: 8px;\"></td>\n");
-  printf("    <td align=\"center\" class=\"pt9\">%s %s</td>\n", get_random($before), get_random($after));
+for ($x = 1; $x <= $amount; ++$x)
+{
+  $names[0][] = get_random($before) . ' ' . get_random($after);
+  $names[1][] = get_random($before) . ' ' . get_random($after);
+  $names[2][] = get_random($before) . ' ' . get_random($after);
 
-  print("  </tr>\n");
 }
-?>
-</table>
-</p>
 
-<?php end_html();
+print(json_encode($names));

@@ -17083,7 +17083,7 @@
 	  }
 	  return value;
 	}
-	function style$o(options) {
+	function style$p(options) {
 	  const {
 	    prop,
 	    cssProperty = options.prop,
@@ -17238,17 +17238,17 @@
 	  const propValue = props[prop];
 	  return handleBreakpoints(props, propValue, styleFromPropValue);
 	}
-	function style$n(props, keys) {
+	function style$o(props, keys) {
 	  const transformer = createUnarySpacing(props.theme);
 	  return Object.keys(props).map(prop => resolveCssProperty(props, keys, prop, transformer)).reduce(merge, {});
 	}
 	function margin(props) {
-	  return style$n(props, marginKeys);
+	  return style$o(props, marginKeys);
 	}
 	margin.propTypes = {};
 	margin.filterProps = marginKeys;
 	function padding(props) {
-	  return style$n(props, paddingKeys);
+	  return style$o(props, paddingKeys);
 	}
 	padding.propTypes = {};
 	padding.filterProps = paddingKeys;
@@ -17283,7 +17283,7 @@
 	  return `${value}px solid`;
 	}
 	function createBorderStyle(prop, transform) {
-	  return style$o({
+	  return style$p({
 	    prop,
 	    themeKey: 'borders',
 	    transform
@@ -17362,31 +17362,31 @@
 	};
 	rowGap.propTypes = {};
 	rowGap.filterProps = ['rowGap'];
-	const gridColumn = style$o({
+	const gridColumn = style$p({
 	  prop: 'gridColumn'
 	});
-	const gridRow = style$o({
+	const gridRow = style$p({
 	  prop: 'gridRow'
 	});
-	const gridAutoFlow = style$o({
+	const gridAutoFlow = style$p({
 	  prop: 'gridAutoFlow'
 	});
-	const gridAutoColumns = style$o({
+	const gridAutoColumns = style$p({
 	  prop: 'gridAutoColumns'
 	});
-	const gridAutoRows = style$o({
+	const gridAutoRows = style$p({
 	  prop: 'gridAutoRows'
 	});
-	const gridTemplateColumns = style$o({
+	const gridTemplateColumns = style$p({
 	  prop: 'gridTemplateColumns'
 	});
-	const gridTemplateRows = style$o({
+	const gridTemplateRows = style$p({
 	  prop: 'gridTemplateRows'
 	});
-	const gridTemplateAreas = style$o({
+	const gridTemplateAreas = style$p({
 	  prop: 'gridTemplateAreas'
 	});
-	const gridArea = style$o({
+	const gridArea = style$p({
 	  prop: 'gridArea'
 	});
 	compose(gap, columnGap, rowGap, gridColumn, gridRow, gridAutoFlow, gridAutoColumns, gridAutoRows, gridTemplateColumns, gridTemplateRows, gridTemplateAreas, gridArea);
@@ -17397,18 +17397,18 @@
 	  }
 	  return value;
 	}
-	const color = style$o({
+	const color = style$p({
 	  prop: 'color',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const bgcolor = style$o({
+	const bgcolor = style$p({
 	  prop: 'bgcolor',
 	  cssProperty: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
 	});
-	const backgroundColor = style$o({
+	const backgroundColor = style$p({
 	  prop: 'backgroundColor',
 	  themeKey: 'palette',
 	  transform: paletteTransform
@@ -17418,7 +17418,7 @@
 	function sizingTransform(value) {
 	  return value <= 1 && value !== 0 ? `${value * 100}%` : value;
 	}
-	const width = style$o({
+	const width = style$p({
 	  prop: 'width',
 	  transform: sizingTransform
 	});
@@ -17445,33 +17445,33 @@
 	  return null;
 	};
 	maxWidth.filterProps = ['maxWidth'];
-	const minWidth = style$o({
+	const minWidth = style$p({
 	  prop: 'minWidth',
 	  transform: sizingTransform
 	});
-	const height = style$o({
+	const height = style$p({
 	  prop: 'height',
 	  transform: sizingTransform
 	});
-	const maxHeight = style$o({
+	const maxHeight = style$p({
 	  prop: 'maxHeight',
 	  transform: sizingTransform
 	});
-	const minHeight = style$o({
+	const minHeight = style$p({
 	  prop: 'minHeight',
 	  transform: sizingTransform
 	});
-	style$o({
+	style$p({
 	  prop: 'size',
 	  cssProperty: 'width',
 	  transform: sizingTransform
 	});
-	style$o({
+	style$p({
 	  prop: 'size',
 	  cssProperty: 'height',
 	  transform: sizingTransform
 	});
-	const boxSizing = style$o({
+	const boxSizing = style$p({
 	  prop: 'boxSizing'
 	});
 	compose(width, maxWidth, minWidth, height, maxHeight, minHeight, boxSizing);
@@ -31607,7 +31607,7 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
-	const style$m = {
+	const style$n = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31680,7 +31680,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$m
+	    sx: style$n
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31759,7 +31759,7 @@ export default theme;`;
 	  }
 	}
 
-	const style$l = {
+	const style$m = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31840,7 +31840,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$l
+	    sx: style$m
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31893,7 +31893,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$k = {
+	const style$l = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -31969,7 +31969,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$k
+	    sx: style$l
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32018,7 +32018,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$j = {
+	const style$k = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -32091,7 +32091,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$j
+	    sx: style$k
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32144,7 +32144,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$i = {
+	const style$j = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -32215,7 +32215,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$i
+	    sx: style$j
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32264,7 +32264,7 @@ export default theme;`;
 	  })))))));
 	}
 
-	const style$h = {
+	const style$i = {
 	  position: 'absolute',
 	  top: '50%',
 	  left: '50%',
@@ -32393,7 +32393,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$i
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32470,7 +32470,7 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$i
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32484,6 +32484,123 @@ export default theme;`;
 	    variant: "h5",
 	    component: "h2"
 	  }, "Random Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getNames()
+	  })), /*#__PURE__*/reactExports.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 4
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 0
+	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 4
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 1
+	  }))), /*#__PURE__*/reactExports.createElement(Grid, {
+	    size: 4
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(NameList, {
+	    column: 2
+	  })))))));
+	}
+
+	const style$h = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function EstablishmentNames() {
+	  const handleOpen = () => {
+	    getNames();
+	  };
+	  const handleClose = () => {
+	    setNames(null);
+	  };
+	  const [names, setNames] = reactExports.useState(null);
+	  const getNames = async () => {
+	    const nameData = await callAPI(20);
+	    setNames(nameData);
+	  };
+	  const updateName = async (columnToUpdate, indexToUpdate, newValue) => {
+	    setNames(names.map((arr, colIndex) => {
+	      return colIndex === columnToUpdate ? arr.map((item, index) => {
+	        return index === indexToUpdate ? newValue : item;
+	      }) : arr;
+	    }));
+	  };
+	  async function callAPI(amount) {
+	    let response = await fetch("http://localhost:8080/tools2/api/estab.php?amount=".concat(amount));
+	    return await response.json();
+	  }
+	  async function replaceName(_ref) {
+	    let {
+	      column,
+	      idx
+	    } = _ref;
+	    let newName = await callAPI(1);
+	    updateName(column, idx, newName[0][0]);
+	  }
+	  function NameList(_ref2) {
+	    let {
+	      column
+	    } = _ref2;
+	    return /*#__PURE__*/reactExports.createElement("div", null, names[column].map((name, idx) => /*#__PURE__*/reactExports.createElement("div", null, name, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	      sx: {
+	        paddingLeft: "5px",
+	        fontSize: "9pt"
+	      },
+	      onClick: () => replaceName({
+	        column,
+	        idx
+	      })
+	    }))));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Establishment Names"), names && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: names != null,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style$h
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, "Establishment Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -32549,7 +32666,7 @@ export default theme;`;
 	      type: "orc"
 	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(MFName, {
 	      type: "viking"
-	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(AllNames, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(RandomNames, null), /*#__PURE__*/React.createElement("br", null)));
+	    }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(AllNames, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(RandomNames, null), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(EstablishmentNames, null), /*#__PURE__*/React.createElement("br", null)));
 	  }
 	}
 

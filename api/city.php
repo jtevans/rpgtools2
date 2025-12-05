@@ -599,31 +599,6 @@ function get_quality()
   }
 }
 
-function num_table($title, $arr)
-{
-  $count = 0;
-
-  $html =  "  <tr><th class=\"pt16\" colspan=5>$title</th></tr>\n";
-  $html .= "  <tr>\n";
-
-  reset($arr);
-  foreach ($arr as $key => $val)
-  {
-    ++$count;
-    $html .= sprintf("    <td class=\"pt10\">&nbsp;<a class=\"black\" href=\"#%s\"><b>%s</b></a>: %s&nbsp;</td>\n", $key, $key, $val);
-    if ($count % 3 == 0)
-    {
-      $html .= "  </tr>\n\n  <tr>\n";
-    }
-    else
-    {
-      $html .= "    <td>&nbsp;&nbsp;&nbsp;</td>\n";
-    }
-  }
-  $html .= "  </tr>\n\n\n";
-  return($html);
-}
-
 function make_estab_name($key)
 {
   global $adjs, $nouns, $gods,

@@ -8,6 +8,7 @@ import TwoPartName from "./TwoPart";
 import KoreanName from "./Korean";
 import AllNames from "./All";
 import RandomNames from "./Random";
+import EstablishmentNames from "./Establishment";
 
 class NameGenerators extends React.Component {
   render() {
@@ -27,6 +28,7 @@ class NameGenerators extends React.Component {
           <MFName type='viking' /><br />
           <AllNames /><br />
           <RandomNames /><br />
+          <EstablishmentNames /><br />
         </CardContent>
       </Card>
     );
