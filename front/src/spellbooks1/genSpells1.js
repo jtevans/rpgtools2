@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
-import Utils from '../utils';
 
 const style = {
   position: 'absolute',
@@ -79,7 +78,7 @@ export default function GenSpells1(props) {
   }
 
   async function replaceSpell(idx, level) {
-    let newSpells = await callAPI(spellbookData, level);
+    let newSpells = await callAPI(level);
     updateSpell(idx, level, newSpells[level][0]);
   }
 

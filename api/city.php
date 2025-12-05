@@ -1,26 +1,25 @@
 <?php
-/* John's D&D Utilities
- * Copyright (C) 2001-2025, John Evans
- * Released under GPLv3.
- */
-
 require("utils.php");
 
-$name = trim(get_var("name"));
-$density = get_var("density");
-$size = get_var("size");
-$estab = get_var("estab");
-$agri = get_var("agri");
-$wine = get_var("wine");
-$herding = get_var("herding");
-$hills = get_var("hills");
-$forest = get_var("forest");
-$port = get_var("port");
-$military = get_var("military");
-$nation = get_var("nation");
+function abort($message)
+{
+  print(json_encode([[$message]]));
+  exit;
+}
 
-if (empty($name))
-  $name = "Random City";
+$f = get_var("f");
+$type = get_var("type");
+$name = trim(get_var("name", "Random City"));
+$density = intval(get_var("density", 0));
+$size = intval(get_var("size"), 0);
+$makeNames = get_var("makeNames", 'true');
+$agri = get_var("agricultural", 'false');
+$wine = get_var("wine", 'false');
+$grazing = get_var("grazing", 'false');
+$hills = get_var("hills", 'false');
+$forest = get_var("forest", 'false');
+$port = get_var("port", 'false');
+$military = get_var("military", 'false');
 
 $densities = array("X", "Sparse", "Low", "Average", "High", "Very High");
 $sizes = array("X", "Village", "Town", "City");
@@ -258,9 +257,20 @@ while (!feof($fh))
 }
 fclose($fh);
 
+
+if ($f == 'item') {
+  $item = new stdClass();
+  $item->stars = get_quality();
+  $item->name = make_estab_name($type);
+
+  print(json_encode($item));
+  exit();
+}
+
+
 function validate_city_input()
 {
-  global $estab, $density, $size, $agri, $wine, $herding, $hills, $forest, $port, $military;
+  global $makeNames, $density, $size, $agri, $wine, $grazing, $hills, $forest, $port, $military;
 
   if ($density <= 0)
   {
@@ -279,14 +289,14 @@ function validate_city_input()
     $size = 3;
   }
 
-  $estab = ($estab == "on");
-  $agri = ($agri == "on");
-  $wine = ($wine == "on");
-  $herding = ($herding == "on");
-  $hills = ($hills == "on");
-  $forest = ($forest == "on");
-  $port = ($port == "on");
-  $military = ($military == "on");
+  $makeNames = ($makeNames == "true");
+  $agri = ($agri == "true");
+  $wine = ($wine == "true");
+  $grazing = ($grazing == "true");
+  $hills = ($hills == "true");
+  $forest = ($forest == "true");
+  $port = ($port == "true");
+  $military = ($military == "true");
 }
 
 function determine_population($density, $size) {
@@ -392,7 +402,7 @@ function build_services()
 {
   global $lodging, $common, $rare, $transport, $services, $establishments;
   global $blocks;
-  global $agri, $wine, $herding, $hills, $forest, $port, $military;
+  global $agri, $wine, $grazing, $hills, $forest, $port, $military;
 
   $lodging["Almshouse"] = calc_number($blocks, 10);
   $lodging["Baker"] = calc_number($blocks, 33);
@@ -439,7 +449,7 @@ function build_services()
   }
   $common["Cobbler"] = calc_number($blocks, 70);
   $common["Cooper"] = calc_number($blocks, 66);
-  if ($herding || $military)
+  if ($grazing || $military)
   {
     $common["Leatherworker"] = max(1, calc_number($blocks, 90));
   }
@@ -457,7 +467,7 @@ function build_services()
   }
   $common["Miller"] = calc_number($blocks, 50);
   $common["Potter"] = calc_number($blocks, 25);
-  if ($herding)
+  if ($grazing)
   {
     $common["Tanner"] = calc_number($blocks, 90);
   }
@@ -689,36 +699,34 @@ function make_estab_name($key)
   return($name);
 }
 
-function desc_table($title, $arr)
+function make_estab_arr($arr)
 {
-  global $estab;
+  global $makeNames;
 
+  $estabArr = [];
   $count = 0;
-  $html = "<p class=\"pt18\" align=\"center\">$title</p>\n";
   foreach ($arr as $key => $amt)
   {
     if ($amt > 0)
     {
-      $html .= "\n\n\n<a name=\"$key\">\n<p>\n<table align=\"center\" width=\"90%\" cellpadding=2 cellspacing=0 border=1>\n";
-      $html .= "  <tr><th class=\"pt16\">$key</th></tr>\n";
+      $estabObj = new stdClass();
+      $estabObj->name = $key;
+      $estabObj->items = [];
       for ($count = 1; $count <= $amt; ++$count)
       {
-        $html .= "  <tr>\n    <td class=\"pt9\">\n";
-        if ($estab)
+        $item = new stdClass();
+        if ($makeNames)
         {
-          $html .= sprintf("<b class=\"pt10\">%s<sup>%s</sup></b><br />\n", make_estab_name($key), get_quality());
+          $item->name = make_estab_name($key);
+
         }
-        else
-        {
-          $html .= sprintf("<b class=\"pt10\">%s<sup>%s</sup></b><br />\n", $key, get_quality());
-        }
-        $html .= "<p class=\"indent9\">\n\n</p>\n";
-        $html .= "    </td>\n  </tr>\n\n";
+        $item->stars = get_quality();
+        array_push($estabObj->items, $item);
       }
-      $html .= "</table>\n</p>\n";
+      array_push($estabArr, $estabObj);
     }
   }
-  return($html);
+  return($estabArr);
 }
 
 function determine_economy($pop)
@@ -746,20 +754,6 @@ determine_population($density, $size);
 determine_economy($pop);
 build_services();
 
-$lodging_num = num_table("Food, Drink and Lodging", $lodging);
-$common_num = num_table("Common Crafts and Trades", $common);
-$rare_num = num_table("Rare Crafts and Trades", $rare);
-$transport_num = num_table("Transportation", $transport);
-$services_num = num_table("NPC Services", $services);
-$estab_num = num_table("Establishments", $establishments);
-
-$lodging_desc = desc_table("Food, Drink and Lodging", $lodging);
-$common_desc = desc_table("Common Crafts and Trades", $common);
-$rare_desc = desc_table("Rare Crafts and Trades", $rare);
-$transport_desc = desc_table("Transportation", $transport);
-$services_desc = desc_table("NPC Services", $services);
-$estab_desc = desc_table("Establishments", $establishments);
-
 $blocks = max(1, $blocks);
 $density = array_key_exists($density, $densities) ? $densities[$density] : "Average";
 $size = array_key_exists($size, $sizes) ? $sizes[$size] : "Town";
@@ -767,70 +761,45 @@ $pop = comma($pop);
 $max_val_single_item = comma($max_val_single_item);
 $ready_cash = comma($ready_cash);
 
-$entity_name = htmlentities($name);
-$output = return_start_html($entity_name);
+$cityObj = new stdClass();
+$cityObj->overview = new stdClass();
+$cityObj->overview->density = $density;
+$cityObj->overview->size = $size;
+$cityObj->overview->blocks = $blocks;
+$cityObj->overview->population = $pop;
+$cityObj->overview->singleItem = $max_val_single_item;
+$cityObj->overview->readyGold = $ready_cash;
 
-$output .= <<< END_HTML
+$cityObj->categories = [];
 
-<p>
-<h1 align="center">$entity_name</h1>
-</p>
+$lodgingObj = new stdClass();
+$lodgingObj->name = "Food, Drink, and Lodging";
+$lodgingObj->types = make_estab_arr($lodging);
+array_push($cityObj->categories, $lodgingObj);
 
-<p>
-<table align="center" cellpadding=3 cellspacing=3 border=1>
-  <tr>
-    <th>Density</th>
-    <th>Size</th>
-    <th>Blocks</th>
-    <th>Population</th>
-    <th>Max Val of Single Item</th>
-    <th>Ready Gold on Hand</th>
-  </tr>
-  <tr>
-    <td align="center">$density</td>
-    <td align="center">$size</td>
-    <td align="center">$blocks</td>
-    <td align="center">$pop</td>
-    <td align="center">$max_val_single_item</td>
-    <td align="center">$ready_cash</td>
-  </tr>
-</table>
-</p>
+$commonObj = new stdClass();
+$commonObj->name = "Common Crafts and Trades";
+$commonObj->types = make_estab_arr($common);
+array_push($cityObj->categories, $commonObj);
 
-<p align="center">
-<a href="#Notes" class="black">Click for Notes</a>
-</p>
+$rareObj = new stdClass();
+$rareObj->name = "Rare Crafts and Trades";
+$rareObj->types = make_estab_arr($rare);
+array_push($cityObj->categories, $rareObj);
 
-<p>
-<table align="center" cellpadding=0 cellspacing=1 border=1>
-$lodging_num
-$common_num
-$rare_num
-$transport_num
-$services_num
-$estab_num
-</table>
-</p>
+$transportObj = new stdClass();
+$transportObj->name = "Transportation";
+$transportObj->types = make_estab_arr($transport);
+array_push($cityObj->categories, $transportObj);
 
-<hr width="80%">
+$servicesObj = new stdClass();
+$servicesObj->name = "NPC Services";
+$servicesObj->types = make_estab_arr($services);
+array_push($cityObj->categories, $servicesObj);
 
-$lodging_desc
-$common_desc
-$rare_desc
-$transport_desc
-$services_desc
-$estab_desc
+$establishmentsObj = new stdClass();
+$establishmentsObj->name = "Establishments";
+$establishmentsObj->types = make_estab_arr($establishments);
+array_push($cityObj->categories, $establishmentsObj);
 
-<a name="Notes">
-<p>
-<h1 align="center">Notes</h1><br />
-<ul>
-<li>Notes go here.</li>
-</ul>
-</p>
-
-</body>
-</html>
-END_HTML;
-
-print($output);
+print(json_encode([$cityObj]));

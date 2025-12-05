@@ -1,12 +1,4 @@
 <?php
-/* John's D&D Utilities
- * Copyright (C) 2001-2025, John Evans
- * Released under GPLv3.
- */
-
-require("utils.php");
-
-
 $caster_level = min(18, max(1, intval(get_var("wizardLevel", 1))));
 $intel = min(19, max(9, intval(get_var("intelligence"), 10)));
 $adventure = get_var("gainSpells") == 'true' ? true : false;
@@ -15,6 +7,12 @@ $always_max_num_spells = get_var("maxNumSpells") == 'true' ? true : false;
 $PHB = get_var("phb") == 'true' ? true : false;
 $UA = get_var("ua") == 'true' ? true : false;
 $AV = get_var("av") == 'true' ? true : false;
+
+function abort($message)
+{
+  print(json_encode([[$message]]));
+  exit;
+}
 
 class Spell
 {

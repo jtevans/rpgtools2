@@ -38,7 +38,6 @@ function abort($message)
 {
   print(json_encode([[$message]]));
   exit;
-
 }
 
 function calculate_intel_bonus($intel)
