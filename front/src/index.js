@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Grid, Typography } from '@mui/material';
@@ -20,64 +20,75 @@ import Lowerplanes from './lowerplanes/lowerplanes';
 import CraftCalculator from './craftCalculator/craftCalculator'
 import XPCalculator from './xp/xpCalculator'
 import City from './city/city';
+import { MessageProvider } from './messageContext';
+import MessageBox from './MessageBox';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
-root.render(
-  <React.StrictMode>
-    <CssBaseline />
-    <Grid container spacing={2}>
 
-      <Grid size={4}>
-        <NameGenerators />
-      </Grid>
+function Main() {
+  return (
+    <React.StrictMode>
+      <MessageProvider>
+        <MessageBox />
+        <CssBaseline />
+        <Grid container spacing={2}>
 
-      <Grid size={4}>
-        <DungeonDressing />
-      </Grid>
+          <Grid size={4}>
+            <NameGenerators />
+          </Grid>
 
-      <Grid size={4}>
-        <Traps /><br />
-        <Lowerplanes />
-      </Grid>
+          <Grid size={4}>
+            <DungeonDressing />
+          </Grid>
 
-      <Grid size={4}>
-        <Treasure3 /><br />
-        <Treasure1 />
-      </Grid>
+          <Grid size={4}>
+            <Traps /><br />
+            <Lowerplanes />
+          </Grid>
 
-      <Grid size={4}>
-        <Baubles3 /><br />
-        <Baubles1 /><br />
-        <Drow /><br />
-        <GiantBag />
-      </Grid>
-    
-      <Grid size={4}>
-        <MagicItems3 /><br />
-        <MagicItems1 /><br />
-        <Typography sx={{ textAlign: "center" }}>
-          <IntelligentWeapon label="Generic Intelligent Weapon" />
-        </Typography><br />
-        <CraftCalculator />
-      </Grid>
-   
-      <Grid size={4}>
-        <SpellBooks3 />
-      </Grid>
+          <Grid size={4}>
+            <Treasure3 /><br />
+            <Treasure1 />
+          </Grid>
 
-      <Grid size={4}>
-        <SpellBooks1 />
-      </Grid>
+          <Grid size={4}>
+            <Baubles3 /><br />
+            <Baubles1 /><br />
+            <Drow /><br />
+            <GiantBag />
+          </Grid>
 
-      <Grid size={4}>
-        <XPCalculator />
-      </Grid>
+          <Grid size={4}>
+            <MagicItems3 /><br />
+            <MagicItems1 /><br />
+            <Typography sx={{ textAlign: "center" }}>
+              <IntelligentWeapon label="Generic Intelligent Weapon" />
+            </Typography><br />
+            <CraftCalculator />
+          </Grid>
 
-      <Grid size={4}>
-        <City />
-      </Grid>
+          <Grid size={4}>
+            <SpellBooks3 />
+          </Grid>
 
-    </Grid>
-  </React.StrictMode>
-);
+          <Grid size={4}>
+            <SpellBooks1 />
+          </Grid>
+
+          <Grid size={4}>
+            <XPCalculator />
+          </Grid>
+
+          <Grid size={4}>
+            <City />
+          </Grid>
+
+        </Grid>
+      </MessageProvider>
+    </React.StrictMode>
+  );
+}
+
+
+root.render(<Main />);
