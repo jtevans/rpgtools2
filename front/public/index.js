@@ -30731,6 +30731,36 @@ export default theme;`;
 	  d: "M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8"
 	}));
 
+	var ContentCopyIcon = createSvgIcon(/*#__PURE__*/jsxRuntimeExports.jsx("path", {
+	  d: "M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z"
+	}));
+
+	const MessageContext = /*#__PURE__*/reactExports.createContext();
+	const MessageProvider = _ref => {
+	  let {
+	    children
+	  } = _ref;
+	  const [message, setMessage] = reactExports.useState(null);
+	  const openMessage = function (text) {
+	    let type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'info';
+	    setMessage({
+	      text,
+	      type
+	    });
+	  };
+	  const closeMessage = () => {
+	    setMessage(null);
+	  };
+	  return /*#__PURE__*/reactExports.createElement(MessageContext.Provider, {
+	    value: {
+	      message,
+	      openMessage,
+	      closeMessage
+	    }
+	  }, children);
+	};
+	const useMessage$1 = () => reactExports.useContext(MessageContext);
+
 	const style$n = {
 	  position: 'absolute',
 	  top: '50%',
@@ -30750,6 +30780,19 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setNames(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [names, setNames] = reactExports.useState(null);
 	  const getNames = async () => {
@@ -30804,7 +30847,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$n
+	    sx: style$n,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -30817,7 +30861,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Dwarf Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Dwarf Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -30871,10 +30921,6 @@ export default theme;`;
 	  })))))));
 	}
 
-	var ContentCopyIcon = createSvgIcon(/*#__PURE__*/jsxRuntimeExports.jsx("path", {
-	  d: "M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z"
-	}));
-
 	class Utils {
 	  static ucfirst(str) {
 	    if (!str) {
@@ -30886,32 +30932,6 @@ export default theme;`;
 	    return str.charAt(0).toUpperCase() + str.slice(1);
 	  }
 	}
-
-	const MessageContext = /*#__PURE__*/reactExports.createContext();
-	const MessageProvider = _ref => {
-	  let {
-	    children
-	  } = _ref;
-	  const [message, setMessage] = reactExports.useState(null);
-	  const openMessage = function (text) {
-	    let type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'info';
-	    setMessage({
-	      text,
-	      type
-	    });
-	  };
-	  const closeMessage = () => {
-	    setMessage(null);
-	  };
-	  return /*#__PURE__*/reactExports.createElement(MessageContext.Provider, {
-	    value: {
-	      message,
-	      openMessage,
-	      closeMessage
-	    }
-	  }, children);
-	};
-	const useMessage = () => reactExports.useContext(MessageContext);
 
 	const style$m = {
 	  position: 'absolute',
@@ -30937,7 +30957,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage();
+	  } = useMessage$1();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31095,6 +31115,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setNames(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [names, setNames] = reactExports.useState(null);
 	  const getNames = async () => {
 	    const nameData = await callAPI(20);
@@ -31143,7 +31176,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$l
+	    sx: style$l,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31156,7 +31190,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, ucType, " Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), ucType, " Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -31212,6 +31252,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setNames(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [names, setNames] = reactExports.useState(null);
 	  const getNames = async () => {
 	    const nameData = await callAPI(20);
@@ -31265,7 +31318,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$k
+	    sx: style$k,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31278,7 +31332,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Korean Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Korean Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -31340,6 +31400,19 @@ export default theme;`;
 	    setOpen(false);
 	    setNames(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [names, setNames] = reactExports.useState(null);
 	  const getNames = async () => {
 	    const nameData = await callAPI(20);
@@ -31389,7 +31462,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$j
+	    sx: style$j,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31402,7 +31476,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "All Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "All Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -31471,6 +31551,19 @@ export default theme;`;
 	  };
 	  const handleCloseForm = () => {
 	    setOpenForm(false);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const handleOpenNames = () => {
 	    const pattern = document.getElementById('pattern').value;
@@ -31644,7 +31737,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$i
+	    sx: style$i,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31657,7 +31751,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Random Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Random Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -31713,6 +31813,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setNames(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [names, setNames] = reactExports.useState(null);
 	  const getNames = async () => {
 	    const nameData = await callAPI(20);
@@ -31761,7 +31874,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$h
+	    sx: style$h,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31774,7 +31888,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Establishment Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Establishment Names", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -31872,6 +31992,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setDressings(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [dressings, setDressings] = reactExports.useState(null);
 	  const getDressings = async () => {
 	    const dressingData = await callAPI(20);
@@ -31911,7 +32044,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$g
+	    sx: style$g,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -31924,7 +32058,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, label, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), label, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -32017,11 +32157,23 @@ export default theme;`;
 	  const handleClose = () => {
 	    setTraps(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [traps, setTraps] = reactExports.useState(null);
 	  const getTraps = async () => {
 	    const trapData = await callAPI(5);
 	    setTraps(trapData);
-	    setOpen(true);
 	  };
 	  const updateTrap = async (indexToUpdate, newValue) => {
 	    setTraps(traps.map((item, index) => index === indexToUpdate ? newValue : item));
@@ -32061,7 +32213,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$f
+	    sx: style$f,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32074,7 +32227,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, label, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), label, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -47200,6 +47359,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setLower(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage$1();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [lower, setLower] = reactExports.useState(null);
 	  const getLower = async () => {
 	    const data = await callAPI();
@@ -47265,7 +47437,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$3
+	    sx: style$3,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -47278,7 +47451,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Lower Planes Creatures", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Lower Planes Creatures", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -48848,7 +49027,7 @@ export default theme;`;
 	  const {
 	    message,
 	    closeMessage
-	  } = useMessage();
+	  } = useMessage$1();
 	  if (!message) return null;
 	  const style = {
 	    position: 'absolute',
@@ -48861,9 +49040,6 @@ export default theme;`;
 	    overflow: 'auto',
 	    zIndex: 9999
 	  };
-	  React.useEffect(() => {
-	    console.log(message);
-	  }, [message]);
 	  return /*#__PURE__*/React.createElement(Alert, {
 	    severity: message.type,
 	    style: style,

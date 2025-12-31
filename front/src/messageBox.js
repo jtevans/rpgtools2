@@ -19,11 +19,6 @@ export default function MessageBox() {
     zIndex: 9999,
   };
 
-
-  React.useEffect(() => {
-    console.log(message);
-  }, [message]);
-
   return (
     <Alert severity={message.type} style={style} onClick={closeMessage}>
       {message.text}

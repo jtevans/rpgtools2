@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { useMessage } from '../messageContext';
 
 const style = {
   position: 'absolute',
@@ -34,6 +36,18 @@ export default function GenDressing(props) {
   const handleClose = () => {
     setDressings(null);
   };
+
+  const gridRef = React.useRef(null);
+  const { openMessage } = useMessage();
+  const handleCopy = async () => {
+    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+    try {
+      await navigator.clipboard.writeText(contentToCopy);
+      openMessage('Content copied to clipboard.');
+    } catch (err) {
+      openMessage('Failed to copy content to clipboard.', 'error');
+    }
+  }
 
   const [dressings, setDressings] = React.useState(null);
 
@@ -83,12 +97,12 @@ export default function GenDressing(props) {
         disableEscapeKeyDown={true}
         disableBackdropClick={true}
       >
-        <Box sx={style}>
+        <Box sx={style} ref={gridRef}>
           <Typography sx={{ textAlign: "right" }}>
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            { label }<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getDressings()} />
+            <ContentCopyIcon sx={{ paddingRight: "5px", fontSize: "12pt" }} onClick={handleCopy} />{ label }<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getDressings()} />
           </Typography>
           <Typography sx={{ textAlign: "center" }}>
             <DressingList />

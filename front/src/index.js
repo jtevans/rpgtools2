@@ -47,6 +47,7 @@ function Main() {
             <Lowerplanes />
           </Grid>
 
+          {/* Stopped here on adding Copy to Clipboard functionality. */}
           <Grid size={4}>
             <Treasure3 /><br />
             <Treasure1 />
