@@ -5,10 +5,8 @@ import Alert from '@mui/material/Alert';
 export default function MessageBox() {
   const { message, closeMessage } = useMessage();
 
-  if (!message) return null;
-
   const style = {
-    position: 'absolute',
+    position: 'fixed',
     top: '10%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
@@ -19,9 +17,19 @@ export default function MessageBox() {
     zIndex: 9999,
   };
 
+  React.useEffect(() => {
+    if (message != null) {
+      setTimeout(closeMessage, 1500);
+    }
+  }, [message]);
+
   return (
-    <Alert severity={message.type} style={style} onClick={closeMessage}>
-      {message.text}
-    </Alert>
+    <React.Fragment>
+      {message &&
+        <Alert severity={message.type} style={style} onClick={closeMessage}>
+          {message.text}
+        </Alert>
+      }
+    </React.Fragment>
   );
 };

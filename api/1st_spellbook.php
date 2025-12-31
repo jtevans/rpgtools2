@@ -1,4 +1,6 @@
 <?php
+require("utils.php");
+
 $caster_level = min(18, max(1, intval(get_var("wizardLevel", 1))));
 $intel = min(19, max(9, intval(get_var("intelligence"), 10)));
 $adventure = get_var("gainSpells") == 'true' ? true : false;

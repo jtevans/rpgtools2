@@ -30759,7 +30759,7 @@ export default theme;`;
 	    }
 	  }, children);
 	};
-	const useMessage$1 = () => reactExports.useContext(MessageContext);
+	const useMessage = () => reactExports.useContext(MessageContext);
 
 	const style$n = {
 	  position: 'absolute',
@@ -30784,7 +30784,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -30957,7 +30957,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31118,7 +31118,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31255,7 +31255,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31403,7 +31403,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31555,7 +31555,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31816,7 +31816,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -31995,7 +31995,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -32160,7 +32160,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -32302,6 +32302,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setSpecials(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [specials, setSpecials] = reactExports.useState(null);
 	  const getSpecials = async () => {
 	    const data = await callAPI();
@@ -32352,7 +32365,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$e
+	    sx: style$e,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32365,7 +32379,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, title, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), title, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -32403,6 +32423,19 @@ export default theme;`;
 	    setMinor(null);
 	    setMedium(null);
 	    setMajor(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [minor, setMinor] = reactExports.useState(null);
 	  const [medium, setMedium] = reactExports.useState(null);
@@ -32492,7 +32525,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$d
+	    sx: style$d,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32505,7 +32539,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Magic Items", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Magic Items", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -32558,6 +32598,23 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setOpen(false);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    let contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    contentToCopy = contentToCopy.replace('GENERATE GEMS', '');
+	    contentToCopy = contentToCopy.replace('GENERATE ART', '');
+	    contentToCopy = contentToCopy.replace('GENERATE MUNDANE ITEMS', '');
+	    contentToCopy = contentToCopy.replace('GENERATE MAGIC ITEMS', '');
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [cp3, setCP3] = reactExports.useState(0);
 	  const [sp3, setSP3] = reactExports.useState(0);
@@ -32688,7 +32745,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$c
+	    sx: style$c,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -32701,7 +32759,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -40366,6 +40430,20 @@ export default theme;`;
 	  const handleClose = () => {
 	    setStats(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    let contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    contentToCopy = contentToCopy.replace(/(\r\n|\n|\r){2}/gm, "\n");
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [stats, setStats] = reactExports.useState(null);
 	  async function callAPI() {
 	    let response = await fetch(`http://localhost:8080/tools2/api/intelligent.php`);
@@ -40391,7 +40469,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$b
+	    sx: style$b,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -40404,7 +40483,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, label, " ", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), label, " ", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -40435,6 +40520,20 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setItems(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    let contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    contentToCopy = contentToCopy.replace(/(\r\n|\n|\r){2}/gm, "\n");
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [items, setItems] = reactExports.useState(null);
 	  const getItems = async () => {
@@ -40511,7 +40610,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$a
+	    sx: style$a,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -40524,7 +40624,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Magic Items", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Magic Items", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -45628,6 +45734,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setSpecials(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [specials, setSpecials] = reactExports.useState(null);
 	  const getSpecials = async () => {
 	    const data = await callAPI();
@@ -45678,7 +45797,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$9
+	    sx: style$9,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45691,7 +45811,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, title, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), title, /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -45785,6 +45911,23 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setTreasure(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    let contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    contentToCopy = contentToCopy.replace('GENERATE GEMS', '');
+	    contentToCopy = contentToCopy.replace('GENERATE JEWELRY', '');
+	    contentToCopy = contentToCopy.replace('GENERATE MAGIC ITEMS', '');
+	    contentToCopy = contentToCopy.replace(/(\r\n|\n|\r){2}/gm, "\n");
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [treasure, setTreasure] = reactExports.useState(null);
 	  const [magicItemsData, setMagicItemData] = reactExports.useState({
@@ -45919,7 +46062,8 @@ export default theme;`;
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$8
+	    sx: style$8,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -45932,7 +46076,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -46186,348 +46336,6 @@ export default theme;`;
 	  overflow: 'auto',
 	  maxHeight: '80%'
 	};
-	function GenSpells1(props) {
-	  const {
-	    spellbookData
-	  } = props;
-	  const handleOpen = () => {
-	    getSpells();
-	  };
-	  const handleClose = () => {
-	    setSpellbook(null);
-	  };
-	  const [spellbook, setSpellbook] = reactExports.useState(null);
-	  const getSpells = async () => {
-	    const newSpells = await callAPI();
-	    setSpellbook(newSpells);
-	  };
-	  const updateSpell = async (indexToUpdate, level, newValue) => {
-	    setSpellbook(spellbook.map((spells, spellLevel) => {
-	      if (level === spellLevel) {
-	        return spells.map((spell, index) => {
-	          if (index === indexToUpdate) {
-	            return newValue;
-	          }
-	          return spell;
-	        });
-	      } else {
-	        return spells;
-	      }
-	    }));
-	  };
-	  async function callAPI() {
-	    let level = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-	    const wizardLevel = spellbookData.level || '1';
-	    const intelligence = spellbookData.intelligence || '10';
-	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
-	    const maxNumSpells = spellbookData.maxNumSpells ? 'true' : 'false';
-	    let phb = spellbookData.phb ? 'true' : 'false';
-	    const ua = spellbookData.ua ? 'true' : 'false';
-	    const av = spellbookData.av ? 'true' : 'false';
-
-	    // Force at least one source to be used. Default to PHB.
-	    if (!(spellbookData.phb || spellbookData.ua || spellbookData.av)) {
-	      phb = 'true';
-	    }
-	    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&maxNumSpells=${maxNumSpells}&phb=${phb}&ua=${ua}&av=${av}`;
-	    if (level) {
-	      args += `&spellLevel=${level}`;
-	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
-	    return await response.json();
-	  }
-	  async function replaceSpell(idx, level) {
-	    let newSpells = await callAPI(level);
-	    updateSpell(idx, level, newSpells[level][0]);
-	  }
-	  function SpellsList() {
-	    if (spellbook.length == 1) {
-	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
-	    }
-	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, spellbookData.name || 'Unknown'), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
-	      return spells.map((spell, index) => {
-	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	          sx: {
-	            paddingLeft: "5px",
-	            fontSize: "9pt"
-	          },
-	          onClick: () => replaceSpell(index, spellLevel)
-	        }));
-	      });
-	    }));
-	  }
-	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
-	    onClick: handleOpen
-	  }, "Generate Spellbook"), spellbook && /*#__PURE__*/reactExports.createElement(Modal, {
-	    open: spellbook != null,
-	    onClose: (event, reason) => {
-	    },
-	    disableEscapeKeyDown: true,
-	    disableBackdropClick: true,
-	    sx: {
-	      maxHeight: "80%"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$7
-	  }, /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
-	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
-	    sx: {
-	      textAlign: "center"
-	    },
-	    variant: "h5",
-	    component: "h2"
-	  }, "1st Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
-	    sx: {
-	      paddingLeft: "5px",
-	      fontSize: "10pt"
-	    },
-	    onClick: () => getSpells()
-	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, null)))));
-	}
-
-	function SpellBooks1() {
-	  const [spellbookData, setSpellbookData] = React.useState({
-	    level: '0',
-	    intelligence: '0',
-	    maxNumSpells: true,
-	    gainSpells: false,
-	    phb: true,
-	    ua: false,
-	    av: false,
-	    name: ''
-	  });
-	  const handleNameChange = id => event => {
-	    setSpellbookData(prevFormData => ({
-	      ...prevFormData,
-	      name: event?.target?.value || ''
-	    }));
-	  };
-	  const handleCheckboxChange = (checkboxName, box) => {
-	    setSpellbookData(prevFormData => ({
-	      ...prevFormData,
-	      [checkboxName]: box?.target?.checked || false
-	    }));
-	  };
-	  const handleSelectChange = (selectName, option) => {
-	    setSpellbookData(prevFormData => ({
-	      ...prevFormData,
-	      [selectName]: option?.value || ''
-	    }));
-	  };
-	  const WizardLevel = () => {
-	    let options = [];
-	    for (let i = 1; i <= 18; i++) {
-	      const num = i.toString();
-	      const obj = {
-	        value: num,
-	        label: num
-	      };
-	      options.push(obj);
-	    }
-	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	      value: options.filter(function (option) {
-	        return option.value === spellbookData.level;
-	      }),
-	      name: "level",
-	      onChange: option => handleSelectChange('level', option),
-	      options: options,
-	      isClearable: true,
-	      placeholder: "Select Wizard Level",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      },
-	      menuPortalTarget: document.body,
-	      styles: {
-	        menuPortal: base => ({
-	          ...base,
-	          zIndex: 9999
-	        })
-	      }
-	    }));
-	  };
-	  const WizardIntelligence = () => {
-	    let options = [];
-	    for (let i = 9; i <= 19; i++) {
-	      const num = i.toString();
-	      const obj = {
-	        value: num,
-	        label: num
-	      };
-	      options.push(obj);
-	    }
-	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
-	      value: options.filter(function (option) {
-	        return option.value === spellbookData.intelligence;
-	      }),
-	      name: "intelligence",
-	      onChange: option => handleSelectChange('intelligence', option),
-	      options: options,
-	      isClearable: true,
-	      placeholder: "Select Wizard Intelligence",
-	      sx: {
-	        width: "30%",
-	        height: "16pt"
-	      },
-	      menuPortalTarget: document.body,
-	      styles: {
-	        menuPortal: base => ({
-	          ...base,
-	          zIndex: 9999
-	        })
-	      }
-	    }));
-	  };
-	  return /*#__PURE__*/React.createElement(Card, {
-	    variant: "outlined",
-	    sx: {
-	      height: 'fit-content'
-	    }
-	  }, /*#__PURE__*/React.createElement(CardHeader, {
-	    sx: {
-	      textAlign: "center",
-	      fontWeight: "bold"
-	    },
-	    title: "1st Edition AD&D Wizard Spellbooks"
-	  }), /*#__PURE__*/React.createElement(CardContent, {
-	    sx: {
-	      textAlign: "center"
-	    }
-	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
-	    container: true,
-	    spacing: 2
-	  }, /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Generate max # of spells per level based on intelligence?")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.maxNumSpells,
-	    type: "checkbox",
-	    id: "maxNumSpells",
-	    name: "maxNumSpells",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('maxNumSpells', box)
-	  }))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.gainSpells,
-	    type: "checkbox",
-	    id: "gainSpells",
-	    name: "gainSpells",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('gainSpells', box)
-	  }))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Sourcebooks:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "left"
-	    }
-	  }, "Player's Handbook (PHB) ", /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.phb,
-	    type: "checkbox",
-	    id: "phb",
-	    name: "phb",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('phb', box)
-	  }), /*#__PURE__*/React.createElement("br", null), "Unearthed Arcana (UA) ", /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.ua,
-	    type: "checkbox",
-	    id: "ua",
-	    name: "ua",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('ua', box)
-	  }), "Arden Vul (AV) ", /*#__PURE__*/React.createElement("input", {
-	    checked: spellbookData.av,
-	    type: "checkbox",
-	    id: "av",
-	    name: "av",
-	    value: "1",
-	    onChange: box => handleCheckboxChange('av', box)
-	  }))), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(Typography, {
-	    sx: {
-	      textAlign: "right"
-	    }
-	  }, "Wizard name:")), /*#__PURE__*/React.createElement(Grid, {
-	    size: 6
-	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
-	    size: "small",
-	    sx: {
-	      height: "16pt"
-	    },
-	    onChange: handleNameChange()
-	  }))), /*#__PURE__*/React.createElement(GenSpells1, {
-	    spellbookData: spellbookData
-	  }))));
-	}
-
-	const style$6 = {
-	  position: 'absolute',
-	  top: '50%',
-	  left: '50%',
-	  transform: 'translate(-50%, -50%)',
-	  width: '75%',
-	  bgcolor: 'background.paper',
-	  border: '2px solid #000',
-	  boxShadow: 24,
-	  p: 4,
-	  overflow: 'auto',
-	  maxHeight: '80%'
-	};
 	function GenSpells3(props) {
 	  const {
 	    spellbookData
@@ -46537,6 +46345,19 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setSpellbook(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [spellbook, setSpellbook] = reactExports.useState(null);
 	  const getSpells = async spellbookData => {
@@ -46615,7 +46436,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$6
+	    sx: style$7,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -46628,7 +46450,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "3rd Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "3rd Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -46927,6 +46755,368 @@ export default theme;`;
 	  }))));
 	}
 
+	const style$6 = {
+	  position: 'absolute',
+	  top: '50%',
+	  left: '50%',
+	  transform: 'translate(-50%, -50%)',
+	  width: '75%',
+	  bgcolor: 'background.paper',
+	  border: '2px solid #000',
+	  boxShadow: 24,
+	  p: 4,
+	  overflow: 'auto',
+	  maxHeight: '80%'
+	};
+	function GenSpells1(props) {
+	  const {
+	    spellbookData
+	  } = props;
+	  const handleOpen = () => {
+	    getSpells();
+	  };
+	  const handleClose = () => {
+	    setSpellbook(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
+	  const [spellbook, setSpellbook] = reactExports.useState(null);
+	  const getSpells = async () => {
+	    const newSpells = await callAPI();
+	    setSpellbook(newSpells);
+	  };
+	  const updateSpell = async (indexToUpdate, level, newValue) => {
+	    setSpellbook(spellbook.map((spells, spellLevel) => {
+	      if (level === spellLevel) {
+	        return spells.map((spell, index) => {
+	          if (index === indexToUpdate) {
+	            return newValue;
+	          }
+	          return spell;
+	        });
+	      } else {
+	        return spells;
+	      }
+	    }));
+	  };
+	  async function callAPI() {
+	    let level = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    const wizardLevel = spellbookData.level || '1';
+	    const intelligence = spellbookData.intelligence || '10';
+	    const gainSpells = spellbookData.gainSpells ? 'true' : 'false';
+	    const maxNumSpells = spellbookData.maxNumSpells ? 'true' : 'false';
+	    let phb = spellbookData.phb ? 'true' : 'false';
+	    const ua = spellbookData.ua ? 'true' : 'false';
+	    const av = spellbookData.av ? 'true' : 'false';
+
+	    // Force at least one source to be used. Default to PHB.
+	    if (!(spellbookData.phb || spellbookData.ua || spellbookData.av)) {
+	      phb = 'true';
+	    }
+	    let args = `wizardLevel=${wizardLevel}&intelligence=${intelligence}&gainSpells=${gainSpells}&maxNumSpells=${maxNumSpells}&phb=${phb}&ua=${ua}&av=${av}`;
+	    if (level) {
+	      args += `&spellLevel=${level}`;
+	    }
+	    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
+	    return await response.json();
+	  }
+	  async function replaceSpell(idx, level) {
+	    let newSpells = await callAPI(level);
+	    updateSpell(idx, level, newSpells[level][0]);
+	  }
+	  function SpellsList() {
+	    if (spellbook.length == 1) {
+	      return /*#__PURE__*/reactExports.createElement("div", null, `${spellbook[0][0]}`);
+	    }
+	    return /*#__PURE__*/reactExports.createElement("div", null, "Wizard Name: ", /*#__PURE__*/reactExports.createElement("u", null, spellbookData.name || 'Unknown'), /*#__PURE__*/reactExports.createElement("br", null), "Wizard Level: ", spellbookData.level, /*#__PURE__*/reactExports.createElement("br", null), "Wizard Intelligence: ", spellbookData.intelligence, /*#__PURE__*/reactExports.createElement("br", null), spellbook.map((spells, spellLevel) => {
+	      return spells.map((spell, index) => {
+	        return /*#__PURE__*/reactExports.createElement("div", null, /*#__PURE__*/reactExports.createElement("span", null, "_____ (", spellLevel, ") ", spell), /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	          sx: {
+	            paddingLeft: "5px",
+	            fontSize: "9pt"
+	          },
+	          onClick: () => replaceSpell(index, spellLevel)
+	        }));
+	      });
+	    }));
+	  }
+	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
+	    onClick: handleOpen
+	  }, "Generate Spellbook"), spellbook && /*#__PURE__*/reactExports.createElement(Modal, {
+	    open: spellbook != null,
+	    onClose: (event, reason) => {
+	    },
+	    disableEscapeKeyDown: true,
+	    disableBackdropClick: true,
+	    sx: {
+	      maxHeight: "80%"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(Box, {
+	    sx: style$6,
+	    ref: gridRef
+	  }, /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
+	    onClick: handleClose
+	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	    sx: {
+	      textAlign: "center"
+	    },
+	    variant: "h5",
+	    component: "h2"
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "1st Edition Wizard Spellbook", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	    sx: {
+	      paddingLeft: "5px",
+	      fontSize: "10pt"
+	    },
+	    onClick: () => getSpells()
+	  })), /*#__PURE__*/reactExports.createElement(Typography, null, /*#__PURE__*/reactExports.createElement(SpellsList, null)))));
+	}
+
+	function SpellBooks1() {
+	  const [spellbookData, setSpellbookData] = React.useState({
+	    level: '0',
+	    intelligence: '0',
+	    maxNumSpells: true,
+	    gainSpells: false,
+	    phb: true,
+	    ua: false,
+	    av: false,
+	    name: ''
+	  });
+	  const handleNameChange = id => event => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      name: event?.target?.value || ''
+	    }));
+	  };
+	  const handleCheckboxChange = (checkboxName, box) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [checkboxName]: box?.target?.checked || false
+	    }));
+	  };
+	  const handleSelectChange = (selectName, option) => {
+	    setSpellbookData(prevFormData => ({
+	      ...prevFormData,
+	      [selectName]: option?.value || ''
+	    }));
+	  };
+	  const WizardLevel = () => {
+	    let options = [];
+	    for (let i = 1; i <= 18; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.level;
+	      }),
+	      name: "level",
+	      onChange: option => handleSelectChange('level', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Level",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  const WizardIntelligence = () => {
+	    let options = [];
+	    for (let i = 9; i <= 19; i++) {
+	      const num = i.toString();
+	      const obj = {
+	        value: num,
+	        label: num
+	      };
+	      options.push(obj);
+	    }
+	    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(StateManagedSelect$1, {
+	      value: options.filter(function (option) {
+	        return option.value === spellbookData.intelligence;
+	      }),
+	      name: "intelligence",
+	      onChange: option => handleSelectChange('intelligence', option),
+	      options: options,
+	      isClearable: true,
+	      placeholder: "Select Wizard Intelligence",
+	      sx: {
+	        width: "30%",
+	        height: "16pt"
+	      },
+	      menuPortalTarget: document.body,
+	      styles: {
+	        menuPortal: base => ({
+	          ...base,
+	          zIndex: 9999
+	        })
+	      }
+	    }));
+	  };
+	  return /*#__PURE__*/React.createElement(Card, {
+	    variant: "outlined",
+	    sx: {
+	      height: 'fit-content'
+	    }
+	  }, /*#__PURE__*/React.createElement(CardHeader, {
+	    sx: {
+	      textAlign: "center",
+	      fontWeight: "bold"
+	    },
+	    title: "1st Edition AD&D Wizard Spellbooks"
+	  }), /*#__PURE__*/React.createElement(CardContent, {
+	    sx: {
+	      textAlign: "center"
+	    }
+	  }, /*#__PURE__*/React.createElement(Typography, null, /*#__PURE__*/React.createElement(Grid, {
+	    container: true,
+	    spacing: 2
+	  }, /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard Level:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardLevel, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Intelligence:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement(WizardIntelligence, null))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Generate max # of spells per level based on intelligence?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.maxNumSpells,
+	    type: "checkbox",
+	    id: "maxNumSpells",
+	    name: "maxNumSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('maxNumSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Gain spells via adventuring?")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.gainSpells,
+	    type: "checkbox",
+	    id: "gainSpells",
+	    name: "gainSpells",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('gainSpells', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Sourcebooks:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "left"
+	    }
+	  }, "Player's Handbook (PHB) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.phb,
+	    type: "checkbox",
+	    id: "phb",
+	    name: "phb",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('phb', box)
+	  }), /*#__PURE__*/React.createElement("br", null), "Unearthed Arcana (UA) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.ua,
+	    type: "checkbox",
+	    id: "ua",
+	    name: "ua",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('ua', box)
+	  }), "Arden Vul (AV) ", /*#__PURE__*/React.createElement("input", {
+	    checked: spellbookData.av,
+	    type: "checkbox",
+	    id: "av",
+	    name: "av",
+	    value: "1",
+	    onChange: box => handleCheckboxChange('av', box)
+	  }))), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(Typography, {
+	    sx: {
+	      textAlign: "right"
+	    }
+	  }, "Wizard name:")), /*#__PURE__*/React.createElement(Grid, {
+	    size: 6
+	  }, /*#__PURE__*/React.createElement(OutlinedInput, {
+	    size: "small",
+	    sx: {
+	      height: "16pt"
+	    },
+	    onChange: handleNameChange()
+	  }))), /*#__PURE__*/React.createElement(GenSpells1, {
+	    spellbookData: spellbookData
+	  }))));
+	}
+
 	const style$5 = {
 	  position: 'absolute',
 	  top: '50%',
@@ -46949,6 +47139,19 @@ export default theme;`;
 	  };
 	  const handleClose = () => {
 	    setDrowTreasure(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [drowTreasure, setDrowTreasure] = reactExports.useState(null);
 	  const getDrowTreasure = async () => {
@@ -47013,7 +47216,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$5
+	    sx: style$5,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -47026,7 +47230,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Incidental Drow Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Incidental Drow Treasure", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -47194,6 +47404,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setGiantBag(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [giantBag, setGiantBag] = reactExports.useState(null);
 	  const getGiantBag = async () => {
 	    const data = await callAPI();
@@ -47241,7 +47464,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$4
+	    sx: style$4,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -47254,7 +47478,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Giant Bag Contents", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Giant Bag Contents", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -47362,7 +47592,7 @@ export default theme;`;
 	  const gridRef = reactExports.useRef(null);
 	  const {
 	    openMessage
-	  } = useMessage$1();
+	  } = useMessage();
 	  const handleCopy = async () => {
 	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
 	    try {
@@ -47528,6 +47758,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setWeeks(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [weeks, setWeeks] = reactExports.useState(null);
 	  function calcCraft() {
 	    let progress = 0;
@@ -47605,7 +47848,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$2
+	    sx: style$2,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -47618,7 +47862,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, "Weeks to Craft", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), "Weeks to Craft", /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -47757,6 +48007,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setTotal(null);
 	    setShare(null);
+	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
 	  };
 	  const [total, setTotal] = reactExports.useState(null);
 	  const [share, setShare] = reactExports.useState(null);
@@ -48182,21 +48445,28 @@ export default theme;`;
 	  };
 	  return /*#__PURE__*/reactExports.createElement(reactExports.Fragment, null, /*#__PURE__*/reactExports.createElement(Button, {
 	    onClick: handleOpen
-	  }, "Calculate XP"), total && /*#__PURE__*/reactExports.createElement(Modal, {
+	  }, "Calculate XP"), total != null && /*#__PURE__*/reactExports.createElement(Modal, {
 	    open: total != null,
 	    onClose: (event, reason) => {
 	    },
 	    disableEscapeKeyDown: true,
 	    disableBackdropClick: true
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style$1
+	    sx: style$1,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(CloseIcon, {
 	    onClick: handleClose
-	  })), /*#__PURE__*/reactExports.createElement(Typography, {
+	  })), /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "center"
 	    },
@@ -48566,6 +48836,19 @@ export default theme;`;
 	  const handleClose = () => {
 	    setCity(null);
 	  };
+	  const gridRef = reactExports.useRef(null);
+	  const {
+	    openMessage
+	  } = useMessage();
+	  const handleCopy = async () => {
+	    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+	    try {
+	      await navigator.clipboard.writeText(contentToCopy);
+	      openMessage('Content copied to clipboard.');
+	    } catch (err) {
+	      openMessage('Failed to copy content to clipboard.', 'error');
+	    }
+	  };
 	  const [city, setCity] = reactExports.useState(null);
 	  const getCity = async () => {
 	    const newCity = await callAPI();
@@ -48664,7 +48947,8 @@ export default theme;`;
 	      maxHeight: "80%"
 	    }
 	  }, /*#__PURE__*/reactExports.createElement(Box, {
-	    sx: style
+	    sx: style,
+	    ref: gridRef
 	  }, /*#__PURE__*/reactExports.createElement(Typography, {
 	    sx: {
 	      textAlign: "right"
@@ -48677,7 +48961,13 @@ export default theme;`;
 	    },
 	    variant: "h5",
 	    component: "h2"
-	  }, cityData.name || 'Random City', /*#__PURE__*/reactExports.createElement(ReplayIcon, {
+	  }, /*#__PURE__*/reactExports.createElement(ContentCopyIcon, {
+	    sx: {
+	      paddingRight: "5px",
+	      fontSize: "12pt"
+	    },
+	    onClick: handleCopy
+	  }), cityData.name || 'Random City', /*#__PURE__*/reactExports.createElement(ReplayIcon, {
 	    sx: {
 	      paddingLeft: "5px",
 	      fontSize: "10pt"
@@ -49027,10 +49317,9 @@ export default theme;`;
 	  const {
 	    message,
 	    closeMessage
-	  } = useMessage$1();
-	  if (!message) return null;
+	  } = useMessage();
 	  const style = {
-	    position: 'absolute',
+	    position: 'fixed',
 	    top: '10%',
 	    left: '50%',
 	    transform: 'translate(-50%, -50%)',
@@ -49040,11 +49329,16 @@ export default theme;`;
 	    overflow: 'auto',
 	    zIndex: 9999
 	  };
-	  return /*#__PURE__*/React.createElement(Alert, {
+	  React.useEffect(() => {
+	    if (message != null) {
+	      setTimeout(closeMessage, 1500);
+	    }
+	  }, [message]);
+	  return /*#__PURE__*/React.createElement(React.Fragment, null, message && /*#__PURE__*/React.createElement(Alert, {
 	    severity: message.type,
 	    style: style,
 	    onClick: closeMessage
-	  }, message.text);
+	  }, message.text));
 	}
 
 	const rootElement = document.getElementById('root');

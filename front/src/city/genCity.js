@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { useMessage } from '../messageContext';
 
 const style = {
   position: 'absolute',
@@ -28,6 +30,18 @@ export default function GenCity(props) {
   const handleClose = () => {
     setCity(null);
   };
+
+  const gridRef = React.useRef(null);
+  const { openMessage } = useMessage();
+  const handleCopy = async () => {
+    const contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+    try {
+      await navigator.clipboard.writeText(contentToCopy);
+      openMessage('Content copied to clipboard.');
+    } catch (err) {
+      openMessage('Failed to copy content to clipboard.', 'error');
+    }
+  }
 
   const [city, setCity] = React.useState(null);
 
@@ -139,12 +153,12 @@ export default function GenCity(props) {
         disableBackdropClick={true}
         sx={{ maxHeight: "80%" }}
       >
-        <Box sx={style}>
+        <Box sx={style} ref={gridRef}>
           <Typography sx={{ textAlign: "right" }}>
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            {cityData.name || 'Random City'}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getCity()} />
+            <ContentCopyIcon sx={{ paddingRight: "5px", fontSize: "12pt" }} onClick={handleCopy} />{cityData.name || 'Random City'}<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getCity()} />
           </Typography>
           <Typography>
             <CityDisplay />

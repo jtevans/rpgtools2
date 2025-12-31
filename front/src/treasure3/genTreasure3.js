@@ -5,8 +5,10 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import GenSpecial3 from '../baubles3/genSpecial3';
 import GenMagicItems3 from '../magicItems3/genMagicItems3';
+import { useMessage } from '../messageContext';
 
 const style = {
   position: 'absolute',
@@ -30,6 +32,22 @@ export default function GenTreasure3() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const gridRef = React.useRef(null);
+  const { openMessage } = useMessage();
+  const handleCopy = async () => {
+    let contentToCopy = gridRef.current.innerText || gridRef.current.textContent;
+    contentToCopy = contentToCopy.replace('GENERATE GEMS', '');
+    contentToCopy = contentToCopy.replace('GENERATE ART', '');
+    contentToCopy = contentToCopy.replace('GENERATE MUNDANE ITEMS', '');
+    contentToCopy = contentToCopy.replace('GENERATE MAGIC ITEMS', '');
+    try {
+      await navigator.clipboard.writeText(contentToCopy);
+      openMessage('Content copied to clipboard.');
+    } catch (err) {
+      openMessage('Failed to copy content to clipboard.', 'error');
+    }
+  }
 
   const [cp3, setCP3] = React.useState(0);
   const [sp3, setSP3] = React.useState(0);
@@ -158,12 +176,12 @@ export default function GenTreasure3() {
         disableEscapeKeyDown={true}
         disableBackdropClick={true}
       >
-        <Box sx={style}>
+        <Box sx={style} ref={gridRef}>
           <Typography sx={{ textAlign: "right" }}>
             <CloseIcon onClick={handleClose} />
           </Typography>
           <Typography sx={{ textAlign: "center" }} variant="h5" component="h2">
-            Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTreasure()} />
+            <ContentCopyIcon sx={{ paddingRight: "5px", fontSize: "12pt" }} onClick={handleCopy} />Treasure<ReplayIcon sx={{ paddingLeft: "5px", fontSize: "10pt" }} onClick={() => getTreasure()} />
           </Typography>
           <Typography>
             <TreasureItem3 type={'CP'} amount={cp3} />
