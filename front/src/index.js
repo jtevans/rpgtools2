@@ -21,7 +21,7 @@ import CraftCalculator from './craftCalculator/craftCalculator'
 import XPCalculator from './xp/xpCalculator'
 import City from './city/city';
 import { MessageProvider } from './messageContext';
-import MessageBox from './MessageBox';
+import MessageBox from './messageBox';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
