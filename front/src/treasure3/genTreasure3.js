@@ -9,6 +9,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import GenSpecial3 from '../baubles3/genSpecial3';
 import GenMagicItems3 from '../magicItems3/genMagicItems3';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -94,7 +95,7 @@ export default function GenTreasure3() {
       return [];
     }
     args = args.slice(1);
-    let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
+    let response = await fetch(`${APIURL}/api/treasure3.php?${args}`);
     return await response.json();
   }
 

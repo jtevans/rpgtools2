@@ -7,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -55,7 +56,7 @@ export default function GenDrow({ drowData }) {
       args += `&l${index}=${data.drowLevel}&q${index}=${data.numDrow}`;
     });
     args = args.slice(1);
-    let response = await fetch(`http://localhost:8080/tools2/api/drow_treasure.php?${args}`);
+    let response = await fetch(`${APIURL}/api/drow_treasure.php?${args}`);
     return await response.json();
   }
 

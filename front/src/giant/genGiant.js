@@ -7,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -62,7 +63,7 @@ export default function GenGiant({ giantType }) {
     if (amount != 0) {
       amountArgs = `&amount=${amount}`;
     }
-    let response = await fetch(`http://localhost:8080/tools2/api/giant_bag.php?type=${giantType}${amountArgs}`);
+    let response = await fetch(`${APIURL}/api/giant_bag.php?type=${giantType}${amountArgs}`);
     return await response.json();
   }
 

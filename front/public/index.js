@@ -30761,6 +30761,8 @@ export default theme;`;
 	};
 	const useMessage = () => reactExports.useContext(MessageContext);
 
+	const APIURL = 'http://jtevans.kilnar.com/rpg/dnd/tools2';
+
 	const style$n = {
 	  position: 'absolute',
 	  top: '50%',
@@ -30800,7 +30802,7 @@ export default theme;`;
 	    setNames(nameData);
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/dwarf.php?amount=${amount}`);
+	    let response = await fetch(`${APIURL}/api/dwarf.php?amount=${amount}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
@@ -30980,7 +30982,7 @@ export default theme;`;
 	    setNames(nameData);
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/mfnames.php?amount=${amount}&type=${type}`);
+	    let response = await fetch(`${APIURL}/api/mfnames.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
@@ -31141,7 +31143,7 @@ export default theme;`;
 	    }));
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/twopartnames.php?amount=${amount}&type=${type}`);
+	    let response = await fetch(`${APIURL}/api/twopartnames.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
@@ -31271,7 +31273,7 @@ export default theme;`;
 	    setNames(nameData);
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/korean.php?amount=${amount}`);
+	    let response = await fetch(`${APIURL}/api/korean.php?amount=${amount}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
@@ -31427,7 +31429,7 @@ export default theme;`;
 	    }));
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/twopartnames.php?amount=${amount}`);
+	    let response = await fetch(`${APIURL}/api/twopartnames.php?amount=${amount}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
@@ -31839,7 +31841,7 @@ export default theme;`;
 	    }));
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/estab.php?amount=${amount}`);
+	    let response = await fetch(`${APIURL}/api/estab.php?amount=${amount}`);
 	    return await response.json();
 	  }
 	  async function replaceName(_ref) {
@@ -32014,7 +32016,7 @@ export default theme;`;
 	    setDressings(dressings.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
 	  async function callAPI(amount) {
-	    let response = await fetch(`http://localhost:8080/tools2/api/dressing.php?amount=${amount}&type=${type}`);
+	    let response = await fetch(`${APIURL}/api/dressing.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceDressing(_ref) {
@@ -32179,7 +32181,7 @@ export default theme;`;
 	    setTraps(traps.map((item, index) => index === indexToUpdate ? newValue : item));
 	  };
 	  async function callAPI(amount) {
-	    const response = await fetch(`http://localhost:8080/tools2/api/traps.php?amount=${amount}&type=${type}`);
+	    const response = await fetch(`${APIURL}/api/traps.php?amount=${amount}&type=${type}`);
 	    return await response.json();
 	  }
 	  async function replaceTrap(_ref) {
@@ -32329,7 +32331,7 @@ export default theme;`;
 	    if (newAmount != 0) {
 	      targetAmount = newAmount;
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${targetAmount}`);
+	    let response = await fetch(`${APIURL}/api/${API}?amount=${targetAmount}`);
 	    return await response.json();
 	  }
 	  async function replaceSpecial(_ref2) {
@@ -32474,7 +32476,7 @@ export default theme;`;
 	      majorAmt = passedMajorAmount;
 	    }
 	    const args = `minor=${minorAmt}&medium=${mediumAmt}&major=${majorAmt}`;
-	    let response = await fetch(`http://localhost:8080/tools2/api/mi.php?${args}`);
+	    let response = await fetch(`${APIURL}/api/mi.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceItem(_ref) {
@@ -32657,7 +32659,7 @@ export default theme;`;
 	      return [];
 	    }
 	    args = args.slice(1);
-	    let response = await fetch(`http://localhost:8080/tools2/api/treasure3.php?${args}`);
+	    let response = await fetch(`${APIURL}/api/treasure3.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceTreasureItem(_ref) {
@@ -40446,7 +40448,7 @@ export default theme;`;
 	  };
 	  const [stats, setStats] = reactExports.useState(null);
 	  async function callAPI() {
-	    let response = await fetch(`http://localhost:8080/tools2/api/intelligent.php`);
+	    let response = await fetch(`${APIURL}/api/intelligent.php`);
 	    const responseText = await response.json();
 	    return parse(responseText);
 	  }
@@ -40563,7 +40565,7 @@ export default theme;`;
 	        args += `&specificType=${magicItemsInput.SpecificType}`;
 	      }
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/1st_mi.php?${args}`);
+	    let response = await fetch(`${APIURL}/api/1st_mi.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceItem(_ref) {
@@ -45761,7 +45763,7 @@ export default theme;`;
 	    if (newAmount != 0) {
 	      targetAmount = newAmount;
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/${API}?amount=${targetAmount}`);
+	    let response = await fetch(`${APIURL}/api/${API}?amount=${targetAmount}`);
 	    return await response.json();
 	  }
 	  async function replaceSpecial(_ref2) {
@@ -45952,7 +45954,7 @@ export default theme;`;
 	      return [];
 	    }
 	    args = args.slice(1); // Remove the leading '&'
-	    const response = await fetch(`http://localhost:8080/tools2/api/treasure1.php?${args}`);
+	    const response = await fetch(`${APIURL}/api/treasure1.php?${args}`);
 	    return await response.json();
 	  }
 	  const handleTreasureChange = (name, value) => {
@@ -46396,7 +46398,7 @@ export default theme;`;
 	    if (level) {
 	      args += `&spellLevel=${level}`;
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/rnd_spellbook.php?${args}`);
+	    let response = await fetch(`${APIURL}/api/rnd_spellbook.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceSpell(idx, level) {
@@ -46828,7 +46830,7 @@ export default theme;`;
 	    if (level) {
 	      args += `&spellLevel=${level}`;
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/1st_spellbook.php?${args}`);
+	    let response = await fetch(`${APIURL}/api/1st_spellbook.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceSpell(idx, level) {
@@ -47164,7 +47166,7 @@ export default theme;`;
 	      args += `&l${index}=${data.drowLevel}&q${index}=${data.numDrow}`;
 	    });
 	    args = args.slice(1);
-	    let response = await fetch(`http://localhost:8080/tools2/api/drow_treasure.php?${args}`);
+	    let response = await fetch(`${APIURL}/api/drow_treasure.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceDrowTreasure(_ref2) {
@@ -47431,7 +47433,7 @@ export default theme;`;
 	    if (amount != 0) {
 	      amountArgs = `&amount=${amount}`;
 	    }
-	    let response = await fetch(`http://localhost:8080/tools2/api/giant_bag.php?type=${giantType}${amountArgs}`);
+	    let response = await fetch(`${APIURL}/api/giant_bag.php?type=${giantType}${amountArgs}`);
 	    return await response.json();
 	  }
 	  async function replaceContent(_ref2) {
@@ -47611,7 +47613,7 @@ export default theme;`;
 	    setLower(lower.map((creature, index) => index === indexToUpdate ? newValue : creature));
 	  };
 	  async function callAPI() {
-	    let response = await fetch(`http://localhost:8080/tools2/api/lowerplanes.php?amount=${amount}`);
+	    let response = await fetch(`${APIURL}/api/lowerplanes.php?amount=${amount}`);
 	    return await response.json();
 	  }
 	  async function replaceLower(_ref2) {
@@ -48874,7 +48876,7 @@ export default theme;`;
 	      const military = cityData.military ? 'true' : 'false';
 	      args = `f=city&name=${name}&density=${density}&size=${size}&makeNames=${makeNames}&agricultural=${agricultural}&wine=${wine}&grazing=${grazing}&hills=${hills}&forest=${forest}&port=${port}&military=${military}`;
 	    }
-	    const response = await fetch(`http://localhost:8080/tools2/api/city.php?${args}`);
+	    const response = await fetch(`${APIURL}/api/city.php?${args}`);
 	    return await response.json();
 	  }
 	  async function replaceItem(catIndex, typeIndex, itemIndex, typeToChange) {

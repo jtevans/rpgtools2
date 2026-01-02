@@ -8,6 +8,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useMessage } from '../messageContext';
 import Utils from '../utils';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -88,7 +89,7 @@ export default function GenSpells3(props) {
     if (level) {
       args += `&spellLevel=${level}`;
     }
-    let response = await fetch(`http://localhost:8080/tools2/api/rnd_spellbook.php?${args}`);
+    let response = await fetch(`${APIURL}/api/rnd_spellbook.php?${args}`);
     return await response.json();
   }
 

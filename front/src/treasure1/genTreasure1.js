@@ -9,6 +9,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import GenSpecial1 from '../baubles1/genSpecial1';
 import GenMagicItems1 from '../magicItems1/genMagicItems1';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -76,7 +77,7 @@ export default function GenTreasure1(props) {
       return [];
     }
     args = args.slice(1); // Remove the leading '&'
-    const response = await fetch(`http://localhost:8080/tools2/api/treasure1.php?${args}`);
+    const response = await fetch(`${APIURL}/api/treasure1.php?${args}`);
     return await response.json();
   }
 

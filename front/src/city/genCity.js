@@ -7,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -72,7 +73,7 @@ export default function GenCity(props) {
       args = `f=city&name=${name}&density=${density}&size=${size}&makeNames=${makeNames}&agricultural=${agricultural}&wine=${wine}&grazing=${grazing}&hills=${hills}&forest=${forest}&port=${port}&military=${military}`;
     }
 
-    const response = await fetch(`http://localhost:8080/tools2/api/city.php?${args}`);
+    const response = await fetch(`${APIURL}/api/city.php?${args}`);
     return await response.json();
   }
 

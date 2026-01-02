@@ -8,6 +8,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import IntelligentWeapon from './genIntelligentWeapon';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -82,7 +83,7 @@ export default function GenMagicItems1(props) {
       }
     }
 
-    let response = await fetch(`http://localhost:8080/tools2/api/1st_mi.php?${args}`);
+    let response = await fetch(`${APIURL}/api/1st_mi.php?${args}`);
     return await response.json();
   }
 

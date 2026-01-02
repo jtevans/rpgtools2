@@ -1,8 +1,10 @@
 # rpgtools2
 
-This is the second iteration of my RPG tools. Once I have the feature set completed to align with the features found at https://jtevans.kilnar.com/rpg/dnd/tools/, I'll push this version up to my web site as well.
+This is the second iteration of my RPG tools. You can find the deployed, original version here: https://jtevans.kilnar.com/rpg/dnd/tools/
 
-For now, this is entirely in dev mode, and may or may not function properly. I do my best not to push broken, untested code to the repo, though.
+You can find this version of the tools deployed here: https://jtevans.kilnar.com/rpg/dnd/tools2/
+
+I think I'm done with this entire feature set for this version of the tools. As I have new ideas for new features (or if people request new features), I'll add them to this codebase.
 
 This version has a React frontend with a PHP backend. The data files are the same between this repo and what is found here: https://github.com/jtevans/rpgtools
 

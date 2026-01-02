@@ -7,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -65,7 +66,7 @@ export default function Trap(props) {
   };
 
   async function callAPI(amount) {
-    const response = await fetch(`http://localhost:8080/tools2/api/traps.php?amount=${amount}&type=${type}`);
+    const response = await fetch(`${APIURL}/api/traps.php?amount=${amount}&type=${type}`);
     return await response.json();
   }
 

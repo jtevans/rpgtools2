@@ -9,6 +9,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Grid } from '@mui/material';
 import Utils from '../utils';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -62,7 +63,7 @@ export default function MFName(props) {
   };
 
   async function callAPI(amount) {
-    let response = await fetch(`http://localhost:8080/tools2/api/mfnames.php?amount=${amount}&type=${type}`);
+    let response = await fetch(`${APIURL}/api/mfnames.php?amount=${amount}&type=${type}`);
     return await response.json();
   }
 

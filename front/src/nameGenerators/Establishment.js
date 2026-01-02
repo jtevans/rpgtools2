@@ -8,6 +8,7 @@ import ReplayIcon from '@mui/icons-material/Replay';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Grid } from '@mui/material';
 import { useMessage } from '../messageContext';
+import { APIURL } from '../config';
 
 const style = {
   position: 'absolute',
@@ -61,7 +62,7 @@ export default function EstablishmentNames() {
   };
 
   async function callAPI(amount) {
-    let response = await fetch(`http://localhost:8080/tools2/api/estab.php?amount=${amount}`);
+    let response = await fetch(`${APIURL}/api/estab.php?amount=${amount}`);
     return await response.json();
   }
 
