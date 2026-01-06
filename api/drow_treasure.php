@@ -2,12 +2,12 @@
 
 require("utils.php");
 
-$l1 = intval(get_var("l1", 0));
-$l2 = intval(get_var("l2", 0));
-$l3 = intval(get_var("l3", 0));
-$q1 = intval(get_var("q1", 0));
-$q2 = intval(get_var("q2", 0));
-$q3 = intval(get_var("q3", 0));
+$l1 = intval(get_var("l0", 0));
+$l2 = intval(get_var("l1", 0));
+$l3 = intval(get_var("l2", 0));
+$q1 = intval(get_var("q0", 0));
+$q2 = intval(get_var("q1", 0));
+$q3 = intval(get_var("q2", 0));
 
 
 $treasure = [];
