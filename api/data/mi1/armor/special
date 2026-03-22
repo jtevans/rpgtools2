@@ -82,7 +82,7 @@
 6~83~Voice of Heroes (Armor) :: {armor/armor} +5 {armor/sized_for}
 6~83~Armor of Vulnerability :: {armor/armor} {armor/bonus_cursed} {armor/sized_for}
 6~83~Armor of Vulnerability II :: {armor/armor} {armor/bonus_cursed_II} {armor/sized_for}
-6~83~Armor of Wannth*
+6~83~Armor of Warmth*
 6~83~White Armor of the Griff Mountains
 6~158~Barding of Deceptive Travel :: {armor/material_barding} {armor/barding} {armor/bonus} {armor/barding_category} (Creature: {armor/barding_deceptive_travel})
 6~158~Barding of Easy Travel :: {armor/material_barding} {armor/barding} {armor/bonus} {armor/barding_category}
